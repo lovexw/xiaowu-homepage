@@ -397,3 +397,130 @@ body {
     display: none;
     z-index: 1001;
 }
+
+/* 个人项目样式 */
+.projects-section {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.projects-section h2 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.projects-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: #1D1D1F;
+    border-radius: 2px;
+}
+
+/* 删除重复的 .projects-section h2 定义 */
+
+.projects-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-card {
+    border: 1px solid #E5E7EB;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #FFFFFF;
+    text-decoration: none;
+    display: block;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #D1D5DB;
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    color: #000;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.project-content p {
+    color: #6B7280;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #F3F4F6;
+    color: #4B5563;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+    .projects-section {
+        padding: 1.5rem;
+    }
+    
+    .project-content {
+        padding: 1.25rem;
+    }
+}
+/* 底部声明样式 */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.footer a {
+    color: #4B5563;
+    text-decoration: none;
+    border-bottom: 1px dashed #9CA3AF;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #1D1D1F;
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+}
