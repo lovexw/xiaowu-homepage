@@ -445,12 +445,28 @@ body {
     background: #FFFFFF;
     text-decoration: none;
     display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
 .project-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-color: #D1D5DB;
+}
+
+.project-content {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+    height: 100%;
+    transition: background 0.3s ease;
+}
+
+.project-card:hover .project-content {
+    background: rgba(255, 255, 255, 0.95); /* 悬停时背景更不透明 */
 }
 
 @media (max-width: 640px) {
