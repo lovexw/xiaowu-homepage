@@ -1,0 +1,542 @@
+:root {
+    --wordpress-color: #70B7D4;
+    --twitter-color: #6BBBF5;
+    --bilibili-color: #FFA7C1;
+    --tiktok-color: #4A4A4A;
+    --youtube-color: #FF6B6B;
+    --wechat-color: #6BD39B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F7;
+    color: #1D1D1F;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 3rem;
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    align-items: start;
+}
+
+.wechat-qr {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.wechat-qr img {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    background-color: white;
+    padding: 8px;
+}
+
+.wechat-qr p {
+    color: #6B7280;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .profile {
+        padding: 1.5rem;
+    }
+
+    .profile-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .avatar {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.75rem;
+    }
+    
+    .profile-details {
+        font-size: 0.95rem;
+    }
+    
+    .wechat-qr {
+        margin: 1.5rem auto 0;
+    }
+    
+    .wechat-qr img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .bio {
+        font-size: 1rem;
+        margin: 1.25rem 0;
+        padding-top: 1.25rem;
+    }
+
+    .btc-address {
+        padding: 0.875rem;
+    }
+
+    .btc-address p {
+        font-size: 0.875rem;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 480px) {
+    .wechat-qr img {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.profile-details {
+    color: #4B5563;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.profile-details .title {
+    font-weight: 600;
+    color: #000;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.bio {
+    font-style: italic;
+    color: #6B7280;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+.btc-address {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #FEF3C7;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.btc-address p {
+    color: #92400E;
+    font-family: monospace;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.qrcode-popup {
+    display: none;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qrcode-popup img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 640px) {
+    .btc-address {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: white;
+    gap: 0.75rem;
+    transition: opacity 0.2s;
+}
+
+.link-card:hover {
+    opacity: 0.9;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.text h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.text p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Link card backgrounds */
+.wordpress { background-color: var(--wordpress-color); }
+.twitter { background-color: var(--twitter-color); }
+.bilibili { background-color: var(--bilibili-color); }
+.tiktok { background-color: var(--tiktok-color); }
+.youtube { background-color: var(--youtube-color); }
+.wechat { background-color: var(--wechat-color); }
+
+/* 订阅模块样式 */
+.subscribe-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.subscribe-card h2 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 0.75rem;
+}
+
+.subscribe-card p {
+    color: #6B7280;
+    margin-bottom: 1.5rem;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.subscribe-form input[type="email"]:focus {
+    border-color: #6B7280;
+}
+
+.subscribe-form button {
+    background: #1D1D1F;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.subscribe-form button:hover {
+    background: #2D2D2F;
+}
+
+@media (max-width: 640px) {
+    .subscribe-form {
+        flex-direction: column;
+    }
+    
+    .subscribe-form button {
+        width: 100%;
+    }
+}
+.btc-address {
+    position: relative;
+    background-color: #FEF3C7;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btc-address p {
+    color: #92400E;
+    font-family: monospace;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.btc-value {
+    border-bottom: 1px dashed #92400E;
+}
+
+.qrcode-popup {
+    position: fixed;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 999;
+}
+
+.qrcode-popup img {
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+
+.tooltip {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: none;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.copy-success {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: none;
+    z-index: 1001;
+}
+
+/* 个人项目样式 */
+.projects-section {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.projects-section h2 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.projects-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: #1D1D1F;
+    border-radius: 2px;
+}
+
+/* 删除重复的 .projects-section h2 定义 */
+
+.projects-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-card {
+    border: 1px solid #E5E7EB;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #D1D5DB;
+}
+
+.project-content {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+    height: 100%;
+    transition: background 0.3s ease;
+}
+
+.project-card:hover .project-content {
+    background: rgba(255, 255, 255, 0.95); /* 悬停时背景更不透明 */
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    color: #000;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.project-content p {
+    color: #6B7280;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #F3F4F6;
+    color: #4B5563;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+    .projects-section {
+        padding: 1.5rem;
+    }
+    
+    .project-content {
+        padding: 1.25rem;
+    }
+}
+/* 底部声明样式 */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.footer a {
+    color: #4B5563;
+    text-decoration: none;
+    border-bottom: 1px dashed #9CA3AF;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #1D1D1F;
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+}
