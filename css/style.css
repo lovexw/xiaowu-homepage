@@ -60,14 +60,14 @@ body::before {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
 .profile {
     background: var(--card-bg);
     border-radius: var(--border-radius-lg);
-    padding: 3rem 2.5rem;
-    margin-bottom: 2.5rem;
+    padding: 2rem 2rem;
+    margin-bottom: 1.5rem;
     box-shadow: var(--shadow-md);
     position: relative;
     overflow: hidden;
@@ -98,8 +98,8 @@ body::before {
 .profile-header {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 2.5rem;
-    margin-bottom: 2rem;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
     text-align: left;
     align-items: start;
 }
@@ -136,7 +136,7 @@ body::before {
 
 .profile-info h1 {
     font-size: 2.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: var(--text-primary);
     font-weight: 700;
     background: linear-gradient(135deg, #1A1A1A 0%, #4B5563 100%);
@@ -200,9 +200,9 @@ body::before {
 .bio {
     font-style: italic;
     color: var(--text-secondary);
-    margin: 1.5rem 0;
-    font-size: 1.15rem;
-    padding: 1.5rem 0;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    padding: 1rem 0;
     border-top: 1px solid #F3F4F6;
     text-align: center;
     position: relative;
@@ -220,7 +220,7 @@ body::before {
 .btc-address {
     position: relative;
     background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-    padding: 1.25rem;
+    padding: 1rem;
     border-radius: var(--border-radius-md);
     cursor: pointer;
     text-align: center;
@@ -321,8 +321,8 @@ body::before {
 .links-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
     animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
@@ -335,11 +335,11 @@ body::before {
 .link-card {
     display: flex;
     align-items: center;
-    padding: 1.25rem;
+    padding: 1rem;
     border-radius: var(--border-radius-md);
     text-decoration: none;
     color: white;
-    gap: 1rem;
+    gap: 0.85rem;
     transition: var(--transition-base);
     box-shadow: var(--shadow-sm);
     position: relative;
@@ -406,8 +406,8 @@ body::before {
 .projects-section {
     background: var(--card-bg);
     border-radius: var(--border-radius-lg);
-    padding: 3rem 2.5rem;
-    margin-bottom: 2.5rem;
+    padding: 2rem 2rem;
+    margin-bottom: 1.5rem;
     box-shadow: var(--shadow-md);
     animation: fadeInUp 0.6s ease-out 0.4s both;
 }
@@ -415,10 +415,10 @@ body::before {
 .projects-section h2 {
     font-size: 1.75rem;
     color: var(--text-primary);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.75rem;
     text-align: center;
     position: relative;
-    padding-bottom: 1.25rem;
+    padding-bottom: 1rem;
     font-weight: 700;
 }
 
@@ -436,7 +436,7 @@ body::before {
 
 .projects-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -451,7 +451,7 @@ body::before {
     position: relative;
     background-size: cover;
     background-position: center;
-    min-height: 220px;
+    min-height: 200px;
 }
 
 .project-card::before {
@@ -474,7 +474,7 @@ body::before {
 }
 
 .project-content {
-    padding: 1.75rem;
+    padding: 1.5rem;
     position: relative;
     z-index: 2;
     height: 100%;
@@ -484,9 +484,9 @@ body::before {
 }
 
 .project-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: var(--text-primary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
     transition: var(--transition-base);
 }
@@ -497,9 +497,9 @@ body::before {
 
 .project-content p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    margin-bottom: 0.85rem;
+    line-height: 1.5;
 }
 
 .project-tags {
@@ -527,7 +527,7 @@ body::before {
 
 .footer {
     text-align: center;
-    padding: 2.5rem 1rem;
+    padding: 1.5rem 1rem;
     color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.8;
@@ -548,16 +548,16 @@ body::before {
 
 @media (max-width: 768px) {
     .container {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .profile {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1.25rem;
     }
 
     .profile-header {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.25rem;
         text-align: center;
     }
     
@@ -576,7 +576,7 @@ body::before {
     }
     
     .wechat-qr {
-        margin: 1.5rem auto 0;
+        margin: 1rem auto 0;
     }
     
     .wechat-qr img {
@@ -586,12 +586,12 @@ body::before {
 
     .bio {
         font-size: 1rem;
-        margin: 1.25rem 0;
-        padding-top: 1.25rem;
+        margin: 0.85rem 0;
+        padding-top: 0.85rem;
     }
 
     .btc-address {
-        padding: 1rem;
+        padding: 0.85rem;
     }
 
     .btc-address p {
@@ -600,18 +600,19 @@ body::before {
     }
 
     .projects-section {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1.25rem;
     }
 
     .projects-section h2 {
         font-size: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 }
 
 @media (max-width: 640px) {
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 0.85rem;
     }
 
     .wechat-qr img {
@@ -624,21 +625,21 @@ body::before {
     }
 
     .project-card {
-        min-height: 200px;
+        min-height: 180px;
     }
 
     .project-content {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 1.5rem 1rem;
+        padding: 1.25rem 0.85rem;
     }
 
     .profile {
-        padding: 1.75rem 1.25rem;
+        padding: 1.5rem 1rem;
     }
 
     .profile-info h1 {
@@ -650,11 +651,11 @@ body::before {
     }
 
     .links-grid {
-        gap: 0.85rem;
+        gap: 0.65rem;
     }
 
     .link-card {
-        padding: 1rem;
+        padding: 0.85rem;
     }
 
     .icon {
@@ -670,7 +671,15 @@ body::before {
         font-size: 0.85rem;
     }
 
+    .projects-section {
+        padding: 1.25rem 1rem;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
     .footer {
-        padding: 2rem 1rem;
+        padding: 1.25rem 1rem;
     }
 }
