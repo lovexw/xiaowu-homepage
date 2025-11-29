@@ -97,7 +97,7 @@ body::before {
 
 .profile-header {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
     gap: 2rem;
     margin-bottom: 1.5rem;
     text-align: left;
@@ -168,33 +168,6 @@ body::before {
 .profile-details a:hover {
     color: var(--text-primary);
     border-bottom-color: var(--text-primary);
-}
-
-.wechat-qr {
-    text-align: center;
-    margin-top: 0.5rem;
-}
-
-.wechat-qr img {
-    width: 160px;
-    height: 160px;
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-sm);
-    object-fit: contain;
-    background-color: white;
-    padding: 8px;
-    transition: var(--transition-base);
-}
-
-.wechat-qr img:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-md);
-}
-
-.wechat-qr p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-top: 0.75rem;
 }
 
 .bio {
@@ -574,15 +547,6 @@ body::before {
     .profile-details {
         font-size: 0.95rem;
     }
-    
-    .wechat-qr {
-        margin: 1rem auto 0;
-    }
-    
-    .wechat-qr img {
-        width: 150px;
-        height: 150px;
-    }
 
     .bio {
         font-size: 1rem;
@@ -613,11 +577,6 @@ body::before {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 0.85rem;
-    }
-
-    .wechat-qr img {
-        width: 140px;
-        height: 140px;
     }
     
     .profile-info h1 {
