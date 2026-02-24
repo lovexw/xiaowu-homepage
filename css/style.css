@@ -484,6 +484,7 @@ body::before {
 .tiktok    { background: linear-gradient(135deg, #4A4A4A 0%, #2D2D2D 100%); }
 .youtube   { background: linear-gradient(135deg, #FF6B6B 0%, #E84040 100%); }
 .wechat    { background: linear-gradient(135deg, #6BD39B 0%, #46BF80 100%); }
+.bitcoin   { background: linear-gradient(135deg, #F7931A 0%, #E07B0A 100%); }
 
 /* ── Projects Section ────────────────────────────────── */
 
