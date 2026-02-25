@@ -336,6 +336,24 @@ body::before {
     animation: popIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+.qrcode-popup::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 8px solid transparent;
+}
+
+.qrcode-popup.right-arrow::before {
+    left: -16px;
+    border-right-color: white;
+}
+
+.qrcode-popup.left-arrow::before {
+    right: -16px;
+    border-left-color: white;
+}
+
 @keyframes popIn {
     from {
         opacity: 0;
@@ -369,30 +387,29 @@ body::before {
 
 .copy-success {
     position: fixed;
-    top: 28px;
-    left: 50%;
-    transform: translateX(-50%);
     background: linear-gradient(135deg, #10B981 0%, #059669 100%);
     color: white;
-    padding: 11px 26px;
+    padding: 8px 16px;
     border-radius: 50px;
     display: none;
     z-index: 1001;
     box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 0.02em;
-    animation: slideDown 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+    animation: popSuccess 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    white-space: nowrap;
 }
 
-@keyframes slideDown {
+@keyframes popSuccess {
     from {
         opacity: 0;
-        transform: translate(-50%, -16px);
+        transform: scale(0.8);
     }
     to {
         opacity: 1;
-        transform: translate(-50%, 0);
+        transform: scale(1);
     }
 }
 

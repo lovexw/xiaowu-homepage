@@ -227,6 +227,9 @@
             const qrcodePopup = document.getElementById('qrcode-popup');
             const copySuccess = document.getElementById('copy-success');
             
+            let lastMouseX = 0;
+            let lastMouseY = 0;
+            
             // 生成二维码
             function generateQR() {
                 const qr = qrcode(0, 'L');
@@ -235,27 +238,45 @@
                 qrcodePopup.innerHTML = qr.createImgTag(5);
             }
             
+            // 计算二维码显示位置
+            function positionQRCode() {
+                const rect = btcAddress.getBoundingClientRect();
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+                const qrSize = 144; // 120px + 24px padding
+                
+                let left, top;
+                
+                // 移除旧的箭头类
+                qrcodePopup.classList.remove('right-arrow', 'left-arrow');
+                
+                // 判断右侧空间是否足够
+                if (rect.right + qrSize + 15 <= windowWidth) {
+                    left = rect.right + 15;
+                    qrcodePopup.classList.add('left-arrow');
+                } else if (rect.left - qrSize - 15 >= 0) {
+                    left = rect.left - qrSize - 15;
+                    qrcodePopup.classList.add('right-arrow');
+                } else {
+                    left = Math.max(10, Math.min(windowWidth - qrSize - 10, rect.right + 10));
+                }
+                
+                // 垂直居中对齐，但要确保不超出屏幕
+                top = rect.top + rect.height / 2 - qrSize / 2;
+                top = Math.max(10, Math.min(windowHeight - qrSize - 10, top));
+                
+                qrcodePopup.style.left = left + 'px';
+                qrcodePopup.style.top = top + 'px';
+            }
+            
             // 显示/隐藏二维码
             btcAddress.addEventListener('mouseenter', function(e) {
                 if (!qrcodePopup.innerHTML) {
                     generateQR();
                 }
+                positionQRCode();
                 qrcodePopup.style.display = 'block';
                 tooltip.style.display = 'block';
-                
-                // 计算位置
-                const rect = btcAddress.getBoundingClientRect();
-                const windowWidth = window.innerWidth;
-                const qrWidth = 144; // 120px + 24px padding
-                
-                // 如果右侧空间不足，显示在左侧
-                if (rect.right + qrWidth + 10 > windowWidth) {
-                    qrcodePopup.style.left = (rect.left - qrWidth - 10) + 'px';
-                } else {
-                    qrcodePopup.style.left = (rect.right + 10) + 'px';
-                }
-                
-                qrcodePopup.style.top = (rect.top + rect.height/2 - qrWidth/2) + 'px';
             });
             
             btcAddress.addEventListener('mouseleave', function(e) {
@@ -265,18 +286,34 @@
             
             // 更新提示位置
             document.addEventListener('mousemove', function(e) {
-                tooltip.style.left = (e.pageX + 10) + 'px';
-                tooltip.style.top = (e.pageY + 10) + 'px';
+                lastMouseX = e.clientX;
+                lastMouseY = e.clientY;
+                tooltip.style.left = (e.clientX + 15) + 'px';
+                tooltip.style.top = (e.clientY + 15) + 'px';
             });
             
             // 复制功能
-            btcAddress.addEventListener('click', async function() {
+            btcAddress.addEventListener('click', async function(e) {
                 try {
                     await navigator.clipboard.writeText(btcAddress.textContent);
+                    
+                    // 在鼠标位置显示复制成功提示
+                    const tipWidth = 100;
+                    const tipHeight = 36;
+                    let left = lastMouseX - tipWidth / 2;
+                    let top = lastMouseY - tipHeight - 10;
+                    
+                    // 确保不超出屏幕边界
+                    left = Math.max(10, Math.min(window.innerWidth - tipWidth - 10, left));
+                    top = Math.max(10, top);
+                    
+                    copySuccess.style.left = left + 'px';
+                    copySuccess.style.top = top + 'px';
                     copySuccess.style.display = 'block';
+                    
                     setTimeout(() => {
                         copySuccess.style.display = 'none';
-                    }, 2000);
+                    }, 1500);
                 } catch (err) {
                     console.error('复制失败:', err);
                 }
