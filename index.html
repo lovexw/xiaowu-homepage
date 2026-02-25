@@ -222,20 +222,29 @@
     <div class="copy-success" id="copy-success">复制成功！</div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const btcAddress = document.querySelector('.btc-value');
+            const btcAddress = document.querySelector('.btc-address');
+            const btcValue = document.querySelector('.btc-value');
             const tooltip = document.getElementById('copy-tooltip');
             const qrcodePopup = document.getElementById('qrcode-popup');
             const copySuccess = document.getElementById('copy-success');
             
             let lastMouseX = 0;
             let lastMouseY = 0;
+            let hideQRTimer = null;
+            let qrGenerated = false;
             
             // 生成二维码
             function generateQR() {
-                const qr = qrcode(0, 'L');
-                qr.addData('bitcoin:' + btcAddress.textContent);
-                qr.make();
-                qrcodePopup.innerHTML = qr.createImgTag(5);
+                if (qrGenerated) return;
+                try {
+                    const qr = qrcode(0, 'L');
+                    qr.addData('bitcoin:' + btcValue.textContent);
+                    qr.make();
+                    qrcodePopup.innerHTML = qr.createImgTag(5);
+                    qrGenerated = true;
+                } catch (e) {
+                    console.error('二维码生成失败:', e);
+                }
             }
             
             // 计算二维码显示位置
@@ -269,17 +278,44 @@
                 qrcodePopup.style.top = top + 'px';
             }
             
-            // 显示/隐藏二维码
-            btcAddress.addEventListener('mouseenter', function(e) {
-                if (!qrcodePopup.innerHTML) {
-                    generateQR();
+            // 显示二维码
+            function showQRCode() {
+                if (hideQRTimer) {
+                    clearTimeout(hideQRTimer);
+                    hideQRTimer = null;
                 }
+                generateQR();
                 positionQRCode();
                 qrcodePopup.style.display = 'block';
+            }
+            
+            // 隐藏二维码（带延迟）
+            function hideQRCode() {
+                hideQRTimer = setTimeout(function() {
+                    qrcodePopup.style.display = 'none';
+                    tooltip.style.display = 'none';
+                }, 100);
+            }
+            
+            // 比特币地址区域事件
+            btcAddress.addEventListener('mouseenter', function(e) {
+                showQRCode();
                 tooltip.style.display = 'block';
             });
             
             btcAddress.addEventListener('mouseleave', function(e) {
+                hideQRCode();
+            });
+            
+            // 二维码区域事件 - 防止鼠标移到二维码上时消失
+            qrcodePopup.addEventListener('mouseenter', function(e) {
+                if (hideQRTimer) {
+                    clearTimeout(hideQRTimer);
+                    hideQRTimer = null;
+                }
+            });
+            
+            qrcodePopup.addEventListener('mouseleave', function(e) {
                 qrcodePopup.style.display = 'none';
                 tooltip.style.display = 'none';
             });
@@ -293,9 +329,10 @@
             });
             
             // 复制功能
-            btcAddress.addEventListener('click', async function(e) {
+            btcValue.addEventListener('click', async function(e) {
+                e.stopPropagation();
                 try {
-                    await navigator.clipboard.writeText(btcAddress.textContent);
+                    await navigator.clipboard.writeText(btcValue.textContent);
                     
                     // 在鼠标位置显示复制成功提示
                     const tipWidth = 100;
