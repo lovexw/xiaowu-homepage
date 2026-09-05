@@ -8,7 +8,6 @@
     --wordpress-color: #70B7D4;
     --twitter-color: #6BBBF5;
     --bilibili-color: #FFA7C1;
-    --tiktok-color: #4A4A4A;
     --youtube-color: #FF6B6B;
     --wechat-color: #6BD39B;
 
@@ -55,13 +54,6 @@ body::before {
         radial-gradient(ellipse at 85% 20%, rgba(107, 187, 245, 0.08) 0%, transparent 45%),
         radial-gradient(ellipse at 60% 90%, rgba(255, 107, 107, 0.05) 0%, transparent 40%);
     z-index: -1;
-    animation: backgroundMove 25s ease-in-out infinite;
-}
-
-@keyframes backgroundMove {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(-3%, -4%) scale(1.02); }
-    66% { transform: translate(3%, 2%) scale(0.98); }
 }
 
 .container {
@@ -144,24 +136,6 @@ body::before {
     background: var(--accent-gradient);
     border-radius: 1.3rem;
     z-index: -1;
-    animation: rotate 10s linear infinite;
-}
-
-.avatar::after {
-    content: '';
-    position: absolute;
-    inset: -6px;
-    background: var(--accent-gradient);
-    border-radius: 1.5rem;
-    z-index: -2;
-    opacity: 0.25;
-    animation: rotate 10s linear infinite reverse;
-    filter: blur(6px);
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 .avatar img {
@@ -498,7 +472,6 @@ body::before {
 .wordpress { background: linear-gradient(135deg, #70B7D4 0%, #4D9FBF 100%); }
 .twitter   { background: linear-gradient(135deg, #6BBBF5 0%, #4AA6EC 100%); }
 .bilibili  { background: linear-gradient(135deg, #FFA7C1 0%, #F87BA4 100%); }
-.tiktok    { background: linear-gradient(135deg, #4A4A4A 0%, #2D2D2D 100%); }
 .youtube   { background: linear-gradient(135deg, #FF6B6B 0%, #E84040 100%); }
 .wechat    { background: linear-gradient(135deg, #6BD39B 0%, #46BF80 100%); }
 .bitcoin   { background: linear-gradient(135deg, #F7931A 0%, #E07B0A 100%); }
