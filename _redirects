@@ -1,0 +1,2 @@
+# 裸域 301 到 www，避免搜索引擎重复收录（canonical 同时指向 www）
+https://xiaowuleyi.com/*  https://www.xiaowuleyi.com/:splat  301

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    background: linear-gradient(150deg, #F0F4FF 0%, #F8F9FC 40%, #F0FDF7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .glow {
+    position: absolute;
+    width: 900px; height: 900px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(107, 187, 245, 0.10) 0%, transparent 70%);
+    top: -300px; right: -200px;
+  }
+  .glow2 {
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(107, 211, 155, 0.10) 0%, transparent 70%);
+    bottom: -250px; left: -150px;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 0 90px;
+    position: relative;
+  }
+  .avatar-ring {
+    padding: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6BD39B 0%, #6BBBF5 50%, #FF6B6B 100%);
+    flex-shrink: 0;
+  }
+  .avatar {
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    display: block;
+    border: 10px solid #ffffff;
+    box-shadow: 0 20px 48px rgba(0,0,0,0.13);
+  }
+  .info h1 {
+    font-size: 96px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: 4px;
+    line-height: 1.15;
+  }
+  .info .role {
+    margin-top: 18px;
+    font-size: 40px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #374151 0%, #6B7280 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .info .tags {
+    margin-top: 22px;
+    font-size: 30px;
+    color: #6B7280;
+    letter-spacing: 1px;
+  }
+  .info .tags b { color: #2563EB; font-weight: 600; }
+  .info .quote {
+    margin-top: 14px;
+    font-size: 28px;
+    color: #9CA3AF;
+    letter-spacing: 1px;
+  }
+  .domain {
+    position: absolute;
+    bottom: 48px;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 28px;
+    color: #9CA3AF;
+    letter-spacing: 2px;
+  }
+  .domain b { color: #4B5563; font-weight: 600; }
+  .topbar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 10px;
+    background: linear-gradient(135deg, #6BD39B 0%, #6BBBF5 50%, #FF6B6B 100%);
+  }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="glow2"></div>
+  <div class="topbar"></div>
+  <div class="card">
+    <div class="avatar-ring"><img class="avatar" src="public/img/avatar.webp"></div>
+    <div class="info">
+      <h1>小吴乐意</h1>
+      <div class="role">哈勃未来创始人 · 比特币爱好者</div>
+      <div class="tags">关注 <b>Health · AI · Bitcoin</b></div>
+      <div class="quote">“未来的种子，深埋在过去。”</div>
+    </div>
+  </div>
+  <div class="domain"><b>www.xiaowuleyi.com</b></div>
+</body>
+</html>
