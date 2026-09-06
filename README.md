@@ -25,7 +25,7 @@
 ## SEO
 
 - 完整的 title / description，Open Graph 与 Twitter Card 分享卡（图：`public/og-image.jpg`，设计源文件为根目录 `og-template.html`，可用无头 Chrome 重新渲染：`chrome --headless --screenshot=public/og-image.png --window-size=1200,630 file://$(pwd)/og-template.html`）
-- `rel="canonical"` 指向 `https://www.xiaowuleyi.com/`，`_redirects` 将裸域 301 到 www（Cloudflare Pages）
+- `rel="canonical"` 指向 `https://www.xiaowuleyi.com/`；裸域 → www 的 301 需在 Cloudflare 控制台配置 Redirect Rule（`_redirects` 文件内有说明，Pages 的 `_redirects` 不支持带主机名的 source）
 - `robots.txt` 与 `sitemap.xml`（部署后请在 Google Search Console、Bing Webmaster Tools 提交站点与 sitemap）
 - schema.org `Person` + `WebSite` 结构化数据（JSON-LD）
 - 所有外链统一 `rel="noopener noreferrer"`，头像声明 `width/height` 减少布局偏移（CLS）

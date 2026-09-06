@@ -1,2 +1,7 @@
-# 裸域 301 到 www，避免搜索引擎重复收录（canonical 同时指向 www）
-https://xiaowuleyi.com/*  https://www.xiaowuleyi.com/:splat  301
+# 注意：Cloudflare Pages 的 _redirects source 仅支持路径（file path），
+# 不支持带主机名的跨域跳转，因此裸域 → www 的 301 需在
+# Cloudflare 控制台 → 规则 → Redirect Rules 添加：
+#   If: Hostname equals xiaowuleyi.com
+#   Then: Dynamic redirect → concat(https://www.xiaowuleyi.com, http.request.uri.path) ｜ 301
+# 搜索引擎去重由 index.html 的 rel="canonical"（指向 www）兜底。
+#https://xiaowuleyi.com/*  https://www.xiaowuleyi.com/:splat  301
