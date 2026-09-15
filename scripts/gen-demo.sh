@@ -57,7 +57,7 @@ cat > "$OUT/demo-videos.json" <<'JSON'
       "videos": [
         { "id": "demo-vertical", "title": "竖屏演示（MP4 直连）", "dir": "demo",
           "mp4": "/.demo/vertical.mp4", "poster": "", "orientation": "vertical",
-          "duration": 8, "tags": ["演示"], "tips": "这是本地生成的测试画面，用来验证播放器：双击左右可快退/快进 10 秒，长按可 2 倍速。", "status": "ready" },
+          "duration": 8, "tags": ["演示"], "tips": ["这是本地生成的测试画面，用来验证播放器：双击左右可快退/快进 10 秒，长按可 2 倍速。", { "t": 3, "text": "要点时间戳演示：点左边的时间芯片，直接跳到 3 秒" }], "status": "ready" },
         { "id": "demo-pending", "title": "占位示例（未上传）", "dir": "demo/pending",
           "hls": "", "poster": "", "orientation": "vertical", "duration": 0,
           "tags": ["占位"], "tips": "status=pending 时前端会显示优雅的「整理中」占位。", "status": "pending" }
@@ -80,7 +80,7 @@ cat > "$OUT/demo-videos.json" <<'JSON'
       "videos": [
         { "id": "demo-hls", "title": "横屏演示（HLS 分片）", "dir": "demo",
           "hls": "/.demo/hls/master.m3u8", "poster": "", "orientation": "horizontal",
-          "duration": 10, "tags": ["演示", "HLS"], "tips": ["这条走的是 hls.js 分片加载路径，进度条可以随意拖动。", "手机竖拍视频是 9:16 竖版，相机横拍是 16:9 横版，播放器都会自动适配。"], "status": "ready" }
+          "duration": 10, "tags": ["演示", "HLS"], "tips": ["这条走的是 hls.js 分片加载路径，进度条可以随意拖动。", { "t": 2, "text": "要点一：点击跳到 2 秒，看色条变化" }, { "t": 6, "text": "要点二：跳到 6 秒，精学某个片段就是这么快" }, "手机竖拍视频是 9:16 竖版，相机横拍是 16:9 横版，播放器都会自动适配。"], "status": "ready" }
       ]
     }
   ]

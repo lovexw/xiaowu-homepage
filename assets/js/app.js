@@ -84,6 +84,29 @@ const I = {
   seek10r: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 9A8.5 8.5 0 1012 20.5"/><path d="M19.5 4v5h-5"/></svg>'
 };
 
+/* ---------- 继续观看（localStorage 进度） ---------- */
+function collectContinue() {
+  const out = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    if (!k || !k.startsWith('fitv:prog:')) continue;
+    let p; try { p = JSON.parse(localStorage.getItem(k)); } catch { continue; }
+    if (!p || !p.at || !p.t || !p.d) continue;
+    const { v } = findVideo(k.slice('fitv:prog:'.length));
+    if (!v || v.status !== 'ready') continue;
+    out.push({ v, p, pct: Math.min(1, p.t / p.d) });
+  }
+  return out.sort((a, b) => b.p.at - a.p.at).slice(0, 6);
+}
+
+function ago(ts) {
+  const s = (Date.now() - ts) / 1000;
+  if (s < 60) return '刚刚';
+  if (s < 3600) return Math.floor(s / 60) + ' 分钟前';
+  if (s < 86400) return Math.floor(s / 3600) + ' 小时前';
+  return Math.floor(s / 86400) + ' 天前';
+}
+
 /* ============================================================
    视图：首页
    ============================================================ */
@@ -118,6 +141,26 @@ function renderHome() {
 
   const chips = m.categories.map(c => `<a class="chip" href="#/c/${esc(c.id)}">${esc(c.name)}</a>`).join('');
 
+  const cw = collectContinue();
+  const cwHTML = cw.length ? `
+    <section class="cw">
+      <div class="cw-head">
+        <div class="cw-title">▶ 继续观看</div>
+        <button class="cw-clear" data-cwclear>清空记录</button>
+      </div>
+      <div class="cw-scroll">
+        ${cw.map((x, i) => `
+        <a class="cw-card" style="--i:${i}" href="#/v/${esc(x.v.id)}">
+          <div class="cw-thumb">${x.v.poster ? `<img loading="lazy" src="${esc(mediaUrl(x.v, x.v.poster))}" alt="">` : '▶'}</div>
+          <div class="cw-bar"><i style="width:${(x.pct * 100).toFixed(1)}%"></i></div>
+          <div class="cw-body">
+            <div class="cw-t">${esc(x.v.title)}</div>
+            <div class="cw-sub">${ago(x.p.at)} · 剩余 ${fmtTime(Math.max(0, x.p.d - x.p.t))}</div>
+          </div>
+        </a>`).join('')}
+      </div>
+    </section>` : '';
+
   return `
     <header class="topbar">
       <div class="logo-mark">${I.logo}</div>
@@ -131,6 +174,7 @@ function renderHome() {
       <p>手机优先 · 循环播放 · 滑动进度精学每个细节</p>
     </div>
     <nav class="chips">${chips}</nav>
+    ${cwHTML}
     ${groups}
     <footer class="foot">FitLab · 本地视频库 · Cloudflare Pages + R2<br><b>向着更好的自己 💪</b></footer>`;
 }
@@ -254,6 +298,17 @@ function render() {
 
   if (r.name === 'home') {
     view.innerHTML = renderHome();
+    const clearBtn = view.querySelector('[data-cwclear]');
+    if (clearBtn) clearBtn.addEventListener('click', () => {
+      const kill = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith('fitv:prog:')) kill.push(k);
+      }
+      kill.forEach(k => localStorage.removeItem(k));
+      toast('已清空观看记录');
+      render();
+    });
   } else if (r.name === 'category') {
     view.innerHTML = renderCategory(r.id);
   } else {
@@ -270,6 +325,10 @@ function boot() {
     b.className = 'demo-banner';
     b.textContent = 'DEMO 演示模式';
     document.body.appendChild(b);
+  }
+  // PWA 离线壳（https 或 localhost 下注册，失败静默）
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || ['localhost', '127.0.0.1'].includes(location.hostname))) {
+    addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => { }));
   }
   loadManifest()
     .then(m => { App.manifest = m; render(); })

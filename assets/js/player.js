@@ -35,6 +35,14 @@ const fmtT = (t) => {
 const RATES = [0.5, 0.75, 1, 1.25, 1.5, 2];
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
+/* 要点：字符串直接渲染；{t, text} 渲染成可点击的时间戳芯片 */
+function tipItem(t) {
+  if (t && typeof t === 'object' && isFinite(t.t)) {
+    return `<li><button class="tip-jump" data-t="${Number(t.t)}">⏱ ${fmtT(Number(t.t))}</button><span>${esc(t.text || '')}</span></li>`;
+  }
+  return `<li>${esc(t)}</li>`;
+}
+
 class FitPlayer {
   /**
    * @param {HTMLElement} root  挂载容器（.view）
@@ -146,7 +154,7 @@ class FitPlayer {
           ${tips.length ? `
           <div class="tips-card">
             <div class="tips-h">${I.info} 动作要领</div>
-            <ul>${tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+            <ul>${tips.map(tipItem).join('')}</ul>
           </div>` : ''}
         </div>
 
@@ -165,6 +173,10 @@ class FitPlayer {
         </div>
       </div>`;
 
+    // 科目主色（时间戳芯片等使用）
+    const shell = this.root.querySelector('.player-shell');
+    if (shell) shell.style.setProperty('--cat', cat.accent || '#ff5a3c');
+
     // 收集 DOM 引用
     this.ui = {};
     this.root.querySelectorAll('[data-ref]').forEach(el => {
@@ -174,8 +186,18 @@ class FitPlayer {
     this.video = this.ui.video;
     this.video.defaultMuted = true;
 
-    // 点击行为代理（芯片/按钮）
+    // 点击行为代理（芯片/按钮/要点时间戳）
     this.root.addEventListener('click', e => {
+      const jump = e.target.closest('.tip-jump');
+      if (jump) {
+        const t = parseFloat(jump.getAttribute('data-t')) || 0;
+        this.seekTo(t);
+        if (this.video.paused || this.video.ended) this.play();
+        try { this.ui.stage.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch { window.scrollTo(0, 0); }
+        this.stageUI(true);
+        toast('⏱ 已跳到 ' + fmtT(t));
+        return;
+      }
       const btn = e.target.closest('[data-act]');
       if (!btn) return;
       const act = btn.getAttribute('data-act');
@@ -544,11 +566,12 @@ class FitPlayer {
     }
   }
 
+  play() { const p = this.video.play(); return p && p.catch ? p.catch(() => { }) : p; }
   togglePlay() {
     if (this.pending) { toast('视频还没上传哦'); return; }
     if (this.video.paused || this.video.ended) {
       if (this.video.ended) this.video.currentTime = 0;
-      this.video.play().catch(() => { });
+      this.play();
     } else {
       this.video.pause();
       this.stageUI(true);
@@ -571,7 +594,8 @@ class FitPlayer {
   maybeResume() {
     const p = Store.get('prog:' + this.entry.id, null);
     if (!p || !isFinite(this.video.duration)) return;
-    if (p.t > 30 && p.t < this.video.duration - 12) {
+    const min = Math.min(30, this.video.duration * 0.15);
+    if (p.t > min && p.t < this.video.duration - 3) {
       this.ui.resumePill.textContent = '▶ 从 ' + fmtT(p.t) + ' 继续播放';
       this.showPill(this.ui.resumePill, 6000);
     }
@@ -581,12 +605,14 @@ class FitPlayer {
     const now = Date.now();
     if (!force && now - this.saveTick < 3000) return;
     this.saveTick = now;
-    const d = this.video.duration;
+    const v = this.video, d = v.duration, t = v.currentTime;
     if (!isFinite(d) || !d) return;
-    if (this.video.currentTime > 5 && this.video.currentTime < d - 5) {
-      Store.set('prog:' + this.entry.id, { t: this.video.currentTime, d, at: now });
-    } else if (this.video.currentTime <= 5) {
-      localStorage.removeItem('fitv:prog:' + this.entry.id);
+    const key = 'fitv:prog:' + this.entry.id;
+    if (t > 3 && t < d - 2) {
+      Store.set('prog:' + this.entry.id, { t, d, at: now });
+    } else if (t >= d - 2 || t <= 3) {
+      // 刚开播或接近看完：清掉记录，避免「继续观看」里留无效条目
+      try { localStorage.removeItem(key); } catch { }
     }
   }
 
