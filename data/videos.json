@@ -1,0 +1,140 @@
+{
+  "_readme": [
+    "这是全站唯一的视频清单：页面上展示什么、每个视频对应 R2 哪个目录，都由这里决定。",
+    "添加视频的三步：① 用 scripts/add-video.sh 把切片传到 R2；② 在对应科目的 videos 里加一条记录；③ git push（或 npm run deploy）。",
+    "视频文件默认通过本站的 /media/ 代理读取 R2 桶 fitlab-videos（见 functions/media/[[path]].js）；如果你给 R2 绑定了公开自定义域名，可填到 cdnBaseUrl 直接走 CDN。",
+    "hls: 指向目录里的 m3u8 文件名（如 master.m3u8）；mp4: 也可直接放 mp4 文件名，两者至少填一个，m3u8 优先。",
+    "orientation: vertical=竖版(9:16)，horizontal=横版(16:9)，决定封面与播放器的展示比例。",
+    "status: ready=已上传可播放，pending=占位（前端会显示「整理中」的优雅占位卡片）。",
+    "duration: 秒数（add-video.sh 会帮你算好），用于卡片角标。",
+    "tips: 动作要领，展示在播放页下方，支持字符串数组（多条要点）或一个字符串。"
+  ],
+  "version": 1,
+  "updatedAt": "2026-09-15",
+  "cdnBaseUrl": "",
+  "groups": [
+    { "id": "cardio",   "name": "有氧",     "nameEn": "CARDIO",   "icon": "🔥", "accent": "#ff7a45" },
+    { "id": "strength", "name": "力量训练", "nameEn": "STRENGTH", "icon": "💪", "accent": "#7c5cff" }
+  ],
+  "categories": [
+    {
+      "id": "treadmill",
+      "groupId": "cardio",
+      "name": "走步机",
+      "icon": "🚶",
+      "accent": "#ff9f43",
+      "dir": "cardio/treadmill",
+      "description": "走步机有氧跟练：边看边走，节奏同步",
+      "videos": [
+        {
+          "id": "walk-basics-20",
+          "title": "20 分钟基础快走",
+          "dir": "cardio/treadmill/walk-basics-20",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "vertical",
+          "duration": 0,
+          "tags": ["入门", "低强度"],
+          "tips": "全程保持核心收紧，落地从脚跟到脚掌滚动，跟随节奏即可。",
+          "status": "pending"
+        },
+        {
+          "id": "walk-incline-fatburn",
+          "title": "坡度燃脂走",
+          "dir": "cardio/treadmill/walk-incline-fatburn",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "vertical",
+          "duration": 0,
+          "tags": ["燃脂", "坡度"],
+          "tips": "坡度 6-8，速度 5.0-5.5km/h，全程不扶扶手效果更好。",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "swimming",
+      "groupId": "cardio",
+      "name": "游泳",
+      "icon": "🏊",
+      "accent": "#2f9bff",
+      "dir": "cardio/swimming",
+      "description": "泳姿分解与配合练习，陆上先学、下水再练",
+      "videos": [
+        {
+          "id": "freestyle-kick",
+          "title": "自由泳打腿分解",
+          "dir": "cardio/swimming/freestyle-kick",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "vertical",
+          "duration": 0,
+          "tags": ["自由泳", "打腿"],
+          "tips": "大腿带小腿，脚踝放松鞭状打水，膝盖微屈不出水面。",
+          "status": "pending"
+        },
+        {
+          "id": "breath-drill",
+          "title": "换气节奏练习",
+          "dir": "cardio/swimming/breath-drill",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "vertical",
+          "duration": 0,
+          "tags": ["换气"],
+          "tips": "转头不要抬头，嘴角贴水面吸气，吐气在水下完成。",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "strength",
+      "groupId": "strength",
+      "name": "力量训练",
+      "icon": "🏋️",
+      "accent": "#ff4d6d",
+      "dir": "strength",
+      "description": "器械动作库：每个动作一条视频，跟着学标准轨迹",
+      "videos": [
+        {
+          "id": "pec-deck-fly",
+          "title": "蝴蝶机夹胸",
+          "dir": "strength/pec-deck-fly",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "horizontal",
+          "duration": 0,
+          "tags": ["胸", "中束"],
+          "tips": [
+            "坐姿调好：把手与肩同高或略低，背部贴紧靠背。",
+            "肘部微屈锁定角度，用胸发力向内夹，想象抱住一棵大树。",
+            "顶点停顿 1 秒挤压胸肌，回放要慢（2-3 秒），不要让配重砸回去。"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "seated-db-press",
+          "title": "坐姿哑铃肩推",
+          "dir": "strength/seated-db-press",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "horizontal",
+          "duration": 0,
+          "tags": ["肩", "三角肌"],
+          "tips": [
+            "腰背贴紧靠背，双脚踩实，核心收紧防止塌腰。",
+            "起始位哑铃在耳朵两侧，推起时不要完全锁死肘关节。",
+            "下放到大臂平行或略低即可，全程小臂垂直地面。"
+          ],
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}

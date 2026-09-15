@@ -1,0 +1,14 @@
+{
+  "name": "FitLab 健身视频库",
+  "short_name": "FitLab",
+  "description": "个人健身教学视频库：有氧 · 力量训练，移动优先",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f6fa",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

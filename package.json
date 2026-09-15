@@ -1,0 +1,13 @@
+{
+  "name": "fitlab-videos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FitLab 健身视频库：静态站点 + Cloudflare Pages + R2 视频分发",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "demo": "bash scripts/gen-demo.sh && python3 -m http.server 8080",
+    "deploy": "wrangler pages deploy . --project-name fitlab-videos",
+    "video": "bash scripts/add-video.sh",
+    "log": "bash scripts/gen-demo.sh"
+  }
+}

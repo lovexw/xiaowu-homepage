@@ -1,0 +1,9 @@
+# Cloudflare Pages 项目配置（wrangler 4.x 支持用 wrangler.toml 管理 Pages）
+name = "fitlab-videos"
+pages_build_output_dir = "."
+compatibility_date = "2025-05-05"
+
+# R2 存储桶绑定：前端通过 /media/* 由 functions/media/[[path]].js 读取本桶
+[[r2_buckets]]
+binding = "VIDEO_BUCKET"
+bucket_name = "fitlab-videos"
