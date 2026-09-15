@@ -85,10 +85,11 @@ ok "封面 → poster.jpg"
 
 # ---------- 3) 上传 R2 ----------
 say "3/4 上传到 R2 桶 [$BUCKET] 的 $VDIR/ …"
-r2put() { # $1=远端key $2=本地文件
-  if $WR r2 object put "$BUCKET/$1" --file "$2" --content-type "$3" >/dev/null 2>&1; then return 0; fi
+r2put() { # $1=远端key $2=本地文件 $3=Content-Type
+  # 注意：项目目录里有 wrangler.toml 时，wrangler 4.x 默认写"本地模拟桶"，
+  # 必须显式 --remote 才真正上传到 R2，因此 --remote 优先。
+  if $WR r2 object put "$BUCKET/$1" --file "$2" --content-type "$3" --remote >/dev/null 2>&1; then return 0; fi
   if $WR r2 object put "$BUCKET/$1" --file "$2" >/dev/null 2>&1; then return 0; fi
-  if $WR r2 object put "$BUCKET/$1" --file "$2" --remote >/dev/null 2>&1; then return 0; fi
   return 1
 }
 N=0

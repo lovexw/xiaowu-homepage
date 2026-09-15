@@ -177,5 +177,6 @@ Public Development URL 或绑定自定义域名（如 `cdn.yourdomain.com`），
 | 手机上进度条拖不动 | 用的是网页缓存旧版 → 强制刷新；仍异常请开 issue 反馈 |
 | 视频能放但没声音 | 跟学默认静音自动播放（浏览器策略），点播放器上的 🔊 开声音 |
 | 上传报 wrangler 未登录 | `npx wrangler login` |
+| 上传"成功"但线上 404 | wrangler 在项目目录里默认写本地模拟桶，必须加 `--remote`（脚本已内置，勿改） |
 | 切片很慢 | 把 `-preset medium` 改成 `-preset fast`（体积略增） |
 | 想删视频 | 先在 R2 控制台删 `dir` 目录，再删清单里的条目并 push |
