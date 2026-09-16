@@ -7,7 +7,8 @@
 
 ## ✨ 特性
 
-- 📱 **移动优先**：竖版 9:16 / 横版 16:9 视频自适应，iPhone 安全区适配，可「添加到主屏幕」当 App 用
+- 📱 **移动优先**：**默认一律竖屏 9:16**（横版 16:9 需明确指定），iPhone 安全区适配，可「添加到主屏幕」当 App 用
+- 🧘 **简洁优雅**：无描边、无光晕、无多余装饰的干净卡片风
 - 🔁 **跟学友好**：进入即静音循环播放、双击 ±10s、长按 2 倍速、0.5~2.0 变速、连播模式
 - 🕐 **继续观看**：首页自动记录上次看到的位置，一键续播（看完自动清掉）
 - 🎯 **要点时间戳**：tips 支持 `{t: 秒, text}`，渲染成时间芯片，点击直达对应片段
@@ -40,6 +41,7 @@ fitlab-videos/
 ├── scripts/
 │   ├── add-video.sh            # ★ 一条龙：切片→封面→上传R2→输出清单片段
 │   └── gen-demo.sh             # 生成本地演示资源
+├── .github/workflows/deploy.yml # push main 自动部署到 Cloudflare Pages（需配密钥）
 ├── docs/
 │   ├── WORKFLOW.md             # ★ 视频上传全流程指南
 │   └── PROGRESS.md             # ★ 项目进度日志 / 断点记录
@@ -50,8 +52,8 @@ fitlab-videos/
 ## 🎬 添加一个视频（3 步）
 
 ```bash
-# 1. 切片并上传到 R2（自动压缩、生成封面、输出清单片段）
-./scripts/add-video.sh ~/Movies/pec.mp4 strength pec-deck-fly "蝴蝶机夹胸" horizontal
+# 1. 切片并上传到 R2（自动压缩、生成封面、输出清单片段；不填方向默认竖屏 9:16）
+./scripts/add-video.sh ~/Movies/pec.mp4 strength pec-deck-fly "蝴蝶机夹胸" vertical
 
 # 2. 把输出的 JSON 片段粘进 data/videos.json 对应科目的 videos 里
 
@@ -74,7 +76,10 @@ Cloudflare R2 桶 fitlab-videos
         └── cardio/treadmill/... · cardio/swimming/... · strength/...
 ```
 
-- **部署方式 A（推荐）**：GitHub 仓库 → Cloudflare Pages「连接 Git」→ 每次 push 自动部署
+- **部署方式 A（已就绪，推荐）**：GitHub Actions 自动部署——仓库 `.github/workflows/deploy.yml` 会在每次 push main 时执行 `wrangler pages deploy`。一次性配置两个密钥（仓库 Settings → Secrets and variables → Actions）：
+  - `CLOUDFLARE_API_TOKEN`：Cloudflare 控制台 → API Tokens → 「Edit Cloudflare Workers」模板创建（含 Pages 权限）
+  - `CLOUDFLARE_ACCOUNT_ID`：账户 ID（`wrangler whoami` 可查）
+  - 未配置时工作流自动跳过部署，保持绿色
 - **部署方式 B**：本地 `npm run deploy` 直接上传
 - R2 绑定名必须是 `VIDEO_BUCKET`（见 `wrangler.toml`）
 

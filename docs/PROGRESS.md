@@ -9,12 +9,13 @@
 
 | 项 | 状态 |
 |---|---|
-| 更新日期 | 2026-09-15 |
-| 当前阶段 | **v0.2.0 增强版已上线**（继续观看/时间戳/PWA 壳；仍为占位数据，等待真实视频） |
+| 更新日期 | 2026-09-16 |
+| 当前阶段 | **v0.2.2 已上线**（首条真实视频《蝴蝶机夹胸》可播；全站默认竖屏 9:16；简洁化改版） |
 | 线上地址 | https://fitlab-videos.pages.dev |
 | 演示模式 | https://fitlab-videos.pages.dev/?demo=1 （内置测试视频，验证播放器用） |
-| 部署方式 | Cloudflare Pages 直传（`npm run deploy`），R2 绑定 `VIDEO_BUCKET` 已生效 |
-| GitHub | ❌ **尚未推送**（gh 未登录，见「断点与下一步」第 1 条） |
+| 部署方式 | Cloudflare Pages 直传（`npm run deploy`）+ **GitHub Actions 工作流已就绪**（等 API Token 密钥后即全自动） |
+| GitHub | ✅ 已推送 https://github.com/lovexw/fitlab-videos （main 分支） |
+| R2 | ✅ 桶 `fitlab-videos`，`strength/pec-deck-fly/`（m3u8 + 18 分片 + 封面）已在线可播 |
 | 本地预览 | `python3 -m http.server 8080` 或 `npm run demo`（演示数据） |
 
 ---
@@ -48,6 +49,19 @@
 - [x] `scripts/gen-demo.sh`：生成本地演示视频（竖版 MP4 / 横版 HLS / 占位条目）
 - [x] R2 端到端链路验证：上传 → `https://fitlab-videos.pages.dev/media/<key>` 可读 → 删除 ✓
 
+### 真实视频上线 + v0.2.1/v0.2.2（2026-09-16）
+- [x] 《蝴蝶机夹胸》端到端上架：原片 1080×1920 竖屏 103s → `add-video.sh` 切片（18 分片）+ 封面 → 上传 R2 → 清单 `status: ready`，附 10 条**可点击时间戳要点**（调座椅→全握→抱树发力→慢还原→上胸/下胸变式）
+- [x] 生产链路验证：`/media/strength/pec-deck-fly/` 的 m3u8 / 分片 / 封面全部 200
+- [x] **全站默认竖屏 9:16**：清单内全部条目 `orientation: vertical`；`add-video.sh` 与 WORKFLOW.md 明确「无特殊说明一律竖屏」
+- [x] **简洁化改版**：删除方向徽章、图标 inset 描边圈、桌面 1px 边框、卡片装饰圆斑、按钮粉紫光晕；`.more-card.now` 改淡色描边
+- [x] **修复播放器模糊遮挡**：`.backdrop`（封面虚化层）在无 z-index 时按绘制顺序压在 video 上层，真实视频有封面后首次暴露；`video { position:relative; z-index:1 }` 提层修复（v0.2.2）
+- [x] GitHub 仓库已推送；新增 `.github/workflows/deploy.yml`（push main → wrangler pages deploy，密钥未配置时自动跳过保持绿色）
+- [x] 修复 `add-video.sh` 在 macOS 自带 bash 3.2 + C locale 下 `$TITLE` 紧贴全角字符报 unbound variable 的问题（改用 printf 注入）
+
+### 测试记录（2026-09-16，IAB 1280×720 视口，生产环境）
+- [x] 播放页 9:16 竖屏渲染正常、画面清晰无遮挡（截图验证）、时间戳要点芯片正常显示
+- [x] GitHub Actions 两次推送运行成功（未配置密钥 → 按设计跳过部署）
+
 ### 测试记录（2026-09-15，IAB WebKit 内核 390×844 视口）
 - [x] 首页/科目页/播放页渲染正常，真实清单占位态美观
 - [x] 演示视频（横版 HLS、竖版 MP4）自动静音播放、循环开启
@@ -61,25 +75,26 @@
 1. **wrangler 4.x 在含 wrangler.toml 的目录里，`r2 object put` 默认写本地模拟桶**（`--remote` 才真正上传）。已在 `add-video.sh` 的 `r2put()` 里内置 `--remote` 优先，别改回去。
 2. **CSS 类选择器会覆盖 HTML `hidden` 属性**（`.center-layer{display:grid}` 干掉 `[hidden]` 的 display:none），需要显式写 `.center-layer[hidden]{display:none}`。已修复，新增浮层时注意。
 3. iOS 播放策略：自动播放必须 `muted + playsinline`；全屏用 `video.webkitEnterFullscreen()`（仅用户手势内可调）。
-4. Cloudflare Pages **直传项目不能事后改成 Git 连接**。当前是直传；若以后想 GitHub 自动部署，需删除 Pages 项目重建（见下）。
+4. Cloudflare Pages **直传项目不能事后改成 Git 连接**（官方文档只支持创建时连接）。所以自动部署走 **GitHub Actions → `wrangler pages deploy`**（仓库里 `.github/workflows/deploy.yml` 已就绪），不要尝试删项目重建来换原生 Git 集成（`fitlab-videos.pages.dev` 子域名有被回收的风险）。
+5. **`.stage` 内部的层叠顺序**：`position:absolute` 的装饰层（如封面虚化 `.backdrop`）会绘制在未定位的 `video` 之上——给视频加 `position:relative; z-index:1` 才不会被遮挡。新增 stage 内浮层时注意 z-index 层级表（video 1 / 控件 5-6 / 浮层 7 / 居中层 8）。
+6. **macOS 自带 bash 3.2 + C locale**：`"$VAR"` 后紧贴中文全角字符（如 `$TITLE》`）会把多字节字符并入变量名，报 `VAR: unbound variable`。脚本里凡变量后接中文，一律用 `printf '%s'` 注入。
 
 ---
 
 ## 📍 断点与下一步（按优先级）
 
-1. **推送 GitHub**（用户动作，约 2 分钟）：
-   ```bash
-   gh auth login                       # 选 GitHub.com → HTTPS → 浏览器登录
-   gh repo create fitlab-videos --private --source=. --push
-   ```
-   推上去之后若想要 push 自动部署：Cloudflare 控制台 → Workers & Pages → 删除现在的
-   `fitlab-videos` 项目 → 重新 Create → 连接 Git 仓库（构建命令留空、输出目录 `/`），
-   再在 Functions 设置里把 R2 绑定 `VIDEO_BUCKET` 指到桶 `fitlab-videos`
-   （或保留 wrangler.toml，新部署会自动带绑定）。**不删项目也行**，继续用 `npm run deploy` 手动部署。
+1. **打通 GitHub 自动部署**（用户动作，唯一剩余步骤）：
+   `.github/workflows/deploy.yml` 已就位，只差两个仓库密钥：
+   - Cloudflare 控制台 → My Profile → API Tokens → Create Token → 模板「Edit Cloudflare Workers」（含 Pages: Edit）→ 创建并复制
+   - 配置密钥（或把 Token 交给 AI 处理）：
+     ```bash
+     gh secret set CLOUDFLARE_API_TOKEN -R lovexw/fitlab-videos   # 粘贴 Token
+     gh secret set CLOUDFLARE_ACCOUNT_ID -R lovexw/fitlab-videos  # edbcf0ec7c3ee185334d13d9077ef6e9
+     ```
+   配好后任意 `git push` 即自动部署；也可在 Actions 页面手动 Run workflow 验证。
 
-2. **上传真实视频**：完全按 `docs/WORKFLOW.md` 第 2~3 节操作（一条命令 + 粘 30 秒清单）。
-   建议顺序：先传力量训练两条（蝴蝶机夹胸 `strength/pec-deck-fly`、坐姿哑铃肩推
-   `strength/seated-db-press`），替换对应 pending 条目。
+2. **继续上传视频**：按 `docs/WORKFLOW.md` 操作（一条命令 + 粘 30 秒清单）。
+   待传：坐姿哑铃肩推 `strength/seated-db-press`、走步机两条 `cardio/treadmill/*`、游泳两条 `cardio/swimming/*`（均为竖屏 9:16）。
 
 3. **待办（增强，非阻塞）**：
    - [ ] 多码率 HLS（现单码率 720p；手机流量够用，桌面想更高清再加 1080p rendition）
@@ -99,6 +114,18 @@
 - **不要**给 manifest 里的视频加跨域属性（同域代理无跨域）；若切到 R2 公开域名模式，记得配 `r2-cors.json` 并把 `cdnBaseUrl` 填上。
 
 ## 📝 变更日志
+
+### 2026-09-16 · v0.2.2
+- 修复：播放器封面虚化背景层（`.backdrop`）绘制在视频上层，导致真实视频播放时有「一层模糊遮挡」——`video` 提升 `position:relative; z-index:1`（背景层此前从未被触发：占位视频无封面，首条真实视频上线才暴露）
+- 版本号 bump：`index.html` / `sw.js` → `?v=0.2.2`
+
+### 2026-09-16 · v0.2.1
+- 上架首条真实视频：《蝴蝶机夹胸》（`strength/pec-deck-fly`，103s 竖屏 HLS + 封面 + 10 条时间戳要点，`status: ready`）
+- 全站规则：**无特殊说明一律竖屏 9:16**——清单两条力量视频 `horizontal → vertical`；`add-video.sh` 与 `WORKFLOW.md` 默认值/示例/说明同步
+- 简洁化改版：移除播放页方向徽章、`.group-badge`/`.cat-ico`/`.tip-jump` 的 inset 描边、`.cat-card::after` 装饰圆斑、桌面 `.app` 1px 边框、各渐变按钮光晕阴影
+- 修复：`add-video.sh` 在 bash 3.2 + C locale 下 `$TITLE` 后接全角字符报 unbound variable（改 printf 注入）
+- 新增：`.github/workflows/deploy.yml`（push main 自动 `wrangler pages deploy`；密钥未配置时跳过）
+- GitHub 仓库建立并推送：https://github.com/lovexw/fitlab-videos
 
 ### 2026-09-15 · v0.2.0
 - 新增：首页「继续观看」（localStorage 进度驱动，含进度条/剩余时间/刚刚，支持一键清空）
