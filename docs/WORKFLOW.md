@@ -26,7 +26,7 @@ npx wrangler r2 bucket create fitlab-videos
 
 | 项目 | 建议 |
 |---|---|
-| 方向 | 手机**竖拍 = 竖版 9:16**，横拍 = 横版 16:9，网站两种都完美支持 |
+| 方向 | **默认一律竖屏 9:16**（手机竖拍）；确有横版素材再单独说明，两种比例网站都支持 |
 | 时长 | 单个动作 30 秒～3 分钟最佳；长有氧课可以整条传 |
 | 文件 | 相机原片直接给脚本即可，脚本会自动压缩到最长边 720/1280 |
 | 命名 | 源文件随意，**视频 ID**（如 `pec-deck-fly`）用小写英文+中划线 |
@@ -41,10 +41,12 @@ npx wrangler r2 bucket create fitlab-videos
 ./scripts/add-video.sh <本地视频> <R2目录> <视频ID> "<标题>" [vertical|horizontal|auto] [--push]
 ```
 
+> 方向参数**不填默认 vertical（竖屏 9:16）**，和站内规则一致；横版素材才需要显式传 horizontal。
+
 真实例子——上传「蝴蝶机夹胸」：
 
 ```bash
-./scripts/add-video.sh ~/Movies/pec-deck.mp4 strength pec-deck-fly "蝴蝶机夹胸" horizontal
+./scripts/add-video.sh ~/Movies/pec-deck.mp4 strength pec-deck-fly "蝴蝶机夹胸" vertical
 ```
 
 上传「走步机」竖版视频：
@@ -92,7 +94,7 @@ fitlab-videos/
   "hls": "master.m3u8",               ← m3u8 文件名
   "mp4": "",
   "poster": "poster.jpg",
-  "orientation": "horizontal",        ← 竖版改 vertical
+  "orientation": "vertical",          ← 默认竖屏 9:16（横版素材才填 horizontal）
   "duration": 95,                     ← 秒数（脚本已算好）
   "tags": ["胸", "中束"],
   "tips": ["动作要领第一条", "第二条"],
@@ -104,9 +106,9 @@ fitlab-videos/
 
 | 字段 | 说明 |
 |---|---|
-| `dir` | R2 里的目录，前端按 `<cdnBaseUrl>/media/<dir>/<文件>` 取文件 |
+| `dir` | R2 里的目录，前端按 `<cdnBaseUrl>/media/<dir>/<file>` 取文件 |
 | `hls` / `mp4` | 至少填一个；都有时 m3u8 优先（省流量、可拖动快） |
-| `orientation` | `vertical`(9:16) / `horizontal`(16:9)，决定封面与播放器比例 |
+| `orientation` | 默认 `vertical`(9:16)；仅横版素材填 `horizontal`(16:9) |
 | `duration` | 秒，卡片角标显示；填 0 则不显示 |
 | `tips` | 字符串或字符串数组，显示在播放页「动作要领」卡片 |
 | `status` | `ready` 可播放 / `pending` 显示优雅占位卡片 |

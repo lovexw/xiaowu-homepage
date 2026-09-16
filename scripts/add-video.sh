@@ -6,10 +6,10 @@
 #   ./scripts/add-video.sh <本地视频> <R2目录> <视频ID> <标题> [orientation] [--push]
 #
 # 示例:
-#   ./scripts/add-video.sh ~/Movies/pec.mp4 strength pec-deck-fly "蝴蝶机夹胸" horizontal
-#   ./scripts/add-video.sh ~/walk.mov cardio/treadmill walk-basics-20 "20分钟基础快走" vertical --push
+#   ./scripts/add-video.sh ~/Movies/pec.mp4 strength pec-deck-fly "蝴蝶机夹胸" vertical
+#   ./scripts/add-video.sh ~/walk.mov cardio/treadmill walk-basics-20 "20分钟基础快走" --push
 #
-# orientation: vertical(竖版9:16，默认) | horizontal(横版16:9) | auto(自动检测)
+# orientation: vertical(竖版9:16，默认，站内一律默认竖屏) | horizontal(横版16:9) | auto(自动检测)
 # --push:      上传成功后自动 git commit + push（触发 Cloudflare 自动部署）
 #
 # 依赖: ffmpeg / wrangler（没有则自动用 npx 拉起）/ git(可选)
@@ -136,13 +136,16 @@ echo ""
 echo "$SNIPPET"
 echo ""
 echo "3. 提交并推送（或用 npm run deploy 手动部署）:"
-echo "   git add -A && git commit -m \"video: 上传《$TITLE》\" && git push"
+# 注意：$TITLE 后紧贴中文全角字符时，旧版 bash(3.2)+C locale 会把多字节字符并入变量名
+# 导致 "TITLE: unbound variable"，因此用 printf 以 %s 注入标题。
+printf '   git add -A && git commit -m "video: 上传《%s》" && git push\n' "$TITLE"
 
 if [[ "$PUSH" == "1" ]]; then
   say "自动提交并推送…"
   cd "$ROOT"
   git add -A
-  git commit -m "video: 上传《$TITLE》($VID)" || ok "没有可提交的变更"
+  COMMIT_MSG=$(printf 'video: 上传《%s》(%s)' "$TITLE" "$VID")
+  git commit -m "$COMMIT_MSG" || ok "没有可提交的变更"
   git push && ok "已推送，Cloudflare 正在自动部署"
 fi
 

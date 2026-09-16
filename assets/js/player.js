@@ -142,7 +142,6 @@ class FitPlayer {
         <div class="p-info">
           <div class="p-title-row">
             <h1>${esc(v.title || '')}</h1>
-            <span class="p-orient">${vertical ? '竖屏 9:16' : '横屏 16:9'}</span>
           </div>
           ${cat.name ? `<div class="p-desc">${esc(cat.icon || '')} ${esc(cat.name)}${cat.description ? ' · ' + esc(cat.description) : ''}</div>` : ''}
           <div class="p-chips">
