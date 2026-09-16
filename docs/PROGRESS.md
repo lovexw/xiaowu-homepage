@@ -10,12 +10,12 @@
 | 项 | 状态 |
 |---|---|
 | 更新日期 | 2026-09-16 |
-| 当前阶段 | **v0.2.3 已上线**（播放页常驻返回/首页导航；第二条真实视频《坐姿哑铃肩推》可播） |
+| 当前阶段 | **v0.2.3 已上线**（播放页常驻返回/首页导航；第三条真实视频《高位下拉》可播） |
 | 线上地址 | https://fitlab-videos.pages.dev |
 | 演示模式 | https://fitlab-videos.pages.dev/?demo=1 （内置测试视频，验证播放器用） |
-| 部署方式 | Cloudflare Pages 直传（`npm run deploy`）+ **GitHub Actions 工作流已就绪**（等 API Token 密钥后即全自动） |
+| 部署方式 | Cloudflare Pages 直传（`npm run deploy`）+ **GitHub Actions 工作流已就绪**（等 API Token 密钥后即全自动；密钥仍未配置，Actions 目前跳过部署，改清单后需本地 `npm run deploy`） |
 | GitHub | ✅ 已推送 https://github.com/lovexw/fitlab-videos （main 分支） |
-| R2 | ✅ 桶 `fitlab-videos`：`strength/pec-deck-fly/`、`strength/seated-db-press/`（各 m3u8 + 分片 + 封面）均在线可播 |
+| R2 | ✅ 桶 `fitlab-videos`：`strength/pec-deck-fly/`、`strength/seated-db-press/`、`strength/lat-pulldown/`（各 m3u8 + 分片 + 封面）均在线可播 |
 | 本地预览 | `python3 -m http.server 8080` 或 `npm run demo`（演示数据） |
 
 ---
@@ -103,7 +103,7 @@
 
 2. **继续上传视频**：按 `docs/WORKFLOW.md` 操作（一条命令 + 粘 30 秒清单）。
    待传：走步机两条 `cardio/treadmill/*`、游泳两条 `cardio/swimming/*`（均为竖屏 9:16）。
-   （《坐姿哑铃肩推》已于 2026-09-16 上架 ✓）
+   （《坐姿哑铃肩推》已于 2026-09-16 上架 ✓；《高位下拉》已于 2026-09-16 上架 ✓）
 
 3. **待办（增强，非阻塞）**：
    - [ ] 多码率 HLS（现单码率 720p；手机流量够用，桌面想更高清再加 1080p rendition）
@@ -123,6 +123,13 @@
 - **不要**给 manifest 里的视频加跨域属性（同域代理无跨域）；若切到 R2 公开域名模式，记得配 `r2-cors.json` 并把 `cdnBaseUrl` 填上。
 
 ## 📝 变更日志
+
+### 2026-09-16 · 《高位下拉》上架
+- 上架：《高位下拉》（`strength/lat-pulldown`，124s 竖屏 HLS + 封面 + **11 条时间戳要点**，`status: ready`）
+  - 原片 1078×1920 竖屏 → `add-video.sh`（21 分片，23 个文件）→ 上传 R2 → 生产 `/media/strength/lat-pulldown/` m3u8/分片/封面全部 200
+  - 要点时间戳按原片内容对齐：握法虚握→握距 1.5 倍肩宽→「掰弯横杆」→勿手臂硬拽→背阔肌发力主体→慢速还原→握距/握把变式（宽握倒三角、对握 V 把）→颈后下拉伤肩警告
+- ⚠️ **GitHub Actions 密钥仍未配置**：本次 push 后 Actions 显示 success 但实为「跳过部署」（`Missing Cloudflare credentials`）——线上清单靠本地 `wrangler pages deploy` 直传生效。以后改 `videos.json` 后记得 `npm run deploy`，或尽快配好密钥（见断点 1）
+- 命令行注意：本机 npm 不在 PATH（zsh 只能找到 `/usr/local/bin/wrangler`），可绕过 npm 直接执行 `wrangler pages deploy . --project-name fitlab-videos`
 
 ### 2026-09-16 · v0.2.3
 - 新增：播放页常驻导航栏 `.p-nav`（「← 返回」+「🏠 首页」）——修复播放页找不到回主页入口的问题
