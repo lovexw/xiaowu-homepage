@@ -1,6 +1,6 @@
 {
   "name": "fitlab-videos",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "description": "FitLab 健身视频库：静态站点 + Cloudflare Pages + R2 视频分发",
   "scripts": {

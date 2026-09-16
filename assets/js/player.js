@@ -140,6 +140,10 @@ class FitPlayer {
         </div>
 
         <div class="p-info">
+          <div class="p-nav">
+            <button class="p-nav-btn" data-act="back" aria-label="返回上一页">${I.back}<span>返回</span></button>
+            <button class="p-nav-btn" data-act="home" aria-label="回到首页">${I.home}<span>首页</span></button>
+          </div>
           <div class="p-title-row">
             <h1>${esc(v.title || '')}</h1>
           </div>
@@ -202,6 +206,7 @@ class FitPlayer {
       const act = btn.getAttribute('data-act');
       ({
         back: () => this.opts.onExit && this.opts.onExit(),
+        home: () => this.opts.onHome && this.opts.onHome(),
         big: () => this.togglePlay(),
         mute: () => this.toggleMute(),
         unmute: () => this.toggleMute(),

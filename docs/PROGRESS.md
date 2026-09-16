@@ -10,12 +10,12 @@
 | 项 | 状态 |
 |---|---|
 | 更新日期 | 2026-09-16 |
-| 当前阶段 | **v0.2.2 已上线**（首条真实视频《蝴蝶机夹胸》可播；全站默认竖屏 9:16；简洁化改版） |
+| 当前阶段 | **v0.2.3 已上线**（播放页常驻返回/首页导航；第二条真实视频《坐姿哑铃肩推》可播） |
 | 线上地址 | https://fitlab-videos.pages.dev |
 | 演示模式 | https://fitlab-videos.pages.dev/?demo=1 （内置测试视频，验证播放器用） |
 | 部署方式 | Cloudflare Pages 直传（`npm run deploy`）+ **GitHub Actions 工作流已就绪**（等 API Token 密钥后即全自动） |
 | GitHub | ✅ 已推送 https://github.com/lovexw/fitlab-videos （main 分支） |
-| R2 | ✅ 桶 `fitlab-videos`，`strength/pec-deck-fly/`（m3u8 + 18 分片 + 封面）已在线可播 |
+| R2 | ✅ 桶 `fitlab-videos`：`strength/pec-deck-fly/`、`strength/seated-db-press/`（各 m3u8 + 分片 + 封面）均在线可播 |
 | 本地预览 | `python3 -m http.server 8080` 或 `npm run demo`（演示数据） |
 
 ---
@@ -58,6 +58,14 @@
 - [x] GitHub 仓库已推送；新增 `.github/workflows/deploy.yml`（push main → wrangler pages deploy，密钥未配置时自动跳过保持绿色）
 - [x] 修复 `add-video.sh` 在 macOS 自带 bash 3.2 + C locale 下 `$TITLE` 紧贴全角字符报 unbound variable 的问题（改用 printf 注入）
 
+### 播放页导航修复 + 《坐姿哑铃肩推》上架（v0.2.3，2026-09-16）
+- [x] **播放页常驻导航栏**：视频下方新增「← 返回」「🏠 首页」两个胶囊按钮（`.p-nav`），不依赖视频控件显隐——修复「打开视频后找不到回主页的路」
+- [x] **智能历史回退**：app.js 记录站内 hash 跳转深度（`navDepth`），「返回」按钮走 `history.back()` 从哪来回哪去（首页进的回首页、科目页进的回科目页）；直进/刷新进来的播放页兜底回科目页；「首页」按钮固定回 `#/`
+- [x] 《坐姿哑铃肩推》端到端上架：原片 1080×1920 竖屏 73s → `add-video.sh`（13 分片）+ 封面 → 上传 R2 → 清单 `status: ready`，附 **6 条可点击时间戳要点**（按原片字幕对齐：调凳子→靠背稳定→手腕握法→手肘垂直→哑铃平行耳朵→肩部持续受力）
+- [x] 生产链路验证：`/media/strength/seated-db-press/` m3u8/分片/封面全部 200；生产播放页 HLS 加载正常（readyState 3、无报错层）
+- [x] `add-video.sh` 末行 `$OUT（` 又踩 bash 3.2 全角字符坑（报 unbound variable，上传本身已完成）→ 改 `${OUT} ` 修复
+- [x] 导航路径本地 + 生产实测通过：首页→视频→返回 ✓、播放页→首页 ✓、科目页→视频→返回→科目页 ✓、直进播放页→返回兜底 ✓
+
 ### 测试记录（2026-09-16，IAB 1280×720 视口，生产环境）
 - [x] 播放页 9:16 竖屏渲染正常、画面清晰无遮挡（截图验证）、时间戳要点芯片正常显示
 - [x] GitHub Actions 两次推送运行成功（未配置密钥 → 按设计跳过部署）
@@ -77,7 +85,7 @@
 3. iOS 播放策略：自动播放必须 `muted + playsinline`；全屏用 `video.webkitEnterFullscreen()`（仅用户手势内可调）。
 4. Cloudflare Pages **直传项目不能事后改成 Git 连接**（官方文档只支持创建时连接）。所以自动部署走 **GitHub Actions → `wrangler pages deploy`**（仓库里 `.github/workflows/deploy.yml` 已就绪），不要尝试删项目重建来换原生 Git 集成（`fitlab-videos.pages.dev` 子域名有被回收的风险）。
 5. **`.stage` 内部的层叠顺序**：`position:absolute` 的装饰层（如封面虚化 `.backdrop`）会绘制在未定位的 `video` 之上——给视频加 `position:relative; z-index:1` 才不会被遮挡。新增 stage 内浮层时注意 z-index 层级表（video 1 / 控件 5-6 / 浮层 7 / 居中层 8）。
-6. **macOS 自带 bash 3.2 + C locale**：`"$VAR"` 后紧贴中文全角字符（如 `$TITLE》`）会把多字节字符并入变量名，报 `VAR: unbound variable`。脚本里凡变量后接中文，一律用 `printf '%s'` 注入。
+6. **macOS 自带 bash 3.2 + C locale**：`"$VAR"` 后紧贴中文全角字符（如 `$TITLE》`、`$OUT（`）会把多字节字符并入变量名，报 `VAR: unbound variable`。脚本里凡变量后接中文，一律用 `printf '%s'` 注入或写成 `${VAR} `（大括号闭合 + 空格隔开）。
 
 ---
 
@@ -94,7 +102,8 @@
    配好后任意 `git push` 即自动部署；也可在 Actions 页面手动 Run workflow 验证。
 
 2. **继续上传视频**：按 `docs/WORKFLOW.md` 操作（一条命令 + 粘 30 秒清单）。
-   待传：坐姿哑铃肩推 `strength/seated-db-press`、走步机两条 `cardio/treadmill/*`、游泳两条 `cardio/swimming/*`（均为竖屏 9:16）。
+   待传：走步机两条 `cardio/treadmill/*`、游泳两条 `cardio/swimming/*`（均为竖屏 9:16）。
+   （《坐姿哑铃肩推》已于 2026-09-16 上架 ✓）
 
 3. **待办（增强，非阻塞）**：
    - [ ] 多码率 HLS（现单码率 720p；手机流量够用，桌面想更高清再加 1080p rendition）
@@ -114,6 +123,13 @@
 - **不要**给 manifest 里的视频加跨域属性（同域代理无跨域）；若切到 R2 公开域名模式，记得配 `r2-cors.json` 并把 `cdnBaseUrl` 填上。
 
 ## 📝 变更日志
+
+### 2026-09-16 · v0.2.3
+- 新增：播放页常驻导航栏 `.p-nav`（「← 返回」+「🏠 首页」）——修复播放页找不到回主页入口的问题
+- 新增：智能历史回退 `goBack()`（`navDepth` 跟踪站内跳转；有来路 `history.back()`，无来路兜底科目页）；新增 `home` 图标与 `onHome` 回调
+- 上架：《坐姿哑铃肩推》（`strength/seated-db-press`，73s 竖屏 HLS + 封面 + 6 条时间戳要点，`status: ready`）
+- 修复：`add-video.sh` 末行 `$OUT（` 全角字符 unbound variable（改 `${OUT} `）
+- 版本号 bump：`index.html` / `sw.js` → `?v=0.2.3`
 
 ### 2026-09-16 · v0.2.2
 - 修复：播放器封面虚化背景层（`.backdrop`）绘制在视频上层，导致真实视频播放时有「一层模糊遮挡」——`video` 提升 `position:relative; z-index:1`（背景层此前从未被触发：占位视频无封面，首条真实视频上线才暴露）

@@ -400,6 +400,16 @@ img, video { display: block; max-width: 100%; }
 
 /* 播放器下方信息区 */
 .p-info { padding: 16px 20px 0; }
+/* 常驻导航：不依赖视频控件显隐，任何时刻都能返回/回首页 */
+.p-nav { display: flex; gap: 8px; margin-bottom: 12px; }
+.p-nav-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 9px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 700;
+  background: var(--card); color: var(--ink-2); box-shadow: var(--shadow-s);
+  transition: transform var(--dur) var(--ease);
+}
+.p-nav-btn:active { transform: scale(.93); }
+.p-nav-btn svg { width: 15px; height: 15px; }
 .p-title-row { display: flex; align-items: flex-start; gap: 10px; }
 .p-title-row h1 { font-size: 19px; font-weight: 800; line-height: 1.35; flex: 1; }
 .p-desc { margin-top: 6px; font-size: 12.5px; color: var(--ink-2); }

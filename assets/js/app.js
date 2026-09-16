@@ -68,6 +68,7 @@ function findVideo(id) {
 const I = {
   logo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11"/></svg>',
   back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>',
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.8L12 3.5l9 7.3"/><path d="M5.4 9.3V20.5h13.2V9.3"/><path d="M9.8 20.5v-5.8h4.4v5.8"/></svg>',
   play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72c0 .8.87 1.3 1.55.87l10.5-6.86a1.03 1.03 0 000-1.74L9.55 4.27A1.03 1.03 0 008 5.14z"/></svg>',
   pause: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1.4"/><rect x="14" y="5" width="4" height="14" rx="1.4"/></svg>',
   replay: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9.4 9.4 0 00-6.74 2.94L3 8"/><path d="M3 3v5h5"/></svg>',
@@ -269,7 +270,10 @@ function renderPlayer(videoId, root) {
     siblings,
     settings: Store.get('player', { loop: true, autoNext: false, rate: 1 }),
     onNav(id) { location.hash = '#/v/' + id; },
-    onExit() { location.hash = '#/c/' + (cat ? cat.id : ''); }
+    /* 返回：有站内来路就从哪来回哪去（首页进的回首页，科目页进的回科目页）；
+       直接打开/刷新进来的没有来路，兜底回科目页 */
+    onExit() { goBack('#/c/' + (cat ? cat.id : '')); },
+    onHome() { location.hash = '#/'; }
   });
 }
 
@@ -286,6 +290,13 @@ function parseHash() {
 
 let scrollMem = {};
 let prevHash = location.hash;
+let navDepth = 0;   // 站内 hash 跳转次数：>0 说明有来路，可用 history.back 回退
+
+/* 站内历史回退：从哪来回哪去；无来路（分享链接/刷新直进）走兜底路由 */
+function goBack(fallbackHash) {
+  if (navDepth > 0) history.back();
+  else location.hash = fallbackHash;
+}
 
 function render() {
   const r = parseHash();
@@ -344,6 +355,7 @@ function boot() {
 }
 
 addEventListener('hashchange', () => {
+  navDepth++;
   scrollMem[prevHash] = window.scrollY;
   prevHash = location.hash;
   render();

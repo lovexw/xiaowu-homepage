@@ -150,4 +150,5 @@ if [[ "$PUSH" == "1" ]]; then
 fi
 
 echo ""
-ok "完成！本地文件保留在 $OUT（可删除，已传 R2）"
+# 同 PROGRESS 坑 6：$VAR 后紧贴全角字符在 bash 3.2 + C locale 下会把多字节字符并入变量名
+ok "完成！本地文件保留在 ${OUT} （可删除，已传 R2）"
