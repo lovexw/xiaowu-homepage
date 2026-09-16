@@ -236,6 +236,30 @@
                         </div>
                     </div>
                 </a>
+
+                <a href="https://fit.xiaowuleyi.com" target="_blank" rel="noopener noreferrer" class="project-card" style="background-image: url('public/img/fitlab.svg')">
+                    <div class="project-content">
+                        <h3>FitLab 健身视频库</h3>
+                        <p>走步机、游泳、力量训练教学视频，手机上练对每个动作</p>
+                        <div class="project-tags">
+                            <span class="tag">健身</span>
+                            <span class="tag">视频</span>
+                            <span class="tag">健康</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://litepic.xiaowuleyi.com" target="_blank" rel="noopener noreferrer" class="project-card" style="background-image: url('public/img/litepic.svg')">
+                    <div class="project-content">
+                        <h3>轻图 LitePic</h3>
+                        <p>浏览器本地图片压缩，零上传零存储，体积直降 60%–90%</p>
+                        <div class="project-tags">
+                            <span class="tag">图片压缩</span>
+                            <span class="tag">隐私</span>
+                            <span class="tag">工具</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </main>
@@ -346,13 +370,14 @@
                 tooltip.style.display = 'none';
             });
             
-            // 更新提示位置
+            // 更新提示位置（仅可见时更新，用 transform 避免重排）
             document.addEventListener('mousemove', function(e) {
                 lastMouseX = e.clientX;
                 lastMouseY = e.clientY;
-                tooltip.style.left = (e.clientX + 15) + 'px';
-                tooltip.style.top = (e.clientY + 15) + 'px';
-            });
+                if (tooltip.style.display === 'block') {
+                    tooltip.style.transform = 'translate(' + (e.clientX + 15) + 'px,' + (e.clientY + 15) + 'px)';
+                }
+            }, { passive: true });
             
             // 复制功能
             btcValue.addEventListener('click', async function(e) {
