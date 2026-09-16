@@ -235,9 +235,9 @@ img, video { display: block; max-width: 100%; }
   width: auto;
   max-width: 100%;
 }
-.stage video { width: 100%; height: 100%; object-fit: contain; }
+.stage video { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; }
 .backdrop {
-  position: absolute; inset: -8%; background-size: cover; background-position: center;
+  position: absolute; z-index: 0; inset: -8%; background-size: cover; background-position: center;
   filter: blur(34px) brightness(.8) saturate(1.2); transform: scale(1.1);
   opacity: 0; transition: opacity .5s var(--ease); pointer-events: none;
 }

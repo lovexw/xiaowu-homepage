@@ -8,14 +8,14 @@
    ============================================================ */
 'use strict';
 
-const VERSION = 'fitlab-v0.2.1';
+const VERSION = 'fitlab-v0.2.2';
 
 const CORE = [
   './',
   './index.html',
-  './assets/css/style.css?v=0.2.1',
-  './assets/js/app.js?v=0.2.1',
-  './assets/js/player.js?v=0.2.1',
+  './assets/css/style.css?v=0.2.2',
+  './assets/js/app.js?v=0.2.2',
+  './assets/js/player.js?v=0.2.2',
   './assets/vendor/hls.min.js',
   './assets/icons/icon.svg',
   './site.webmanifest'
