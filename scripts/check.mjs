@@ -6,15 +6,15 @@ import { runInNewContext } from 'node:vm';
 import { profile, socials, projects, categoryLabel } from '../src/data.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const html = await readFile(resolve(root, 'index.html'), 'utf8');
-const perCategory = { tools: 2, bitcoin: 2, life: 3 };
-assert.equal(projects.length, 7);
+const perCategory = { tools: 3, bitcoin: 2, life: 3 };
+assert.equal(projects.length, 8);
 assert.equal(socials.length, 6);
 assert.ok(!html.includes('hh.btchao.com'), 'Removed gallery project reappeared');
 for (const item of [...projects, ...socials]) {
   assert.ok(html.includes(item.name), `Missing name: ${item.name}`);
   if (item.url) assert.ok(html.includes(`href="${item.url}"`), `Missing URL: ${item.url}`);
 }
-assert.equal((html.match(/class="project-card"/g) || []).length, 7);
+assert.equal((html.match(/class="project-card"/g) || []).length, 8);
 assert.deepEqual(['tools', 'bitcoin', 'life'].map(category => projects.filter(p => p.category === category).length), Object.values(perCategory));
 assert.ok(html.includes(profile.bitcoinAddress), 'Full BTC address missing from footer');
 assert.ok(html.includes(profile.bitcoinCreed), 'Bitcoin creed missing from hero');
@@ -28,5 +28,5 @@ const qr = sandbox.qrcode(0, 'M');
 qr.addData(`bitcoin:${profile.bitcoinAddress}`);
 qr.make();
 assert.ok(qr.createImgTag(5, 20).includes('data:image/gif;base64,'));
-console.log('PASS: 7 project names and URLs, 6 social entries, categories 2/2/3, gallery card absent, full BTC address in footer, bitcoin creed in hero, local resources, SEO JSON-LD, no external runtime scripts, bundled CSS, BTC QR generation.');
+console.log('PASS: 8 project names and URLs, 6 social entries, categories 3/2/3, gallery card absent, full BTC address in footer, bitcoin creed in hero, local resources, SEO JSON-LD, no external runtime scripts, bundled CSS, BTC QR generation.');
 console.log('Scope: static/build checks only; this script does not verify real clicks, clipboard permission, or visual/mobile layout.');

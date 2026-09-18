@@ -129,4 +129,13 @@ export const projects = [
         category: 'life',
         mark: '★',
     },
+    {
+        id: 'macbench',
+        name: 'Mac 电池性能检测',
+        description: '你的 Mac 变慢，可能只是电池坏了。本地跑分检测电池导致的降频',
+        url: 'https://macbench.xiaowuleyi.com',
+        tags: ['Mac', '电池', '跑分'],
+        category: 'tools',
+        mark: '🔋',
+    },
 ];
