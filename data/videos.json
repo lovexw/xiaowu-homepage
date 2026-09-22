@@ -10,11 +10,12 @@
     "tips: 动作要领，展示在播放页下方。支持三种写法：一个字符串；字符串数组（多条要点）；对象 {\"t\": 秒数, \"text\": \"说明\"}（要点时间戳，渲染成可点击的时间芯片，点击即跳转到对应进度，适合精学某个片段）。"
   ],
   "version": 1,
-  "updatedAt": "2026-09-16",
+  "updatedAt": "2026-09-22",
   "cdnBaseUrl": "",
   "groups": [
     { "id": "cardio",   "name": "有氧",     "nameEn": "CARDIO",   "icon": "🔥", "accent": "#ff7a45" },
-    { "id": "strength", "name": "力量训练", "nameEn": "STRENGTH", "icon": "💪", "accent": "#7c5cff" }
+    { "id": "strength", "name": "力量训练", "nameEn": "STRENGTH", "icon": "💪", "accent": "#7c5cff" },
+    { "id": "skills",   "name": "技巧训练", "nameEn": "SKILLS",   "icon": "🤸", "accent": "#f59e0b" }
   ],
   "categories": [
     {
@@ -184,6 +185,39 @@
             { "t": 45, "text": "下放到大臂平行或略低即可，全程手肘垂直地面、小臂不倾斜。" },
             { "t": 60, "text": "起始位：哑铃放到与两个耳朵平行的位置，不要沉得太低。" },
             { "t": 70, "text": "推起不要完全锁肘，肩部全程保持受力，发力感会特别明显。" }
+          ],
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "tumbling",
+      "groupId": "skills",
+      "name": "空翻技巧",
+      "icon": "🤸",
+      "accent": "#f59e0b",
+      "dir": "skills/tumbling",
+      "description": "空翻与翻腾动作分解教学：从垫上辅助到平地完成",
+      "videos": [
+        {
+          "id": "backflip",
+          "title": "后空翻教学",
+          "dir": "skills/tumbling/backflip",
+          "hls": "master.m3u8",
+          "mp4": "",
+          "poster": "poster.jpg",
+          "orientation": "vertical",
+          "duration": 101,
+          "tags": ["空翻", "翻腾", "进阶"],
+          "tips": [
+            { "t": 0,  "text": "循序渐进是关键：先借助垫箱和教练保护建立动作记忆，别直接上平地。" },
+            { "t": 9,  "text": "后倒练习：臀部后坐、双臂向后上方甩，背部落上垫箱找翻转的感觉。" },
+            { "t": 26, "text": "地面后手翻分解：后倒撑手成桥，再蹬腿收腹翻过，练好腰腹力量。" },
+            { "t": 43, "text": "在教练保护下完成完整翻转，重点体会起跳和团身的时机。" },
+            { "t": 52, "text": "起跳要垂直向上，不要往后倒着跳——高度才有时间完成翻转。" },
+            { "t": 70, "text": "垫箱辅助练习：往后跳上垫箱，逐渐降低高度过渡到平地。" },
+            { "t": 78, "text": "平地完整后空翻：务必在教练保护下尝试，起跳后立刻收紧团身。" },
+            { "t": 90, "text": "团身越紧转得越快：膝盖抱胸，看到落点后展开身体、屈膝缓冲落地。" }
           ],
           "status": "ready"
         }
