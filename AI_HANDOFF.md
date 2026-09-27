@@ -14,20 +14,32 @@
 - **合规红线**：①原始大文件不入 Git（体积+敏感）；②报告定位「科研/信息展示」，
   不对外提供解读服务；③不推断临床级结论（CYP2D6/HLA/BRCA 等明确留白）。
 
-## 1. 当前状态（最后更新：2026-09-27 v0.1.0 初版）
+## 1. 当前状态（最后更新：2026-09-27 v0.2.0）
+
+### 版本历史
+- **v0.2.0（当前）**：①亮色现代主题（渐变主色/毛玻璃吸顶导航/hover 动效）；
+  ②站点署名「小吴的基因报告」（数据主人本人乐意公开）；③全站科普层
+  `pipeline/panels/popsci.json`——首页"30 秒读懂基因组"4 卡 + 每模块科普卡 +
+  **全部 106 个位点逐条"🗣️ 人话版"一句话**（build_reports 自动合并渲染）；
+  ④新增 11 个位点（ABCG2 Q141K 尿酸痛风杂合[东亚高频]、光喷嚏反射、
+  虹膜颜色 HERC2/OCA2、SCN9A 痛觉、FGF21 嗜甜、G6PD 说明、SLC24A5 肤色等），
+  面板总计 110 位点全部 dbSNP 校验通过、0 unknown；⑤判级配色规则修正
+  （level_of：label 有利词优先于文本警示词）。
+- **v0.1.0**：初版（数据管线 + 6 面板 + 关联表 + 静态站 + 部署）。
 
 ### 已完成 ✅
 | 事项 | 位置 | 说明 |
 |---|---|---|
 | 数据合并入库 | `data/local/genome.sqlite`（gitignore） | 5,466,295 位点，ASA 699,321 + IMP 4,766,974，两文件严格互补无重叠 |
-| 解读面板 6 个 | `pipeline/panels/*.json` | 药物基因组(23)/代谢营养(15)/特质心理(19)/健康风险(18)/免疫炎症(15)/祖先高原(9)，全部位点解读正常解析（0 unknown） |
+| 解读面板 6 个 | `pipeline/panels/*.json` | 药物基因组(23)/代谢营养(18)/特质心理(25)/健康风险(19)/免疫炎症(15)/祖先高原(10)，共 110 位点，0 unknown |
+| 科普层 | `pipeline/panels/popsci.json` | 首页科普卡 + 模块科普卡 + 逐位点人话版；改文案只改这里，`make reports` 生效 |
 | 关联注释字典 | `pipeline/panels/annotations_curated.json` | ~120 条经典注释，未收录者表格中显示"—"+外链 |
-| dbSNP 权威校验 | `pipeline/cache/dbsnp/`（已提交） | 238 个位点全部拉取成功（正链等位基因 + GRCh37 位置），离线可复用 |
+| dbSNP 权威校验 | `pipeline/cache/dbsnp/`（已提交） | 248 个位点全部拉取成功（正链等位基因 + GRCh37 位置），离线可复用 |
 | 双重校验 | `pipeline/verify.py` → `site/data/quality.json` | 用户 8 份人工清单 494 条 vs 原始数据：100% 一致 |
 | 报告生成 | `pipeline/build_reports.py` → `site/data/reports/*.json` | 模块 JSON + 5 张关联表(330 行) + 总览 + manifest |
 | 全基因组导出 | `pipeline/export_genome.py` → `site/data/genome/chr*.tsv.gz` | 24 条染色体 gzip TSV（共 57MB，单文件 ≤4.1MB）+ 每染色体统计 |
-| 静态网站 | `site/`（index.html + assets/app.js + style.css） | 零依赖 SPA，hash 路由，7 类页面 |
-| 部署 | GitHub `lovexw/open-genome-report` + CF Pages | https://open-genome-report.pages.dev ✅ 浏览器验证通过 |
+| 静态网站 | `site/`（index.html + assets/app.js + style.css） | 零依赖 SPA，hash 路由，亮色主题，7 类页面 |
+| 部署 | GitHub `lovexw/open-genome-report` + CF Pages | https://open-genome-report.pages.dev ✅ v0.2 浏览器验证通过 |
 | 文档 | README / docs/* / 本文件 | 部署、决策、路线图、数据许可 |
 
 ### 已验证的关键事实 🔍（接手者可直接信任）
@@ -48,8 +60,9 @@
 4. NAT2 表型自动化判定（注意：该数据集 NAT2 多个位点读数与 dbSNP 不符——
    如 rs1801279 数据 GG、rs1041983 数据 TC——大概率 gesedna 映射问题，
    实现时必须先过 verify 校验，宁可留白）
-5. CF Dashboard 连接 Git 仓库实现 push 自动部署（当前为 wrangler 手动部署）
-6. 英文版页面
+5. 关联表"待核"注释继续补全（annotations_curated.json）
+6. CF Dashboard 连接 Git 仓库实现 push 自动部署（当前为 wrangler 手动部署）
+7. 英文版页面（popsci 层已做好内容分层，i18n 时可平移）
 
 ## 2. 接手操作手册
 
