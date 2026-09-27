@@ -1,157 +1,1120 @@
 {
   "_说明": "经典关联位点注释字典。只收录证据充分、方向明确的条目；未收录的位点在关联表中显示'—'并提供 GWAS Catalog/dbSNP 外链。conf: high/medium/low。所有条目最终经 dbSNP 等位基因校验后才给出风险方向。",
   "annotations": {
-    "rs17401966": {"gene": "1p11.2 (MRPS30 区)", "trait": "乳腺癌易感", "conf": "medium"},
-    "rs11249433": {"gene": "1p11.2", "trait": "乳腺癌易感", "conf": "medium"},
-    "rs4072037": {"gene": "MUC1", "trait": "胃癌（保护方向关联）", "conf": "medium"},
-    "rs721048": {"gene": "EHBP1 (2p15)", "trait": "前列腺癌易感", "conf": "medium"},
-    "rs1052133": {"gene": "OGG1", "trait": "DNA 修复（S326C），肺癌易感性候选", "conf": "medium"},
-    "rs4973768": {"gene": "SLC4A7/NEK10 (3p24)", "trait": "乳腺癌易感", "conf": "medium"},
-    "rs401681": {"gene": "CLPTM1L-TERT (5p15.33)", "trait": "肺癌/膀胱癌等多癌种易感", "conf": "high"},
-    "rs16891982": {"gene": "SLC45A2", "trait": "色素表位/黑色素瘤易感（欧洲变异，东亚罕见）", "conf": "medium"},
-    "rs10941679": {"gene": "5q11 (MRPS30/FGFR2 邻近)", "trait": "乳腺癌易感", "conf": "medium"},
-    "rs889312": {"gene": "MAP3K1 (5q11.2)", "trait": "乳腺癌易感", "conf": "high"},
-    "rs2046210": {"gene": "ESR1 上游 (6q25.1)", "trait": "乳腺癌易感（东亚人群显著）", "conf": "high"},
-    "rs16892766": {"gene": "8q24 区 3", "trait": "结直肠癌易感", "conf": "high"},
-    "rs16901979": {"gene": "8q24 区 3", "trait": "结直肠癌易感", "conf": "high"},
-    "rs13281615": {"gene": "8q24", "trait": "乳腺癌易感", "conf": "medium"},
-    "rs6983267": {"gene": "8q24 (POU5F1 增强子区)", "trait": "前列腺癌/结直肠癌易感", "conf": "high"},
-    "rs1447295": {"gene": "8q24", "trait": "前列腺癌易感", "conf": "medium"},
-    "rs9642880": {"gene": "8q24", "trait": "膀胱癌易感", "conf": "medium"},
-    "rs2294008": {"gene": "PSCA", "trait": "胃癌易感（东亚人群显著）", "conf": "high"},
-    "rs2976392": {"gene": "PSCA", "trait": "胃癌易感（东亚人群显著）", "conf": "medium"},
-    "rs965513": {"gene": "FOXE1 (9q22)", "trait": "甲状腺癌易感", "conf": "high"},
-    "rs505922": {"gene": "ABO", "trait": "胰腺癌风险（与血型连锁）", "conf": "high"},
-    "rs10795668": {"gene": "10p14", "trait": "结直肠癌（保护方向关联）", "conf": "medium"},
-    "rs1219648": {"gene": "FGFR2", "trait": "乳腺癌易感", "conf": "high"},
-    "rs2420946": {"gene": "FGFR2", "trait": "乳腺癌易感", "conf": "high"},
-    "rs2981582": {"gene": "FGFR2", "trait": "乳腺癌易感", "conf": "high"},
-    "rs3817198": {"gene": "LSP1 (11p15.5)", "trait": "乳腺癌易感", "conf": "medium"},
-    "rs1126809": {"gene": "TYR", "trait": "色素/黑色素瘤候选（R402Q）", "conf": "low"},
-    "rs3802842": {"gene": "11q23", "trait": "结直肠癌易感", "conf": "medium"},
-    "rs944289": {"gene": "NKX2-1 (14q13.3)", "trait": "甲状腺癌易感", "conf": "medium"},
-    "rs4444235": {"gene": "BMP4 (14q22.2)", "trait": "结直肠癌易感", "conf": "medium"},
-    "rs8034191": {"gene": "15q25.1 (尼古丁受体区邻近)", "trait": "肺癌易感", "conf": "high"},
-    "rs16969968": {"gene": "CHRNA5", "trait": "肺癌易感 + 尼古丁依赖（D398N）", "conf": "high"},
-    "rs1051730": {"gene": "CHRNA3", "trait": "肺癌易感 + 尼古丁依赖", "conf": "high"},
-    "rs3803662": {"gene": "TOX3/TNRC6B (16q12)", "trait": "乳腺癌易感", "conf": "high"},
-    "rs1800566": {"gene": "NQO1", "trait": "醌氧化还原酶（C609T, P187S）——解毒酶缺陷", "conf": "medium"},
-    "rs1805007": {"gene": "MC1R", "trait": "R151C（红发表型/黑色素瘤；东亚罕见，本数据野生）", "conf": "high"},
-    "rs1805008": {"gene": "MC1R", "trait": "R160W（同上，本数据野生）", "conf": "high"},
-    "rs8067378": {"gene": "GSDMB/ORMDL3 (17q21)", "trait": "哮喘/免疫（列入肿瘤清单存疑，建议复核来源）", "conf": "low"},
-    "rs1859962": {"gene": "17q24.3 (SOX9 区)", "trait": "前列腺癌易感", "conf": "medium"},
-    "rs4939827": {"gene": "SMAD7", "trait": "结直肠癌易感", "conf": "high"},
-    "rs25487": {"gene": "XRCC1", "trait": "DNA 修复（Q399R）", "conf": "medium"},
-    "rs1799782": {"gene": "XRCC1", "trait": "DNA 修复（R194W）", "conf": "medium"},
-    "rs13181": {"gene": "ERCC2 (XP-D)", "trait": "DNA 修复（K751Q）", "conf": "medium"},
-    "rs11615": {"gene": "ERCC1", "trait": "DNA 修复（C8092A）", "conf": "low"},
-    "rs2735839": {"gene": "KLK3", "trait": "前列腺特异抗原水平/前列腺癌", "conf": "medium"},
-    "rs961253": {"gene": "20p12.3 (BMP2 区)", "trait": "结直肠癌（保护方向关联）", "conf": "medium"},
-    "rs2228001": {"gene": "XPC", "trait": "核苷酸切除修复", "conf": "medium"},
-    "rs2228000": {"gene": "XPC", "trait": "核苷酸切除修复", "conf": "medium"},
-
-    "rs646776": {"gene": "SORT1", "trait": "LDL 胆固醇", "conf": "high"},
-    "rs599839": {"gene": "PSRC1", "trait": "LDL 胆固醇（A=低 LDL 方向）", "conf": "high"},
-    "rs1205": {"gene": "CRP", "trait": "C 反应蛋白水平", "conf": "medium"},
-    "rs1130864": {"gene": "CRP", "trait": "C 反应蛋白水平", "conf": "medium"},
-    "rs3091244": {"gene": "CRP", "trait": "C 反应蛋白水平（单倍型位点）", "conf": "medium"},
-    "rs17465637": {"gene": "MIA3", "trait": "冠心病易感", "conf": "high"},
-    "rs699": {"gene": "AGT", "trait": "高血压（M235T，本数据 235M/T）", "conf": "medium"},
-    "rs4762": {"gene": "AGT", "trait": "高血压（T268? 邻近位点）", "conf": "low"},
-    "rs5051": {"gene": "AGT 区", "trait": "血管紧张素原水平", "conf": "low"},
-    "rs5186": {"gene": "AGTR1", "trait": "高血压（1166A>C，本数据野生）", "conf": "medium"},
-    "rs4402960": {"gene": "ENPP1", "trait": "2 型糖尿病/肥胖（K121Q）", "conf": "low"},
-    "rs8192678": {"gene": "PPARGC1A", "trait": "线粒体功能/耐力候选（G482S）", "conf": "low"},
-    "rs7754840": {"gene": "CDKAL1", "trait": "2 型糖尿病易感", "conf": "high"},
-    "rs10811661": {"gene": "CDKN2A/2B 区 (9p21)", "trait": "2 型糖尿病易感", "conf": "high"},
-    "rs657152": {"gene": "CDKN2B-AS1 区 (9p21)", "trait": "甘油三酯/血糖", "conf": "medium"},
-    "rs3798220": {"gene": "LPA", "trait": "脂蛋白(a) 水平", "conf": "medium"},
-    "rs1799971": {"gene": "OPRM1", "trait": "阿片受体 N40D，阿片类药物反应差异（东亚 G 高频）", "conf": "medium"},
-    "rs10434": {"gene": "HIF1A", "trait": "低氧信号通路", "conf": "low"},
-    "rs699947": {"gene": "VEGFA", "trait": "血管生成（-460）", "conf": "low"},
-    "rs833061": {"gene": "VEGFA", "trait": "血管生成（-634，黄斑变性候选）", "conf": "low"},
-    "rs3025033": {"gene": "VEGFA", "trait": "血管生成", "conf": "low"},
-    "rs3025039": {"gene": "VEGFA", "trait": "血管生成（936C>T，本数据野生）", "conf": "medium"},
-    "rs2070744": {"gene": "NOS3", "trait": "eNOS 启动子（-922）", "conf": "low"},
-    "rs3918226": {"gene": "NOS3 区", "trait": "eNOS 调控", "conf": "low"},
-    "rs1801253": {"gene": "ADRB1", "trait": "β1 受体（S49G），心率/血压反应", "conf": "low"},
-    "rs3918242": {"gene": "MMP9", "trait": "基质金属蛋白酶（动脉瘤候选）", "conf": "low"},
-    "rs17576": {"gene": "MMP9", "trait": "基质金属蛋白酶（R668Q）", "conf": "low"},
-    "rs1800206": {"gene": "PPARGC1B", "trait": "代谢（A203P）", "conf": "low"},
-    "rs5443": {"gene": "12p12 (SREBF? 待核)", "trait": "待核", "conf": "low"},
-
-    "rs2569190": {"gene": "CD14", "trait": "先天免疫（-159C/T）", "conf": "medium"},
-    "rs3212227": {"gene": "IL12B", "trait": "白介素 12 产量", "conf": "low"},
-    "rs1800450": {"gene": "MBL2", "trait": "甘露糖结合凝集素（B 变体，本数据野生）", "conf": "medium"},
-    "rs5741880": {"gene": "TLR7/8 区 (Xp22)", "trait": "先天抗病毒免疫", "conf": "low"},
-
-    "rs10046": {"gene": "CYP19A1", "trait": "芳香化酶/雌激素水平", "conf": "medium"},
-    "rs1006737": {"gene": "CACNA1C", "trait": "双相/精神分裂风险（钙通道，效应小）", "conf": "medium"},
-    "rs13107325": {"gene": "SLC39A8", "trait": "锌转运（精神分裂/镉代谢候选；本数据野生）", "conf": "low"},
-    "rs1799941": {"gene": "SHBG 区", "trait": "性激素结合球蛋白水平", "conf": "low"},
-    "rs1800012": {"gene": "COL1A1", "trait": "骨密度（Sp1 位点，本数据野生）", "conf": "low"},
-    "rs2234693": {"gene": "ESR1", "trait": "雌激素受体 PvuII", "conf": "low"},
-    "rs9340799": {"gene": "ESR1", "trait": "雌激素受体 XbaI", "conf": "low"},
-    "rs2295080": {"gene": "mTOR (1p36)", "trait": "mTOR 通路上游变异", "conf": "low"},
-    "rs35767": {"gene": "IGF1", "trait": "胰岛素样生长因子 1 水平", "conf": "low"},
-    "rs3851179": {"gene": "PICALM", "trait": "阿尔茨海默病易感", "conf": "medium"},
-    "rs3865444": {"gene": "CD33", "trait": "阿尔茨海默病易感（本数据野生方向）", "conf": "medium"},
-    "rs523349": {"gene": "SRD5A2", "trait": "5α-还原酶（V89L），雄激素代谢", "conf": "low"},
-    "rs6258": {"gene": "SHBG", "trait": "性激素结合球蛋白（D327N）", "conf": "low"},
-    "rs6259": {"gene": "SHBG", "trait": "性激素结合球蛋白", "conf": "low"},
-    "rs659366": {"gene": "UCP2", "trait": "解偶联蛋白 2（-866G/A），能量代谢", "conf": "low"},
-    "rs6721961": {"gene": "2q31（SORT1? 位置待核）", "trait": "血脂（待核）", "conf": "low"},
-
-    "rs6198": {"gene": "NR3C1", "trait": "糖皮质激素受体 BclI（应激/代谢）", "conf": "low"},
-    "rs41423247": {"gene": "FKBP5", "trait": "应激调节（ER22/23ek? 邻近）", "conf": "low"},
-    "rs7124442": {"gene": "BDNF 区", "trait": "BDNF 邻近变异", "conf": "low"},
-    "rs11030104": {"gene": "BDNF 区", "trait": "BDNF 邻近变异", "conf": "low"},
-    "rs7997012": {"gene": "HTR2A", "trait": "抑郁/SSRI 反应候选", "conf": "low"},
-    "rs909525": {"gene": "MAOA 区", "trait": "单胺氧化酶邻近", "conf": "low"},
-    "rs228697": {"gene": "PER3", "trait": "昼夜节律候选", "conf": "low"},
-    "rs1800955": {"gene": "DRD4", "trait": "多巴胺 D4（-521C/T），新奇寻求候选", "conf": "low"},
-    "rs1042778": {"gene": "OXTR", "trait": "催产素受体", "conf": "low"},
-
-    "rs601338": {"gene": "FUT2", "trait": "分泌者状态（W154X；本数据=分泌者）——肠道菌群与诺如病毒易感性", "conf": "medium"},
-    "rs7294": {"gene": "VKORC1", "trait": "华法林剂量（佐证位点）", "conf": "medium"},
-    "rs9934438": {"gene": "VKORC1", "trait": "华法林剂量（佐证位点）", "conf": "medium"},
-    "rs71647871": {"gene": "16q22（待核）", "trait": "待核", "conf": "low"},
-    "rs1801279": {"gene": "NAT2", "trait": "N-乙酰转移酶（282C>T 组分）", "conf": "medium"},
-    "rs1041983": {"gene": "NAT2", "trait": "N-乙酰转移酶（803A>G 组分）", "conf": "medium"},
-    "rs1801280": {"gene": "NAT2", "trait": "N-乙酰转移酶（341T>C, *5 组分）", "conf": "medium"},
-    "rs1799929": {"gene": "NAT2", "trait": "N-乙酰转移酶组分", "conf": "medium"},
-    "rs1799930": {"gene": "NAT2", "trait": "N-乙酰转移酶（590G>A, *6 组分；本数据野生）", "conf": "high"},
-    "rs1208": {"gene": "NAT2", "trait": "N-乙酰转移酶组分", "conf": "medium"},
-    "rs1799931": {"gene": "NAT2", "trait": "N-乙酰转移酶（857G>A, *7 组分）", "conf": "medium"},
-    "rs8176746": {"gene": "ABO", "trait": "血型判定组分（703，本数据无 B 读数）", "conf": "medium"},
-    "rs8176747": {"gene": "ABO", "trait": "血型判定组分（297，O1 标志读数）", "conf": "medium"},
-
-    "rs1042714": {"gene": "ADRB2", "trait": "β2 受体 Gln27Glu", "conf": "medium"},
-    "rs2764264": {"gene": "FOXO3A 区", "trait": "长寿（与 rs2802292 连锁）", "conf": "medium"},
-    "rs1695": {"gene": "GSTP1", "trait": "谷胱甘肽转移酶（I105V）", "conf": "medium"},
-    "rs1138272": {"gene": "GSTP1", "trait": "谷胱甘肽转移酶（A114V）", "conf": "medium"},
-    "rs25489": {"gene": "XRCC1", "trait": "DNA 修复（R280H）", "conf": "medium"},
-    "rs2057482": {"gene": "14q32（待核）", "trait": "待核", "conf": "low"},
-    "rs1042522": {"gene": "TP53", "trait": "p53 P72R（肿瘤易感/功能差异候选）", "conf": "medium"},
-    "rs5882": {"gene": "LIPC", "trait": "肝脂酶（-514C/T）", "conf": "low"},
-    "rs964184": {"gene": "ZPR1/ZNF259 (11q23)", "trait": "甘油三酯/HDL", "conf": "high"},
-    "rs3135506": {"gene": "APOA5/APOA3 区", "trait": "血脂", "conf": "low"},
-    "rs9536314": {"gene": "13q14（骨密度? 待核）", "trait": "待核", "conf": "low"},
-    "rs3027234": {"gene": "17q21（待核）", "trait": "待核", "conf": "low"},
-    "rs34536443": {"gene": "19p13（IRGM 区候选）", "trait": "自噬/克罗恩候选", "conf": "low"},
-    "rs73598374": {"gene": "20p12（待核）", "trait": "待核", "conf": "low"},
-    "rs480902": {"gene": "1q42（待核）", "trait": "待核", "conf": "low"},
-    "rs17034984": {"gene": "2p23（EPAS1 邻近? 待核）", "trait": "待核", "conf": "low"},
-    "rs1799895": {"gene": "SOD1 区 (4p? 待核)", "trait": "待核", "conf": "low"},
-    "rs551238": {"gene": "7q?（待核）", "trait": "待核", "conf": "low"},
-    "rs135538": {"gene": "22q11（待核）", "trait": "待核", "conf": "low"},
-    "rs1617640": {"gene": "7p14（TFR2? 待核）", "trait": "待核", "conf": "low"},
-    "rs1824024": {"gene": "7q31（待核）", "trait": "待核", "conf": "low"},
-    "rs7566605": {"gene": "2q36（胰岛素特征候选）", "trait": "胰岛素分泌/血糖", "conf": "low"},
-    "rs6746030": {"gene": "2q37（TRPV1 邻近? 待核）", "trait": "待核", "conf": "low"},
-    "rs11125529": {"gene": "2p16（待核）", "trait": "待核", "conf": "low"},
-    "rs6548238": {"gene": "2p25（待核）", "trait": "待核", "conf": "low"},
-    "rs10936599": {"gene": "TERC 区", "trait": "端粒长度/长寿", "conf": "medium"},
-    "rs75333668": {"gene": "1p（待核）", "trait": "待核", "conf": "low"}
+    "rs17401966": {
+      "gene": "1p11.2 (MRPS30 区)",
+      "trait": "乳腺癌易感",
+      "conf": "medium"
+    },
+    "rs11249433": {
+      "gene": "1p11.2",
+      "trait": "乳腺癌易感",
+      "conf": "medium"
+    },
+    "rs4072037": {
+      "gene": "MUC1",
+      "trait": "胃癌（保护方向关联）",
+      "conf": "medium"
+    },
+    "rs721048": {
+      "gene": "EHBP1 (2p15)",
+      "trait": "前列腺癌易感",
+      "conf": "medium"
+    },
+    "rs1052133": {
+      "gene": "OGG1",
+      "trait": "DNA 修复（S326C），肺癌易感性候选",
+      "conf": "medium"
+    },
+    "rs4973768": {
+      "gene": "SLC4A7/NEK10 (3p24)",
+      "trait": "乳腺癌易感",
+      "conf": "medium"
+    },
+    "rs401681": {
+      "gene": "CLPTM1L-TERT (5p15.33)",
+      "trait": "肺癌/膀胱癌等多癌种易感",
+      "conf": "high"
+    },
+    "rs16891982": {
+      "gene": "SLC45A2",
+      "trait": "色素表位/黑色素瘤易感（欧洲变异，东亚罕见）",
+      "conf": "medium"
+    },
+    "rs10941679": {
+      "gene": "5q11 (MRPS30/FGFR2 邻近)",
+      "trait": "乳腺癌易感",
+      "conf": "medium"
+    },
+    "rs889312": {
+      "gene": "MAP3K1 (5q11.2)",
+      "trait": "乳腺癌易感",
+      "conf": "high"
+    },
+    "rs2046210": {
+      "gene": "ESR1 上游 (6q25.1)",
+      "trait": "乳腺癌易感（东亚人群显著）",
+      "conf": "high"
+    },
+    "rs16892766": {
+      "gene": "8q24 区 3",
+      "trait": "结直肠癌易感",
+      "conf": "high"
+    },
+    "rs16901979": {
+      "gene": "8q24 区 3",
+      "trait": "结直肠癌易感",
+      "conf": "high"
+    },
+    "rs13281615": {
+      "gene": "8q24",
+      "trait": "乳腺癌易感",
+      "conf": "medium"
+    },
+    "rs6983267": {
+      "gene": "8q24 (POU5F1 增强子区)",
+      "trait": "前列腺癌/结直肠癌易感",
+      "conf": "high"
+    },
+    "rs1447295": {
+      "gene": "8q24",
+      "trait": "前列腺癌易感",
+      "conf": "medium"
+    },
+    "rs9642880": {
+      "gene": "8q24",
+      "trait": "膀胱癌易感",
+      "conf": "medium"
+    },
+    "rs2294008": {
+      "gene": "PSCA",
+      "trait": "胃癌易感（东亚人群显著）",
+      "conf": "high"
+    },
+    "rs2976392": {
+      "gene": "PSCA",
+      "trait": "胃癌易感（东亚人群显著）",
+      "conf": "medium"
+    },
+    "rs965513": {
+      "gene": "FOXE1 (9q22)",
+      "trait": "甲状腺癌易感",
+      "conf": "high"
+    },
+    "rs505922": {
+      "gene": "ABO",
+      "trait": "胰腺癌风险（与血型连锁）",
+      "conf": "high"
+    },
+    "rs10795668": {
+      "gene": "10p14",
+      "trait": "结直肠癌（保护方向关联）",
+      "conf": "medium"
+    },
+    "rs1219648": {
+      "gene": "FGFR2",
+      "trait": "乳腺癌易感",
+      "conf": "high"
+    },
+    "rs2420946": {
+      "gene": "FGFR2",
+      "trait": "乳腺癌易感",
+      "conf": "high"
+    },
+    "rs2981582": {
+      "gene": "FGFR2",
+      "trait": "乳腺癌易感",
+      "conf": "high"
+    },
+    "rs3817198": {
+      "gene": "LSP1 (11p15.5)",
+      "trait": "乳腺癌易感",
+      "conf": "medium"
+    },
+    "rs1126809": {
+      "gene": "TYR",
+      "trait": "色素/黑色素瘤候选（R402Q）",
+      "conf": "low"
+    },
+    "rs3802842": {
+      "gene": "11q23",
+      "trait": "结直肠癌易感",
+      "conf": "medium"
+    },
+    "rs944289": {
+      "gene": "NKX2-1 (14q13.3)",
+      "trait": "甲状腺癌易感",
+      "conf": "medium"
+    },
+    "rs4444235": {
+      "gene": "BMP4 (14q22.2)",
+      "trait": "结直肠癌易感",
+      "conf": "medium"
+    },
+    "rs8034191": {
+      "gene": "15q25.1 (尼古丁受体区邻近)",
+      "trait": "肺癌易感",
+      "conf": "high"
+    },
+    "rs16969968": {
+      "gene": "CHRNA5",
+      "trait": "肺癌易感 + 尼古丁依赖（D398N）",
+      "conf": "high"
+    },
+    "rs1051730": {
+      "gene": "CHRNA3",
+      "trait": "肺癌易感 + 尼古丁依赖",
+      "conf": "high"
+    },
+    "rs3803662": {
+      "gene": "TOX3/TNRC6B (16q12)",
+      "trait": "乳腺癌易感",
+      "conf": "high"
+    },
+    "rs1800566": {
+      "gene": "NQO1",
+      "trait": "醌氧化还原酶（C609T, P187S）——解毒酶缺陷",
+      "conf": "medium"
+    },
+    "rs1805007": {
+      "gene": "MC1R",
+      "trait": "R151C（红发表型/黑色素瘤；东亚罕见，本数据野生）",
+      "conf": "high"
+    },
+    "rs1805008": {
+      "gene": "MC1R",
+      "trait": "R160W（同上，本数据野生）",
+      "conf": "high"
+    },
+    "rs8067378": {
+      "gene": "GSDMB/ORMDL3 (17q21)",
+      "trait": "哮喘/免疫（列入肿瘤清单存疑，建议复核来源）",
+      "conf": "low"
+    },
+    "rs1859962": {
+      "gene": "17q24.3 (SOX9 区)",
+      "trait": "前列腺癌易感",
+      "conf": "medium"
+    },
+    "rs4939827": {
+      "gene": "SMAD7",
+      "trait": "结直肠癌易感",
+      "conf": "high"
+    },
+    "rs25487": {
+      "gene": "XRCC1",
+      "trait": "DNA 修复（Q399R）",
+      "conf": "medium"
+    },
+    "rs1799782": {
+      "gene": "XRCC1",
+      "trait": "DNA 修复（R194W）",
+      "conf": "medium"
+    },
+    "rs13181": {
+      "gene": "ERCC2 (XP-D)",
+      "trait": "DNA 修复（K751Q）",
+      "conf": "medium"
+    },
+    "rs11615": {
+      "gene": "ERCC1",
+      "trait": "DNA 修复（C8092A）",
+      "conf": "low"
+    },
+    "rs2735839": {
+      "gene": "KLK3",
+      "trait": "前列腺特异抗原水平/前列腺癌",
+      "conf": "medium"
+    },
+    "rs961253": {
+      "gene": "20p12.3 (BMP2 区)",
+      "trait": "结直肠癌（保护方向关联）",
+      "conf": "medium"
+    },
+    "rs2228001": {
+      "gene": "XPC",
+      "trait": "核苷酸切除修复",
+      "conf": "medium"
+    },
+    "rs2228000": {
+      "gene": "XPC",
+      "trait": "核苷酸切除修复",
+      "conf": "medium"
+    },
+    "rs646776": {
+      "gene": "SORT1",
+      "trait": "LDL 胆固醇",
+      "conf": "high"
+    },
+    "rs599839": {
+      "gene": "PSRC1",
+      "trait": "LDL 胆固醇（A=低 LDL 方向）",
+      "conf": "high"
+    },
+    "rs1205": {
+      "gene": "CRP",
+      "trait": "C 反应蛋白水平",
+      "conf": "medium"
+    },
+    "rs1130864": {
+      "gene": "CRP",
+      "trait": "C 反应蛋白水平",
+      "conf": "medium"
+    },
+    "rs3091244": {
+      "gene": "CRP",
+      "trait": "C 反应蛋白水平（单倍型位点）",
+      "conf": "medium"
+    },
+    "rs17465637": {
+      "gene": "MIA3",
+      "trait": "冠心病易感",
+      "conf": "high"
+    },
+    "rs699": {
+      "gene": "AGT",
+      "trait": "高血压（M235T，本数据 235M/T）",
+      "conf": "medium"
+    },
+    "rs4762": {
+      "gene": "AGT",
+      "trait": "高血压（T268? 邻近位点）",
+      "conf": "low"
+    },
+    "rs5051": {
+      "gene": "AGT 区",
+      "trait": "血管紧张素原水平",
+      "conf": "low"
+    },
+    "rs5186": {
+      "gene": "AGTR1",
+      "trait": "高血压（1166A>C，本数据野生）",
+      "conf": "medium"
+    },
+    "rs4402960": {
+      "gene": "ENPP1",
+      "trait": "2 型糖尿病/肥胖（K121Q）",
+      "conf": "low"
+    },
+    "rs8192678": {
+      "gene": "PPARGC1A",
+      "trait": "线粒体功能/耐力候选（G482S）",
+      "conf": "low"
+    },
+    "rs7754840": {
+      "gene": "CDKAL1",
+      "trait": "2 型糖尿病易感",
+      "conf": "high"
+    },
+    "rs10811661": {
+      "gene": "CDKN2A/2B 区 (9p21)",
+      "trait": "2 型糖尿病易感",
+      "conf": "high"
+    },
+    "rs657152": {
+      "gene": "CDKN2B-AS1 区 (9p21)",
+      "trait": "甘油三酯/血糖",
+      "conf": "medium"
+    },
+    "rs3798220": {
+      "gene": "LPA",
+      "trait": "脂蛋白(a) 水平",
+      "conf": "medium"
+    },
+    "rs1799971": {
+      "gene": "OPRM1",
+      "trait": "阿片受体 N40D，阿片类药物反应差异（东亚 G 高频）",
+      "conf": "medium"
+    },
+    "rs10434": {
+      "gene": "HIF1A",
+      "trait": "低氧信号通路",
+      "conf": "low"
+    },
+    "rs699947": {
+      "gene": "VEGFA",
+      "trait": "血管生成（-460）",
+      "conf": "low"
+    },
+    "rs833061": {
+      "gene": "VEGFA",
+      "trait": "血管生成（-634，黄斑变性候选）",
+      "conf": "low"
+    },
+    "rs3025033": {
+      "gene": "VEGFA",
+      "trait": "血管生成",
+      "conf": "low"
+    },
+    "rs3025039": {
+      "gene": "VEGFA",
+      "trait": "血管生成（936C>T，本数据野生）",
+      "conf": "medium"
+    },
+    "rs2070744": {
+      "gene": "NOS3",
+      "trait": "eNOS 启动子（-922）",
+      "conf": "low"
+    },
+    "rs3918226": {
+      "gene": "NOS3 区",
+      "trait": "eNOS 调控",
+      "conf": "low"
+    },
+    "rs1801253": {
+      "gene": "ADRB1",
+      "trait": "β1 受体（S49G），心率/血压反应",
+      "conf": "low"
+    },
+    "rs3918242": {
+      "gene": "MMP9",
+      "trait": "基质金属蛋白酶（动脉瘤候选）",
+      "conf": "low"
+    },
+    "rs17576": {
+      "gene": "MMP9",
+      "trait": "基质金属蛋白酶（R668Q）",
+      "conf": "low"
+    },
+    "rs1800206": {
+      "gene": "PPARGC1B",
+      "trait": "代谢（A203P）",
+      "conf": "low"
+    },
+    "rs5443": {
+      "gene": "12p12 (SREBF? 待核)",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs2569190": {
+      "gene": "CD14",
+      "trait": "先天免疫（-159C/T）",
+      "conf": "medium"
+    },
+    "rs3212227": {
+      "gene": "IL12B",
+      "trait": "白介素 12 产量",
+      "conf": "low"
+    },
+    "rs1800450": {
+      "gene": "MBL2",
+      "trait": "甘露糖结合凝集素（B 变体，本数据野生）",
+      "conf": "medium"
+    },
+    "rs5741880": {
+      "gene": "TLR7/8 区 (Xp22)",
+      "trait": "先天抗病毒免疫",
+      "conf": "low"
+    },
+    "rs10046": {
+      "gene": "CYP19A1",
+      "trait": "芳香化酶/雌激素水平",
+      "conf": "medium"
+    },
+    "rs1006737": {
+      "gene": "CACNA1C",
+      "trait": "双相/精神分裂风险（钙通道，效应小）",
+      "conf": "medium"
+    },
+    "rs13107325": {
+      "gene": "SLC39A8",
+      "trait": "锌转运（精神分裂/镉代谢候选；本数据野生）",
+      "conf": "low"
+    },
+    "rs1799941": {
+      "gene": "SHBG 区",
+      "trait": "性激素结合球蛋白水平",
+      "conf": "low"
+    },
+    "rs1800012": {
+      "gene": "COL1A1",
+      "trait": "骨密度（Sp1 位点，本数据野生）",
+      "conf": "low"
+    },
+    "rs2234693": {
+      "gene": "ESR1",
+      "trait": "雌激素受体 PvuII",
+      "conf": "low"
+    },
+    "rs9340799": {
+      "gene": "ESR1",
+      "trait": "雌激素受体 XbaI",
+      "conf": "low"
+    },
+    "rs2295080": {
+      "gene": "mTOR (1p36)",
+      "trait": "mTOR 通路上游变异",
+      "conf": "low"
+    },
+    "rs35767": {
+      "gene": "IGF1",
+      "trait": "胰岛素样生长因子 1 水平",
+      "conf": "low"
+    },
+    "rs3851179": {
+      "gene": "PICALM",
+      "trait": "阿尔茨海默病易感",
+      "conf": "medium"
+    },
+    "rs3865444": {
+      "gene": "CD33",
+      "trait": "阿尔茨海默病易感（本数据野生方向）",
+      "conf": "medium"
+    },
+    "rs523349": {
+      "gene": "SRD5A2",
+      "trait": "5α-还原酶（V89L），雄激素代谢",
+      "conf": "low"
+    },
+    "rs6258": {
+      "gene": "SHBG",
+      "trait": "性激素结合球蛋白（D327N）",
+      "conf": "low"
+    },
+    "rs6259": {
+      "gene": "SHBG",
+      "trait": "性激素结合球蛋白",
+      "conf": "low"
+    },
+    "rs659366": {
+      "gene": "UCP2",
+      "trait": "解偶联蛋白 2（-866G/A），能量代谢",
+      "conf": "low"
+    },
+    "rs6721961": {
+      "gene": "2q31（SORT1? 位置待核）",
+      "trait": "血脂（待核）",
+      "conf": "low"
+    },
+    "rs6198": {
+      "gene": "NR3C1",
+      "trait": "糖皮质激素受体 BclI（应激/代谢）",
+      "conf": "low"
+    },
+    "rs41423247": {
+      "gene": "FKBP5",
+      "trait": "应激调节（ER22/23ek? 邻近）",
+      "conf": "low"
+    },
+    "rs7124442": {
+      "gene": "BDNF 区",
+      "trait": "BDNF 邻近变异",
+      "conf": "low"
+    },
+    "rs11030104": {
+      "gene": "BDNF 区",
+      "trait": "BDNF 邻近变异",
+      "conf": "low"
+    },
+    "rs7997012": {
+      "gene": "HTR2A",
+      "trait": "抑郁/SSRI 反应候选",
+      "conf": "low"
+    },
+    "rs909525": {
+      "gene": "MAOA 区",
+      "trait": "单胺氧化酶邻近",
+      "conf": "low"
+    },
+    "rs228697": {
+      "gene": "PER3",
+      "trait": "昼夜节律候选",
+      "conf": "low"
+    },
+    "rs1800955": {
+      "gene": "DRD4",
+      "trait": "多巴胺 D4（-521C/T），新奇寻求候选",
+      "conf": "low"
+    },
+    "rs1042778": {
+      "gene": "OXTR",
+      "trait": "催产素受体",
+      "conf": "low"
+    },
+    "rs601338": {
+      "gene": "FUT2",
+      "trait": "分泌者状态（W154X；本数据=分泌者）——肠道菌群与诺如病毒易感性",
+      "conf": "medium"
+    },
+    "rs7294": {
+      "gene": "VKORC1",
+      "trait": "华法林剂量（佐证位点）",
+      "conf": "medium"
+    },
+    "rs9934438": {
+      "gene": "VKORC1",
+      "trait": "华法林剂量（佐证位点）",
+      "conf": "medium"
+    },
+    "rs71647871": {
+      "gene": "16q22（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs1801279": {
+      "gene": "NAT2",
+      "trait": "N-乙酰转移酶（282C>T 组分）",
+      "conf": "medium"
+    },
+    "rs1041983": {
+      "gene": "NAT2",
+      "trait": "N-乙酰转移酶（803A>G 组分）",
+      "conf": "medium"
+    },
+    "rs1801280": {
+      "gene": "NAT2",
+      "trait": "N-乙酰转移酶（341T>C, *5 组分）",
+      "conf": "medium"
+    },
+    "rs1799929": {
+      "gene": "NAT2",
+      "trait": "N-乙酰转移酶组分",
+      "conf": "medium"
+    },
+    "rs1799930": {
+      "gene": "NAT2",
+      "trait": "N-乙酰转移酶（590G>A, *6 组分；本数据野生）",
+      "conf": "high"
+    },
+    "rs1208": {
+      "gene": "NAT2",
+      "trait": "N-乙酰转移酶组分",
+      "conf": "medium"
+    },
+    "rs1799931": {
+      "gene": "NAT2",
+      "trait": "N-乙酰转移酶（857G>A, *7 组分）",
+      "conf": "medium"
+    },
+    "rs8176746": {
+      "gene": "ABO",
+      "trait": "血型判定组分（703，本数据无 B 读数）",
+      "conf": "medium"
+    },
+    "rs8176747": {
+      "gene": "ABO",
+      "trait": "血型判定组分（297，O1 标志读数）",
+      "conf": "medium"
+    },
+    "rs1042714": {
+      "gene": "ADRB2",
+      "trait": "β2 受体 Gln27Glu",
+      "conf": "medium"
+    },
+    "rs2764264": {
+      "gene": "FOXO3A 区",
+      "trait": "长寿（与 rs2802292 连锁）",
+      "conf": "medium"
+    },
+    "rs1695": {
+      "gene": "GSTP1",
+      "trait": "谷胱甘肽转移酶（I105V）",
+      "conf": "medium"
+    },
+    "rs1138272": {
+      "gene": "GSTP1",
+      "trait": "谷胱甘肽转移酶（A114V）",
+      "conf": "medium"
+    },
+    "rs25489": {
+      "gene": "XRCC1",
+      "trait": "DNA 修复（R280H）",
+      "conf": "medium"
+    },
+    "rs2057482": {
+      "gene": "14q32（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs1042522": {
+      "gene": "TP53",
+      "trait": "p53 P72R（肿瘤易感/功能差异候选）",
+      "conf": "medium"
+    },
+    "rs5882": {
+      "gene": "LIPC",
+      "trait": "肝脂酶（-514C/T）",
+      "conf": "low"
+    },
+    "rs964184": {
+      "gene": "ZPR1/ZNF259 (11q23)",
+      "trait": "甘油三酯/HDL",
+      "conf": "high"
+    },
+    "rs3135506": {
+      "gene": "APOA5/APOA3 区",
+      "trait": "血脂",
+      "conf": "low"
+    },
+    "rs9536314": {
+      "gene": "13q14（骨密度? 待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs3027234": {
+      "gene": "17q21（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs34536443": {
+      "gene": "19p13（IRGM 区候选）",
+      "trait": "自噬/克罗恩候选",
+      "conf": "low"
+    },
+    "rs73598374": {
+      "gene": "20p12（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs480902": {
+      "gene": "1q42（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs17034984": {
+      "gene": "2p23（EPAS1 邻近? 待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs1799895": {
+      "gene": "SOD1 区 (4p? 待核)",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs551238": {
+      "gene": "7q?（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs135538": {
+      "gene": "22q11（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs1617640": {
+      "gene": "7p14（TFR2? 待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs1824024": {
+      "gene": "7q31（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs7566605": {
+      "gene": "2q36（胰岛素特征候选）",
+      "trait": "胰岛素分泌/血糖",
+      "conf": "low"
+    },
+    "rs6746030": {
+      "gene": "2q37（TRPV1 邻近? 待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs11125529": {
+      "gene": "2p16（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs6548238": {
+      "gene": "2p25（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs10936599": {
+      "gene": "TERC 区",
+      "trait": "端粒长度/长寿",
+      "conf": "medium"
+    },
+    "rs75333668": {
+      "gene": "1p（待核）",
+      "trait": "待核",
+      "conf": "low"
+    },
+    "rs2476601": {
+      "gene": "PTPN22",
+      "trait": "C1858T：RA/T1D 等自身免疫易感（欧洲主效，东亚变异型罕见）",
+      "conf": "high"
+    },
+    "rs7574865": {
+      "gene": "STAT4",
+      "trait": "自身免疫（RA/SLE）易感",
+      "conf": "medium"
+    },
+    "rs231775": {
+      "gene": "CTLA4",
+      "trait": "A49G：T1D/自身免疫易感",
+      "conf": "medium"
+    },
+    "rs1990760": {
+      "gene": "IFIH1 (MDA5)",
+      "trait": "1 型糖尿病易感/保护候选",
+      "conf": "low"
+    },
+    "rs16944": {
+      "gene": "IL1B",
+      "trait": "-511：IL-1β 产量",
+      "conf": "medium"
+    },
+    "rs1143627": {
+      "gene": "IL1RN",
+      "trait": "IL-1 受体拮抗剂水平/炎症反应",
+      "conf": "low"
+    },
+    "rs1800629": {
+      "gene": "TNF",
+      "trait": "-308G>A：TNF-α 产量",
+      "conf": "medium"
+    },
+    "rs1800795": {
+      "gene": "IL6",
+      "trait": "-174G>C：IL-6 水平（东亚以 G 为主）",
+      "conf": "medium"
+    },
+    "rs3775291": {
+      "gene": "TLR4",
+      "trait": "Thr399Ile：先天免疫反应",
+      "conf": "medium"
+    },
+    "rs4986790": {
+      "gene": "TLR4",
+      "trait": "Asp299Gly：先天免疫/革兰氏阴性菌反应",
+      "conf": "medium"
+    },
+    "rs4986791": {
+      "gene": "TLR4",
+      "trait": "Thr399Ile（与 D299G 连锁）",
+      "conf": "medium"
+    },
+    "rs2066845": {
+      "gene": "NOD2",
+      "trait": "克罗恩病易感（欧洲主效，东亚罕见）",
+      "conf": "medium"
+    },
+    "rs2066847": {
+      "gene": "NOD2",
+      "trait": "克罗恩病易感（欧洲主效，东亚罕见）",
+      "conf": "medium"
+    },
+    "rs12979860": {
+      "gene": "IFNL3 (IL28B)",
+      "trait": "丙肝干扰素治疗应答",
+      "conf": "high"
+    },
+    "rs8099917": {
+      "gene": "IFNL3 (IL28B)",
+      "trait": "丙肝干扰素治疗应答",
+      "conf": "high"
+    },
+    "rs762551": {
+      "gene": "AHR",
+      "trait": "芳烃受体：CYP1A1 诱导（吸烟代谢）",
+      "conf": "medium"
+    },
+    "rs1801282": {
+      "gene": "PPARG",
+      "trait": "Pro12Ala：Ala 携带与 T2D 风险降低相关",
+      "conf": "high"
+    },
+    "rs7903146": {
+      "gene": "TCF7L2",
+      "trait": "T2D 主效易感位点",
+      "conf": "high"
+    },
+    "rs12255372": {
+      "gene": "TCF7L2",
+      "trait": "T2D 易感（与 rs7903146 连锁）",
+      "conf": "high"
+    },
+    "rs13266634": {
+      "gene": "SLC30A8",
+      "trait": "R325W：T2D 易感（锌转运体）",
+      "conf": "high"
+    },
+    "rs5219": {
+      "gene": "KCNJ11",
+      "trait": "E23K：T2D 易感/磺脲类反应",
+      "conf": "high"
+    },
+    "rs9939609": {
+      "gene": "FTO",
+      "trait": "BMI/肥胖易感（食欲调节通路）",
+      "conf": "high"
+    },
+    "rs8050136": {
+      "gene": "FTO",
+      "trait": "BMI/肥胖易感",
+      "conf": "high"
+    },
+    "rs1421085": {
+      "gene": "FTO-IRX3/5 增强子",
+      "trait": "肥胖/脂肪细胞产热",
+      "conf": "medium"
+    },
+    "rs17782313": {
+      "gene": "MC4R 下游",
+      "trait": "肥胖易感",
+      "conf": "medium"
+    },
+    "rs328": {
+      "gene": "LPL",
+      "trait": "S447X：甘油三酯降低/HDL 升高（有利方向）",
+      "conf": "high"
+    },
+    "rs662799": {
+      "gene": "APOA5",
+      "trait": "-1131T>C：甘油三酯水平",
+      "conf": "medium"
+    },
+    "rs174546": {
+      "gene": "FADS1",
+      "trait": "长链多不饱和脂肪酸（AA/EPA/DHA）代谢",
+      "conf": "high"
+    },
+    "rs174547": {
+      "gene": "FADS1",
+      "trait": "长链多不饱和脂肪酸代谢（与 rs174546 连锁）",
+      "conf": "high"
+    },
+    "rs1801133": {
+      "gene": "MTHFR",
+      "trait": "A222V（677C>T）：叶酸/同型半胱氨酸代谢",
+      "conf": "high"
+    },
+    "rs1801131": {
+      "gene": "MTHFR",
+      "trait": "E429A（1298A>C）：叶酸代谢",
+      "conf": "high"
+    },
+    "rs1050450": {
+      "gene": "GPX1",
+      "trait": "Pro198Leu：谷胱甘肽过氧化物酶活性",
+      "conf": "medium"
+    },
+    "rs1001179": {
+      "gene": "CAT",
+      "trait": "过氧化氢酶活性",
+      "conf": "low"
+    },
+    "rs4880": {
+      "gene": "SOD2",
+      "trait": "Val16Ala：线粒体 MnSOD 酶活性",
+      "conf": "medium"
+    },
+    "rs4988235": {
+      "gene": "LCT/MCM6",
+      "trait": "-13910：乳糖酶持久性（欧洲型；东亚几乎均为不持久）",
+      "conf": "high"
+    },
+    "rs10757274": {
+      "gene": "9p21 (CDKN2B-AS1)",
+      "trait": "冠心病易感",
+      "conf": "high"
+    },
+    "rs1333049": {
+      "gene": "9p21 (CDKN2B-AS1)",
+      "trait": "冠心病易感",
+      "conf": "high"
+    },
+    "rs2736100": {
+      "gene": "TERT",
+      "trait": "白细胞端粒长度/胶质瘤等易感",
+      "conf": "medium"
+    },
+    "rs4410790": {
+      "gene": "CLPTM1L-TERT (5p15.33)",
+      "trait": "肺癌易感候选",
+      "conf": "low"
+    },
+    "rs1799945": {
+      "gene": "HFE",
+      "trait": "H63D：血色病携带（轻）",
+      "conf": "high"
+    },
+    "rs1800562": {
+      "gene": "HFE",
+      "trait": "C282Y：血色病主效（欧洲变异，东亚罕见）",
+      "conf": "high"
+    },
+    "rs429358": {
+      "gene": "APOE",
+      "trait": "ε 等位基因决定（阿尔茨海默风险主效）",
+      "conf": "high"
+    },
+    "rs7412": {
+      "gene": "APOE",
+      "trait": "ε 等位基因决定（阿尔茨海默风险主效）",
+      "conf": "high"
+    },
+    "rs671": {
+      "gene": "ALDH2",
+      "trait": "Glu504Lys：乙醛代谢（饮酒脸红）",
+      "conf": "high"
+    },
+    "rs4149056": {
+      "gene": "SLCO1B1",
+      "trait": "他汀类肌肉毒性易感",
+      "conf": "high"
+    },
+    "rs4244285": {
+      "gene": "CYP2C19",
+      "trait": "*2（681G>A）：慢代谢（氯吡格雷/PPI）",
+      "conf": "high"
+    },
+    "rs1799853": {
+      "gene": "CYP2C9",
+      "trait": "*2：华法林敏感",
+      "conf": "high"
+    },
+    "rs1057910": {
+      "gene": "CYP2C9",
+      "trait": "*3：华法林/苯妥英代谢",
+      "conf": "high"
+    },
+    "rs9923231": {
+      "gene": "VKORC1",
+      "trait": "-1639：华法林剂量主效",
+      "conf": "high"
+    },
+    "rs776746": {
+      "gene": "CYP3A5",
+      "trait": "*3（6986A>G）：CYP3A5 表达缺失",
+      "conf": "high"
+    },
+    "rs1045642": {
+      "gene": "ABCB1",
+      "trait": "C3435T：P-糖蛋白表达",
+      "conf": "medium"
+    },
+    "rs2032582": {
+      "gene": "ABCB1",
+      "trait": "G2677T/A：P-糖蛋白转运",
+      "conf": "medium"
+    },
+    "rs1128503": {
+      "gene": "ABCB1",
+      "trait": "P-糖蛋白转运",
+      "conf": "low"
+    },
+    "rs8176719": {
+      "gene": "ABO",
+      "trait": "261delG：O 等位基因标志",
+      "conf": "high"
+    },
+    "rs4953354": {
+      "gene": "EPAS1",
+      "trait": "高原适应选择区（藏族富集单倍型）",
+      "conf": "low"
+    },
+    "rs1868092": {
+      "gene": "EPAS1 区",
+      "trait": "高原适应连锁位点",
+      "conf": "low"
+    },
+    "rs1799983": {
+      "gene": "NOS3",
+      "trait": "E298D：eNOS 活性/血管反应",
+      "conf": "medium"
+    },
+    "rs11549465": {
+      "gene": "HIF1A",
+      "trait": "P582S：低氧反应候选",
+      "conf": "low"
+    },
+    "rs11549467": {
+      "gene": "HIF1A",
+      "trait": "A588T：低氧反应候选",
+      "conf": "low"
+    },
+    "rs2010963": {
+      "gene": "VEGFA",
+      "trait": "-2578：VEGF 水平",
+      "conf": "low"
+    },
+    "rs4253778": {
+      "gene": "ACE 区",
+      "trait": "ACE I/D 结构变异邻近标签",
+      "conf": "low"
+    },
+    "rs4343": {
+      "gene": "ACE",
+      "trait": "ACE 区标签（I/D 结构变异不可由 SNP 判定）",
+      "conf": "low"
+    },
+    "rs4341": {
+      "gene": "ACE",
+      "trait": "ACE 区标签",
+      "conf": "low"
+    },
+    "rs1815739": {
+      "gene": "ACTN3",
+      "trait": "R577X：快肌α-辅肌动蛋白（X 型无功能，耐力偏向）",
+      "conf": "high"
+    },
+    "rs6265": {
+      "gene": "BDNF",
+      "trait": "Val66Met：应激反应/记忆表现关联",
+      "conf": "medium"
+    },
+    "rs53576": {
+      "gene": "OXTR",
+      "trait": "催产素受体：社会认知关联（效应极小）",
+      "conf": "low"
+    },
+    "rs2254298": {
+      "gene": "OXTR",
+      "trait": "催产素受体：应激/依恋关联（效应极小）",
+      "conf": "low"
+    },
+    "rs4680": {
+      "gene": "COMT",
+      "trait": "Val158Met：儿茶酚胺代谢（前额叶多巴胺）",
+      "conf": "medium"
+    },
+    "rs6311": {
+      "gene": "HTR2A",
+      "trait": "-1438A/G：5-HT2A 密度",
+      "conf": "low"
+    },
+    "rs6313": {
+      "gene": "HTR2A",
+      "trait": "102T/C：5-HT2A 密度",
+      "conf": "low"
+    },
+    "rs6280": {
+      "gene": "DRD3",
+      "trait": "Ser9Gly：多巴胺 D3 受体",
+      "conf": "low"
+    },
+    "rs6323": {
+      "gene": "MAOA",
+      "trait": "单胺氧化酶 A 活性",
+      "conf": "low"
+    },
+    "rs1800497": {
+      "gene": "ANKK1/DRD2",
+      "trait": "Taq1A：D2 受体密度/奖赏",
+      "conf": "medium"
+    },
+    "rs1360780": {
+      "gene": "FKBP5",
+      "trait": "应激轴（HPA）反应性/创伤应激候选",
+      "conf": "low"
+    },
+    "rs17070145": {
+      "gene": "KIBRA",
+      "trait": "情景记忆表现关联",
+      "conf": "low"
+    },
+    "rs1801260": {
+      "gene": "CLOCK",
+      "trait": "3111T/C：睡眠节律关联",
+      "conf": "low"
+    },
+    "rs1042713": {
+      "gene": "ADRB2",
+      "trait": "Arg16Gly：β2 受体下调/支气管反应性",
+      "conf": "medium"
+    }
   }
 }

@@ -25,8 +25,10 @@
 4. 🫀 **健康风险参考** — APOE、9p21 冠心病、T2D、FTO 体重、FOXO3 长寿、HFE 等（统计关联级）
 5. 🛡️ **免疫与炎症** — 自身免疫主效位点 + 细胞因子产量
 6. 🏔️ **祖先特征与高原适应** — 东亚正选择位点、EPAS1 高原适应、血型等
-7. 📊 **关联位点总表** — 330+ 位点的文献注释 + GWAS Catalog/dbSNP/SNPedia 外链
-8. 🧫 **基因组概览与下载** — 每染色体统计图 + 全部原始分型 gzip TSV 下载
+7. 🧭 **父系与母系单倍群（粗判）** — Phylotree B17 全树走查（母系）+ ISOGG 2016 主干标记（父系），
+   全部判定证据以表格展示
+8. 📊 **关联位点总表** — 330+ 位点的文献注释 + GWAS Catalog/dbSNP/SNPedia 外链
+9. 🧫 **基因组概览与下载** — 每染色体统计图 + 全部原始分型 gzip TSV 下载
 
 ## 快速开始
 
@@ -51,7 +53,9 @@ make serve   # http://localhost:8080
 │   ├── import_genotypes.py  #   ASA+IMP → SQLite
 │   ├── fetch_dbsnp.py       #   dbSNP 权威等位基因拉取（缓存已提交）
 │   ├── verify.py            #   双重校验（用户清单比对 + dbSNP 比对）
+│   ├── haplogroups.py       #   父系/母系单倍群推断（树感知走查）
 │   ├── panels/*.json        #   ⭐ 解读面板（改内容只改这里）
+│   │   └── haplogroup_trees.json.gz  #   Phylotree 17 + ISOGG 树数据（判定的唯一依据）
 │   ├── build_reports.py     #   面板 × 基因型 → 网站 JSON
 │   └── export_genome.py     #   按染色体导出 + 统计
 ├── site/                    # 纯静态网站（Cloudflare Pages 部署目录）
@@ -64,7 +68,7 @@ make serve   # http://localhost:8080
 ## 方法与质控（详见站内「方法与数据质量」页）
 
 - **链方向**：原始数据为正链；文献"基因方向"写法统一换算并标注。
-  每个面板位点的正链等位基因均已用 NCBI dbSNP 官方 API 核验（238/238 成功）。
+  每个面板位点的正链等位基因均已用 NCBI dbSNP 官方 API 核验（306/306 成功，含单倍群标记）。
 - **实测优先**：ASA 实测与 IMP 填充严格互补；报告优先使用实测位点。
 - **不推断清单**：CYP2D6（结构变异）、HLA（高多态）、5-HTTLPR（indel）、
   BRCA1/2 大片段、Lynch 综合征基因、ACE I/D、Rh 血型等。
@@ -73,5 +77,6 @@ make serve   # http://localhost:8080
 ## 许可
 
 - 代码：MIT
-- 基因分型数据与报告内容：CC BY 4.0（数据所有者本人授权公开）
-- 详细说明见 [docs/DATA_LICENSE.md](docs/DATA_LICENSE.md)
+- 基因分型数据与报告内容：**CC BY-NC-ND 4.0**（仅可非商业、原样、署名转载；禁止演绎）
+  > 2026-09-27 起收紧。此前以 CC BY 4.0 获取的副本依原许可；另附所有者使用边界声明
+  > （禁止歧视性用途与再识别分析）。详见 [docs/DATA_LICENSE.md](docs/DATA_LICENSE.md)

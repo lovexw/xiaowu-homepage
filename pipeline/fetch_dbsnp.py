@@ -25,6 +25,7 @@ DELAY = 0.45  # NCBI 免费限速 ~3 req/s
 
 
 def all_panel_rsids() -> set[str]:
+    import gzip
     rsids = set()
     for pf in sorted((Path(__file__).parent / "panels").glob("*.json")):
         if pf.name.startswith("_"):
@@ -36,6 +37,20 @@ def all_panel_rsids() -> set[str]:
                 rsids.add(r)
     ann = json.loads((Path(__file__).parent / "panels" / "annotations_curated.json").read_text())
     rsids.update(k for k in ann["annotations"] if k.startswith("rs"))
+    hg = Path(__file__).parent / "panels" / "haplogroup_trees.json.gz"
+    if hg.exists():
+        data = json.loads(gzip.open(hg, "rt", encoding="utf-8").read())
+
+        def walk(node):
+            for mk in node.get("markers", []):
+                r = mk.get("rsid", "")
+                if r.startswith("rs"):
+                    rsids.add(r)
+            for c in node.get("children", []):
+                walk(c)
+
+        walk(data.get("y", {}))
+        rsids.update(r for r in data.get("mt_evidence_rsids", []) if r.startswith("rs"))
     return rsids
 
 

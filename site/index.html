@@ -10,11 +10,17 @@
 <body>
 <header class="site-header">
   <div class="wrap">
-    <div class="brand">
-      <span class="logo">🧬</span>
-      <div>
-        <h1>小吴的基因报告<em>OPEN GENOME REPORT</em></h1>
-        <p class="sub">个人基因组数据 · 开源科学报告 · GRCh37/hg19</p>
+    <div class="header-top">
+      <div class="brand">
+        <span class="logo">🧬</span>
+        <div>
+          <h1>小吴的基因报告<em>OPEN GENOME REPORT</em></h1>
+          <p class="sub">个人基因组数据 · 开源科学报告 · GRCh37/hg19</p>
+        </div>
+      </div>
+      <div class="search-box">
+        <input id="site-search" type="search" placeholder="搜索位点 / 基因 / 关键词…" autocomplete="off" spellcheck="false" aria-label="站内搜索">
+        <div class="search-results" id="search-results" hidden></div>
       </div>
     </div>
     <nav class="top-nav" id="top-nav"></nav>
@@ -33,7 +39,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>数据平台：Illumina ASA（亚洲筛查芯片，约 70 万位点实测）+ 1000 Genomes 填充（约 477 万位点） · 坐标 GRCh37/hg19 · 原始导出于 2019-12</p>
-    <p>开源项目：<a href="https://github.com/lovexw/open-genome-report" target="_blank" rel="noopener">github.com/lovexw/open-genome-report</a> · 代码 MIT · 数据与解读 CC BY 4.0（小吴本人乐意公开）</p>
+    <p>开源项目：<a href="https://github.com/lovexw/open-genome-report" target="_blank" rel="noopener">github.com/lovexw/open-genome-report</a> · 代码 MIT · 数据与解读 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a>（禁商用 / 禁演绎 · 详见数据许可声明）</p>
     <p>科学解读为原创撰写，每个位点均附 dbSNP / GWAS Catalog / PubMed 数据源链接；🔬 页面查看方法与质控。</p>
   </div>
 </footer>

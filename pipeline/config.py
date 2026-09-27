@@ -62,4 +62,4 @@ PROFILE = {
     "genome_build": "GRCh37 / hg19 (build 37)",
 }
 
-VERSION = "0.1.0"
+VERSION = "0.3.2"

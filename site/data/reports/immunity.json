@@ -450,7 +450,21 @@
   {
    "title": "HLA 区域未覆盖说明",
    "text": "经典 HLA 分型（如 HLA-B27、HLA-DR3/4）无法从 SNP 芯片可靠推断，自身免疫病最重要的 HLA 风险（类风湿的 DRB1 共享表位、1 型糖尿病的 DR3/DR4-DQ2/DQ8）不在本报告范围内。",
-   "level": "attention"
+   "level": "attention",
+   "links": [
+    {
+     "label": "HLA-B27 与脊柱关节炎（PubMed 检索）",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/?term=HLA-B27+spondyloarthritis+review"
+    },
+    {
+     "label": "HLA-DRB1 共享表位与类风湿关节炎（PubMed 检索）",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/?term=shared+epitope+HLA-DRB1+rheumatoid+arthritis"
+    },
+    {
+     "label": "HLA DR3/DR4-DQ8 与 1 型糖尿病（PubMed 检索）",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/?term=HLA+DR3+DR4+DQ8+type+1+diabetes+genetics"
+    }
+   ]
   }
  ],
  "counts": {

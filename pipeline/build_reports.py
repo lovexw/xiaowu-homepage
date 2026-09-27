@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config  # noqa: E402
+import haplogroups  # noqa: E402
 
 PANELS_DIR = Path(__file__).parent / "panels"
 
@@ -158,7 +159,8 @@ def build_module(conn, panel: dict, dbsnp: dict, flags: dict, popsci: dict) -> d
         entries.append(out)
 
     cards = [
-        {"title": c["title"], "text": c["text"], "level": c["level"]}
+        {"title": c["title"], "text": c["text"], "level": c["level"],
+         **({"links": c["links"]} if c.get("links") else {})}
         for c in panel.get("special_cards", [])
     ]
     return {
@@ -254,6 +256,64 @@ def build_overview(conn, manifest_modules, dbsnp):
     }
 
 
+def build_search_index() -> dict:
+    """站内搜索索引（首次搜索时客户端拉取一次）。
+
+    范围：面板解读位点（rsid/基因/人话版/解读文字）、关联表全部行（rsid/基因/trait）、
+    以及各页面关键词。全基因组 5.47M 位点的 rsID 检索体积过大，仍留 ROADMAP（按染色体预建索引）。
+    """
+    idx = {"entries": [], "pages": []}
+    manifest = json.loads((config.SITE_DIR / "data" / "manifest.json").read_text())
+    for m in manifest:
+        mod, is_table = m["module"], m["module"].startswith("assoc")
+        d = json.loads((config.REPORTS_DIR / f"{mod}.json").read_text())
+        if is_table:
+            idx["pages"].append({"title": d.get("title", mod), "href": f"#/table/{mod}",
+                                 "kind": "page",
+                                 "text": f"关联位点表 {d.get('title', '')}"})
+            for r in d.get("rows", []):
+                idx["entries"].append({
+                    "kind": "table", "rsid": r.get("rsid", ""), "gene": r.get("gene", ""),
+                    "title": f"{r.get('gene') or '—'} · {r.get('rsid')}",
+                    "sub": r.get("trait") or "（注释待核）",
+                    "module": d.get("title", ""), "href": f"#/table/{mod}",
+                    "anchor": f"{mod}-{r.get('rsid')}",
+                    "text": r.get("trait", ""),
+                })
+        else:
+            idx["pages"].append({"title": f"{m.get('icon', '')} {m['title']}",
+                                 "href": f"#/module/{mod}", "kind": "page",
+                                 "text": m.get("intro", "")})
+            for e in d.get("entries", []):
+                if e.get("crosslink"):
+                    continue
+                res = e.get("resolved") or {}
+                idx["entries"].append({
+                    "kind": "panel", "rsid": e.get("rsid", ""), "gene": e.get("gene", ""),
+                    "title": f"{e.get('gene')} · {e.get('rsid')}",
+                    "sub": e.get("plain") or res.get("label") or e.get("variant", ""),
+                    "module": m["title"], "href": f"#/module/{mod}",
+                    "anchor": e.get("rsid"),
+                    "text": " ".join(x for x in [e.get("variant", ""), e.get("plain") or "",
+                                                 res.get("label", ""), res.get("text", ""),
+                                                 e.get("group", "")] if x),
+                })
+
+    hg = json.loads((config.REPORTS_DIR / "haplogroups.json").read_text())
+    idx["pages"].append({
+        "title": "🧭 父系与母系单倍群", "href": "#/haplogroups", "kind": "page",
+        "text": (f"单倍群 单倍型 父系 母系 Y染色体 线粒体 mtDNA 单倍群粗判 "
+                 f"{hg['y']['call']} M120 Q1a1a1 {hg['mt']['call']} F2"),
+    })
+    idx["pages"].append({"title": "🔬 方法与数据质量", "href": "#/methods", "kind": "page",
+                         "text": "方法 数据质量 校验 dbSNP 坐标 正链 不推断 使用边界 填充"})
+    idx["pages"].append({"title": "🧫 基因组概览与下载", "href": "#/genome", "kind": "page",
+                         "text": "原始分型 下载 染色体 TSV gzip 全基因组 概览 stats"})
+    idx["pages"].append({"title": "🏠 总览", "href": "#/", "kind": "page",
+                         "text": "首页 总览 统计 杂合率 血型 APOE 30秒"})
+    return idx
+
+
 def main():
     if not config.SQLITE_PATH.exists():
         sys.exit("请先运行 make import")
@@ -311,6 +371,22 @@ def main():
 
     overview = build_overview(conn, manifest, dbsnp)
     overview["home_popsci"] = popsci_data.get("home", [])
+
+    # 单倍群（父系 Y / 母系 mtDNA）：独立分析页 + 首页徽章
+    hg_doc = haplogroups.build_report(conn, dbsnp)
+    (config.REPORTS_DIR / "haplogroups.json").write_text(
+        json.dumps(hg_doc, ensure_ascii=False, indent=1))
+    overview["y_haplogroup"] = {"value": hg_doc["y"]["call"],
+                                "confidence": hg_doc["y"]["confidence"]}
+    overview["mt_haplogroup"] = {"value": hg_doc["mt"]["call"],
+                                 "confidence": hg_doc["mt"]["confidence"]}
+    print(f"[haplogroups] mt={hg_doc['mt']['call']} / y={hg_doc['y']['call']}")
+
+    search_idx = build_search_index()
+    (config.SITE_DIR / "data" / "search_index.json").write_text(
+        json.dumps(search_idx, ensure_ascii=False, separators=(",", ":")))
+    print(f"[search_index] {len(search_idx['entries'])} 条目 + {len(search_idx['pages'])} 页面")
+
     (config.REPORTS_DIR / "overview.json").write_text(
         json.dumps(overview, ensure_ascii=False, indent=1))
     (config.SITE_DIR / "data" / "manifest.json").write_text(
