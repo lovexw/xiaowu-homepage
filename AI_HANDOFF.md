@@ -20,14 +20,15 @@
 | 事项 | 位置 | 说明 |
 |---|---|---|
 | 数据合并入库 | `data/local/genome.sqlite`（gitignore） | 5,466,295 位点，ASA 699,321 + IMP 4,766,974，两文件严格互补无重叠 |
-| 解读面板 6 个 | `pipeline/panels/*.json` | 药物基因组(23)/代谢营养(14)/特质心理(19)/健康风险(17)/免疫炎症(15)/祖先高原(9) |
+| 解读面板 6 个 | `pipeline/panels/*.json` | 药物基因组(23)/代谢营养(15)/特质心理(19)/健康风险(18)/免疫炎症(15)/祖先高原(9)，全部位点解读正常解析（0 unknown） |
 | 关联注释字典 | `pipeline/panels/annotations_curated.json` | ~120 条经典注释，未收录者表格中显示"—"+外链 |
 | dbSNP 权威校验 | `pipeline/cache/dbsnp/`（已提交） | 238 个位点全部拉取成功（正链等位基因 + GRCh37 位置），离线可复用 |
 | 双重校验 | `pipeline/verify.py` → `site/data/quality.json` | 用户 8 份人工清单 494 条 vs 原始数据：100% 一致 |
-| 报告生成 | `pipeline/build_reports.py` → `site/data/reports/*.json` | 模块 JSON + 5 张关联表 + 总览 + manifest |
-| 全基因组导出 | `pipeline/export_genome.py` → `site/data/genome/chr*.tsv.gz` | 按染色体 gzip TSV + 每染色体统计 |
+| 报告生成 | `pipeline/build_reports.py` → `site/data/reports/*.json` | 模块 JSON + 5 张关联表(330 行) + 总览 + manifest |
+| 全基因组导出 | `pipeline/export_genome.py` → `site/data/genome/chr*.tsv.gz` | 24 条染色体 gzip TSV（共 57MB，单文件 ≤4.1MB）+ 每染色体统计 |
 | 静态网站 | `site/`（index.html + assets/app.js + style.css） | 零依赖 SPA，hash 路由，7 类页面 |
-| 文档 | README / docs/* / 本文件 | 部署、决策、路线图 |
+| 部署 | GitHub `lovexw/open-genome-report` + CF Pages | https://open-genome-report.pages.dev ✅ 浏览器验证通过 |
+| 文档 | README / docs/* / 本文件 | 部署、决策、路线图、数据许可 |
 
 ### 已验证的关键事实 🔍（接手者可直接信任）
 1. **ASA 与 IMP 两文件严格互补**：抽样 19 位点按 rsID+位置均无交集；总和 = 5,466,295。
@@ -40,12 +41,14 @@
    - dbSNP SPDI 位置为 0 基（1 基 = position+1），解析时已处理。
 5. 部分位点 gesedna 的 rsID↔位置映射与 dbSNP 记录不一致（verify 会标出，网站 ⚠️ 展示）。
 
-### 进行中/待办 ⏳（按优先级）
-1. **Cloudflare Pages 部署**（见 docs/DEPLOY.md；若 wrangler 未登录需所有者操作）
-2. MT 线粒体单倍型分析（3,738 位点在库，可在 build_reports 加 haplogroup 树推断）
-3. 定量祖源分析（需要准备东亚参考面板做 PCA/ADMIXTURE，或对接 open tools）
-4. 前端 rsID 全库检索（现有仅面板位点可查；全库需按染色体预建索引）
-5. NAT2 表型自动化判定（等位基因方向已可从 dbSNP 缓存核对，需写单倍型逻辑）
+### 进行中/待办 ⏳（按优先级，详见 docs/ROADMAP.md）
+1. MT 线粒体单倍型分析（3,738 位点在库，可在 build_reports 加 haplogroup 树推断）
+2. 定量祖源分析（需要准备东亚参考面板做 PCA/ADMIXTURE，或对接 open tools）
+3. 前端 rsID 全库检索（现有仅面板位点可查；全库需按染色体预建索引）
+4. NAT2 表型自动化判定（注意：该数据集 NAT2 多个位点读数与 dbSNP 不符——
+   如 rs1801279 数据 GG、rs1041983 数据 TC——大概率 gesedna 映射问题，
+   实现时必须先过 verify 校验，宁可留白）
+5. CF Dashboard 连接 Git 仓库实现 push 自动部署（当前为 wrangler 手动部署）
 6. 英文版页面
 
 ## 2. 接手操作手册
@@ -85,9 +88,13 @@ make serve     # http://localhost:8080 预览
 
 ## 3. 部署状态
 
-- GitHub：`lovexw/open-genome-report`（推送方式见 docs/DEPLOY.md）
-- Cloudflare Pages：项目名 `open-genome-report`，构建输出目录 `site`（无构建命令，纯静态）。
-- 当前状态：⏳ 待完成首次部署（本地已可 `make serve` 预览）。
+- GitHub：`lovexw/open-genome-report`（main 分支，CI 已配置）✅
+- Cloudflare Pages：项目 `open-genome-report`，生产地址
+  **https://open-genome-report.pages.dev** ✅（2026-09-27 首次部署并经浏览器验证：
+  总览/模块页/基因组页渲染正常）
+- 部署方式：`wrangler pages deploy site --project-name=open-genome-report`
+  （本机 wrangler 已 OAuth 登录；后续推荐在 CF Dashboard 连接 Git 实现自动部署，
+  见 docs/DEPLOY.md）
 
 ## 4. 更新逻辑（数据或内容变更时）
 
