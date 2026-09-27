@@ -1,0 +1,1193 @@
+{
+ "title": "肿瘤相关位点（关联级证据）",
+ "rows": [
+  {
+   "rsid": "rs17401966",
+   "chrom": "1",
+   "pos": 10385471,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "1p11.2 (MRPS30 区)",
+   "trait": "乳腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs17401966",
+    "snpedia": "https://www.snpedia.com/index.php/Rs17401966",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs17401966",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs17401966"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1801131",
+   "chrom": "1",
+   "pos": 11854476,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801131",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801131",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801131",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801131"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1801133",
+   "chrom": "1",
+   "pos": 11856378,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801133",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801133",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801133",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801133"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11249433",
+   "chrom": "1",
+   "pos": 121280613,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "1p11.2",
+   "trait": "乳腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11249433",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11249433",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11249433",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11249433"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4072037",
+   "chrom": "1",
+   "pos": 155162067,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "MUC1",
+   "trait": "胃癌（保护方向关联）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4072037",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4072037",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4072037",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4072037"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs721048",
+   "chrom": "2",
+   "pos": 63131731,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "EHBP1 (2p15)",
+   "trait": "前列腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs721048",
+    "snpedia": "https://www.snpedia.com/index.php/Rs721048",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs721048",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs721048"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs16944",
+   "chrom": "2",
+   "pos": 113594867,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs16944",
+    "snpedia": "https://www.snpedia.com/index.php/Rs16944",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs16944",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs16944"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs7574865",
+   "chrom": "2",
+   "pos": 191964633,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs7574865",
+    "snpedia": "https://www.snpedia.com/index.php/Rs7574865",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs7574865",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs7574865"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1052133",
+   "chrom": "3",
+   "pos": 9798773,
+   "gt": "CG",
+   "source": "ASA",
+   "gene": "OGG1",
+   "trait": "DNA 修复（S326C），肺癌易感性候选",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1052133",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1052133",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1052133",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1052133"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2228001",
+   "chrom": "3",
+   "pos": 14187449,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "XPC",
+   "trait": "核苷酸切除修复",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2228001",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2228001",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2228001",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2228001"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2228000",
+   "chrom": "3",
+   "pos": 14199887,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "XPC",
+   "trait": "核苷酸切除修复",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2228000",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2228000",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2228000",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2228000"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4973768",
+   "chrom": "3",
+   "pos": 27416013,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "SLC4A7/NEK10 (3p24)",
+   "trait": "乳腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4973768",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4973768",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4973768",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4973768"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1050450",
+   "chrom": "3",
+   "pos": 49394834,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1050450",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1050450",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1050450",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1050450"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2736100",
+   "chrom": "5",
+   "pos": 1286516,
+   "gt": "AC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2736100",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2736100",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2736100",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2736100"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs401681",
+   "chrom": "5",
+   "pos": 1322087,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "CLPTM1L-TERT (5p15.33)",
+   "trait": "肺癌/膀胱癌等多癌种易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs401681",
+    "snpedia": "https://www.snpedia.com/index.php/Rs401681",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs401681",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs401681"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs16891982",
+   "chrom": "5",
+   "pos": 33951693,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "SLC45A2",
+   "trait": "色素表位/黑色素瘤易感（欧洲变异，东亚罕见）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs16891982",
+    "snpedia": "https://www.snpedia.com/index.php/Rs16891982",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs16891982",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs16891982"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs10941679",
+   "chrom": "5",
+   "pos": 44706498,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "5q11 (MRPS30/FGFR2 邻近)",
+   "trait": "乳腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs10941679",
+    "snpedia": "https://www.snpedia.com/index.php/Rs10941679",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs10941679",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs10941679"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs889312",
+   "chrom": "5",
+   "pos": 56031884,
+   "gt": "AC",
+   "source": "ASA",
+   "gene": "MAP3K1 (5q11.2)",
+   "trait": "乳腺癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs889312",
+    "snpedia": "https://www.snpedia.com/index.php/Rs889312",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs889312",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs889312"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800629",
+   "chrom": "6",
+   "pos": 31543031,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800629",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800629",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800629",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800629"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2046210",
+   "chrom": "6",
+   "pos": 151948366,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "ESR1 上游 (6q25.1)",
+   "trait": "乳腺癌易感（东亚人群显著）",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2046210",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2046210",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2046210",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2046210"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4880",
+   "chrom": "6",
+   "pos": 160113872,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4880",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4880",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4880",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4880"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800795",
+   "chrom": "7",
+   "pos": 22766645,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800795",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800795",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800795",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800795"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4132601",
+   "chrom": "7",
+   "pos": 50470604,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4132601",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4132601",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4132601",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4132601"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs16892766",
+   "chrom": "8",
+   "pos": 117630683,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "8q24 区 3",
+   "trait": "结直肠癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs16892766",
+    "snpedia": "https://www.snpedia.com/index.php/Rs16892766",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs16892766",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs16892766"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs16901979",
+   "chrom": "8",
+   "pos": 128124916,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "8q24 区 3",
+   "trait": "结直肠癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs16901979",
+    "snpedia": "https://www.snpedia.com/index.php/Rs16901979",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs16901979",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs16901979"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs13281615",
+   "chrom": "8",
+   "pos": 128355618,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "8q24",
+   "trait": "乳腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs13281615",
+    "snpedia": "https://www.snpedia.com/index.php/Rs13281615",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs13281615",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs13281615"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6983267",
+   "chrom": "8",
+   "pos": 128413305,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "8q24 (POU5F1 增强子区)",
+   "trait": "前列腺癌/结直肠癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6983267",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6983267",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6983267",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6983267"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1447295",
+   "chrom": "8",
+   "pos": 128485038,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "8q24",
+   "trait": "前列腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1447295",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1447295",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1447295",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1447295"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs9642880",
+   "chrom": "8",
+   "pos": 128718068,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "8q24",
+   "trait": "膀胱癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs9642880",
+    "snpedia": "https://www.snpedia.com/index.php/Rs9642880",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs9642880",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs9642880"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2294008",
+   "chrom": "8",
+   "pos": 143761931,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "PSCA",
+   "trait": "胃癌易感（东亚人群显著）",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2294008",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2294008",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2294008",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2294008"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2976392",
+   "chrom": "8",
+   "pos": 143762932,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "PSCA",
+   "trait": "胃癌易感（东亚人群显著）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2976392",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2976392",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2976392",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2976392"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs965513",
+   "chrom": "9",
+   "pos": 100556109,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "FOXE1 (9q22)",
+   "trait": "甲状腺癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs965513",
+    "snpedia": "https://www.snpedia.com/index.php/Rs965513",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs965513",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs965513"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs505922",
+   "chrom": "9",
+   "pos": 136149229,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "ABO",
+   "trait": "胰腺癌风险（与血型连锁）",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs505922",
+    "snpedia": "https://www.snpedia.com/index.php/Rs505922",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs505922",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs505922"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs10795668",
+   "chrom": "10",
+   "pos": 8701219,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "10p14",
+   "trait": "结直肠癌（保护方向关联）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs10795668",
+    "snpedia": "https://www.snpedia.com/index.php/Rs10795668",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs10795668",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs10795668"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs7089424",
+   "chrom": "10",
+   "pos": 63752159,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs7089424",
+    "snpedia": "https://www.snpedia.com/index.php/Rs7089424",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs7089424",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs7089424"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1219648",
+   "chrom": "10",
+   "pos": 123346190,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "FGFR2",
+   "trait": "乳腺癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1219648",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1219648",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1219648",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1219648"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2420946",
+   "chrom": "10",
+   "pos": 123351324,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "FGFR2",
+   "trait": "乳腺癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2420946",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2420946",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2420946",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2420946"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2981582",
+   "chrom": "10",
+   "pos": 123352317,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "FGFR2",
+   "trait": "乳腺癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2981582",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2981582",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2981582",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2981582"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3817198",
+   "chrom": "11",
+   "pos": 1909006,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "LSP1 (11p15.5)",
+   "trait": "乳腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3817198",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3817198",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3817198",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3817198"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1695",
+   "chrom": "11",
+   "pos": 67352689,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "GSTP1",
+   "trait": "谷胱甘肽转移酶（I105V）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1695",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1695",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1695",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1695"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1138272",
+   "chrom": "11",
+   "pos": 67353579,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "GSTP1",
+   "trait": "谷胱甘肽转移酶（A114V）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1138272",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1138272",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1138272",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1138272"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1126809",
+   "chrom": "11",
+   "pos": 89017961,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "TYR",
+   "trait": "色素/黑色素瘤候选（R402Q）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1126809",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1126809",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1126809",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1126809"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3802842",
+   "chrom": "11",
+   "pos": 111171709,
+   "gt": "AC",
+   "source": "ASA",
+   "gene": "11q23",
+   "trait": "结直肠癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3802842",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3802842",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3802842",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3802842"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs671",
+   "chrom": "12",
+   "pos": 112241766,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs671",
+    "snpedia": "https://www.snpedia.com/index.php/Rs671",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs671",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs671"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs9543325",
+   "chrom": "13",
+   "pos": 73916628,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs9543325",
+    "snpedia": "https://www.snpedia.com/index.php/Rs9543325",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs9543325",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs9543325"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs944289",
+   "chrom": "14",
+   "pos": 36649246,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "NKX2-1 (14q13.3)",
+   "trait": "甲状腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs944289",
+    "snpedia": "https://www.snpedia.com/index.php/Rs944289",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs944289",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs944289"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4444235",
+   "chrom": "14",
+   "pos": 54410919,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "BMP4 (14q22.2)",
+   "trait": "结直肠癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4444235",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4444235",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4444235",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4444235"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4779584",
+   "chrom": "15",
+   "pos": 32994756,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4779584",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4779584",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4779584",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4779584"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs8034191",
+   "chrom": "15",
+   "pos": 78806023,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "15q25.1 (尼古丁受体区邻近)",
+   "trait": "肺癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs8034191",
+    "snpedia": "https://www.snpedia.com/index.php/Rs8034191",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs8034191",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs8034191"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs16969968",
+   "chrom": "15",
+   "pos": 78882925,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "CHRNA5",
+   "trait": "肺癌易感 + 尼古丁依赖（D398N）",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs16969968",
+    "snpedia": "https://www.snpedia.com/index.php/Rs16969968",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs16969968",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs16969968"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1051730",
+   "chrom": "15",
+   "pos": 78894339,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "CHRNA3",
+   "trait": "肺癌易感 + 尼古丁依赖",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1051730",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1051730",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1051730",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1051730"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3803662",
+   "chrom": "16",
+   "pos": 52586341,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "TOX3/TNRC6B (16q12)",
+   "trait": "乳腺癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3803662",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3803662",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3803662",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3803662"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800566",
+   "chrom": "16",
+   "pos": 69745145,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "NQO1",
+   "trait": "醌氧化还原酶（C609T, P187S）——解毒酶缺陷",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800566",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800566",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800566",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800566"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1805007",
+   "chrom": "16",
+   "pos": 89986117,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "MC1R",
+   "trait": "R151C（红发表型/黑色素瘤；东亚罕见，本数据野生）",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1805007",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1805007",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1805007",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1805007"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1805008",
+   "chrom": "16",
+   "pos": 89986144,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "MC1R",
+   "trait": "R160W（同上，本数据野生）",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1805008",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1805008",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1805008",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1805008"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1042522",
+   "chrom": "17",
+   "pos": 7579472,
+   "gt": "CG",
+   "source": "ASA",
+   "gene": "TP53",
+   "trait": "p53 P72R（肿瘤易感/功能差异候选）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1042522",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1042522",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1042522",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1042522"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs8067378",
+   "chrom": "17",
+   "pos": 38051348,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "GSDMB/ORMDL3 (17q21)",
+   "trait": "哮喘/免疫（列入肿瘤清单存疑，建议复核来源）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs8067378",
+    "snpedia": "https://www.snpedia.com/index.php/Rs8067378",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs8067378",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs8067378"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1859962",
+   "chrom": "17",
+   "pos": 69108753,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "17q24.3 (SOX9 区)",
+   "trait": "前列腺癌易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1859962",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1859962",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1859962",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1859962"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4939827",
+   "chrom": "18",
+   "pos": 46453463,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "SMAD7",
+   "trait": "结直肠癌易感",
+   "conf": "high",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4939827",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4939827",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4939827",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4939827"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs12979860",
+   "chrom": "19",
+   "pos": 39738787,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs12979860",
+    "snpedia": "https://www.snpedia.com/index.php/Rs12979860",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs12979860",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs12979860"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs25487",
+   "chrom": "19",
+   "pos": 44055726,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "XRCC1",
+   "trait": "DNA 修复（Q399R）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs25487",
+    "snpedia": "https://www.snpedia.com/index.php/Rs25487",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs25487",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs25487"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1799782",
+   "chrom": "19",
+   "pos": 44057574,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "XRCC1",
+   "trait": "DNA 修复（R194W）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1799782",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1799782",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1799782",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1799782"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs13181",
+   "chrom": "19",
+   "pos": 45854919,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "ERCC2 (XP-D)",
+   "trait": "DNA 修复（K751Q）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs13181",
+    "snpedia": "https://www.snpedia.com/index.php/Rs13181",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs13181",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs13181"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11615",
+   "chrom": "19",
+   "pos": 45923653,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "ERCC1",
+   "trait": "DNA 修复（C8092A）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11615",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11615",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11615",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11615"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2735839",
+   "chrom": "19",
+   "pos": 51364623,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "KLK3",
+   "trait": "前列腺特异抗原水平/前列腺癌",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2735839",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2735839",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2735839",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2735839"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs961253",
+   "chrom": "20",
+   "pos": 6404281,
+   "gt": "AC",
+   "source": "ASA",
+   "gene": "20p12.3 (BMP2 区)",
+   "trait": "结直肠癌（保护方向关联）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs961253",
+    "snpedia": "https://www.snpedia.com/index.php/Rs961253",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs961253",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs961253"
+   },
+   "flag": null
+  }
+ ]
+}

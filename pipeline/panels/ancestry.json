@@ -1,0 +1,166 @@
+{
+  "module": "ancestry",
+  "title": "祖先特征与高原适应",
+  "icon": "🏔️",
+  "intro": "本报告不做定量祖源分析（需要专门的参考群体面板，如 HGDP/1000G 分层 PCA），但可以展示一组有明确群体遗传学意义的经典位点：东亚正选择位点、高原适应相关位点、以及可推断的基础体质特征（血型、耳垢等）。这些位点合起来能勾勒出清晰的东亚人群画像。",
+  "entries": [
+    {
+      "rsid": "rs8176719",
+      "gene": "ABO",
+      "variant": "ABO 261delG（O 等位基因标志，indel）",
+      "gene_strand": "+",
+      "plus_ref": "-",
+      "plus_alt": "G",
+      "group": "血型推断",
+      "indel": true,
+      "interp": {
+        "DD": ["261delG 纯合（O/O 读数）", "结合 rs8176746（703 位点无 B 变异读数）与 rs8176747（O1 标志读数），推断 ABO 血型为 O 型。血型不是健康指标，仅作基础特征展示。"],
+        "DI": ["杂合（O 携带）", "需结合其他位点判 A/B/AB。"],
+        "II": ["无 261 缺失", "需结合其他位点判 A/B/AB。"]
+      },
+      "confidence": "medium",
+      "evidence": ["ABO 经典分子分型框架"],
+      "note": "Rh 因子（RHD 缺失）为结构变异，芯片无法可靠判定，故不推断 Rh。"
+    },
+    {
+      "rsid": "rs4953354",
+      "gene": "EPAS1 (HIF2α)",
+      "variant": "EPAS1 高原适应选择区 rs4953354（dbSNP 正链 A>G）",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "高原适应",
+      "interp": {
+        "AA": ["单一等位基因纯合", "该位点某一等位基因纯合；藏族富集单倍型的方向性判定需要周边多个连锁位点联合分析。"],
+        "AG": ["杂合", "EPAS1 适应区杂合。该单倍型源自丹尼索瓦人渐渗，与藏区人群低氧生理特征相关；杂合状态可能提示历史人群混合信号（方向性见外链文献）。"],
+        "GG": ["单一等位基因纯合", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Yi et al., Science 2010", "Huerta-Sánchez et al., Nature 2014"],
+      "note": "本数据 A/G 杂合。藏族富集等位基因的具体字母方向存在文献记录差异，本报告采用中性表述，详见外链。"
+    },
+    {
+      "rsid": "rs1868092",
+      "gene": "EPAS1 区",
+      "variant": "EPAS1 高原适应连锁位点 rs1868092（dbSNP 正链 A>G）",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "高原适应",
+      "interp": {
+        "AA": ["单一等位基因纯合", "—"],
+        "AG": ["杂合", "与 rs4953354 连锁，共同构成 EPAS1 适应单倍型片段的一部分（方向性见外链）。"],
+        "GG": ["单一等位基因纯合", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Huerta-Sánchez et al., Nature 2014"],
+      "note": "本数据 A/G，与 rs4953354 一致（均杂合），提示可能携带一份适应单倍型片段。"
+    },
+    {
+      "rsid": "rs1799983",
+      "gene": "NOS3 (eNOS)",
+      "variant": "eNOS G894T (E298D, c.894G>T)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "T",
+      "group": "低氧/血管反应",
+      "interp": {
+        "GG": ["Glu/Glu", "eNOS 常见型。"],
+        "GT": ["Glu/Asp", "携带 T（Asp298）：与 eNOS 蛋白裂解增加、NO 产量差异相关；高原低氧环境下与血氧/血压反应差异的候选位点。"],
+        "TT": ["Asp/Asp", "同上更明显。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Wang et al., 2000 (eNOS 894G>T)", "高原相关文献综述"],
+      "note": "本数据 G/T。"
+    },
+    {
+      "rsid": "rs11549465",
+      "gene": "HIF1A",
+      "variant": "HIF1A P582S (c.1744C>T)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "低氧信号通路",
+      "interp": {
+        "CC": ["野生型", "常见型。"],
+        "CT": ["携带 S582", "缺氧诱导因子变异，与体力表现/低氧反应的候选关联（证据弱）。"],
+        "TT": ["S582 纯合", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS/文献（弱）"],
+      "note": "本数据 C/C。rs11549467 (A588T) 亦为野生读数。"
+    },
+    {
+      "rsid": "rs2010963",
+      "gene": "VEGFA",
+      "variant": "VEGFA -2578（启动子区，多等位位点）",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "血管生成",
+      "interp": {
+        "CC": ["启动子纯合", "VEGF 产量基线（方向依研究而异）。"],
+        "CG": ["杂合", "启动子变异杂合，VEGF 产量差异候选；与高原反应易感性的关联证据弱。"],
+        "GG": ["变异纯合", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS Catalog（VEGF 水平）"],
+      "note": "本数据 C/G 杂合。该位点等位基因记录较混乱（多等位），仅中性展示。"
+    },
+    {
+      "rsid": "rs4253778",
+      "gene": "ACE 区",
+      "variant": "ACE 区 rs4253778（I/D 结构变异邻近）",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "T",
+      "group": "低氧/血压",
+      "interp": {
+        "GG": ["读数参考", "⚠️ 经典 ACE 插入/缺失（I/D）多态是 287bp indel，不能用 SNP 代表；本位点只作邻近标签。"],
+        "GT": ["读数参考", "同上。"],
+        "TT": ["读数参考", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["ACE I/D 结构变异文献"],
+      "note": "本数据 G/G。ACE I/D 的耐力/高原关联无法从芯片可靠推断。"
+    },
+    {
+      "rsid": "rs3827760",
+      "gene": "EDAR — 已在「特质与心理」",
+      "variant": "（交叉引用）",
+      "gene_strand": "-",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "东亚正选择",
+      "interp": {},
+      "confidence": "high",
+      "crosslink": "traits",
+      "note": "370A 衍生纯合（约 3 万年前东亚正选择）见特质模块。"
+    },
+    {
+      "rsid": "rs17822931",
+      "gene": "ABCC11 — 已在「特质与心理」",
+      "variant": "（交叉引用）",
+      "gene_strand": "-",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "东亚典型体质",
+      "interp": {},
+      "confidence": "high",
+      "crosslink": "traits",
+      "note": "干性耳垢纯合（80-95% 东亚人）见特质模块。"
+    }
+  ],
+  "special_cards": [
+    {
+      "title": "东亚人群画像总结",
+      "text": "EDAR 370A 纯合 + ABCC11 干性耳垢纯合 + LCT 乳糖酶不持久 + ALDH2 野生 + FADS 衍生单倍型 + 血型 O —— 这是一组高度典型的东亚（尤其汉族背景）人群特征组合。EPAS1 区杂合携带提示可能有轻微的藏缅/西部人群混合信号（仅供参考，定量祖源需要专门的 PCA/ADMIXTURE 分析，见 ROADMAP）。",
+      "level": "normal"
+    },
+    {
+      "title": "为什么不做「祖源百分比」",
+      "text": "祖源百分比依赖参考面板和模型假设，同一份数据在不同工具中差异可达 10-20%。在缺少东亚精细参考面板的情况下，给出百分比只会制造伪精确。此处只展示有明确生物学意义的位点。",
+      "level": "normal"
+    }
+  ]
+}

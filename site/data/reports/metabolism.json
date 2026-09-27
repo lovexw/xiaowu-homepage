@@ -1,0 +1,446 @@
+{
+ "module": "metabolism",
+ "title": "代谢与营养",
+ "icon": "🥗",
+ "intro": "本模块覆盖叶酸/同型半胱氨酸代谢、乳糖耐受、咖啡因、脂肪酸代谢、抗氧化酶等经典营养遗传位点。单基因效应普遍较小，营养建议应以整体膳食模式优先。",
+ "entries": [
+  {
+   "rsid": "rs1801133",
+   "gene": "MTHFR",
+   "variant": "MTHFR 677C>T (A222V, c.1286A>C 基因方向)",
+   "group": "叶酸与同型半胱氨酸",
+   "confidence": "high",
+   "note": "MTHFR 为负链基因：文献写法 677C>T 对应本数据正链 G>A。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801133",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801133",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801133",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801133"
+   },
+   "genotype": "GG",
+   "chrom": "1",
+   "pos": 11856378,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "CC",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "677C/C（基因方向）· 酶活性正常",
+    "text": "MTHFR 677 位点野生型，叶酸代谢通路此位点无缺陷。东亚人群约 50-60% 为该型。",
+    "level": "caution"
+   }
+  },
+  {
+   "rsid": "rs1801131",
+   "gene": "MTHFR",
+   "variant": "MTHFR 1298A>C (E429A, c.2573A>C 基因方向)",
+   "group": "叶酸与同型半胱氨酸",
+   "confidence": "high",
+   "note": "677T 与 1298C 极少处于同一条染色体（反式时影响叠加）。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801131",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801131",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801131",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801131"
+   },
+   "genotype": "TG",
+   "chrom": "1",
+   "pos": 11854476,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "AC",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "1298A/C · 杂合",
+    "text": "酶活性轻度下降；与 677T 不在常见单倍型组合时影响更小。本数据为 677 野生 + 1298 杂合，总体叶酸代谢受影响轻微。",
+    "level": "favorable"
+   }
+  },
+  {
+   "rsid": "rs4988235",
+   "gene": "MCM6 (调控 LCT)",
+   "variant": "LCT -13910 C>T（乳糖酶持久性主效位点）",
+   "group": "乳糖耐受",
+   "confidence": "high",
+   "note": "东亚人群另有更上游的其他变异，但 -13910 仍是全球主效位点；本数据为典型东亚型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4988235",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4988235",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4988235",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4988235"
+   },
+   "genotype": "GG",
+   "chrom": "2",
+   "pos": 136608646,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "CC",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "乳糖酶不持久型（-13910 C/C 基因方向）",
+    "text": "成年后乳糖酶表达下降，是乳糖不耐受的典型基因型——也是东亚人群约 90% 的主流基因型。饮用牛奶建议少量多次、佐餐或选无乳糖/发酵乳制品。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs174547",
+   "gene": "FADS2 (FADS 基因簇)",
+   "variant": "FADS2 rs174547 (C>T)",
+   "group": "脂肪酸代谢",
+   "confidence": "medium",
+   "note": "与 rs174546 连锁，共同构成东亚高发的衍生单倍型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs174547",
+    "snpedia": "https://www.snpedia.com/index.php/Rs174547",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs174547",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs174547"
+   },
+   "genotype": "TT",
+   "chrom": "11",
+   "pos": 61570783,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "衍生单倍型（东亚高频）",
+    "text": "Δ5/Δ6 去饱和酶活性高：由植物油前体合成花生四烯酸（AA）效率高；血 EPA/DHA 常偏低、TG 与 LDL 偏低的关联证据较多。对膳食 Omega-3 的实际获益因人而异。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs174546",
+   "gene": "FADS1",
+   "variant": "FADS1 rs174546 (C>T, rs174547 连锁位点)",
+   "group": "脂肪酸代谢",
+   "confidence": "medium",
+   "note": "本数据 CC + rs174547 T/T 不构成常见单倍型组合，需 dbSNP 校验确认等位基因方向。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs174546",
+    "snpedia": "https://www.snpedia.com/index.php/Rs174546",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs174546",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs174546"
+   },
+   "genotype": "CC",
+   "chrom": "11",
+   "pos": 61569830,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "ancestral",
+    "text": "同上，活性较低。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs662799",
+   "gene": "APOA5",
+   "variant": "APOA5 -1131T>C（启动子）",
+   "group": "甘油三酯",
+   "confidence": "medium",
+   "note": "等位基因方向以 dbSNP 校验为准。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs662799",
+    "snpedia": "https://www.snpedia.com/index.php/Rs662799",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs662799",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs662799"
+   },
+   "genotype": "AA",
+   "chrom": "11",
+   "pos": 116663707,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "TT",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "野生型（-1131T/T）",
+    "text": "甘油三酯基线遗传倾向正常。",
+    "level": "caution"
+   }
+  },
+  {
+   "rsid": "rs328",
+   "gene": "LPL",
+   "variant": "LPL S447X (c.1338C>G, 提前终止获功能；dbSNP 正链 C>G)",
+   "group": "甘油三酯",
+   "confidence": "medium",
+   "note": "dbSNP 已确认正链等位基因，本数据为野生型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs328",
+    "snpedia": "https://www.snpedia.com/index.php/Rs328",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs328",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs328"
+   },
+   "genotype": "CC",
+   "chrom": "8",
+   "pos": 19819724,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "野生型（S447/S447）",
+    "text": "常见型；就本位点而言脂蛋白脂肪酶活性正常。本数据即此基因型。",
+    "level": "favorable"
+   }
+  },
+  {
+   "rsid": "rs4148323",
+   "gene": "UGT1A1",
+   "variant": "UGT1A1 G71R (c.211G>A) — Gilbert 综合征相关（东亚型）",
+   "group": "胆红素代谢",
+   "confidence": "medium",
+   "note": "本数据 G/G 野生型：G71R 相关的 Gilbert 体质可排除。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4148323",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4148323",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4148323",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4148323"
+   },
+   "genotype": "GG",
+   "chrom": "2",
+   "pos": 234669144,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "野生型（G71/G71）",
+    "text": "胆红素结合酶活性正常（dbSNP 已确认位置与正链等位基因，本数据为野生纯合）。",
+    "level": "favorable"
+   }
+  },
+  {
+   "rsid": "rs4880",
+   "gene": "SOD2 (MnSOD)",
+   "variant": "SOD2 Ala16Val (c.47T>C 基因方向)",
+   "group": "抗氧化",
+   "confidence": "low",
+   "note": "效应量小且研究结论不一，仅作了解。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4880",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4880",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4880",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4880"
+   },
+   "genotype": "AA",
+   "chrom": "6",
+   "pos": 160113872,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "TT",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Val/Val（基因方向）",
+    "text": "Val 型导入线粒体基质效率高，酶活性较高；东亚人群约 70-85% 为该型。与疾病关联的研究方向不一致，属体质差异。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs1050450",
+   "gene": "GPX1",
+   "variant": "GPX1 Pro198Leu (c.594C>T 基因方向)",
+   "group": "抗氧化",
+   "confidence": "low",
+   "note": "该位点等位基因方向待 dbSNP 校验；本数据为 G/G。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1050450",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1050450",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1050450",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1050450"
+   },
+   "genotype": "GG",
+   "chrom": "3",
+   "pos": 49394834,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "CC",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "野生型（Pro/Pro）",
+    "text": "谷胱甘肽过氧化物酶 1 活性正常。",
+    "level": "favorable"
+   }
+  },
+  {
+   "rsid": "rs2472297",
+   "gene": "CYP1A1/1A2 区 (15q24)",
+   "variant": "咖啡因摄入/代谢关联位点",
+   "group": "咖啡因",
+   "confidence": "low",
+   "note": "行为遗传学效应量普遍很小，仅供了解。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2472297",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2472297",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2472297",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2472297"
+   },
+   "genotype": "CC",
+   "chrom": "15",
+   "pos": 75027880,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "典型东亚型",
+    "text": "与较快咖啡因清除倾向相关（结合 CYP1A2 -163 A/A）。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs4410790",
+   "gene": "AHR/CYP1A1 区 (7q21)",
+   "variant": "咖啡摄入量关联位点",
+   "group": "咖啡因",
+   "confidence": "low",
+   "note": "本数据 C/T。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4410790",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4410790",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4410790",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4410790"
+   },
+   "genotype": "TC",
+   "chrom": "7",
+   "pos": 17284577,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "与咖啡摄入量变化相关",
+    "text": "详见 GWAS Catalog。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs1801282",
+   "gene": "PPARG",
+   "variant": "PPARG Pro12Ala (c.34C>G 基因方向)",
+   "group": "糖代谢",
+   "confidence": "medium",
+   "note": "本数据为常见型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801282",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801282",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801282",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801282"
+   },
+   "genotype": "CC",
+   "chrom": "3",
+   "pos": 12393125,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "GG",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Pro/Pro（常见型）",
+    "text": "人群主流基因型（>85%）。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs1042713",
+   "gene": "ADRB2",
+   "variant": "ADRB2 Arg16Gly (c.46A>G)",
+   "group": "肾上腺素能受体",
+   "confidence": "medium",
+   "note": "与 rs1042714 (Gln27Glu) 连锁评估。本数据 Arg/Gly。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1042713",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1042713",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1042713",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1042713"
+   },
+   "genotype": "AG",
+   "chrom": "5",
+   "pos": 148206440,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Arg/Gly",
+    "text": "混合型。哮喘/支气管扩张剂反应及血管反应的研究位点。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs1042714",
+   "gene": "ADRB2",
+   "variant": "ADRB2 Gln27Glu (c.79C>G)",
+   "group": "肾上腺素能受体",
+   "confidence": "medium",
+   "note": "本数据 Gln/Glu。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1042714",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1042714",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1042714",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1042714"
+   },
+   "genotype": "GC",
+   "chrom": "5",
+   "pos": 148206473,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Gln/Glu",
+    "text": "混合型。",
+    "level": "neutral"
+   }
+  }
+ ],
+ "special_cards": [
+  {
+   "title": "同型半胱氨酸综合评估",
+   "text": "MTHFR 677 野生（C/C）+ 1298 杂合的组合提示叶酸代谢通路整体受遗传影响轻微。同型半胱氨酸水平更多取决于叶酸/B12/B6 摄入与肾功能，可通过常规体检（HCY 指标）验证。",
+   "level": "favorable"
+  },
+  {
+   "title": "乳制品策略",
+   "text": "乳糖酶不持久 + 典型东亚脂肪酸单倍型的组合下：乳制品建议以发酵类（酸奶、奶酪）和无乳糖牛奶为主，坚果与深绿叶菜补充钙；不必刻意追求牛奶。",
+   "level": "normal"
+  }
+ ],
+ "counts": {
+  "total": 15,
+  "ok": 15,
+  "flagged": 0,
+  "not_called": 0
+ }
+}

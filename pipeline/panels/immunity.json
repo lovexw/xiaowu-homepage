@@ -1,0 +1,271 @@
+{
+  "module": "immunity",
+  "title": "免疫与炎症",
+  "icon": "🛡️",
+  "intro": "免疫遗传学位点大多只影响细胞因子产量的「基线刻度」，关联的多是自身免疫病的群体统计学风险。绝大多数自身免疫病还需要环境触发，单个位点不能预测个人是否患病。本数据中最值得关注的结论是：主要自身免疫高危变异（PTPN22、NOD2、TLR4、IL23R）均为野生型。",
+  "entries": [
+    {
+      "rsid": "rs2476601",
+      "gene": "PTPN22",
+      "variant": "PTPN22 C1858T (R620W, c.1858C>T 基因方向)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "自身免疫主效位点",
+      "interp": {
+        "GG": ["野生型（1858C/C）", "不携带类风湿关节炎、1 型糖尿病、红斑狼疮等的高风险等位基因 T（欧洲人群 8-15%，东亚 <1%）。"],
+        "GA": ["携带 T", "多种自身免疫病风险升高。"],
+        "AA": ["T/T", "风险纯合。"]
+      },
+      "confidence": "high",
+      "evidence": ["Bottini et al., Nat Genet 2004", "GWAS Catalog RA/T1D/SLE"],
+      "note": "本数据野生型 ✔"
+    },
+    {
+      "rsid": "rs11209026",
+      "gene": "IL23R",
+      "variant": "IL23R R381Q (c.1142G>A)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "自身免疫主效位点",
+      "interp": {
+        "GG": ["野生型", "不携带克罗恩病/银屑病保护性变异 Q381（欧洲人群 ~6%，东亚近于无）。"],
+        "GA": ["携带 Q381（保护性）", "克罗恩病等风险降低（OR≈0.4-0.6）。"],
+        "AA": ["Q381/Q381", "保护关联更明显。"]
+      },
+      "confidence": "high",
+      "evidence": ["Duerr et al., Science 2006"],
+      "note": "本数据野生型（东亚典型）✔"
+    },
+    {
+      "rsid": "rs4986790",
+      "gene": "TLR4",
+      "variant": "TLR4 D299G (c.896A>G)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "先天免疫",
+      "interp": {
+        "AA": ["野生型", "TLR4 信号正常（内毒素识别）。G 变异与革兰阴性菌感染易感性/炎症反应差异相关（东亚罕见）。"],
+        "AG": ["携带 G", "TLR4 功能略降。"],
+        "GG": ["G/G", "功能降低。"]
+      },
+      "confidence": "high",
+      "evidence": ["Arbour & Lorenz, Nat Genet 2000"],
+      "note": "本数据野生型 ✔（rs4986791 C/C 亦野生）"
+    },
+    {
+      "rsid": "rs2066845",
+      "gene": "NOD2",
+      "variant": "NOD2 c.3017insC 移码（indel）",
+      "gene_strand": "+",
+      "plus_ref": "-",
+      "plus_alt": "C",
+      "group": "自身免疫主效位点",
+      "indel": true,
+      "interp": {
+        "GG": ["野生型读数", "数据为 G/G 读数。⚠️ 该位点为 indel，芯片对 indel 的表示法不可靠，仅作参考。"],
+        "其他": ["携带变异读数", "与克罗恩病风险相关。"]
+      },
+      "confidence": "low",
+      "evidence": ["Hugot et al., Nature 2001", "Ogura et al., Nature 2001"],
+      "note": "NOD2 移码变异在东亚人群频率近 0，本数据读数与野生一致，克罗恩病 NOD2 遗传风险基本可排除 ✔（rs2066847 同为野生读数）"
+    },
+    {
+      "rsid": "rs7574865",
+      "gene": "STAT4",
+      "variant": "STAT4 rs7574865 (T>A/G 多等位，风险=T)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "G",
+      "group": "自身免疫风险",
+      "interp": {
+        "TT": ["T/T", "携带两份东亚常见风险等位基因 T：类风湿/狼疮/干燥综合征的群体风险 OR≈1.5-2.0（vs G/G）。这是本数据免疫模块中唯一需要留意的位点。"],
+        "TG": ["杂合", "风险中度。"],
+        "GG": ["G/G", "相对低风险。"]
+      },
+      "confidence": "high",
+      "evidence": ["Remmers et al., Nat Genet 2007", "东亚人群 T 频率 ~0.3"],
+      "note": "⚠️ 本数据 T/T。但自身免疫病是低外显率疾病，此结果只提示统计学基线，不代表会患病。"
+    },
+    {
+      "rsid": "rs231775",
+      "gene": "CTLA4",
+      "variant": "CTLA4 +49A/G (T17A? c.49A>G)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "自身免疫风险",
+      "interp": {
+        "AA": ["A/A", "相对低风险（就 G 而言）。"],
+        "AG": ["A/G", "携带 G：1 型糖尿病/桥本/Graves 风险 OR≈1.2-1.5。"],
+        "GG": ["G/G", "风险略高。"]
+      },
+      "confidence": "medium",
+      "evidence": ["GWAS Catalog 自身免疫"],
+      "note": "本数据 A/G，杂合携带。"
+    },
+    {
+      "rsid": "rs1800896",
+      "gene": "IL10",
+      "variant": "IL10 -1082 A>G（启动子，基因方向）",
+      "gene_strand": "-",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "细胞因子产量",
+      "interp": {
+        "TT": ["-1082 A/A（低 IL-10 产生）", "抗炎细胞因子 IL-10 产量基线偏低（与 rs1800872 组合为 ATA/ATA 单倍型），促炎倾向略高。"],
+        "TC": ["-1082 A/G", "中间。"],
+        "CC": ["-1082 G/G（高 IL-10）", "抗炎基线较高。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Turner et al., 1997", "IL10 单倍型 GCC/ATA 框架"],
+      "note": "本数据 T/T + rs1800872 G/G = ATA/ATA 低 IL-10 型。"
+    },
+    {
+      "rsid": "rs1800872",
+      "gene": "IL10",
+      "variant": "IL10 -592 A>C（启动子，基因方向）",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "T",
+      "group": "细胞因子产量",
+      "interp": {
+        "GG": ["-592 C/C", "与 -1082A 组成 ATA 低产量单倍型。"],
+        "GT": ["杂合", "中间。"],
+        "TT": ["-592 A/A", "同属 ATA 单倍型组分。"]
+      },
+      "confidence": "medium",
+      "evidence": ["IL10 单倍型框架"],
+      "note": "本数据 G/G。"
+    },
+    {
+      "rsid": "rs1800795",
+      "gene": "IL6",
+      "variant": "IL6 -174 G>C（启动子）",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "C",
+      "group": "细胞因子产量",
+      "interp": {
+        "GG": ["G/G", "与较高 IL-6 基线相关（欧洲框架）；东亚人群 C 极罕见（<5%），本数据为东亚主流基因型。"],
+        "GC": ["携带 C", "C 与较低 IL-6/心血管风险相关（欧洲数据）。"],
+        "CC": ["C/C", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Fishman et al., 1998", "东亚频率数据"],
+      "note": "本数据 G/G。在欧洲人群中的方向性结论不宜直接搬到东亚。"
+    },
+    {
+      "rsid": "rs1800629",
+      "gene": "TNF",
+      "variant": "TNF -308 G>A (TNF1/TNF2)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "细胞因子产量",
+      "interp": {
+        "GG": ["TNF1/TNF1", "TNF-α 产量基线正常。"],
+        "AG": ["TNF1/TNF2", "TNF2 启动子活性较高，TNF-α 产量偏高倾向（自身免疫/炎症相关）。"],
+        "AA": ["TNF2/TNF2", "高产量型。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Wilson et al., 1997", "GWAS Catalog"],
+      "note": "本数据 A/G，杂合携带 TNF2。"
+    },
+    {
+      "rsid": "rs16944",
+      "gene": "IL1B",
+      "variant": "IL1B -511 C>T（启动子；dbSNP 正链 A>G）",
+      "gene_strand": "-",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "炎症",
+      "interp": {
+        "AA": ["-511 T/T（基因方向）", "IL-1β 产量较高（与 -31 位点连锁）。"],
+        "AG": ["杂合", "IL-1β 产量差异（方向依研究而异）。本数据即此基因型。"],
+        "GG": ["-511 C/C（基因方向）", "常见型。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS Catalog（弱）"],
+      "note": "本数据 A/G 杂合。"
+    },
+    {
+      "rsid": "rs3775291",
+      "gene": "TLR3",
+      "variant": "TLR3 L412F (c.1234C>T)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "先天免疫",
+      "interp": {
+        "CC": ["野生型", "TLR3（病毒 dsRNA 识别）功能正常。"],
+        "CT": ["携带 F412", "TLR3 功能部分下降，与单纯疱疹脑炎易感性等罕见场景相关。"],
+        "TT": ["F412/F412", "功能下降更明显。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Zhang et al., Science 2007 (HSE 研究)"],
+      "note": "本数据 C/T 杂合。对绝大多数人无实际影响。"
+    },
+    {
+      "rsid": "rs1990760",
+      "gene": "IFIH1 (MDA5)",
+      "variant": "IFIH1 rs1990760 (A/T)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "T",
+      "group": "自身免疫风险",
+      "interp": {
+        "AA": ["A/A", "与 1 型糖尿病风险差异相关（方向依研究）。"],
+        "AT": ["杂合", "中间。"],
+        "TT": ["T/T", "与保护方向相关（降低 MD A5 活性）。"]
+      },
+      "confidence": "low",
+      "evidence": ["Nejentsev et al., Nature 2009"],
+      "note": "本数据 T/T，偏保护方向。"
+    },
+    {
+      "rsid": "rs1801274",
+      "gene": "FCGR2A",
+      "variant": "FCGR2A H131R (c.391A>G)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "免疫复合物清除",
+      "interp": {
+        "AA": ["H/H", "IgG2 免疫复合物清除效率较高（H131 型）。"],
+        "AG": ["H/R", "中间。"],
+        "GG": ["R/R", "IgG2 清除效率较低，与狼疮/感染易感性关联（弱）。"]
+      },
+      "confidence": "low",
+      "evidence": ["Warmerdam et al., 1991", "GWAS（弱）"],
+      "note": "本数据 A/A，清除效率较高方向。"
+    },
+    {
+      "rsid": "rs12979860",
+      "gene": "IFNL3/4 — 已在「药物基因组学」",
+      "variant": "（交叉引用）",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "交叉引用",
+      "interp": {},
+      "confidence": "high",
+      "crosslink": "pharmacogenomics",
+      "note": "IL28B 位点（CC/TT 有利应答）见药物基因组学模块。"
+    }
+  ],
+  "special_cards": [
+    {
+      "title": "免疫遗传画像总结",
+      "text": "主效自身免疫位点全野生（PTPN22/TLR4/IL23R/NOD2）✔；唯一偏高风险的是 STAT4 T/T（东亚常见型，低外显率）；细胞因子基线偏「促炎」（IL-10 低产量型 ATA/ATA + TNF2 携带 + IL1B 杂合）。综合看：重大自身免疫病遗传风险不高，炎症反应基线略偏高——这更像「体质参数」而非疾病预测。",
+      "level": "normal"
+    },
+    {
+      "title": "HLA 区域未覆盖说明",
+      "text": "经典 HLA 分型（如 HLA-B27、HLA-DR3/4）无法从 SNP 芯片可靠推断，自身免疫病最重要的 HLA 风险（类风湿的 DRB1 共享表位、1 型糖尿病的 DR3/DR4-DQ2/DQ8）不在本报告范围内。",
+      "level": "attention"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+# 原始基因数据文件（体积超大且含敏感信息，不入库；仓库只存构建产物）
+data/raw/
+data/local/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# 原始文件的其他可能位置
+*.asa.txt
+*.Imp.txt
+*.asa.txt.gz
+*.Imp.txt.gz
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Wrangler 本地状态
+.wrangler/
+node_modules/

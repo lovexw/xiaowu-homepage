@@ -1,0 +1,119 @@
+[
+ {
+  "module": "ancestry",
+  "title": "祖先特征与高原适应",
+  "icon": "🏔️",
+  "intro": "本报告不做定量祖源分析（需要专门的参考群体面板，如 HGDP/1000G 分层 PCA），但可以展示一组有明确群体遗传学意义的经典位点：东亚正选择位点、高原适应相关位点、以及可推断的基础体质特征（血型、耳垢等）。这些位点合起来能勾勒出清晰的",
+  "counts": {
+   "total": 9,
+   "ok": 7,
+   "flagged": 0,
+   "not_called": 0
+  }
+ },
+ {
+  "module": "health",
+  "title": "健康风险参考",
+  "icon": "🫀",
+  "intro": "本模块展示与常见慢病风险相关的经典易感位点。⚠️ 必读：这里展示的是「统计学关联」，不是「个人命运」。GWAS 位点的风险等位基因普遍只使患病概率变动 10-50%（相对），且大多数疾病的风险由年龄、饮食、运动、吸烟、血脂血压等可改变因素主",
+  "counts": {
+   "total": 18,
+   "ok": 17,
+   "flagged": 0,
+   "not_called": 0
+  }
+ },
+ {
+  "module": "immunity",
+  "title": "免疫与炎症",
+  "icon": "🛡️",
+  "intro": "免疫遗传学位点大多只影响细胞因子产量的「基线刻度」，关联的多是自身免疫病的群体统计学风险。绝大多数自身免疫病还需要环境触发，单个位点不能预测个人是否患病。本数据中最值得关注的结论是：主要自身免疫高危变异（PTPN22、NOD2、TLR4、I",
+  "counts": {
+   "total": 15,
+   "ok": 14,
+   "flagged": 0,
+   "not_called": 0
+  }
+ },
+ {
+  "module": "metabolism",
+  "title": "代谢与营养",
+  "icon": "🥗",
+  "intro": "本模块覆盖叶酸/同型半胱氨酸代谢、乳糖耐受、咖啡因、脂肪酸代谢、抗氧化酶等经典营养遗传位点。单基因效应普遍较小，营养建议应以整体膳食模式优先。",
+  "counts": {
+   "total": 15,
+   "ok": 15,
+   "flagged": 0,
+   "not_called": 0
+  }
+ },
+ {
+  "module": "pharmacogenomics",
+  "title": "药物基因组学",
+  "icon": "💊",
+  "intro": "本模块解读基因型对常用药物代谢和剂量的影响，参照 CPIC（临床药物遗传学实施联盟）与 PharmGKB 的公开指南。以下结论针对分型明确的位点；CYP2D6、CYP21A2 等含结构变异的基因无法用芯片可靠分型，见模块末尾说明。此信息仅供",
+  "counts": {
+   "total": 23,
+   "ok": 23,
+   "flagged": 0,
+   "not_called": 0
+  }
+ },
+ {
+  "module": "traits",
+  "title": "特质与心理",
+  "icon": "🧠",
+  "intro": "本模块涵盖认知、性格、感官与体质的候选基因位点。⚠️ 重要提醒：行为与心理性状受基因网络与环境共同影响，任何单个位点的解释力都很小（通常 <1% 的方差），且复现性参差不齐。以下内容请当作「有趣的可能倾向」而非标签或自我预言。",
+  "counts": {
+   "total": 19,
+   "ok": 19,
+   "flagged": 0,
+   "not_called": 0
+  }
+ },
+ {
+  "module": "assoc_cancer",
+  "title": "肿瘤相关位点（关联级证据）",
+  "icon": "📊",
+  "intro": "",
+  "counts": {
+   "total": 66
+  }
+ },
+ {
+  "module": "assoc_gwas",
+  "title": "GWAS 精选位点总表",
+  "icon": "📊",
+  "intro": "",
+  "counts": {
+   "total": 119
+  }
+ },
+ {
+  "module": "assoc_gwas_adv",
+  "title": "GWAS 扩展位点",
+  "icon": "📊",
+  "intro": "",
+  "counts": {
+   "total": 56
+  }
+ },
+ {
+  "module": "assoc_altitude",
+  "title": "高原低氧相关位点（含扩展）",
+  "icon": "📊",
+  "intro": "",
+  "counts": {
+   "total": 55
+  }
+ },
+ {
+  "module": "assoc_personality",
+  "title": "心理人格候选位点扩展表",
+  "icon": "📊",
+  "intro": "",
+  "counts": {
+   "total": 34
+  }
+ }
+]

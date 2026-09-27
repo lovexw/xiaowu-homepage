@@ -1,0 +1,62 @@
+{
+  "user_note_check": {
+    "life_db": {
+      "total": 82,
+      "match": 82,
+      "mismatch": 0,
+      "absent": 0
+    },
+    "gwas_master": {
+      "total": 119,
+      "match": 119,
+      "mismatch": 0,
+      "absent": 0
+    },
+    "gwas_advanced": {
+      "total": 56,
+      "match": 56,
+      "mismatch": 0,
+      "absent": 0
+    },
+    "cancer": {
+      "total": 66,
+      "match": 66,
+      "mismatch": 0,
+      "absent": 0
+    },
+    "high_altitude": {
+      "total": 13,
+      "match": 13,
+      "mismatch": 0,
+      "absent": 0
+    },
+    "high_altitude_pro": {
+      "total": 55,
+      "match": 55,
+      "mismatch": 0,
+      "absent": 0
+    },
+    "immunity": {
+      "total": 30,
+      "match": 30,
+      "mismatch": 0,
+      "absent": 0
+    },
+    "personality": {
+      "total": 34,
+      "match": 34,
+      "mismatch": 0,
+      "absent": 0
+    },
+    "pharmacogenomics": {
+      "total": 39,
+      "match": 39,
+      "mismatch": 0,
+      "absent": 0
+    }
+  },
+  "panel_checked": 99,
+  "panel_issue_count": 0,
+  "panel_issues": [],
+  "dbsnp_cached": 238
+}

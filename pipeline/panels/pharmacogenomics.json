@@ -1,0 +1,421 @@
+{
+  "module": "pharmacogenomics",
+  "title": "药物基因组学",
+  "icon": "💊",
+  "intro": "本模块解读基因型对常用药物代谢和剂量的影响，参照 CPIC（临床药物遗传学实施联盟）与 PharmGKB 的公开指南。以下结论针对分型明确的位点；CYP2D6、CYP21A2 等含结构变异的基因无法用芯片可靠分型，见模块末尾说明。此信息仅供研究参考，用药调整请务必咨询医生，不要自行改变治疗方案。",
+  "entries": [
+    {
+      "rsid": "rs4244285",
+      "gene": "CYP2C19",
+      "variant": "CYP2C19*2 (c.681G>A, 剪接缺陷)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "CYP2C19",
+      "interp": {
+        "GG": ["CYP2C19*1/*1 · 正常代谢 (Normal Metabolizer)", "氯吡格雷可正常转化为活性代谢物，抗血小板作用充分。对奥美拉唑、伏立康唑、西酞普兰等 CYP2C19 底物的代谢能力正常。"],
+        "AG": ["CYP2C19*1/*2 · 中间代谢 (Intermediate Metabolizer)", "CYP2C19 活性降低。CPIC 指南：急性冠脉综合征/PCI 人群中，中间代谢型使用标准剂量氯吡格雷时血小板抑制不足、缺血事件风险升高，建议优先考虑替格瑞洛或普拉格雷（若无禁忌）。奥美拉唑等 PPI 的暴露量会升高。"],
+        "AA": ["CYP2C19*2/*2 · 慢代谢 (Poor Metabolizer)", "CYP2C19 活性严重降低。CPIC 指南：不建议使用标准剂量氯吡格雷，建议换用替格瑞洛/普拉格雷等不经 CYP2C19 激活的抗血小板药。伏立康唑等药物建议减量并监测。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: clopidogrel and CYP2C19 genotype (Clin Pharmacol Ther, 2013; 更新版 2022)", "PharmGKB CYP2C19 注释"],
+      "note": "东亚人群 *2 等位基因携带率约 25-35%，是氯吡格雷反应不佳的重要遗传因素。"
+    },
+    {
+      "rsid": "rs4986893",
+      "gene": "CYP2C19",
+      "variant": "CYP2C19*3 (c.636G>A, W212X)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "CYP2C19",
+      "interp": {
+        "GG": ["未携带 *3 等位基因", "该位点为野生型，不产生额外功能缺陷。"],
+        "AG": ["携带 *3 等位基因", "*3 为无义突变，与 *2 类似导致慢代谢；具体表型需与 *2 等位基因合并评估。"],
+        "AA": ["CYP2C19*3/*3 或 *2/*3 组合", "慢代谢表型，同上。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: clopidogrel and CYP2C19 genotype", "PharmGKB CYP2C19 注释"],
+      "note": "仅覆盖 *2/*3/*17 等常见等位基因；罕见等位基因不在芯片覆盖内。"
+    },
+    {
+      "rsid": "rs12248560",
+      "gene": "CYP2C19",
+      "variant": "CYP2C19*17 (启动子 -806C>T, 快代谢)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "CYP2C19",
+      "interp": {
+        "CC": ["未携带 *17 等位基因", "无快代谢等位基因。结合 *2 位点结果（*1/*2）综合判定为中间代谢型。"],
+        "CT": ["携带 *17", "*17 使转录增强；与 *2 杂合并存时表型取决于单倍型组合（*2/*17 或 *1/*17），需谨慎解读。"],
+        "TT": ["CYP2C19*17/*17 · 快代谢 (Rapid Metabolizer)", "氯吡格雷暴露后血小板抑制增强、出血风险略增；塞来昔布等底物代谢加快。注意 *17 与 *2 不会共存于同一条染色体。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: clopidogrel and CYP2C19 genotype"],
+      "note": "东亚人群 *17 频率低（约 2-4%），本位点判定价值有限，以 *2 结果为主。"
+    },
+    {
+      "rsid": "rs1799853",
+      "gene": "CYP2C9",
+      "variant": "CYP2C9*2 (c.430C>T, R144C)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "CYP2C9",
+      "interp": {
+        "CC": ["未携带 *2 等位基因", "该位点野生型。"],
+        "CT": ["携带 *2", "CYP2C9 活性约降低 30-40%，影响华法林、苯妥英等底物代谢。"],
+        "TT": ["*2/*2", "CYP2C9 活性明显降低，华法林剂量需求下降，出血风险上升。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: warfarin dosing (CYP2C9, VKORC1, CYP4F2)", "PharmGKB CYP2C9"],
+      "note": "东亚人群 *2 频率极低（<1%），*3 为主。"
+    },
+    {
+      "rsid": "rs1057910",
+      "gene": "CYP2C9",
+      "variant": "CYP2C9*3 (c.1075A>C, I359L)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "C",
+      "group": "CYP2C9",
+      "interp": {
+        "AA": ["CYP2C9*1/*1 · 正常代谢", "两个功能缺陷位点（*2/*3）均为野生型，判定为 *1/*1 正常代谢型。华法林、苯妥英、氯沙坦、塞来昔布等按标准代谢处理；华法林剂量主要参考 VKORC1 与临床因素。"],
+        "AC": ["CYP2C9*1/*3 · 中间代谢", "华法林剂量需求降低约 33%，出血风险增加；建议低起始剂量并加强 INR 监测（CPIC）。"],
+        "CC": ["CYP2C9*3/*3 · 慢代谢", "华法林剂量需求大幅降低，苯妥英应减量至常规 25-50%（CPIC）。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: warfarin dosing (CPIC 2017)", "PharmGKB CYP2C9"],
+      "note": "*3 是东亚人群最主要的 CYP2C9 功能缺陷等位基因（频率约 3-5%）。"
+    },
+    {
+      "rsid": "rs776746",
+      "gene": "CYP3A5",
+      "variant": "CYP3A5*3 (c.6986A>G, 剪接缺陷)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "CYP3A5",
+      "interp": {
+        "TT": ["CYP3A5*1/*1 · 正常表达者 (Expresser)", "CYP3A5 高表达。CPIC 指南：他克莫司建议提高起始剂量（约标准建议剂量的 1.5-2 倍），并以血药浓度监测为准。"],
+        "TC": ["CYP3A5*1/*3 · 中间表达者", "CYP3A5 部分表达。CPIC 指南：他克莫司建议适当提高起始剂量（约 1.5-2 倍），以浓度监测为准。"],
+        "CC": ["CYP3A5*3/*3 · 不表达者 (Non-expresser)", "CYP3A5 无功能。他克莫司按标准剂量起始即可。东亚人群约 65-75% 为该基因型。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: tacrolimus dosing and CYP3A5 (2015, updated 2020)"],
+      "note": "本数据携带 *1/*3，属于中间表达者。他克莫司用于移植领域，此信息对相关人群有参考价值。"
+    },
+    {
+      "rsid": "rs2108622",
+      "gene": "CYP4F2",
+      "variant": "CYP4F2*3 (c.1297G>T, V433M)",
+      "gene_strand": "-",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "CYP4F2",
+      "interp": {
+        "GG": ["CYP4F2 正常功能（*1/*1）", "维生素 K 代谢正常，对华法林剂量无额外影响。"],
+        "GC": ["CYP4F2*3 杂合", "肝内维生素 K 氧化降低，华法林剂量需求约增加 5-11%（CPIC）。"],
+        "CC": ["CYP4F2*3 纯合", "华法林剂量需求增加趋势更明显；同时维生素 E 代谢相关研究提示该基因型人群补充维生素 E 时暴露升高。"]
+      },
+      "confidence": "medium",
+      "evidence": ["CPIC Guideline: warfarin dosing (CYP4F2 部分)", "PharmGKB CYP4F2"],
+      "note": "若该位点不在芯片覆盖范围内，则显示为未测出。"
+    },
+    {
+      "rsid": "rs9923231",
+      "gene": "VKORC1",
+      "variant": "VKORC1 -1639G>A (启动子)",
+      "gene_strand": "-",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "warfarin",
+      "interp": {
+        "TT": ["VKORC1 AA（基因方向）· 华法林高敏感", "VKORC1 转录水平低、维生素 K 环氧化物还原酶表达少，华法林剂量需求显著降低（约为 GG 型的 60% 左右）。CPIC 算法中该基因型对应低剂量组；东亚人群 A/A 比例约 80%，与华法林在亚洲人群中常规低剂量使用一致。"],
+        "TC": ["VKORC1 AG（基因方向）· 中等敏感", "华法林剂量需求中等偏低。"],
+        "CC": ["VKORC1 GG（基因方向）· 相对不敏感", "华法林剂量需求相对较高。东亚人群中少见。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: warfarin dosing (2017)", "PharmGKB VKORC1"],
+      "note": "注意链方向：本文件为正链 T>C；文献常用基因方向 -1639G>A 表示，两者互补。"
+    },
+    {
+      "rsid": "rs4149056",
+      "gene": "SLCO1B1",
+      "variant": "SLCO1B1*5/*15 (c.521T>C, V174A)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "statin",
+      "interp": {
+        "TT": ["SLCO1B1 功能正常（就本位点而言）", "521 位点无缺陷等位基因。CPIC 指南：可按标准处方使用辛伐他汀等他汀，肌病风险无遗传性升高（就本位点而言）。"],
+        "TC": ["SLCO1B1 *1a/*5 等组合 · 功能降低", "OATP1B1 摄取能力下降，辛伐他汀暴露升高、肌病风险增加。CPIC 建议：辛伐他汀减量或换用其他他汀，避免大剂量。"],
+        "CC": ["SLCO1B1 *5/*5 · 功能显著降低", "辛伐他汀肌病风险显著升高，CPIC 建议避免辛伐他汀大剂量，选择瑞舒伐他汀等替代并监测。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: statins and SLCO1B1 (2012? 更新见 PharmGKB)", "SEARCH study (Lancet 2008)"],
+      "note": "SLCO1B1 完整分型还需 rs2306283（*1b）等位点；本数据同时覆盖该位点。"
+    },
+    {
+      "rsid": "rs2306283",
+      "gene": "SLCO1B1",
+      "variant": "SLCO1B1*1b (c.388A>G, N130D)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "statin",
+      "interp": {
+        "AA": ["*1a 单倍型（就本位点）", "c.388 为野生型 A。"],
+        "AG": ["携带 *1b", "*1b 功能基本正常，与 *1a 组成 *1a/*1b（本数据即此组合）。"],
+        "GG": ["*1b/*1b", "功能正常范围。"]
+      },
+      "confidence": "medium",
+      "evidence": ["PharmGKB SLCO1B1"],
+      "note": "等位基因方向待 dbSNP 校验步骤确认；若有出入以校验结果为准。"
+    },
+    {
+      "rsid": "rs3918290",
+      "gene": "DPYD",
+      "variant": "DPYD*2A (c.1905+1G>A, 剪接缺陷)",
+      "gene_strand": "-",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "chemo",
+      "interp": {
+        "CC": ["未携带 *2A", "就本位点而言无功能缺陷。DPYD 完整评估还需覆盖 *13、HapB3 等位点。"],
+        "CT": ["携带 *2A（部分 DPD 缺陷）", "氟尿嘧啶/卡培他滨严重毒性风险显著升高。CPIC/EMA 建议：至少先减量 50% 起始并密切监测。"],
+        "TT": ["*2A 纯合（完全 DPD 缺陷）", "应避免氟尿嘧啶类药物，选择替代方案。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: fluoropyrimidine and DPYD (2013? 更新版见 PharmGKB)", "EMA 2020 安全性建议"],
+      "note": "DPYD 为负链基因，文献写法 c.1905+1G>A 是基因方向；正链表现互补。"
+    },
+    {
+      "rsid": "rs55886062",
+      "gene": "DPYD",
+      "variant": "DPYD*13 (c.1679T>G, D949V)",
+      "gene_strand": "-",
+      "plus_ref": "A",
+      "plus_alt": "C",
+      "group": "chemo",
+      "interp": {
+        "AA": ["未携带 *13", "就本位点而言无功能缺陷。"],
+        "AC": ["携带 *13", "DPD 功能缺陷，氟尿嘧啶类毒性风险升高，处理同 *2A 携带者。"],
+        "CC": ["*13 纯合", "完全缺陷，应避免氟尿嘧啶类药物。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: fluoropyrimidine and DPYD"],
+      "note": "等位基因方向以 dbSNP 校验为准。"
+    },
+    {
+      "rsid": "rs67376798",
+      "gene": "DPYD",
+      "variant": "DPYD c.2688G>A（基因方向；dbSNP 已确认正链 T→A）",
+      "gene_strand": "-",
+      "plus_ref": "T",
+      "plus_alt": "A",
+      "group": "chemo",
+      "interp": {
+        "TT": ["野生型（正链 T/T = 基因方向 G/G）", "无功能缺陷。本数据即此基因型。"],
+        "TA": ["携带变异", "该变异的功能影响证据较 *2A/*13 弱，但欧洲指南将其列为需评估的 DPYD 变异之一；携带时建议肿瘤科医生评估。"],
+        "AA": ["变异纯合", "同上，且风险更高；此结果罕见，建议先确认分型再用临床验证方法复核。"]
+      },
+      "confidence": "low",
+      "evidence": ["EMA fluoropyrimidine 安全性沟通", "PharmGKB DPYD"],
+      "note": "本位点等位基因方向存在不确定性，已列入 dbSNP 强制校验清单；解读以校验后的等位基因为准。"
+    },
+    {
+      "rsid": "rs1142345",
+      "gene": "NUDT15",
+      "variant": "NUDT15*3 (c.415C>T, R139C)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "thiopurine",
+      "interp": {
+        "TT": ["NUDT15*1/*1 · 正常", "硫嘌呤类药物（硫唑嘌呤、6-MP、硫鸟嘌呤）可按标准剂量使用，就本基因而言无毒性风险升高。"],
+        "TC": ["NUDT15*1/*3 · 中间代谢", "硫嘌呤白细胞减少/脱发风险升高。CPIC 建议：起始剂量减少 30-80%，并延迟至 6 周渐达标、加强血常规监测。"],
+        "CC": ["NUDT15*3/*3 · 慢代谢", "标准剂量下严重白细胞减少风险极高，CPIC 建议减量 90% 以上或换药。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: thiopurines and NUDT15 (2018)", "东亚人群 R139C 频率约 2-10%"],
+      "note": "NUDT15*3 在东亚人群中的临床意义甚至超过 TPMT，是硫嘌呤用药必查位点。"
+    },
+    {
+      "rsid": "rs1800460",
+      "gene": "TPMT",
+      "variant": "TPMT*3B (c.460G>A, A154T)",
+      "gene_strand": "-",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "thiopurine",
+      "interp": {
+        "CC": ["未携带 *3B", "就本位点而言正常。"],
+        "CT": ["携带 *3B", "TPMT 活性降低；若与 *3C 组成 *3A 单倍型则影响更大，需结合 rs1800462。"],
+        "TT": ["*3B 纯合", "TPMT 活性极低，硫嘌呤需大幅减量。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: thiopurines and TPMT/NUDT15 (2018)"],
+      "note": "TPMT 为负链基因。"
+    },
+    {
+      "rsid": "rs1800462",
+      "gene": "TPMT",
+      "variant": "TPMT*3C (c.719A>G, Y240C)",
+      "gene_strand": "-",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "thiopurine",
+      "interp": {
+        "TT": ["未携带 *3C", "就本位点而言正常。"],
+        "TC": ["携带 *3C", "TPMT 活性降低。"],
+        "CC": ["*3C 纯合", "TPMT 活性极低。"]
+      },
+      "confidence": "high",
+      "evidence": ["CPIC Guideline: thiopurines and TPMT/NUDT15 (2018)"],
+      "note": "TPMT*3A = *3B + *3C 顺式组合。本数据两位点均无变异，判定 TPMT*1/*1。"
+    },
+    {
+      "rsid": "rs671",
+      "gene": "ALDH2",
+      "variant": "ALDH2*2 (c.1510G>A, E504K, 乙醛脱氢酶缺陷)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "alcohol",
+      "interp": {
+        "GG": ["ALDH2*1/*1 · 乙醛代谢正常", "线粒体乙醛脱氢酶活性正常，饮酒后乙醛可正常清除，无明显的酒精潮红反应遗传倾向。注意：酶活性正常不等于饮酒无害。"],
+        "AG": ["ALDH2*1/*2 · 杂合缺陷", "酶活性约为正常的 6-39%，饮酒易脸红、心悸。此基因型与食管癌风险显著相关（尤其饮酒者），强烈建议限制酒精；硝酸甘油疗效可能受影响。"],
+        "AA": ["ALDH2*2/*2 · 纯合缺陷", "酶活性极低，饮酒后乙醛大量蓄积（典型的严重潮红体质）。强烈建议戒酒；该基因型饮酒与食管癌风险升高十余倍相关。"]
+      },
+      "confidence": "high",
+      "evidence": ["SNPedia/文献共识：rs671 A 等位基因（正链）对应 ALDH2*2", " Brooks et al., PLoS Med 2009（ALDH2 与食管癌）"],
+      "note": "约 30-50% 东亚人携带 *2；本数据为 G/G，即最常见的正常基因型。"
+    },
+    {
+      "rsid": "rs12979860",
+      "gene": "IFNL3/4 (IL28B)",
+      "variant": "IL28B rs12979860 (C>T)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "hepatitis",
+      "interp": {
+        "CC": ["IL28B CC · 干扰素应答有利基因型", "聚乙二醇干扰素+利巴韦林时代，CC 型丙肝自发清除率与持续病毒学应答率最高。直接抗病毒药物（DAA）时代该位点的选药价值下降。"],
+        "CT": ["IL28B CT · 中等", "应答率介于中间。"],
+        "TT": ["IL28B TT · 应答不利", "干扰素时代应答率较低。"]
+      },
+      "confidence": "high",
+      "evidence": ["Ge et al., Nature 2009 (IL28B 与 HCV 应答)", "PharmGKB IL28B"],
+      "note": "本数据 CC，为有利基因型。"
+    },
+    {
+      "rsid": "rs8099917",
+      "gene": "IFNL3/4 (IL28B)",
+      "variant": "IL28B rs8099917 (T>G)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "G",
+      "group": "hepatitis",
+      "interp": {
+        "TT": ["有利基因型", "与干扰素治疗应答率升高相关（与 rs12979860 相互印证）。"],
+        "TG": ["中间", "应答率下降。"],
+        "GG": ["不利基因型", "干扰素应答率较低。"]
+      },
+      "confidence": "high",
+      "evidence": ["Tanaka et al., Nature 2009", "PharmGKB IL28B"],
+      "note": "本数据 TT，与 rs12979860 CC 一致，均指向有利应答基因型。"
+    },
+    {
+      "rsid": "rs762551",
+      "gene": "CYP1A2",
+      "variant": "CYP1A2 -163C>A (启动子, 快代谢)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "A",
+      "group": "caffeine",
+      "interp": {
+        "CC": ["CYP1A2 慢代谢型", "咖啡因清除慢，大量摄入咖啡因可能与血压升高、心悸相关。"],
+        "AC": ["中间型", "咖啡因代谢能力中等。"],
+        "AA": ["CYP1A2 快代谢型", "诱导型快代谢，咖啡因清除快。观察性研究提示快代谢者适量咖啡摄入的心血管获益更明确。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Sachse et al., 1999 (CYP1A2 -163C>A)", "Cornelis et al. 咖啡 GWAS"],
+      "note": "CYP1A2 活性受吸烟强烈诱导，基因型只是基线。"
+    },
+    {
+      "rsid": "rs1045642",
+      "gene": "ABCB1 (P-糖蛋白)",
+      "variant": "ABCB1 3435C>T (I1145M 同义变异)",
+      "gene_strand": "-",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "transporter",
+      "interp": {
+        "AA": ["3435 T/T（基因方向）· 表达降低", "肠道 P-糖蛋白表达降低，部分药物（地高辛、部分免疫抑制剂、他汀）暴露升高。"],
+        "AG": ["3435 C/T（基因方向）", "携带一份低表达等位基因（本数据即此组合）。"],
+        "GG": ["3435 C/C（基因方向）· 正常表达", "P-糖蛋白正常表达。"]
+      },
+      "confidence": "medium",
+      "evidence": ["PharmGKB ABCB1（证据等级 2-3）"],
+      "note": "ABCB1 三个热点位点构成单倍型；本数据未做相位分析，解读为近似。"
+    },
+    {
+      "rsid": "rs2032582",
+      "gene": "ABCB1 (P-糖蛋白)",
+      "variant": "ABCB1 2677G>T/A (A893S/T；dbSNP 正链 A>C/T)",
+      "gene_strand": "-",
+      "plus_ref": "A",
+      "plus_alt": "C",
+      "group": "transporter",
+      "interp": {
+        "AA": ["2677 T/T（基因方向）", "携带两份 2677T 变异。"],
+        "AC": ["2677 G/T（基因方向）", "携带一份 2677T 变异（本数据即此组合）。"],
+        "CC": ["2677 G/G（基因方向）· 野生型", "无变异携带。"]
+      },
+      "confidence": "medium",
+      "evidence": ["PharmGKB ABCB1"],
+      "note": "该位点存在 G>T/A 三态变异（正链对应 C/A/T），芯片只覆盖部分组合。"
+    },
+    {
+      "rsid": "rs1128503",
+      "gene": "ABCB1 (P-糖蛋白)",
+      "variant": "ABCB1 1236C>T (G412G 同义变异)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "transporter",
+      "interp": {
+        "GG": ["1236 C/C（基因方向）· 野生型", "无变异携带。"],
+        "GA": ["1236 C/T", "携带 T 变异。"],
+        "AA": ["1236 T/T", "1236T 与 3435T 连锁，指向低表达单倍型。"]
+      },
+      "confidence": "medium",
+      "evidence": ["PharmGKB ABCB1"],
+      "note": "与上两位点共同评估。"
+    }
+  ],
+  "special_cards": [
+    {
+      "title": "CYP2D6 — 芯片无法可靠分型",
+      "text": "CYP2D6 区域存在基因拷贝数变异和大量假基因干扰，ASA 芯片的少数位点（如 *10 相关）不足以给出可靠表型。涉及 CYP2D6 的药物（他莫昔芬、可待因/曲马多、部分抗抑郁药、部分抗精神病药）请勿根据本报告做任何推断，临床如需可用 PCR/LR-PCR 方法专门分型。",
+      "level": "attention"
+    },
+    {
+      "title": "NAT2 乙酰化表型（研究级推断）",
+      "text": "NAT2 表型由多点位单倍型组合决定，本报告基于已覆盖的 7 个位点做近似推断（慢型等位基因计数法：0 个=快型，1 个=中间型，2 个=慢型）。该推断未覆盖全部罕见等位基因，结论标注为研究级。",
+      "level": "caution"
+    },
+    {
+      "title": "HLA 区域 — 疫苗/药物超敏反应",
+      "text": "HLA-B*15:02（卡马西平）、HLA-B*57:01（阿巴卡韦）、HLA-A*31:01 等超敏相关等位基因位于高多态性 HLA 区域，必须用专门的 HLA 分型方法，芯片探针覆盖不可靠，本报告不作推断。",
+      "level": "attention"
+    },
+    {
+      "title": "使用边界",
+      "text": "本模块所有结论均为分型明确的位点 + 公开指南的机械映射，不替代药物基因组学临床检测（后者有更全面的基因覆盖和质控）。任何用药决定请与医生讨论。",
+      "level": "normal"
+    }
+  ]
+}

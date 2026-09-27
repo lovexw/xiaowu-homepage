@@ -1,0 +1,563 @@
+{
+ "module": "traits",
+ "title": "特质与心理",
+ "icon": "🧠",
+ "intro": "本模块涵盖认知、性格、感官与体质的候选基因位点。⚠️ 重要提醒：行为与心理性状受基因网络与环境共同影响，任何单个位点的解释力都很小（通常 <1% 的方差），且复现性参差不齐。以下内容请当作「有趣的可能倾向」而非标签或自我预言。",
+ "entries": [
+  {
+   "rsid": "rs4680",
+   "gene": "COMT",
+   "variant": "COMT Val158Met (c.472G>A)",
+   "group": "认知与压力",
+   "confidence": "medium",
+   "note": "本数据 Val/Met 平衡型。该位点对实际行为的解释力很小，请勿过度解读。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4680",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4680",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4680",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4680"
+   },
+   "genotype": "AG",
+   "chrom": "22",
+   "pos": 19951271,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Val/Met · 平衡型",
+    "text": "介于两种表型之间，执行功能较平衡（'战士-诗人'中间型）。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs6265",
+   "gene": "BDNF",
+   "variant": "BDNF Val66Met (c.196G>A 基因方向)",
+   "group": "认知与神经可塑性",
+   "confidence": "medium",
+   "note": "本数据 Val/Met。有氧运动仍是提升 BDNF 最可靠的方式。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6265",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6265",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6265",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6265"
+   },
+   "genotype": "TC",
+   "chrom": "11",
+   "pos": 27679916,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Val/Met",
+    "text": "活动依赖性 BDNF 分泌略降；与情景记忆表现、运动后 BDNF 升高幅度较小相关（效应小）。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs53576",
+   "gene": "OXTR",
+   "variant": "催产素受体 rs53576 (A/G)",
+   "group": "社交与情绪",
+   "confidence": "low",
+   "note": "本数据 A/G 中间型。社交能力的实际解释力非常有限。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs53576",
+    "snpedia": "https://www.snpedia.com/index.php/Rs53576",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs53576",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs53576"
+   },
+   "genotype": "AG",
+   "chrom": "3",
+   "pos": 8804371,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "A/G",
+    "text": "中间型。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs1042778",
+   "gene": "OXTR",
+   "variant": "催产素受体 rs104778 (T/G)",
+   "group": "社交与情绪",
+   "confidence": "low",
+   "note": "本数据 G/G。证据等级低。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1042778",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1042778",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1042778",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1042778"
+   },
+   "genotype": "GG",
+   "chrom": "3",
+   "pos": 8794545,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "G/G",
+    "text": "部分研究提示与共情/亲子行为差异相关。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs2254298",
+   "gene": "OXTR",
+   "variant": "催产素受体 rs2254298 (A/G)",
+   "group": "社交与情绪",
+   "confidence": "low",
+   "note": "本数据 G/G。证据等级低。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2254298",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2254298",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2254298",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2254298"
+   },
+   "genotype": "GG",
+   "chrom": "3",
+   "pos": 8802228,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "G/G",
+    "text": "部分研究提示与更晚的依恋形成等差异相关。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs1800497",
+   "gene": "ANKK1 (影响 DRD2)",
+   "variant": "DRD2/ANKK1 Taq1A (rs1800497)",
+   "group": "奖赏与成瘾",
+   "confidence": "medium",
+   "note": "本数据 A1 携带（AG）。该关联对个体预测价值有限。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800497",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800497",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800497",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800497"
+   },
+   "genotype": "AG",
+   "chrom": "11",
+   "pos": 113270828,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Taq1A C/T（A1 携带）",
+    "text": "D2 受体可用性降低 30-40%（PET 证据），与奖赏敏感性变化、成瘾易感性略增相关。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs6280",
+   "gene": "DRD3",
+   "variant": "DRD3 Ser9Gly (rs6280)",
+   "group": "奖赏与成瘾",
+   "confidence": "low",
+   "note": "本数据 Ser/Gly。仅供了解。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6280",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6280",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6280",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6280"
+   },
+   "genotype": "TC",
+   "chrom": "3",
+   "pos": 113890815,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Ser/Gly",
+    "text": "与帕金森病易感性/冲动行为差异的候选位点（效应小）。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs6311",
+   "gene": "HTR2A",
+   "variant": "5-羟色胺 2A 受体 -1438A>G (rs6311)",
+   "group": "情绪与用药",
+   "confidence": "low",
+   "note": "本数据杂合。证据等级低。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6311",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6311",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6311",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6311"
+   },
+   "genotype": "TC",
+   "chrom": "13",
+   "pos": 47471478,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "杂合",
+    "text": "该启动子位点与 5-HT2A 表达及抗抑郁药反应差异的候选关联。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs6313",
+   "gene": "HTR2A",
+   "variant": "5-羟色胺 2A 受体 102T>C (rs6313)",
+   "group": "情绪与用药",
+   "confidence": "low",
+   "note": "本数据 102T/C。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6313",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6313",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6313",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6313"
+   },
+   "genotype": "AG",
+   "chrom": "13",
+   "pos": 47469940,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "102T/C",
+    "text": "与 rs6311 强连锁；部分研究与非自杀性自伤/抑郁易感性关联（弱）。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs17070145",
+   "gene": "KIBRA (WWC1)",
+   "variant": "KIBRA rs17070145 (C/T)",
+   "group": "记忆",
+   "confidence": "medium",
+   "note": "本数据 T/T，指向较优的情景记忆潜质；对个体预测价值有限。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs17070145",
+    "snpedia": "https://www.snpedia.com/index.php/Rs17070145",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs17070145",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs17070145"
+   },
+   "genotype": "TT",
+   "chrom": "5",
+   "pos": 167845791,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "T/T",
+    "text": "与情景/延迟回忆表现较好相关的基因型（效应小）。",
+    "level": "caution"
+   }
+  },
+  {
+   "rsid": "rs1801260",
+   "gene": "CLOCK",
+   "variant": "CLOCK 3111T/C (rs1801260；dbSNP 正链 A>G)",
+   "group": "昼夜节律",
+   "confidence": "low",
+   "note": "本数据 A/A 野生型，无晚睡倾向的该位点证据。光照与作息仍是决定性因素。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801260",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801260",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801260",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801260"
+   },
+   "genotype": "AA",
+   "chrom": "4",
+   "pos": 56301369,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "TT",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "3111 T/T（基因方向）· 野生型",
+    "text": "与'晨型'倾向无特殊关联。本数据即此基因型。",
+    "level": "caution"
+   }
+  },
+  {
+   "rsid": "rs1360780",
+   "gene": "FKBP5",
+   "variant": "FKBP5 rs1360780 (C/T)",
+   "group": "应激反应",
+   "confidence": "medium",
+   "note": "本数据 C/T。该位点的风险意义高度依赖环境（创伤暴露），单独存在不构成预测。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1360780",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1360780",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1360780",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1360780"
+   },
+   "genotype": "TC",
+   "chrom": "6",
+   "pos": 35607571,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "C/T",
+    "text": "携带 T：应激时 FKBP5 诱导更强，HPA 轴负反馈减弱；与童年创伤叠加时的抑郁/PTSD 易感性升高相关（基因×环境交互研究的经典位点）。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs6323",
+   "gene": "MAOA (X 染色体)",
+   "variant": "MAOA rs6323 (G/T, c.897G>T? R297R)",
+   "group": "神经递质降解",
+   "confidence": "low",
+   "note": "本数据为 X 染色体半合子 G。uVNTR 结构变异无法用该 SNP 代表。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6323",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6323",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6323",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6323"
+   },
+   "genotype": "GG",
+   "chrom": "X",
+   "pos": 43591036,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "G（半合子，男性）",
+    "text": "该位点与 MAOA 活性调节相关；MAOA 经典'战士基因'研究针对的是启动子 uVNTR，而非此 SNP，请注意区分。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs1815739",
+   "gene": "ACTN3",
+   "variant": "ACTN3 R577X (c.1729C>T)",
+   "group": "运动类型",
+   "confidence": "medium",
+   "note": "本数据 R/X 均衡型。基因型不能替代训练，只描述'起点微差'。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1815739",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1815739",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1815739",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1815739"
+   },
+   "genotype": "TC",
+   "chrom": "11",
+   "pos": 66328095,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "R/X",
+    "text": "一份功能性 α-辅肌动蛋白；爆发与耐力均衡。",
+    "level": "neutral"
+   }
+  },
+  {
+   "rsid": "rs3827760",
+   "gene": "EDAR",
+   "variant": "EDAR V370A (c.1540T>C, 370A 衍生等位基因)",
+   "group": "体质特征（东亚适应）",
+   "confidence": "high",
+   "note": "本数据为衍生纯合，典型的东亚适应性基因型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3827760",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3827760",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3827760",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3827760"
+   },
+   "genotype": "GG",
+   "chrom": "2",
+   "pos": 109513601,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "CC",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "370A/370A（衍生纯合）",
+    "text": "约 93% 东亚人携带：直粗头发、汗腺密度较高、铲形门齿、乳腺/汗腺发育差异等。该变异约 3 万年前出现在东亚祖先群体并受正选择。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs17822931",
+   "gene": "ABCC11",
+   "variant": "ABCC11 538G>A (耳垢干湿 + 腋臭主效位点)",
+   "group": "体质特征",
+   "confidence": "high",
+   "note": "本数据干性纯合，为典型东亚表型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs17822931",
+    "snpedia": "https://www.snpedia.com/index.php/Rs17822931",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs17822931",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs17822931"
+   },
+   "genotype": "TT",
+   "chrom": "16",
+   "pos": 48258198,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "AA",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "干性耳垢（1800G>A 纯合）",
+    "text": "耳垢干性、腋臭风险极低、乳汁分泌相关物减少。约 80-95% 东亚人携带。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs713598",
+   "gene": "TAS2R38",
+   "variant": "苦味受体 TAS2R38 位点 1/3 (PAV/AVI 单倍型组成)",
+   "group": "味觉",
+   "confidence": "medium",
+   "note": "需要 rs713598 + rs1726866 + rs10246939 三点共同判定单倍型；本数据三点均为杂合 → PAV/AVI 双单倍型，中等苦味敏感。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs713598",
+    "snpedia": "https://www.snpedia.com/index.php/Rs713598",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs713598",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs713598"
+   },
+   "genotype": "CG",
+   "chrom": "7",
+   "pos": 141673345,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "杂合",
+    "text": "PAV/AVI 混合（三点综合判断见下）。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs1726866",
+   "gene": "TAS2R38",
+   "variant": "苦味受体 TAS2R38 位点 2/3",
+   "group": "味觉",
+   "confidence": "medium",
+   "note": "本数据 A/G（dbSNP 正链 G>A）。三点综合判断见位点 1/3。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1726866",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1726866",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1726866",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1726866"
+   },
+   "genotype": "AG",
+   "chrom": "7",
+   "pos": 141672705,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "杂合",
+    "text": "PAV/AVI 混合。",
+    "level": "attention"
+   }
+  },
+  {
+   "rsid": "rs10246939",
+   "gene": "TAS2R38",
+   "variant": "苦味受体 TAS2R38 位点 3/3",
+   "group": "味觉",
+   "confidence": "medium",
+   "note": "本数据 T/C。三点综合：PAV/AVI 杂合 → 中等苦味敏感（能尝出 PTC/苦味，弱于 PAV 纯合）。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs10246939",
+    "snpedia": "https://www.snpedia.com/index.php/Rs10246939",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs10246939",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs10246939"
+   },
+   "genotype": "TC",
+   "chrom": "7",
+   "pos": 141672604,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "杂合",
+    "text": "PAV/AVI 混合。",
+    "level": "attention"
+   }
+  }
+ ],
+ "special_cards": [
+  {
+   "title": "综合解读：认知与行为画像",
+   "text": "记忆位点（KIBRA T/T）+ COMT 平衡型 + BDNF 杂合的组合大致指向：情景记忆潜质较好、压力下认知较稳的中间画像。但这只是几个小效应位点的拼图，实际认知表现由训练、睡眠、教育与环境主导。",
+   "level": "normal"
+  },
+  {
+   "title": "应激系统的基因×环境提示",
+   "text": "FKBP5 T 携带的应激敏感性差异，仅在严重早期逆境下才与心理疾病风险升高相关；稳定支持性环境即可'关闭'大部分风险。这与'基因不是命运'的科学共识一致。",
+   "level": "normal"
+  },
+  {
+   "title": "5-HTTLPR 未覆盖说明",
+   "text": "经典'情绪基因'5-HTTLPR（SLC6A4 启动子插入/缺失）是结构变异，芯片单 SNP 无法代表；文献中也因大样本复现失败而信誉下降。本报告不作推断。",
+   "level": "attention"
+  }
+ ],
+ "counts": {
+  "total": 19,
+  "ok": 19,
+  "flagged": 0,
+  "not_called": 0
+ }
+}
