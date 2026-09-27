@@ -160,7 +160,7 @@
    "resolved": {
     "label": "T/T",
     "text": "携带两份东亚常见风险等位基因 T：类风湿/狼疮/干燥综合征的群体风险 OR≈1.5-2.0（vs G/G）。这是本数据免疫模块中唯一需要留意的位点。",
-    "level": "caution"
+    "level": "attention"
    }
   },
   {
@@ -305,7 +305,7 @@
    "resolved": {
     "label": "TNF1/TNF2",
     "text": "TNF2 启动子活性较高，TNF-α 产量偏高倾向（自身免疫/炎症相关）。",
-    "level": "neutral"
+    "level": "attention"
    }
   },
   {
@@ -392,7 +392,7 @@
    "resolved": {
     "label": "T/T",
     "text": "与保护方向相关（降低 MD A5 活性）。",
-    "level": "caution"
+    "level": "neutral"
    }
   },
   {

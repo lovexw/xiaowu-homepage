@@ -73,7 +73,7 @@
    "resolved": {
     "label": "Val/Met",
     "text": "活动依赖性 BDNF 分泌略降；与情景记忆表现、运动后 BDNF 升高幅度较小相关（效应小）。",
-    "level": "neutral"
+    "level": "caution"
    }
   },
   {
@@ -305,7 +305,7 @@
    "resolved": {
     "label": "T/T",
     "text": "与情景/延迟回忆表现较好相关的基因型（效应小）。",
-    "level": "caution"
+    "level": "neutral"
    }
   },
   {
@@ -334,7 +334,7 @@
    "resolved": {
     "label": "3111 T/T（基因方向）· 野生型",
     "text": "与'晨型'倾向无特殊关联。本数据即此基因型。",
-    "level": "caution"
+    "level": "favorable"
    }
   },
   {
@@ -363,7 +363,7 @@
    "resolved": {
     "label": "C/T",
     "text": "携带 T：应激时 FKBP5 诱导更强，HPA 轴负反馈减弱；与童年创伤叠加时的抑郁/PTSD 易感性升高相关（基因×环境交互研究的经典位点）。",
-    "level": "attention"
+    "level": "caution"
    }
   },
   {
@@ -624,7 +624,7 @@
    "resolved": {
     "label": "深棕色虹膜",
     "text": "该位点是人类虹膜颜色最强决定位点：G/G 组合才可能出现蓝眼睛，A/A 高度确定深棕色。东亚人群几乎全部为 A/A。",
-    "level": "neutral"
+    "level": "favorable"
    }
   },
   {
@@ -682,7 +682,7 @@
    "resolved": {
     "label": "常见型（A/A）",
     "text": "不携带欧洲卷发 GWAS 里的 T 直发相关等位基因。不过东亚人群的直发主要由 EDAR 370A 决定（你的 EDAR 已是衍生纯合），此位点只是次要参考。",
-    "level": "attention"
+    "level": "favorable"
    }
   },
   {
@@ -711,7 +711,7 @@
    "resolved": {
     "label": "G/G",
     "text": "部分研究：与甜食摄入偏好升高相关（观察性，效应小）。",
-    "level": "neutral"
+    "level": "caution"
    }
   },
   {

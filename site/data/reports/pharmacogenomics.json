@@ -44,7 +44,7 @@
    "resolved": {
     "label": "CYP2C19*1/*2 · 中间代谢 (Intermediate Metabolizer)",
     "text": "CYP2C19 活性降低。CPIC 指南：急性冠脉综合征/PCI 人群中，中间代谢型使用标准剂量氯吡格雷时血小板抑制不足、缺血事件风险升高，建议优先考虑替格瑞洛或普拉格雷（若无禁忌）。奥美拉唑等 PPI 的暴露量会升高。",
-    "level": "attention"
+    "level": "caution"
    }
   },
   {
@@ -73,7 +73,7 @@
    "resolved": {
     "label": "未携带 *3 等位基因",
     "text": "该位点为野生型，不产生额外功能缺陷。",
-    "level": "caution"
+    "level": "attention"
    }
   },
   {
@@ -131,7 +131,7 @@
    "resolved": {
     "label": "未携带 *2 等位基因",
     "text": "该位点野生型。",
-    "level": "favorable"
+    "level": "attention"
    }
   },
   {
@@ -160,7 +160,7 @@
    "resolved": {
     "label": "CYP2C9*1/*1 · 正常代谢",
     "text": "两个功能缺陷位点（*2/*3）均为野生型，判定为 *1/*1 正常代谢型。华法林、苯妥英、氯沙坦、塞来昔布等按标准代谢处理；华法林剂量主要参考 VKORC1 与临床因素。",
-    "level": "caution"
+    "level": "favorable"
    }
   },
   {
@@ -218,7 +218,7 @@
    "resolved": {
     "label": "CYP4F2*3 纯合",
     "text": "华法林剂量需求增加趋势更明显；同时维生素 E 代谢相关研究提示该基因型人群补充维生素 E 时暴露升高。",
-    "level": "neutral"
+    "level": "caution"
    }
   },
   {
@@ -276,7 +276,7 @@
    "resolved": {
     "label": "SLCO1B1 功能正常（就本位点而言）",
     "text": "521 位点无缺陷等位基因。CPIC 指南：可按标准处方使用辛伐他汀等他汀，肌病风险无遗传性升高（就本位点而言）。",
-    "level": "caution"
+    "level": "favorable"
    }
   },
   {
@@ -305,7 +305,7 @@
    "resolved": {
     "label": "携带 *1b",
     "text": "*1b 功能基本正常，与 *1a 组成 *1a/*1b（本数据即此组合）。",
-    "level": "favorable"
+    "level": "attention"
    }
   },
   {
@@ -334,7 +334,7 @@
    "resolved": {
     "label": "未携带 *2A",
     "text": "就本位点而言无功能缺陷。DPYD 完整评估还需覆盖 *13、HapB3 等位点。",
-    "level": "caution"
+    "level": "attention"
    }
   },
   {
@@ -363,7 +363,7 @@
    "resolved": {
     "label": "未携带 *13",
     "text": "就本位点而言无功能缺陷。",
-    "level": "caution"
+    "level": "attention"
    }
   },
   {
@@ -392,7 +392,7 @@
    "resolved": {
     "label": "野生型（正链 T/T = 基因方向 G/G）",
     "text": "无功能缺陷。本数据即此基因型。",
-    "level": "caution"
+    "level": "favorable"
    }
   },
   {
@@ -450,7 +450,7 @@
    "resolved": {
     "label": "未携带 *3B",
     "text": "就本位点而言正常。",
-    "level": "favorable"
+    "level": "attention"
    }
   },
   {
@@ -595,7 +595,7 @@
    "resolved": {
     "label": "CYP1A2 快代谢型",
     "text": "诱导型快代谢，咖啡因清除快。观察性研究提示快代谢者适量咖啡摄入的心血管获益更明确。",
-    "level": "neutral"
+    "level": "favorable"
    }
   },
   {
@@ -624,7 +624,7 @@
    "resolved": {
     "label": "3435 C/T（基因方向）",
     "text": "携带一份低表达等位基因（本数据即此组合）。",
-    "level": "attention"
+    "level": "caution"
    }
   },
   {

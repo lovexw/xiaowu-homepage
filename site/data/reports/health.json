@@ -102,7 +102,7 @@
    "resolved": {
     "label": "Trp/Trp",
     "text": "风险 OR≈1.25。2014 年功能缺失研究提示罕见截断变异反而保护，说明该通路复杂。",
-    "level": "favorable"
+    "level": "neutral"
    }
   },
   {
@@ -160,7 +160,7 @@
    "resolved": {
     "label": "风险等位基因纯合（C/C）",
     "text": "冠心病风险相对升高（OR≈1.5-1.8 vs G/G）；东亚人群 C 频率约 0.55-0.65，本基因型在人群中也常见。可通过戒烟、运动、血压血脂管理显著压缩风险差异。",
-    "level": "neutral"
+    "level": "caution"
    }
   },
   {
@@ -189,7 +189,7 @@
    "resolved": {
     "label": "携带一个 G",
     "text": "风险中度升高（与 rs1333049 连锁，非独立证据）。",
-    "level": "attention"
+    "level": "caution"
    }
   },
   {
@@ -218,7 +218,7 @@
    "resolved": {
     "label": "无风险等位基因",
     "text": "不携带该肥胖风险等位基因（A）。东亚人群 A 频率约 0.1-0.15。",
-    "level": "attention"
+    "level": "favorable"
    }
   },
   {
@@ -247,7 +247,7 @@
    "resolved": {
     "label": "无风险等位基因",
     "text": "C 为风险等位基因（IRX3/IRX5 增强子变异）。",
-    "level": "neutral"
+    "level": "favorable"
    }
   },
   {
@@ -276,7 +276,7 @@
    "resolved": {
     "label": "无风险等位基因",
     "text": "A 为风险等位基因。",
-    "level": "neutral"
+    "level": "favorable"
    }
   },
   {
@@ -392,7 +392,7 @@
    "resolved": {
     "label": "T/T",
     "text": "与较长端粒相关等位基因。",
-    "level": "caution"
+    "level": "neutral"
    }
   },
   {
@@ -450,7 +450,7 @@
    "resolved": {
     "label": "未携带 H63D",
     "text": "野生型。",
-    "level": "favorable"
+    "level": "attention"
    }
   },
   {
@@ -479,7 +479,7 @@
    "resolved": {
     "label": "T/T（保护方向）",
     "text": "不携带风险等位基因 C（OR≈1.16）。",
-    "level": "caution"
+    "level": "favorable"
    }
   },
   {

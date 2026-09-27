@@ -48,7 +48,7 @@
    "resolved": {
     "label": "677C/C（基因方向）· 酶活性正常",
     "text": "MTHFR 677 位点野生型，叶酸代谢通路此位点无缺陷。东亚人群约 50-60% 为该型。",
-    "level": "caution"
+    "level": "favorable"
    }
   },
   {
@@ -77,7 +77,7 @@
    "resolved": {
     "label": "1298A/C · 杂合",
     "text": "酶活性轻度下降；与 677T 不在常见单倍型组合时影响更小。本数据为 677 野生 + 1298 杂合，总体叶酸代谢受影响轻微。",
-    "level": "favorable"
+    "level": "attention"
    }
   },
   {
@@ -193,7 +193,7 @@
    "resolved": {
     "label": "野生型（-1131T/T）",
     "text": "甘油三酯基线遗传倾向正常。",
-    "level": "caution"
+    "level": "favorable"
    }
   },
   {
@@ -396,7 +396,7 @@
    "resolved": {
     "label": "Pro/Pro（常见型）",
     "text": "人群主流基因型（>85%）。",
-    "level": "neutral"
+    "level": "favorable"
    }
   },
   {
@@ -483,7 +483,7 @@
    "resolved": {
     "label": "Q141K 杂合（本数据）",
     "text": "ABCG2 转运效率下降约一半：肾脏排泄尿酸能力降低，痛风风险升高（东亚人群 OR≈1.7-2.0，该变异在东亚携带率约 25-30%，远高于欧洲）。同时影响部分药物暴露（他汀、磺吡酮等）。建议：定期体检关注血尿酸，少喝含糖饮料与啤酒、多喝水。",
-    "level": "attention"
+    "level": "caution"
    }
   },
   {

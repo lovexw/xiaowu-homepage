@@ -82,12 +82,19 @@ def links_for(rsid: str) -> dict:
 
 
 def level_of(label: str, text: str) -> str:
-    blob = label + text
-    if any(k in blob for k in ("风险纯合", "慢代谢 (Poor", "缺陷", "强列建议", "强烈建议", "避免", "风险升高倾向明显", "风险 OR≈1.5", "OR≈1.8", "风险较高", "T/T")) and "风险较低" not in blob:
-        return "caution"
-    if any(k in blob for k in ("野生", "正常", "保护", "有利", "低风险", "长寿", "快代谢 (Normal", "排除")):
+    """判级优先看 label（结论标题），文本仅作兜底：
+    有利词优先于警示词（如'酶活性正常'里提到'缺陷'仍判 favorable）。"""
+    if any(k in label for k in ("正常", "野生", "保护", "有利", "无风险", "排除",
+                                "常见型", "长寿", "快代谢", "高效", "标准", "好签",
+                                "深棕", "清洁效率", "favorable", "快班", "满血",
+                                "双修", "中味", "典型的", "原装", "轻装")):
         return "favorable"
-    if any(k in blob for k in ("携带", "杂合", "中间", "中度")):
+    blob = label + text
+    if any(k in blob for k in ("风险纯合", "慢代谢 (Poor", "强烈建议", "避免",
+                               "风险较高", "风险 OR≈1.8", "OR≈1.5-1.8",
+                               "风险等位基因纯合", "低表达", "升高")):
+        return "caution"
+    if any(k in blob for k in ("携带", "杂合", "中间", "中度", "偏高")):
         return "attention"
     return "neutral"
 
