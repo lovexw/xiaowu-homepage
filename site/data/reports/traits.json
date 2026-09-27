@@ -3,8 +3,23 @@
  "title": "特质与心理",
  "icon": "🧠",
  "intro": "本模块涵盖认知、性格、感官与体质的候选基因位点。⚠️ 重要提醒：行为与心理性状受基因网络与环境共同影响，任何单个位点的解释力都很小（通常 <1% 的方差），且复现性参差不齐。以下内容请当作「有趣的可能倾向」而非标签或自我预言。",
+ "popsci_cards": [
+  {
+   "title": "🎲 一个位点解释不了'你是谁'",
+   "text": "本模块所有位点对性格/认知的解释力通常不到 1%——相当于抛一颗骰子给人生轨迹歪了一点点。真正的'性格配方'是几百个基因各贡献一丝，再乘上家庭、教育、经历。所以这里的每个结论都要在前面加一个'稍微'：稍微偏向、稍微敏感、稍微快半拍。"
+  },
+  {
+   "title": "🦣 EDAR：3 万年前东亚祖先的'爆款变异'",
+   "text": "你的 EDAR 370A 纯合是本报告最'有故事'的位点：这个变异大约 3 万年前出现在东亚祖先群体里，带来更直更粗的头发、更密的汗腺、铲形门齿——今天约 93% 的东亚人携带。它是'自然选择真实发生在一个具体字母上'的教科书案例。"
+  },
+  {
+   "title": "🎯 苦味试纸实验在家就能做",
+   "text": "TAS2R38 决定你能不能尝出 PTU 试纸（或西兰花里的苦味分子）的苦。你的组合是 PAV/AVI 杂合=中等敏感：吃得出苦，但没有'敏感组'那么抗拒十字花科蔬菜——这可能让你比纯苦味敏感者更容易爱上西兰花。"
+  }
+ ],
  "entries": [
   {
+   "plain": "前额叶多巴胺的'清理工'（COMT）速度中等——压力下稳定性与日常细节敏感度的'平衡配置'。",
    "rsid": "rs4680",
    "gene": "COMT",
    "variant": "COMT Val158Met (c.472G>A)",
@@ -33,6 +48,7 @@
    }
   },
   {
+   "plain": "大脑的'肥料'（BDNF）分泌略带节制版——运动依然是提升它最可靠的办法。",
    "rsid": "rs6265",
    "gene": "BDNF",
    "variant": "BDNF Val66Met (c.196G>A 基因方向)",
@@ -61,6 +77,7 @@
    }
   },
   {
+   "plain": "催产素受体'社交敏感度'中间档——共情能力更靠经历说话。",
    "rsid": "rs53576",
    "gene": "OXTR",
    "variant": "催产素受体 rs53576 (A/G)",
@@ -89,6 +106,7 @@
    }
   },
   {
+   "plain": "催产素受体的另一个读数（证据较弱，看看就好）。",
    "rsid": "rs1042778",
    "gene": "OXTR",
    "variant": "催产素受体 rs104778 (T/G)",
@@ -117,6 +135,7 @@
    }
   },
   {
+   "plain": "催产素受体第三读数——同上，别当标签用。",
    "rsid": "rs2254298",
    "gene": "OXTR",
    "variant": "催产素受体 rs2254298 (A/G)",
@@ -145,6 +164,7 @@
    }
   },
   {
+   "plain": "大脑奖赏'音量'（D2 受体）略偏低配——对新鲜刺激的'再来一次'信号稍弱一些。",
    "rsid": "rs1800497",
    "gene": "ANKK1 (影响 DRD2)",
    "variant": "DRD2/ANKK1 Taq1A (rs1800497)",
@@ -173,6 +193,7 @@
    }
   },
   {
+   "plain": "多巴胺 D3 受体的常见杂合——了解即可。",
    "rsid": "rs6280",
    "gene": "DRD3",
    "variant": "DRD3 Ser9Gly (rs6280)",
@@ -201,6 +222,7 @@
    }
   },
   {
+   "plain": "血清素 2A 受体的调控杂合——抗抑郁药反应研究的候选位点。",
    "rsid": "rs6311",
    "gene": "HTR2A",
    "variant": "5-羟色胺 2A 受体 -1438A>G (rs6311)",
@@ -229,6 +251,7 @@
    }
   },
   {
+   "plain": "与上一位点连锁的同方向读数。",
    "rsid": "rs6313",
    "gene": "HTR2A",
    "variant": "5-羟色胺 2A 受体 102T>C (rs6313)",
@@ -257,6 +280,7 @@
    }
   },
   {
+   "plain": "记忆相关基因（KIBRA）是'好签'组合——与延迟回忆表现较好相关。",
    "rsid": "rs17070145",
    "gene": "KIBRA (WWC1)",
    "variant": "KIBRA rs17070145 (C/T)",
@@ -285,6 +309,7 @@
    }
   },
   {
+   "plain": "生物钟主发条（CLOCK）是标准版——夜猫子倾向的这口锅它不背。",
    "rsid": "rs1801260",
    "gene": "CLOCK",
    "variant": "CLOCK 3111T/C (rs1801260；dbSNP 正链 A>G)",
@@ -313,6 +338,7 @@
    }
   },
   {
+   "plain": "应激系统的'音量键'（FKBP5）带一份敏感版——稳定的环境可以完全'盖住'它。",
    "rsid": "rs1360780",
    "gene": "FKBP5",
    "variant": "FKBP5 rs1360780 (C/T)",
@@ -341,6 +367,7 @@
    }
   },
   {
+   "plain": "MAOA 的一个普通读数（网传'战士基因'其实说的是另一个结构变异，别混）。",
    "rsid": "rs6323",
    "gene": "MAOA (X 染色体)",
    "variant": "MAOA rs6323 (G/T, c.897G>T? R297R)",
@@ -369,6 +396,7 @@
    }
   },
   {
+   "plain": "肌肉里的α-辅肌动蛋白是 R/X 均衡版——爆发与耐力'双修'起点。",
    "rsid": "rs1815739",
    "gene": "ACTN3",
    "variant": "ACTN3 R577X (c.1729C>T)",
@@ -397,6 +425,7 @@
    }
   },
   {
+   "plain": "3 万年前东亚爆款变异 EDAR 370A 纯合：直发、汗腺密、铲形门齿套餐齐活。",
    "rsid": "rs3827760",
    "gene": "EDAR",
    "variant": "EDAR V370A (c.1540T>C, 370A 衍生等位基因)",
@@ -425,6 +454,7 @@
    }
   },
   {
+   "plain": "干性耳垢纯合——八成东亚人的配置，顺带腋下风味物质也少。",
    "rsid": "rs17822931",
    "gene": "ABCC11",
    "variant": "ABCC11 538G>A (耳垢干湿 + 腋臭主效位点)",
@@ -453,6 +483,7 @@
    }
   },
   {
+   "plain": "苦味受体第一读数：杂合。",
    "rsid": "rs713598",
    "gene": "TAS2R38",
    "variant": "苦味受体 TAS2R38 位点 1/3 (PAV/AVI 单倍型组成)",
@@ -481,6 +512,7 @@
    }
   },
   {
+   "plain": "苦味受体第二读数：杂合。",
    "rsid": "rs1726866",
    "gene": "TAS2R38",
    "variant": "苦味受体 TAS2R38 位点 2/3",
@@ -509,6 +541,7 @@
    }
   },
   {
+   "plain": "苦味受体第三读数：杂合——三点合并=中等苦味敏感，西兰花还能再吃点。",
    "rsid": "rs10246939",
    "gene": "TAS2R38",
    "variant": "苦味受体 TAS2R38 位点 3/3",
@@ -535,6 +568,180 @@
     "text": "PAV/AVI 混合。",
     "level": "attention"
    }
+  },
+  {
+   "plain": "光喷嚏反射中等倾向——出隧道见阳光可能想打喷嚏，开车留意。",
+   "rsid": "rs10427255",
+   "gene": "ACHOO 光喷嚏反射 (2q37)",
+   "variant": "看到阳光想打喷嚏的反射 rs10427255",
+   "group": "趣味特征",
+   "confidence": "medium",
+   "note": "本数据 T/C —— 中等倾向。安全影响：开车出隧道时留意。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs10427255",
+    "snpedia": "https://www.snpedia.com/index.php/Rs10427255",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs10427255",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs10427255"
+   },
+   "genotype": "TC",
+   "chrom": "2",
+   "pos": 146125523,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "中等光喷嚏反射",
+    "text": "从暗处走向阳光时偶尔想打喷嚏——这是真实存在的'光喷嚏反射'（ACHOO 综合征），约 1/4 人口有此反射。",
+    "level": "neutral"
+   }
+  },
+  {
+   "plain": "虹膜颜色主效位点深棕组合——眼睛颜色这题拿满分。",
+   "rsid": "rs12913832",
+   "gene": "HERC2 (调控 OCA2)",
+   "variant": "虹膜（眼睛颜色）主效位点 rs12913832",
+   "group": "外貌特征",
+   "confidence": "high",
+   "note": "本数据 A/A —— 典型的深棕色虹膜基因型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs12913832",
+    "snpedia": "https://www.snpedia.com/index.php/Rs12913832",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs12913832",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs12913832"
+   },
+   "genotype": "AA",
+   "chrom": "15",
+   "pos": 28365618,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "深棕色虹膜",
+    "text": "该位点是人类虹膜颜色最强决定位点：G/G 组合才可能出现蓝眼睛，A/A 高度确定深棕色。东亚人群几乎全部为 A/A。",
+    "level": "neutral"
+   }
+  },
+  {
+   "plain": "眼色副位点与主效一致：深棕。",
+   "rsid": "rs1800407",
+   "gene": "OCA2",
+   "variant": "虹膜颜色次效位点 rs1800407",
+   "group": "外貌特征",
+   "confidence": "low",
+   "note": "次效位点，主效位点（rs12913832）已确定为深棕。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800407",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800407",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800407",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800407"
+   },
+   "genotype": "CC",
+   "chrom": "15",
+   "pos": 28230318,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "指向深色虹膜的组合",
+    "text": "与 rs12913832 A/A 一致：深棕色虹膜。",
+    "level": "neutral"
+   }
+  },
+  {
+   "plain": "欧洲卷发 GWAS 的位点读数待校验——东亚直发主要由 EDAR 决定（你已确认）。",
+   "rsid": "rs11803731",
+   "gene": "TCHH (毛透明蛋白)",
+   "variant": "头发卷直关联位点 rs11803731 (dbSNP 正链 A>C/G/T)",
+   "group": "外貌特征",
+   "confidence": "low",
+   "note": "本数据 A/A 常见型。头发的东亚故事主角是 EDAR（见特质模块）。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11803731",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11803731",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11803731",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11803731"
+   },
+   "genotype": "AA",
+   "chrom": "1",
+   "pos": 152083325,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "常见型（A/A）",
+    "text": "不携带欧洲卷发 GWAS 里的 T 直发相关等位基因。不过东亚人群的直发主要由 EDAR 370A 决定（你的 EDAR 已是衍生纯合），此位点只是次要参考。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "FGF21'嗜甜'关联读数——奶茶欲望不能全赖它。",
+   "rsid": "rs838133",
+   "gene": "FGF21",
+   "variant": "嗜甜/饮食偏好关联 rs838133",
+   "group": "饮食偏好",
+   "confidence": "low",
+   "note": "本数据 G/G。行为偏好的遗传解释力很小，当个有趣的参考。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs838133",
+    "snpedia": "https://www.snpedia.com/index.php/Rs838133",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs838133",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs838133"
+   },
+   "genotype": "GG",
+   "chrom": "19",
+   "pos": 49259529,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "G/G",
+    "text": "部分研究：与甜食摄入偏好升高相关（观察性，效应小）。",
+    "level": "neutral"
+   }
+  },
+  {
+   "plain": "痛觉'音量旋钮'（SCN9A）常见配置——罕见的天生无痛突变不在你身上。",
+   "rsid": "rs6746030",
+   "gene": "SCN9A (NaV1.7 钠通道)",
+   "variant": "痛觉敏感度关联 rs6746030 (R1150W)",
+   "group": "感觉",
+   "confidence": "low",
+   "note": "本数据 G/G 野生型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6746030",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6746030",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6746030",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6746030"
+   },
+   "genotype": "GG",
+   "chrom": "2",
+   "pos": 167099158,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "CC",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "野生型 · 常见痛阈",
+    "text": "不携带 W1150 变异。SCN9A 是'痛觉音量旋钮'基因——罕见功能获得突变会让人天生无痛觉（罕见病），常见变异的影响则很轻微。",
+    "level": "favorable"
+   }
   }
  ],
  "special_cards": [
@@ -555,8 +762,8 @@
   }
  ],
  "counts": {
-  "total": 19,
-  "ok": 19,
+  "total": 25,
+  "ok": 25,
   "flagged": 0,
   "not_called": 0
  }

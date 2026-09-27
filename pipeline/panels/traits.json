@@ -326,6 +326,108 @@
       "confidence": "medium",
       "evidence": ["Kim et al., Science 2003"],
       "note": "本数据 T/C。三点综合：PAV/AVI 杂合 → 中等苦味敏感（能尝出 PTC/苦味，弱于 PAV 纯合）。"
+    },
+    {
+      "rsid": "rs10427255",
+      "gene": "ACHOO 光喷嚏反射 (2q37)",
+      "variant": "看到阳光想打喷嚏的反射 rs10427255",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "趣味特征",
+      "interp": {
+        "TT": ["无光喷嚏反射倾向", "走出暗处见到阳光不会喷嚏连连。"],
+        "TC": ["中等光喷嚏反射", "从暗处走向阳光时偶尔想打喷嚏——这是真实存在的'光喷嚏反射'（ACHOO 综合征），约 1/4 人口有此反射。"],
+        "CC": ["强光喷嚏反射", "见光打喷嚏的倾向明显。无害，纯属神经回路'串线'：三叉神经与视神经在脑内离得太近。"]
+      },
+      "confidence": "medium",
+      "evidence": ["GWAS Catalog 'photic sneeze reflex'（祖先公司大型队列）"],
+      "note": "本数据 T/C —— 中等倾向。安全影响：开车出隧道时留意。"
+    },
+    {
+      "rsid": "rs12913832",
+      "gene": "HERC2 (调控 OCA2)",
+      "variant": "虹膜（眼睛颜色）主效位点 rs12913832",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "外貌特征",
+      "interp": {
+        "AA": ["深棕色虹膜", "该位点是人类虹膜颜色最强决定位点：G/G 组合才可能出现蓝眼睛，A/A 高度确定深棕色。东亚人群几乎全部为 A/A。"],
+        "AG": ["棕色为主", "携带一份衍生等位基因，虹膜颜色仍偏深。"],
+        "GG": ["蓝眼睛可能", "欧洲人群蓝眼睛的经典组合。"]
+      },
+      "confidence": "high",
+      "evidence": ["Eiberg et al., Am J Hum Genet 2008"],
+      "note": "本数据 A/A —— 典型的深棕色虹膜基因型。"
+    },
+    {
+      "rsid": "rs1800407",
+      "gene": "OCA2",
+      "variant": "虹膜颜色次效位点 rs1800407",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "外貌特征",
+      "interp": {
+        "CC": ["指向深色虹膜的组合", "与 rs12913832 A/A 一致：深棕色虹膜。"],
+        "CG": ["中间", "单一位点不改变结论。"],
+        "GG": ["与浅色虹膜相关的组合（欧洲人群）", "需与主效位点联合判断。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS Catalog 眼色"],
+      "note": "次效位点，主效位点（rs12913832）已确定为深棕。"
+    },
+    {
+      "rsid": "rs11803731",
+      "gene": "TCHH (毛透明蛋白)",
+      "variant": "头发卷直关联位点 rs11803731 (dbSNP 正链 A>C/G/T)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "T",
+      "group": "外貌特征",
+      "interp": {
+        "AA": ["常见型（A/A）", "不携带欧洲卷发 GWAS 里的 T 直发相关等位基因。不过东亚人群的直发主要由 EDAR 370A 决定（你的 EDAR 已是衍生纯合），此位点只是次要参考。"],
+        "AT": ["携带 T（欧洲人群直发方向等位基因）", "欧洲双生子研究里 T 与直发相关；东亚背景下影响更小。"],
+        "GG": ["其他等位基因组合", "该位点为多等位位点，详见外链。"]
+      },
+      "confidence": "low",
+      "evidence": ["Medland et al., 2009 (欧洲双生子卷发 GWAS)"],
+      "note": "本数据 A/A 常见型。头发的东亚故事主角是 EDAR（见特质模块）。"
+    },
+    {
+      "rsid": "rs838133",
+      "gene": "FGF21",
+      "variant": "嗜甜/饮食偏好关联 rs838133",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "饮食偏好",
+      "interp": {
+        "AA": ["常见型", "该位点与甜食/酒精偏好差异的候选关联（效应小）。"],
+        "AG": ["杂合", "部分研究：携带 G 与更高的甜食摄入偏好相关。"],
+        "GG": ["G/G", "部分研究：与甜食摄入偏好升高相关（观察性，效应小）。"]
+      },
+      "confidence": "low",
+      "evidence": ["Chuang et al., Cell Metab 2018 (FGF21 与饮食偏好)"],
+      "note": "本数据 G/G。行为偏好的遗传解释力很小，当个有趣的参考。"
+    },
+    {
+      "rsid": "rs6746030",
+      "gene": "SCN9A (NaV1.7 钠通道)",
+      "variant": "痛觉敏感度关联 rs6746030 (R1150W)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "感觉",
+      "interp": {
+        "GG": ["野生型 · 常见痛阈", "不携带 W1150 变异。SCN9A 是'痛觉音量旋钮'基因——罕见功能获得突变会让人天生无痛觉（罕见病），常见变异的影响则很轻微。"],
+        "GA": ["携带 W1150", "部分研究：痛阈略低/背痛敏感度略高的候选关联（效应小）。"],
+        "AA": ["W1150 纯合", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Reimann et al., Curr Biol 2010 (SCN9A 与痛觉)"],
+      "note": "本数据 G/G 野生型。"
     }
   ],
   "special_cards": [

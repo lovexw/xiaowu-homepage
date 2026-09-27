@@ -149,6 +149,23 @@
       "confidence": "high",
       "crosslink": "traits",
       "note": "干性耳垢纯合（80-95% 东亚人）见特质模块。"
+    },
+    {
+      "rsid": "rs1426654",
+      "gene": "SLC24A5",
+      "variant": "肤色主效位点 rs1426654 (A111T)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "群体遗传学经典位点",
+      "interp": {
+        "GG": ["祖先型（深色素）", "SLC24A5 是欧洲人群浅肤色的最强遗传位点（约 3 万年内被强正选择）；祖先型在东亚与非洲人群共享。东亚人群的肤色差异主要由其他位点（如 DDB1/TCHH、OCA2 区）决定。"],
+        "GA": ["杂合", "欧洲混合信号候选。"],
+        "AA": ["衍生纯合（欧洲浅肤色主效）", "欧洲人群约 98% 携带。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Lamason et al., Science 2005", "1000G 人群频率"],
+      "note": "本数据 G/G —— 祖先型，与东亚人群一致。"
     }
   ],
   "special_cards": [

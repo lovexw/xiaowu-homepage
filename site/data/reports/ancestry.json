@@ -3,8 +3,23 @@
  "title": "祖先特征与高原适应",
  "icon": "🏔️",
  "intro": "本报告不做定量祖源分析（需要专门的参考群体面板，如 HGDP/1000G 分层 PCA），但可以展示一组有明确群体遗传学意义的经典位点：东亚正选择位点、高原适应相关位点、以及可推断的基础体质特征（血型、耳垢等）。这些位点合起来能勾勒出清晰的东亚人群画像。",
+ "popsci_cards": [
+  {
+   "title": "🧗 从'远古表亲'借来的高原基因",
+   "text": "藏族人能在高原上轻松生活，靠的是 EPAS1 基因的一个特殊单倍型——2014 年科学家发现它不是慢慢演化来的，而是约 4-6 万年前从已经灭绝的丹尼索瓦人那里'整段借来'的。你的 EPAS1 区是杂合状态，可能提示遥远历史里的西部人群混合信号。"
+  },
+  {
+   "title": "🩸 血型 O 是怎么读出来的",
+   "text": "ABO 血型的'O'其实是'缺了一个字母'——261 位置的 G 字母被删掉了，蛋白质根本造不出来。你的数据在这个删除位点是'双份删除'，加上 703、297 两个位点的读数，拼出 O 型。Rh 阴阳性是另一种大片段变异，芯片读不了。"
+  },
+  {
+   "title": "🎨 为什么不做'祖源百分比'？",
+   "text": "祖源百分比强依赖参考人群的选取——同一份数据在不同工具里能差出 10-20 个点。与其给你一个精确到个位数但不可靠的数字，不如只展示这些有明确生物学意义的位点。"
+  }
+ ],
  "entries": [
   {
+   "plain": "ABO 基因的'261 缺字'双份——拼出 O 型血的关键证据。",
    "rsid": "rs8176719",
    "gene": "ABO",
    "variant": "ABO 261delG（O 等位基因标志，indel）",
@@ -33,6 +48,7 @@
    }
   },
   {
+   "plain": "EPAS1 高原适应区杂合——可能从西部古人群混合而来的一小段'远古遗产'。",
    "rsid": "rs4953354",
    "gene": "EPAS1 (HIF2α)",
    "variant": "EPAS1 高原适应选择区 rs4953354（dbSNP 正链 A>G）",
@@ -61,6 +77,7 @@
    }
   },
   {
+   "plain": "EPAS1 连锁位点方向一致，与上一位点共同构成那段单倍型的证据。",
    "rsid": "rs1868092",
    "gene": "EPAS1 区",
    "variant": "EPAS1 高原适应连锁位点 rs1868092（dbSNP 正链 A>G）",
@@ -89,6 +106,7 @@
    }
   },
   {
+   "plain": "血管'一氧化氮阀门'（eNOS）的常见杂合——高原研究里看血管反应的候选位点。",
    "rsid": "rs1799983",
    "gene": "NOS3 (eNOS)",
    "variant": "eNOS G894T (E298D, c.894G>T)",
@@ -117,6 +135,7 @@
    }
   },
   {
+   "plain": "低氧感应器 HIF1A 常见型读数（11549467 也为野生方向）。",
    "rsid": "rs11549465",
    "gene": "HIF1A",
    "variant": "HIF1A P582S (c.1744C>T)",
@@ -145,6 +164,7 @@
    }
   },
   {
+   "plain": "血管生长因子（VEGF）启动子杂合——高原反应研究的弱候选。",
    "rsid": "rs2010963",
    "gene": "VEGFA",
    "variant": "VEGFA -2578（启动子区，多等位位点）",
@@ -173,6 +193,7 @@
    }
   },
   {
+   "plain": "耐力基因 ACE 的'插入/缺失'结构变异芯片读不了，此位点只是路标。",
    "rsid": "rs4253778",
    "gene": "ACE 区",
    "variant": "ACE 区 rs4253778（I/D 结构变异邻近）",
@@ -201,6 +222,7 @@
    }
   },
   {
+   "plain": "（见特质模块：EDAR 370A，3 万年前的东亚爆款）",
    "rsid": "rs3827760",
    "gene": "EDAR — 已在「特质与心理」",
    "variant": "（交叉引用）",
@@ -216,6 +238,7 @@
    "crosslink": "traits"
   },
   {
+   "plain": "（见特质模块：干性耳垢）",
    "rsid": "rs17822931",
    "gene": "ABCC11 — 已在「特质与心理」",
    "variant": "（交叉引用）",
@@ -229,6 +252,35 @@
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs17822931"
    },
    "crosslink": "traits"
+  },
+  {
+   "plain": "肤色主效位点是祖先型——欧洲人的浅肤'新版本'你没有，东亚主流配置。",
+   "rsid": "rs1426654",
+   "gene": "SLC24A5",
+   "variant": "肤色主效位点 rs1426654 (A111T)",
+   "group": "群体遗传学经典位点",
+   "confidence": "medium",
+   "note": "本数据 G/G —— 祖先型，与东亚人群一致。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1426654",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1426654",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1426654",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1426654"
+   },
+   "genotype": "GG",
+   "chrom": "15",
+   "pos": 48426484,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "祖先型（深色素）",
+    "text": "SLC24A5 是欧洲人群浅肤色的最强遗传位点（约 3 万年内被强正选择）；祖先型在东亚与非洲人群共享。东亚人群的肤色差异主要由其他位点（如 DDB1/TCHH、OCA2 区）决定。",
+    "level": "neutral"
+   }
   }
  ],
  "special_cards": [
@@ -244,8 +296,8 @@
   }
  ],
  "counts": {
-  "total": 9,
-  "ok": 7,
+  "total": 10,
+  "ok": 8,
   "flagged": 0,
   "not_called": 0
  }

@@ -3,8 +3,27 @@
  "title": "代谢与营养",
  "icon": "🥗",
  "intro": "本模块覆盖叶酸/同型半胱氨酸代谢、乳糖耐受、咖啡因、脂肪酸代谢、抗氧化酶等经典营养遗传位点。单基因效应普遍较小，营养建议应以整体膳食模式优先。",
+ "popsci_cards": [
+  {
+   "title": "🥛 乳糖不耐不是病，是'出厂默认'",
+   "text": "婴儿都会产乳糖酶，但多数人类的程序在断奶后逐步'关掉'这个功能——能终身喝奶的反而是基因突变后的'少数派'（欧洲为主）。你的 LCT 位点是标准的东亚默认配置：酸奶、奶酪这类'替你把乳糖消化掉'的发酵乳制品是好朋友。"
+  },
+  {
+   "title": "🌡️ MTHFR：叶酸循环的'变速器'",
+   "text": "叶酸要在体内被 MTHFR 酶'改写'一次才能用于同型半胱氨酸的回收。677 位点变异相当于变速器降一挡——你的主档位正常，整体循环影响轻微。体检报告里的同型半胱氨酸（HCY）数值可以直观验证。"
+  },
+  {
+   "title": "🫧 痛风与 ABCG2：东亚人的'高频关卡'",
+   "text": "尿酸要靠 ABCG2 这个'水泵'排进肠道。Q141K 变异让水泵慢半拍——它在东亚人群携带率高达四分之一（欧洲只有约十分之一），所以它被称为'东亚特色'的痛风遗传位点。你带了一份。好消息是：血尿酸用一管血就能实测，基因倾向完全可以用饮食和体检管理。"
+  },
+  {
+   "title": "☕ 咖啡因快代谢是种什么体验？",
+   "text": "CYP1A2 是肝脏里专门'拆咖啡'的工人。你属于快拆组：咖啡因进得快出得也快，下午喝咖啡影响晚上睡眠的概率相对低——观察性研究里快代谢者的咖啡心血管获益也更明确。对照实验：下午三点喝一杯，看晚上入睡有没有变化就知道合不合身。"
+  }
+ ],
  "entries": [
   {
+   "plain": "叶酸循环变速器的主档位（MTHFR 677）是原装正常版——这是东亚人群最常见的配置。",
    "rsid": "rs1801133",
    "gene": "MTHFR",
    "variant": "MTHFR 677C>T (A222V, c.1286A>C 基因方向)",
@@ -33,6 +52,7 @@
    }
   },
   {
+   "plain": "变速器的副档位（1298）带一份小变异，与主档位正常叠加后整体影响轻微。",
    "rsid": "rs1801131",
    "gene": "MTHFR",
    "variant": "MTHFR 1298A>C (E429A, c.2573A>C 基因方向)",
@@ -61,6 +81,7 @@
    }
   },
   {
+   "plain": "乳糖酶'终身续费'的开关是关的——标准东亚出厂设置，喝奶选酸奶/无乳糖牛奶更舒服。",
    "rsid": "rs4988235",
    "gene": "MCM6 (调控 LCT)",
    "variant": "LCT -13910 C>T（乳糖酶持久性主效位点）",
@@ -89,6 +110,7 @@
    }
   },
   {
+   "plain": "你的'脂肪酸榨油机'（FADS）是东亚高发的强力版：把植物油转化为长链脂肪酸效率高，血脂谱关联偏有利。",
    "rsid": "rs174547",
    "gene": "FADS2 (FADS 基因簇)",
    "variant": "FADS2 rs174547 (C>T)",
@@ -117,6 +139,7 @@
    }
   },
   {
+   "plain": "榨油机的联动齿轮，读数需与上一位点合并解读（校验提示：方向以 dbSNP 为准）。",
    "rsid": "rs174546",
    "gene": "FADS1",
    "variant": "FADS1 rs174546 (C>T, rs174547 连锁位点)",
@@ -145,6 +168,7 @@
    }
   },
   {
+   "plain": "甘油三酯'油门'（APOA5）的常见提速变异你没有。",
    "rsid": "rs662799",
    "gene": "APOA5",
    "variant": "APOA5 -1131T>C（启动子）",
@@ -173,6 +197,7 @@
    }
   },
   {
+   "plain": "脂蛋白脂肪酶（LPL）的'稀有有利版'S447X 你没有——多数人都是这样的常见型。",
    "rsid": "rs328",
    "gene": "LPL",
    "variant": "LPL S447X (c.1338C>G, 提前终止获功能；dbSNP 正链 C>G)",
@@ -201,6 +226,7 @@
    }
   },
   {
+   "plain": "胆红素处理酶（UGT1A1）的东亚版 Gilbert 变异（G71R）你没有——偶尔眼白偏黄不是它造成的。",
    "rsid": "rs4148323",
    "gene": "UGT1A1",
    "variant": "UGT1A1 G71R (c.211G>A) — Gilbert 综合征相关（东亚型）",
@@ -229,6 +255,7 @@
    }
   },
   {
+   "plain": "线粒体抗氧化工兵（SOD2）是高效导入版（东亚约八成如此），体质差异而已。",
    "rsid": "rs4880",
    "gene": "SOD2 (MnSOD)",
    "variant": "SOD2 Ala16Val (c.47T>C 基因方向)",
@@ -257,6 +284,7 @@
    }
   },
   {
+   "plain": "另一种抗氧化酶 GPX1 也是常见型——保证硒摄入（海产、蛋）即可。",
    "rsid": "rs1050450",
    "gene": "GPX1",
    "variant": "GPX1 Pro198Leu (c.594C>T 基因方向)",
@@ -285,6 +313,7 @@
    }
   },
   {
+   "plain": "咖啡因摄入量的另一个观察点位，与 CYP1A2 结果方向一致：偏'爱喝也能喝'的组。",
    "rsid": "rs2472297",
    "gene": "CYP1A1/1A2 区 (15q24)",
    "variant": "咖啡因摄入/代谢关联位点",
@@ -313,6 +342,7 @@
    }
   },
   {
+   "plain": "咖啡摄入量的第三个相关位点——三个点拼起来：你对咖啡既爱喝、也拆得快。",
    "rsid": "rs4410790",
    "gene": "AHR/CYP1A1 区 (7q21)",
    "variant": "咖啡摄入量关联位点",
@@ -341,6 +371,7 @@
    }
   },
   {
+   "plain": "胰岛素敏感性'稀有福利变异'（PPARG Ala12）你没有——它本来在东亚也罕见。",
    "rsid": "rs1801282",
    "gene": "PPARG",
    "variant": "PPARG Pro12Ala (c.34C>G 基因方向)",
@@ -369,6 +400,7 @@
    }
   },
   {
+   "plain": "肾上腺素 β2 受体是混合版本（Arg/Gly）——影响哮喘用药反应研究的经典位点。",
    "rsid": "rs1042713",
    "gene": "ADRB2",
    "variant": "ADRB2 Arg16Gly (c.46A>G)",
@@ -397,6 +429,7 @@
    }
   },
   {
+   "plain": "β2 受体的第二个位置也是混合版本，与上一位点一致。",
    "rsid": "rs1042714",
    "gene": "ADRB2",
    "variant": "ADRB2 Gln27Glu (c.79C>G)",
@@ -423,6 +456,93 @@
     "text": "混合型。",
     "level": "neutral"
    }
+  },
+  {
+   "plain": "尿酸'水泵'（ABCG2）慢半拍版带一份——东亚四分之一人口的配置，记得看体检的血尿酸那一行。",
+   "rsid": "rs2231142",
+   "gene": "ABCG2",
+   "variant": "ABCG2 Q141K (c.421C>A；正链 G>T，东亚高频)",
+   "group": "尿酸与痛风",
+   "confidence": "high",
+   "note": "本数据 G/T —— 携带一份 Q141K，属于东亚人群最常见的痛风遗传风险位点。尿酸水平受饮食与肾功能影响更大，建议以体检血尿酸实测为准。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2231142",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2231142",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2231142",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2231142"
+   },
+   "genotype": "TG",
+   "chrom": "4",
+   "pos": 89052323,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "AC",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "Q141K 杂合（本数据）",
+    "text": "ABCG2 转运效率下降约一半：肾脏排泄尿酸能力降低，痛风风险升高（东亚人群 OR≈1.7-2.0，该变异在东亚携带率约 25-30%，远高于欧洲）。同时影响部分药物暴露（他汀、磺吡酮等）。建议：定期体检关注血尿酸，少喝含糖饮料与啤酒、多喝水。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "尿酸转运的主效基因（SLC2A9）读数，方向与上一位点一致：留意血尿酸。",
+   "rsid": "rs12498742",
+   "gene": "SLC2A9 (GLUT9)",
+   "variant": "尿酸转运主效位点 rs12498742",
+   "group": "尿酸与痛风",
+   "confidence": "low",
+   "note": "本数据 A/A。与 ABCG2 Q141K 杂合的提示方向一致：建议关注体检血尿酸值。等位基因方向待 dbSNP 校验。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs12498742",
+    "snpedia": "https://www.snpedia.com/index.php/Rs12498742",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs12498742",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs12498742"
+   },
+   "genotype": "AA",
+   "chrom": "4",
+   "pos": 9944052,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "等位基因纯合",
+    "text": "SLC2A9 是血尿酸水平最强的常见基因位点（效应显著但方向随人群记录有差异，见外链）。",
+    "level": "neutral"
+   }
+  },
+  {
+   "plain": "维生素 C 转运体带一份小变异——多吃水果比纠结这个有用。",
+   "rsid": "rs6596473",
+   "gene": "SLC23A1 (维生素 C 转运体)",
+   "variant": "维生素 C 水平关联 rs6596473",
+   "group": "维生素",
+   "confidence": "low",
+   "note": "本数据 C/G。膳食均衡比基因型重要。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6596473",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6596473",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6596473",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6596473"
+   },
+   "genotype": "CG",
+   "chrom": "5",
+   "pos": 138710576,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "杂合",
+    "text": "部分研究：与血维生素 C 水平差异相关（效应小）。",
+    "level": "attention"
+   }
   }
  ],
  "special_cards": [
@@ -438,8 +558,8 @@
   }
  ],
  "counts": {
-  "total": 15,
-  "ok": 15,
+  "total": 18,
+  "ok": 18,
   "flagged": 0,
   "not_called": 0
  }

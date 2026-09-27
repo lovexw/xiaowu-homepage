@@ -334,7 +334,7 @@
    "gene": "2q37（TRPV1 邻近? 待核）",
    "trait": "待核",
    "conf": "low",
-   "in_panel": false,
+   "in_panel": true,
    "links": {
     "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6746030",
     "snpedia": "https://www.snpedia.com/index.php/Rs6746030",

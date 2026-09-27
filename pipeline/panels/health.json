@@ -305,6 +305,23 @@
       "confidence": "low",
       "crosslink": "metabolism",
       "note": "为避免重复，SOD2/ALDH2/CYP1A2 等位点已归入其他模块。"
+    },
+    {
+      "rsid": "rs5030868",
+      "gene": "G6PD (X 染色体)",
+      "variant": "G6PD A- 型（G202A，非洲型蚕豆病变异）",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "遗传病携带（Caveat 详读）",
+      "interp": {
+        "GG": ["未携带 A- 型变异（男性半合子野生）", "就本位点而言 G6PD 正常。⚠️ 重要：蚕豆病（G6PD 缺乏症）在东亚的常见变异与此不同（如 c.1387G>T、c.95A>G、IVS XI+48 等），芯片均未覆盖——本结果不能用于排除蚕豆病。G6PD 缺乏会影响磺胺、伯氨喹等药物使用，请以新生儿筛查/酶活性检测为准。"],
+        "GA": ["携带 A-（女性杂合）", "女性杂合通常症状轻或无症状，用药前仍需酶活性检测。"],
+        "AA": ["A- 纯合/半合子", "G6PD 活性显著降低。"]
+      },
+      "confidence": "high",
+      "evidence": ["G6PD 变异库（WHO 分型）"],
+      "note": "本数据 G/G：仅排除非洲型变异。东亚常见变异未覆盖，见 interp 中的重要提醒。"
     }
   ],
   "special_cards": [

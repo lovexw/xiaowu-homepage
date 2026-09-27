@@ -258,6 +258,57 @@
       "confidence": "medium",
       "evidence": ["PharmGKB ADRB2"],
       "note": "本数据 Gln/Glu。"
+    },
+    {
+      "rsid": "rs2231142",
+      "gene": "ABCG2",
+      "variant": "ABCG2 Q141K (c.421C>A；正链 G>T，东亚高频)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "T",
+      "group": "尿酸与痛风",
+      "interp": {
+        "GG": ["Q141/Q141 · 转运体正常", "URAT1 上游的尿酸外排泵功能正常，痛风遗传风险不高（就本位点）。"],
+        "GT": ["Q141K 杂合（本数据）", "ABCG2 转运效率下降约一半：肾脏排泄尿酸能力降低，痛风风险升高（东亚人群 OR≈1.7-2.0，该变异在东亚携带率约 25-30%，远高于欧洲）。同时影响部分药物暴露（他汀、磺吡酮等）。建议：定期体检关注血尿酸，少喝含糖饮料与啤酒、多喝水。"],
+        "TT": ["Q141K 纯合", "转运效率下降更明显，痛风遗传倾向更高；药物暴露影响同样存在。"]
+      },
+      "confidence": "high",
+      "evidence": ["Woodward et al., Nat Genet 2009", "Matsuo et al., Lancet 2009", "东亚人群 Q141K 高频研究"],
+      "note": "本数据 G/T —— 携带一份 Q141K，属于东亚人群最常见的痛风遗传风险位点。尿酸水平受饮食与肾功能影响更大，建议以体检血尿酸实测为准。"
+    },
+    {
+      "rsid": "rs12498742",
+      "gene": "SLC2A9 (GLUT9)",
+      "variant": "尿酸转运主效位点 rs12498742",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "尿酸与痛风",
+      "interp": {
+        "AA": ["等位基因纯合", "SLC2A9 是血尿酸水平最强的常见基因位点（效应显著但方向随人群记录有差异，见外链）。"],
+        "AG": ["杂合", "中间。"],
+        "GG": ["等位基因纯合", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Döring et al., Lancet 2008 (SLC2A9 与尿酸)"],
+      "note": "本数据 A/A。与 ABCG2 Q141K 杂合的提示方向一致：建议关注体检血尿酸值。等位基因方向待 dbSNP 校验。"
+    },
+    {
+      "rsid": "rs6596473",
+      "gene": "SLC23A1 (维生素 C 转运体)",
+      "variant": "维生素 C 水平关联 rs6596473",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "维生素",
+      "interp": {
+        "CC": ["常见型", "维生素 C 转运基线。"],
+        "CG": ["杂合", "部分研究：与血维生素 C 水平差异相关（效应小）。"],
+        "GG": ["G/G", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Cahill & El-Sohemy 文献（维 C 转运 GWAS）"],
+      "note": "本数据 C/G。膳食均衡比基因型重要。"
     }
   ],
   "special_cards": [

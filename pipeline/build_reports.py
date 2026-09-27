@@ -92,11 +92,14 @@ def level_of(label: str, text: str) -> str:
     return "neutral"
 
 
-def build_module(conn, panel: dict, dbsnp: dict, flags: dict) -> dict:
+def build_module(conn, panel: dict, dbsnp: dict, flags: dict, popsci: dict) -> dict:
+    mod_ps = (popsci.get("modules") or {}).get(panel["module"], {})
+    plain_map = mod_ps.get("plain", {})
     entries = []
     for e in panel.get("entries", []):
         rsid = e.get("rsid", "")
         out = {
+            "plain": plain_map.get(rsid),
             "rsid": rsid,
             "gene": e.get("gene", ""),
             "variant": e.get("variant", ""),
@@ -156,6 +159,7 @@ def build_module(conn, panel: dict, dbsnp: dict, flags: dict) -> dict:
         "title": panel["title"],
         "icon": panel.get("icon", ""),
         "intro": panel.get("intro", ""),
+        "popsci_cards": mod_ps.get("cards", []),
         "entries": entries,
         "special_cards": cards,
         "counts": {
@@ -266,12 +270,14 @@ def main():
     config.REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     manifest = []
     panel_rsids = set()
+    popsci_path = PANELS_DIR / "popsci.json"
+    popsci_data = json.loads(popsci_path.read_text()) if popsci_path.exists() else {}
     for pf in sorted(PANELS_DIR.glob("*.json")):
-        if pf.name.startswith("_") or pf.name == "annotations_curated.json":
+        if pf.name.startswith("_") or pf.name in ("annotations_curated.json", "popsci.json"):
             continue
         panel = json.loads(pf.read_text())
         panel_rsids.update(e["rsid"] for e in panel.get("entries", []))
-        built = build_module(conn, panel, dbsnp, flags)
+        built = build_module(conn, panel, dbsnp, flags, popsci_data)
         out = config.REPORTS_DIR / f"{panel['module']}.json"
         out.write_text(json.dumps(built, ensure_ascii=False, indent=1))
         manifest.append({"module": panel["module"], "title": panel["title"],
@@ -297,6 +303,7 @@ def main():
         print(f"[{out_name}] {len(built['rows'])} 行")
 
     overview = build_overview(conn, manifest, dbsnp)
+    overview["home_popsci"] = popsci_data.get("home", [])
     (config.REPORTS_DIR / "overview.json").write_text(
         json.dumps(overview, ensure_ascii=False, indent=1))
     (config.SITE_DIR / "data" / "manifest.json").write_text(

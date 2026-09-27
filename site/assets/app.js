@@ -36,6 +36,10 @@ async function renderHome() {
   const ov = await getJSON("data/reports/overview.json");
   const s = ov.stats;
   const total = s.total ?? (s.by_source ? Object.values(s.by_source).reduce((a, b) => a + b, 0) : 0);
+  const owner = ov.profile.owner_name || "数据主人";
+  const popsciHtml = (ov.home_popsci || [])
+    .map((c) => `<div class="popsci-card"><span class="ic">${esc(c.icon)}</span><h4>${esc(c.title)}</h4><p>${esc(c.text)}</p></div>`)
+    .join("");
   const modulesHtml = MANIFEST
     .filter((m) => !m.module.startsWith("assoc"))
     .map((m) => `
@@ -52,7 +56,7 @@ async function renderHome() {
       <a class="module-card" href="#/table/${m.module}">
         <span class="ic">📊</span>
         <h3>${esc(m.title)}</h3>
-        <p>你前期整理的位点清单 + 文献注释 + 外链，共 ${m.counts.total} 行。</p>
+        <p>前期整理的位点清单 + 文献注释 + 外链，共 ${m.counts.total} 行。</p>
       </a>`)
     .join("");
 
@@ -65,19 +69,26 @@ async function renderHome() {
     </div>
 
     <div class="profile-card">
-      <h3>👤 基本信息（最小化原则，仅必要内容）</h3>
+      <h3>👤 关于${esc(owner)}（最小化原则，仅必要内容）</h3>
       <p>
+        <span class="badge hl">数据主人：${esc(owner)}（本人乐意公开）</span>
         <span class="badge hl">${esc(ov.sex_inference.value)}</span>
         <span class="badge hl">血型推断：${esc(ov.blood_type.value)}</span>
         <span class="badge hl">APOE：${esc(ov.apoe.value ?? "—")}</span>
+      </p>
+      <p style="margin-top:8px">
         <span class="badge">检测平台：${esc(ov.profile.data_platform)}</span>
         <span class="badge">坐标系统：${esc(ov.profile.genome_build)}</span>
         <span class="badge">原始数据导出：${esc(ov.profile.data_generated)}</span>
       </p>
     </div>
 
+    <h2 class="sec">🌟 30 秒读懂你的基因组</h2>
+    <p class="sec-sub">先看这段科普，后面的报告会好读很多。</p>
+    <div class="popsci-hero">${popsciHtml}</div>
+
     <h2 class="sec">📚 报告模块</h2>
-    <p class="sec-sub">按科学可靠度排序：药物基因组学最可靠；健康风险仅作统计参考。</p>
+    <p class="sec-sub">按科学可靠度排序：药物基因组学最可靠；健康风险仅作统计参考。每个位点都配了「🗣️ 人话版」。</p>
     <div class="module-grid">${modulesHtml}</div>
 
     <h2 class="sec">📊 关联位点总表</h2>
@@ -102,6 +113,7 @@ function entryHtml(e) {
         ? `<span class="gt-chip dim">基因方向 ${esc(e.genotype_gene_direction)}</span>` : "")
     : `<span class="gt-chip dim">未测出</span>`;
   const src = e.source ? `<span class="src-tag">${e.source === "ASA" ? "芯片实测" : "填充推断"}${e.found_by === "position_fallback" ? " · 按位置回查" : ""}</span>` : "";
+  const plainHtml = e.plain ? `<div class="plain">${esc(e.plain)}</div>` : "";
 
   let body = "";
   if (e.status === "ok" || e.status === "flagged") {
@@ -129,7 +141,7 @@ function entryHtml(e) {
       <span class="variant">${esc(e.variant)}</span>
     </div>
     <div class="gt-row">${gtChip}${src}</div>
-    ${flagHtml}${body}
+    ${plainHtml}${flagHtml}${body}
     <div class="entry-foot">
       <span class="conf ${e.confidence}">证据等级：${e.confidence === "high" ? "高" : e.confidence === "medium" ? "中" : "低"}</span>
       ${links}
@@ -152,11 +164,18 @@ async function renderModule(name) {
   const cards = (m.special_cards || [])
     .map((c) => `<div class="card-note ${c.level}"><h4>📌 ${esc(c.title)}</h4><p>${esc(c.text)}</p></div>`)
     .join("");
+  const popsci = (m.popsci_cards || [])
+    .map((c) => `<div class="popsci-card"><h4>💡 ${esc(c.title)}</h4><p>${esc(c.text)}</p></div>`)
+    .join("");
   const c = m.counts;
   $app.innerHTML = `
     <h2 class="sec">${esc(m.icon)} ${esc(m.title)}</h2>
     <p class="sec-sub">${esc(m.intro)}</p>
     <p class="sec-sub">位点覆盖：${c.ok} 条已解读 · ${c.flagged} 条带校验标记 · ${c.not_called} 条未覆盖，共 ${c.total} 条。</p>
+    <h2 class="sec">💡 科普时间</h2>
+    <p class="sec-sub">先看点背景知识，下面的位点更好懂。</p>
+    ${popsci}
+    <h2 class="sec">🔬 位点解读</h2>
     ${cards}${sections}`;
 }
 

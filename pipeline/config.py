@@ -54,11 +54,12 @@ USER_NOTES = {
 # 个体信息（可按需修改；默认最小化，避免隐私泄露）
 # ---------------------------------------------------------------------------
 PROFILE = {
-    "project_name": "我的基因组 · Open Genome Report",
+    "project_name": "小吴的基因报告 · Open Genome Report",
+    "owner_name": "小吴",
+    "owner_note": "数据主人小吴乐意将本人基因分型数据开源展示（本人确认，非临床内容）。",
     "data_generated": "2019-12-05",     # gesedna 导出日期（ASA）
     "data_platform": "Illumina ASA (Asian Screening Array) + 1000 Genomes 填充",
     "genome_build": "GRCh37 / hg19 (build 37)",
-    "owner_note": "数据所有者本人确认并同意开源展示本人基因分型数据。",
 }
 
 VERSION = "0.1.0"
