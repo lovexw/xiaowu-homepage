@@ -1,0 +1,139 @@
+/* ─────────────────────────────────────────────────────────────────────
+   小吴乐意 · 个人品牌规范 CSS · Xiaowu Brand Kit brand.css
+   温润纸感，手作印刷：纸白底 / 墨色字 / 陶土橘点缀 / 等宽编号 / 细描边。
+   tokens + 基础组件的可直接使用版本，变量加 --xw- 前缀防止冲突。
+   规范文档与 DESIGN.md（AI 设计规范）：https://github.com/lovexw/xiaowu-brand-kit
+   License: MIT
+   ───────────────────────────────────────────────────────────────────── */
+
+/* ── tokens · 设计变量 ─────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+  --xw-bg:          #faf9f6;  /* 纸白 · 页面底色 */
+  --xw-surface:     #ffffff;  /* 纯白 · 卡片表面 */
+  --xw-fg:          #252623;  /* 墨色 · 正文与主按钮（对纸白 14.6:1 AAA） */
+  --xw-muted:       #6d7069;  /* 灰苔 · 次要文字（4.8:1 AA） */
+  --xw-line:        #e5e5df;  /* 亚麻 · 描边与分隔线 */
+  --xw-soft:        #f1f1eb;  /* 米灰 · 软底色块 */
+  --xw-accent:      #b9542b;  /* 陶土橘 · 品牌强调（4.6:1 AA） */
+  --xw-accent-soft: #f9e8de;  /* 陶土浅 · 强调软底 */
+  --xw-green:       #356347;  /* 苔绿 · 辅助与状态 */
+  --xw-btc:         #F7931A;  /* 比特币橙 · 仅比特币专属场景 */
+  --xw-radius:      20px;     /* 容器 / 大卡 */
+  --xw-radius-md:   13px;     /* 常规卡 */
+  --xw-radius-sm:   9px;      /* 按钮 / 输入 */
+  --xw-font:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --xw-mono:  ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --xw-serif: 'Songti SC', 'STSong', Georgia, serif;
+}
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --xw-bg:          #181b18;  /* 墨夜 */
+  --xw-surface:     #212521;  /* 炭面 */
+  --xw-fg:          #eeeee7;  /* 晨雾 */
+  --xw-muted:       #b1b7ac;  /* 雾苔 */
+  --xw-line:        #383e36;  /* 炭线 */
+  --xw-soft:        #2c322a;  /* 暖炭 */
+  --xw-accent:      #f5a37d;  /* 陶土浅（8.6:1 AAA） */
+  --xw-accent-soft: #463026;
+  --xw-green:       #a7d4ae;  /* 月光苔 */
+}
+
+/* ── base · 基础（作用域 .xw-root，避免污染宿主页面） ───────────────── */
+.xw-root { background: var(--xw-bg); color: var(--xw-fg); font: 15px/1.7 var(--xw-font); }
+.xw-root :focus-visible { outline: 3px solid var(--xw-accent); outline-offset: 5px; }
+.xw-root a { color: inherit; }
+.xw-root h1, .xw-root h2, .xw-root h3, .xw-root p { margin: 0; }
+
+/* ── eyebrow · 等宽编号小标（贯穿全站的排版签名） ─────────────────────
+   规则：全大写 + 编号（01 / SECTION NAME）；一节一个，放标题上方。 */
+.xw-eyebrow { font: 11px/1.5 var(--xw-mono); letter-spacing: .16em; color: var(--xw-muted); text-transform: uppercase; }
+.xw-eyebrow b { color: var(--xw-accent); font-weight: 400; }
+
+/* ── button · 按钮 ───────────────────────────────────────────────────
+   规则：一屏只放一个主按钮（墨底纸字，14.6:1 AAA）；不用渐变与投影；
+   悬停只上浮 2px；主按钮不用陶土橘底（橘只做点缀，不做大面积色块）。 */
+.xw-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  min-height: 46px; padding: 10px 20px;
+  border: 1px solid var(--xw-line); border-radius: var(--xw-radius-sm);
+  background: var(--xw-surface); color: var(--xw-fg);
+  font: 600 13px/1.5 var(--xw-font);
+  text-decoration: none; cursor: pointer;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.xw-btn:hover { transform: translateY(-2px); }
+.xw-btn:active { transform: translateY(0); }
+.xw-btn--primary { background: var(--xw-fg); color: var(--xw-bg); border-color: var(--xw-fg); }
+.xw-btn--primary:hover { border-color: var(--xw-accent); }
+
+/* ── card · 卡片 ─────────────────────────────────────────────────────
+   规则：一卡一事；卡不嵌卡；1px 细描边，不堆投影；悬停 = 描边变陶土橘
+   + 上浮 3px；圆角由外向内递减（容器 20 > 卡 13–15 > 按钮 9 > 标签 4–7）。 */
+.xw-card {
+  background: var(--xw-surface);
+  border: 1px solid var(--xw-line);
+  border-radius: var(--xw-radius-md);
+  padding: 20px;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.xw-card:hover { border-color: var(--xw-accent); transform: translateY(-3px); }
+.xw-card--lg { border-radius: var(--xw-radius); padding: 28px 30px; }
+
+/* ── tag / chip · 标签 ─────────────────────────────────────────────── */
+.xw-tag { display: inline-block; padding: 2px 6px; border-radius: 4px; background: var(--xw-soft); color: var(--xw-muted); font-size: 10px; }
+.xw-chip { display: inline-block; padding: 6px 10px; border: 1px solid var(--xw-line); border-radius: 7px; color: var(--xw-muted); font: 11px/1.5 var(--xw-mono); }
+.xw-chip b { color: var(--xw-accent); font-weight: 400; margin-right: 5px; }
+
+/* ── creed · 立场框（左橘线引用条） ─────────────────────────────────── */
+.xw-creed {
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 11px 14px;
+  border: 1px solid var(--xw-line); border-left: 3px solid var(--xw-accent);
+  border-radius: 0 9px 9px 0;
+  background: var(--xw-surface); font-size: 13px;
+}
+
+/* ── art · 编号艺术区块（纸片贴纸感） ────────────────────────────────
+   规则：固定四色轮换（苔绿/藤紫/沙棕/雾蓝），深色模式保留浅色底
+   （像贴在暗处的纸片）；中央放等宽大字符 mark，左下角编号 art-label。 */
+.xw-art {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  min-height: 136px; overflow: hidden;
+  border: 1px solid var(--xw-line); border-radius: 15px;
+  color: #45604e; background: #eaf0e7;
+}
+.xw-art::before { content: ''; position: absolute; width: 100px; height: 100px; border: 1px solid currentColor; opacity: .09; border-radius: 50%; transform: scale(1.7); }
+.xw-art .xw-mark-lg { font: 700 34px/1 var(--xw-mono); letter-spacing: -.05em; position: relative; }
+.xw-art .xw-art-label { position: absolute; left: 14px; bottom: 12px; font: 9px/1 var(--xw-mono); letter-spacing: .12em; opacity: .65; }
+.xw-art .xw-arrow { position: absolute; right: 14px; top: 13px; font-size: 17px; opacity: .6; }
+.xw-art--v2 { color: #5a587c; background: #e9e9f2; }
+.xw-art--v3 { color: #976641; background: #f3e9dc; }
+.xw-art--v4 { color: #4a687c; background: #e6edf2; }
+
+/* ── quote · 宋体引言（书卷气，仅引言与书名场景） ───────────────────── */
+.xw-quote { margin: 0; font: 20px/1.6 var(--xw-serif); }
+.xw-quote span { color: var(--xw-accent); margin-right: 12px; font-size: 30px; vertical-align: middle; }
+
+/* ── frame · 拍立得相框（手作感，唯一允许的投影） ───────────────────── */
+.xw-frame {
+  display: inline-block; padding: 13px 13px 18px;
+  background: var(--xw-surface); border: 1px solid var(--xw-line);
+  border-radius: 6px; transform: rotate(4deg);
+  box-shadow: 0 14px 35px #2526230c;
+}
+.xw-frame img, .xw-frame .xw-frame-body { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 3px; }
+.xw-frame figcaption { display: flex; justify-content: space-between; padding: 15px 4px 0; font: 10px/1.5 var(--xw-mono); color: var(--xw-muted); letter-spacing: .1em; }
+
+/* ── brand mark · 品牌标（墨底「吴」方章） ────────────────────────────
+   规则：最小 28px；不拉伸不换色；深色模式下自动反色（fg/bg 互换）。 */
+.xw-brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: var(--xw-fg); color: var(--xw-bg); font-size: 17px; font-weight: 700; }
+
+/* ── dot · 在线状态点 ──────────────────────────────────────────────── */
+.xw-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #719168; box-shadow: 0 0 0 4px var(--xw-soft); }
+
+/* ── motion · 动效约束 ───────────────────────────────────────────────
+   只允许 transform 过渡（.18s ease），位移 ≤3px；无入场动画堆叠。 */
+@media (prefers-reduced-motion: reduce) {
+  .xw-root *, .xw-root *::before, .xw-root *::after { animation: none !important; transition: none !important; }
+}
