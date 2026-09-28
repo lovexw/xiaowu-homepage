@@ -138,4 +138,13 @@ export const projects = [
         category: 'tools',
         mark: '🔋',
     },
+    {
+        id: 'inkreader',
+        name: '墨阅 · Markdown 阅读器',
+        description: '明亮优雅的在线 Markdown 阅读器，上传文档或导入链接，支持离线阅读',
+        url: 'https://md.xiaowuleyi.com',
+        tags: ['Markdown', '阅读', '工具'],
+        category: 'tools',
+        mark: '墨',
+    },
 ];
