@@ -95,9 +95,9 @@ export const projects = [
     },
     {
         id: 'password',
-        name: '随机密码在线生成',
-        description: '个人安全工具',
-        url: 'https://pd.btchao.com',
+        name: '密码生成器',
+        description: '6/8/12/18 位四档一键生成，纯本地不联网不存储，源码可审计',
+        url: 'https://pd.xiaowuleyi.com',
         tags: ['随机', '密码', '安全'],
         category: 'tools',
         mark: '***',
