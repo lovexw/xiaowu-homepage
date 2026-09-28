@@ -2,6 +2,8 @@
 
 一个只有 `index.html` 一个文件的密码生成网页：无框架、无依赖、无网络请求、无任何存储。
 
+**在线体验：<https://password-generator-5e7.pages.dev>**（Cloudflare Pages）
+
 ![浅色主题截图](docs/screenshot-light.png)
 
 视觉风格遵循 [lovexw/xiaowu-brand-kit](https://github.com/lovexw/xiaowu-brand-kit)（MIT）的设计规范——「温润纸感，手作印刷」：纸白底 `#faf9f6`、墨色字 `#252623`、陶土橘 `#b9542b` 只做点缀、等宽编号贯穿全站、1px 细描边分隔、无投影无渐变，动效仅 transform（.18s、位移 ≤3px）。展示区按四档规格做「编号艺术区块」四色轮换（苔绿 / 藤紫 / 沙棕 / 雾蓝），深浅双主题整组 token 切换。
