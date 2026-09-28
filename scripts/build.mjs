@@ -10,7 +10,7 @@ const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 const socialCards = socials.map((item) => {
   const tag = item.url ? 'a' : 'button';
   const attrs = item.url ? `href="${escape(item.url)}" ${external}` : 'type="button" data-dialog="wechat-dialog"';
-  return `<${tag} class="social-card${item.btc ? ' social-card--btc' : ''}" ${attrs}><span class="social-icon"><img src="${escape(item.icon)}" width="23" height="23" alt="" loading="lazy"></span><span class="social-text"><strong>${escape(item.name)}</strong><small>${escape(item.description)}</small></span>${item.url ? arrow : '<span class="arrow" aria-hidden="true">＋</span>'}</${tag}>`;
+  return `<${tag} class="social-card${item.variant ? ` social-card--${item.variant}` : ''}" ${attrs}><span class="social-icon"><img src="${escape(item.icon)}" width="23" height="23" alt="" loading="lazy"></span><span class="social-text"><strong>${escape(item.name)}</strong><small>${escape(item.description)}</small></span>${item.url ? arrow : '<span class="arrow" aria-hidden="true">＋</span>'}</${tag}>`;
 }).join('\n');
 const projectCards = projects.map((item, index) => `<a class="project-card" href="${escape(item.url)}" ${external} data-category="${item.category}"><div class="project-art" aria-hidden="true"><span class="project-mark">${escape(item.mark)}</span><span class="art-label">${String(index + 1).padStart(2, '0')} / ${item.id.toUpperCase()}</span>${arrow}</div><div class="project-info"><h3>${escape(item.name)}</h3><p>${escape(item.description)}</p><div class="project-tags">${item.tags.map((tag) => `<span>${escape(tag)}</span>`).join('')}</div></div></a>`).join('\n');
 const head = await readFile(join(root, 'src/head.html'), 'utf8');

@@ -41,6 +41,7 @@ export const socials = [
         description: '自由世界，自由言论',
         url: 'https://x.com/xiaowuleyi',
         icon: '/public/twitter.svg',
+        variant: 'x',
     },
     {
         id: 'youtube',
@@ -55,7 +56,7 @@ export const socials = [
         description: '从零开始，认识比特币与长期主义',
         url: 'https://btchao.com',
         icon: '/public/bitcoin-color.svg',
-        btc: true,
+        variant: 'btc',
     },
     {
         id: 'bilibili',
