@@ -50,11 +50,12 @@ export const socials = [
         icon: '/public/youtube.svg',
     },
     {
-        id: 'bitcoin-read',
-        name: '比特币必读',
-        description: '了解比特币的最佳平台',
+        id: 'bitcoin-intro',
+        name: '比特币入门',
+        description: '从零开始，认识比特币与长期主义',
         url: 'https://btchao.com',
-        icon: '/public/bitcoin.svg',
+        icon: '/public/bitcoin-color.svg',
+        btc: true,
     },
     {
         id: 'bilibili',
@@ -110,15 +111,6 @@ export const projects = [
         tags: ['比特币', '历史'],
         category: 'bitcoin',
         mark: '₿',
-    },
-    {
-        id: 'btc-chart',
-        name: '比特币30D-700D价格均线',
-        description: '比特币长期均线分析工具',
-        url: 'https://btcma.xiaowuleyi.com',
-        tags: ['比特币', '均线', '分析'],
-        category: 'bitcoin',
-        mark: '📈',
     },
     {
         id: 'favorites',

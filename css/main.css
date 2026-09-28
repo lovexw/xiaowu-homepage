@@ -95,6 +95,10 @@ html[data-theme='dark'] .social-icon img { filter: grayscale(1) brightness(1.8);
 .social-text strong { font-size: 14px; display: block; font-weight: 650; }
 .social-text small { color: var(--muted); display: block; margin-top: 3px; font-size: 11px; line-height: 1.5; }
 .social-card .arrow { font-size: 17px; color: var(--muted); }
+/* 比特币场景专用点缀：BTC 橙 #F7931A 仅用于比特币语义卡片（品牌规范允许） */
+.social-card--btc .social-icon { background: rgba(247, 147, 26, .15); }
+.social-card--btc .social-icon img { filter: none; }
+.social-card--btc:hover { border-color: #f7931a; }
 .social-card:hover, .project-card:hover { border-color: var(--accent); transform: translateY(-3px); }
 .social-card, .project-card, .button { transition: transform .18s ease, border-color .18s ease; }
 .projects-heading { margin-top: 8px; }
