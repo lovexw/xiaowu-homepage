@@ -140,4 +140,13 @@ export const projects = [
         category: 'tools',
         mark: '墨',
     },
+    {
+        id: 'wechat-editor',
+        name: '公众号图文编辑器',
+        description: '所见即所得排版，一键复制带内联样式 HTML，粘贴进公众号不丢样式',
+        url: 'https://edit.xiaowuleyi.com',
+        tags: ['公众号', '排版', '工具'],
+        category: 'tools',
+        mark: '排',
+    },
 ];
