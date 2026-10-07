@@ -14,6 +14,7 @@ export interface Env {
   BUCKET: R2Bucket;
   ASSETS: Fetcher;
   PASSWORD?: string;
+  USERNAME?: string;
 }
 
 const COOKIE_NAME = "mp_auth";
@@ -182,14 +183,16 @@ async function handleLogin(request: Request, env: Env, url: URL): Promise<Respon
   if (!env.PASSWORD) {
     return json({ error: "服务端还没设置访问密码，请先运行：npx wrangler secret put PASSWORD" }, 500);
   }
-  let body: { password?: string } | null = null;
+  let body: { username?: string; password?: string } | null = null;
   try {
     body = await request.json();
   } catch {
     /* 空请求体 */
   }
-  if (typeof body?.password !== "string" || body.password !== env.PASSWORD) {
-    return json({ error: "密码错误" }, 401);
+  const usernameOk = !env.USERNAME || (typeof body?.username === "string" && body.username === env.USERNAME);
+  const passwordOk = typeof body?.password === "string" && body.password === env.PASSWORD;
+  if (!usernameOk || !passwordOk) {
+    return json({ error: "用户名或密码错误" }, 401);
   }
   const token = await makeToken(env.PASSWORD);
   const secure = url.protocol === "https:" ? "; Secure" : "";

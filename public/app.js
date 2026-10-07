@@ -21,6 +21,8 @@ const hashHue = (s) => {
   return h % 360;
 };
 
+const zh = (a, b) => String(a || "").localeCompare(String(b || ""), "zh-Hans-CN");
+
 function toast(msg, ms = 2600) {
   const wrap = $("#toast-wrap");
   while (wrap.children.length >= 4) wrap.firstChild.remove();
@@ -35,19 +37,21 @@ function toast(msg, ms = 2600) {
 
 const state = {
   tracks: [],
-  view: [],
-  grouped: null, // [{ name, items }]
-  groupMode: "none", // none | artist | album
+  songs: [], // 搜索过滤 + 排序后的歌曲
+  artists: [], // [{ name, items }]
+  albums: [], // [{ name, artist, items }]
+  items: [], // 当前页面展示的歌曲行
+  tab: "songs", // songs | artists | albums
+  detail: null, // { type: 'artist' | 'album', name }
   query: "",
   queue: [],
   qi: -1,
   shuffle: false,
-  repeat: "off", // off | all | one
+  repeat: "off",
   playing: false,
   currentKey: null,
   pending: 0,
   errors: 0,
-  ready: false,
 };
 
 const byKey = new Map();
@@ -90,7 +94,6 @@ async function loadLibrary() {
     if (r.status === 401) { showLogin(); return; }
     if (!r.ok) { toast("加载音乐库失败，稍后自动重试"); schedulePoll(3000); return; }
     const data = await r.json();
-    state.ready = true;
     state.pending = data.pending || 0;
     state.tracks = data.tracks || [];
     indexTracks();
@@ -108,42 +111,51 @@ function indexTracks() {
   for (const t of state.tracks) byKey.set(t.key, t);
 }
 
-/* ================= 列表计算与渲染 ================= */
+/* ================= 数据整理 ================= */
 
 function recompute() {
   const q = state.query.trim().toLowerCase();
-  let list = state.tracks.filter(
-    (t) => !q || [t.title, t.artist, t.album].some((v) => v && v.toLowerCase().includes(q))
-  );
-  const byTitle = (a, b) => (a.title || "").localeCompare(b.title || "", "zh-Hans-CN");
-  list.sort(byTitle);
+  const match = (t) => !q || [t.title, t.artist, t.album].some((v) => v && v.toLowerCase().includes(q));
 
-  state.grouped = null;
-  if (state.groupMode === "artist" || state.groupMode === "album") {
-    const map = new Map();
-    for (const t of list) {
-      const name =
-        state.groupMode === "artist"
-          ? t.artist || "未知歌手"
-          : t.album || "未知专辑";
-      if (!map.has(name)) map.set(name, []);
-      map.get(name).push(t);
-    }
-    const names = [...map.keys()].sort((a, b) => a.localeCompare(b, "zh-Hans-CN"));
-    state.grouped = names.map((name) => {
-      const items = map.get(name);
-      items.sort((a, b) => ((a.trackNo ?? 1e9) - (b.trackNo ?? 1e9)) || byTitle(a, b));
-      return { name, items };
-    });
+  state.songs = state.tracks.filter(match).sort((a, b) => zh(a.title, b.title));
+
+  const artistMap = new Map();
+  const albumMap = new Map();
+  for (const t of state.tracks) {
+    if (!match(t)) continue;
+    const an = t.artist || "未知歌手";
+    const bn = t.album || "未知专辑";
+    if (!artistMap.has(an)) artistMap.set(an, { name: an, items: [] });
+    artistMap.get(an).items.push(t);
+    if (!albumMap.has(bn)) albumMap.set(bn, { name: bn, artist: an, items: [] });
+    albumMap.get(bn).items.push(t);
   }
-  state.view = list;
+  const byAlbum = (a, b) => zh(a.album, b.album) || ((a.trackNo ?? 1e9) - (b.trackNo ?? 1e9)) || zh(a.title, b.title);
+  const byTrack = (a, b) => ((a.trackNo ?? 1e9) - (b.trackNo ?? 1e9)) || zh(a.title, b.title);
+  for (const a of artistMap.values()) a.items.sort(byAlbum);
+  for (const al of albumMap.values()) al.items.sort(byTrack);
+  state.artists = [...artistMap.values()].sort((a, b) => zh(a.name, b.name));
+  state.albums = [...albumMap.values()].sort((a, b) => zh(a.name, b.name));
+
+  if (state.detail) {
+    const pool = state.detail.type === "artist" ? state.artists : state.albums;
+    const entry = pool.find((x) => x.name === state.detail.name);
+    state.items = entry ? entry.items : [];
+    if (entry) state.detail.entry = entry; // 后台刷新后保持 hero 数据同步
+  } else if (state.tab === "songs") {
+    state.items = state.songs;
+  } else {
+    state.items = [];
+  }
 }
+
+/* ================= 渲染 ================= */
 
 function coverHtml(t, cls) {
   if (t.cover) return `<img class="${cls}" loading="lazy" src="/api/cover/${esc(t.cover)}" alt="">`;
   const hue = hashHue(t.artist || t.album || t.title);
   const ch = esc((t.title || "♪").trim().charAt(0).toUpperCase());
-  return `<div class="${cls} ph" style="background:linear-gradient(135deg,hsl(${hue} 38% 27%),hsl(${(hue + 48) % 360} 42% 17%))">${ch}</div>`;
+  return `<div class="${cls} ph" style="background:linear-gradient(135deg,hsl(${hue} 55% 62%),hsl(${(hue + 48) % 360} 60% 50%))">${ch}</div>`;
 }
 
 function rowHtml(t, i) {
@@ -152,8 +164,7 @@ function rowHtml(t, i) {
     ? `<span class="eq"><i></i><i></i><i></i></span>`
     : `<span class="num">${i + 1}</span>`;
   const sub = [t.artist, t.album].filter(Boolean).join(" · ");
-  const fmt = (t.format || "").toUpperCase();
-  const dur = t.duration != null ? fmtTime(t.duration) : `${fmt || "?"}`;
+  const dur = t.duration != null ? fmtTime(t.duration) : `${(t.format || "").toUpperCase() || "?"}`;
   return `<div class="row ${playing ? "playing" : ""} ${playing && !state.playing ? "paused" : ""}" data-i="${i}">
     <div class="row-idx">${idx}</div>
     ${coverHtml(t, "row-cover")}
@@ -163,8 +174,30 @@ function rowHtml(t, i) {
   </div>`;
 }
 
+function cardHtml(entry, type, i) {
+  const sub = type === "album" ? `${entry.items.length} 首 · ${esc(entry.artist || "未知歌手")}` : `${entry.items.length} 首`;
+  return `<div class="card" style="animation-delay:${Math.min(i * 26, 320)}ms" data-type="${type}" data-name="${esc(entry.name)}">
+    <div class="card-cover">${mosaicInner(entry)}</div>
+    <div class="card-name">${esc(entry.name)}</div>
+    <div class="card-sub">${sub}</div>
+  </div>`;
+}
+
+// 卡片封面内容（不带外层尺寸容器）
+function mosaicInner(entry) {
+  const covers = [...new Set(entry.items.map((t) => t.cover).filter(Boolean))].slice(0, 4);
+  if (covers.length >= 4) {
+    return `<div class="mosaic">${covers.map((c) => `<img loading="lazy" src="/api/cover/${esc(c)}">`).join("")}</div>`;
+  }
+  if (covers.length > 0) return `<img loading="lazy" src="/api/cover/${esc(covers[0])}" alt="">`;
+  const hue = hashHue(entry.name);
+  const ch = esc(entry.name.trim().charAt(0).toUpperCase());
+  return `<div class="ph-big" style="background:linear-gradient(135deg,hsl(${hue} 60% 58%),hsl(${(hue + 48) % 360} 62% 46%))">${ch}</div>`;
+}
+
 function render() {
   const listEl = $("#list");
+
   if (!state.tracks.length) {
     listEl.innerHTML = `<div class="empty-state">
       <div class="big">🎵</div>
@@ -175,39 +208,85 @@ function render() {
     $("#empty-upload").addEventListener("click", () => $("#file-input").click());
     return;
   }
-  if (!state.view.length) {
-    listEl.innerHTML = `<div class="empty-state"><div class="big">🔍</div><h3>没有找到「${esc(state.query)}」</h3><p>换个关键词试试</p></div>`;
-    return;
-  }
 
-  const artists = new Set(state.tracks.map((t) => t.artist || "未知歌手"));
-  let head = `<div class="list-head"><span>共 ${state.tracks.length} 首 · ${artists.size} 位歌手</span>
-    <button class="ghost play-all" id="btn-play-all">▶ 播放全部</button></div>`;
+  let html = "";
+  let anim = true;
 
-  let body = "";
-  if (state.grouped) {
-    let i = 0;
-    for (const g of state.grouped) {
-      body += `<div class="group-head">${esc(g.name)}<span class="count">${g.items.length} 首</span></div>`;
-      for (const t of g.items) body += rowHtml(t, i++);
+  if (state.detail) {
+    // 详情页：hero + 歌曲列表
+    const isArtist = state.detail.type === "artist";
+    const backLabel = isArtist ? "全部歌手" : "全部专辑";
+    const albumCount = isArtist ? new Set(state.items.map((t) => t.album || "未知专辑")).size : 0;
+    html += `<div class="detail-hero">
+      <button class="ghost icon-only hero-back" id="btn-back" title="${backLabel}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+      <div class="hero-cover">${mosaicInner(state.detail.entry || { name: state.detail.name, items: state.items })}</div>
+      <div>
+        <div class="hero-kicker">${isArtist ? "歌手" : "专辑"}</div>
+        <h2>${esc(state.detail.name)}</h2>
+        <div class="hero-sub">${state.items.length} 首歌曲${isArtist ? ` · ${albumCount} 张专辑` : ""}</div>
+      </div>
+      <button class="ghost play-all" id="btn-play-all" style="margin-left:auto">▶ 播放全部</button>
+    </div>`;
+    html += state.items.map((t, i) => rowHtml(t, i)).join("");
+  } else if (state.tab === "songs") {
+    if (!state.songs.length) {
+      listEl.innerHTML = `<div class="empty-state"><div class="big">🔍</div><h3>没有找到「${esc(state.query)}」</h3><p>换个关键词试试</p></div>`;
+      return;
     }
+    const artistCount = new Set(state.tracks.map((t) => t.artist || "未知歌手")).size;
+    html += `<div class="list-head"><span>共 ${state.tracks.length} 首 · ${artistCount} 位歌手</span>
+      <button class="ghost play-all" id="btn-play-all">▶ 播放全部</button></div>`;
+    html += state.songs.map((t, i) => rowHtml(t, i)).join("");
   } else {
-    state.view.forEach((t, i) => (body += rowHtml(t, i)));
+    const entries = state.tab === "artists" ? state.artists : state.albums;
+    const type = state.tab === "artists" ? "artist" : "album";
+    if (!entries.length) {
+      listEl.innerHTML = `<div class="empty-state"><div class="big">🔍</div><h3>没有找到「${esc(state.query)}」</h3><p>换个关键词试试</p></div>`;
+      return;
+    }
+    const label = state.tab === "artists" ? `共 ${entries.length} 位歌手` : `共 ${entries.length} 张专辑`;
+    html += `<div class="list-head"><span>${label}</span></div><div class="cards">`;
+    html += entries.map((e, i) => cardHtml(e, type, i)).join("");
+    html += `</div>`;
   }
-  listEl.innerHTML = head + body;
-  $("#btn-play-all").addEventListener("click", () => playIndex(0));
 
-  // 恢复滚动位置（渲染会重置 DOM）
-  listEl.scrollTop = state._scrollTop || 0;
+  listEl.innerHTML = html;
+  if (anim) {
+    listEl.classList.remove("view-anim");
+    void listEl.offsetWidth; // 重新触发动画
+    listEl.classList.add("view-anim");
+  }
+  const back = $("#btn-back");
+  if (back) back.addEventListener("click", closeDetail);
+  const playAll = $("#btn-play-all");
+  if (playAll) playAll.addEventListener("click", () => playIndex(0));
+  listEl.scrollTop = 0;
 }
 
-$("#list").addEventListener("scroll", () => (state._scrollTop = $("#list").scrollTop));
+function openDetail(type, name) {
+  const pool = type === "artist" ? state.artists : state.albums;
+  const entry = pool.find((x) => x.name === name);
+  state.detail = { type, name, entry };
+  recompute();
+  render();
+}
+
+function closeDetail() {
+  state.detail = null;
+  recompute();
+  render();
+}
 
 $("#list").addEventListener("click", (e) => {
   const del = e.target.closest(".row-del");
   if (del) {
     e.stopPropagation();
     deleteTrack(del.dataset.key);
+    return;
+  }
+  const card = e.target.closest(".card");
+  if (card) {
+    openDetail(card.dataset.type, card.dataset.name);
     return;
   }
   const row = e.target.closest(".row");
@@ -217,8 +296,8 @@ $("#list").addEventListener("click", (e) => {
 /* ================= 播放核心 ================= */
 
 function playIndex(i) {
-  if (!state.view[i]) return;
-  state.queue = state.view.slice();
+  if (!state.items[i]) return;
+  state.queue = state.items.slice();
   state.qi = i;
   startCurrent();
 }
@@ -241,14 +320,13 @@ function currentTrack() {
 
 function updateNowPlaying(t) {
   const cover = $("#np-cover");
+  cover.classList.add("active");
   if (t.cover) {
-    cover.classList.add("active");
     cover.style.backgroundImage = `url(/api/cover/${encodeURIComponent(t.cover)})`;
     cover.textContent = "";
   } else {
-    cover.classList.add("active");
     const hue = hashHue(t.artist || t.title);
-    cover.style.backgroundImage = `linear-gradient(135deg,hsl(${hue} 40% 30%),hsl(${(hue + 48) % 360} 45% 18%))`;
+    cover.style.backgroundImage = `linear-gradient(135deg,hsl(${hue} 60% 62%),hsl(${(hue + 48) % 360} 62% 50%))`;
     cover.textContent = (t.title || "♪").trim().charAt(0).toUpperCase();
   }
   $("#np-title").textContent = t.title || "未知歌曲";
@@ -271,7 +349,7 @@ function updateNowPlaying(t) {
 
 function togglePlay() {
   if (!audio.src) {
-    if (state.view.length) playIndex(0);
+    if (state.items.length) playIndex(0);
     return;
   }
   if (audio.paused) audio.play().catch(() => {});
@@ -287,7 +365,7 @@ function nextTrack(manual = false) {
     ni = state.qi + 1;
     if (ni >= state.queue.length) {
       if (manual || state.repeat === "all") ni = 0;
-      else { // 自然播完且不循环 → 停在最后
+      else {
         state.playing = false;
         syncPlayUI();
         return;
@@ -330,9 +408,8 @@ audio.addEventListener("timeupdate", () => {
   if (seeking) return;
   const d = audio.duration;
   if (isFinite(d) && d > 0) {
-    const pct = (audio.currentTime / d) * 100;
     $("#seek").value = Math.round((audio.currentTime / d) * 1000);
-    $("#seek").style.setProperty("--fill", pct + "%");
+    $("#seek").style.setProperty("--fill", (audio.currentTime / d) * 100 + "%");
     $("#time-cur").textContent = fmtTime(audio.currentTime);
   }
 });
@@ -355,8 +432,10 @@ function syncPlayUI() {
   $("#btn-play").innerHTML = state.playing
     ? `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg>`
     : `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11-6.86a1 1 0 0 0 0-1.74l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>`;
-  const rowIdx = document.querySelector(".row.playing .row-idx");
-  if (rowIdx) rowIdx.closest(".row").classList.toggle("paused", !state.playing);
+  const playingRow = document.querySelector(".row.playing");
+  if (playingRow) playingRow.classList.toggle("paused", !state.playing);
+  const qRow = document.querySelector(".q-row.playing");
+  if (qRow) qRow.querySelector(".eq")?.style.setProperty("animation-play-state", state.playing ? "running" : "paused");
 }
 
 /* ================= 进度 / 音量 ================= */
@@ -378,6 +457,9 @@ $("#seek").addEventListener("change", () => {
   seeking = false;
 });
 
+const ICON_VOL = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.3 5.8a9 9 0 0 1 0 12.4"/></svg>`;
+const ICON_MUTED = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" stroke="none"/><path d="m16 9 6 6M22 9l-6 6"/></svg>`;
+
 function setVolume(v, save = true) {
   v = Math.min(1, Math.max(0, v));
   audio.volume = v;
@@ -395,9 +477,6 @@ $("#btn-mute").addEventListener("click", () => {
   else setVolume(state._prevVol ?? 1);
 });
 
-const ICON_VOL = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.3 5.8a9 9 0 0 1 0 12.4"/></svg>`;
-const ICON_MUTED = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" stroke="none"/><path d="m16 9 6 6M22 9l-6 6"/></svg>`;
-
 /* ================= 播放模式 ================= */
 
 $("#btn-shuffle").addEventListener("click", () => {
@@ -409,8 +488,8 @@ $("#btn-shuffle").addEventListener("click", () => {
 
 const REPEAT_ICON = {
   off: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>`,
-  all: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-2)"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>`,
-  one: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-2)"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/><text x="12" y="15.5" text-anchor="middle" font-size="9" font-weight="700" fill="currentColor" stroke="none">1</text></svg>`,
+  all: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>`,
+  one: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/><text x="12" y="15.5" text-anchor="middle" font-size="9" font-weight="700" fill="currentColor" stroke="none">1</text></svg>`,
 };
 
 $("#btn-repeat").addEventListener("click", () => {
@@ -461,7 +540,24 @@ function toggleQueue(open) {
 $("#btn-queue").addEventListener("click", () => toggleQueue());
 $("#btn-close-queue").addEventListener("click", () => toggleQueue(false));
 
-/* ================= 搜索 / 分组 ================= */
+/* ================= 视图切换 / 搜索 ================= */
+
+$("#seg").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-view]");
+  if (!btn) return;
+  state.tab = btn.dataset.view;
+  state.detail = null;
+  syncSeg();
+  localStorage.setItem("mp_tab", state.tab);
+  recompute();
+  render();
+});
+
+function syncSeg() {
+  for (const b of $("#seg").querySelectorAll("button")) {
+    b.classList.toggle("active", b.dataset.view === state.tab && !state.detail);
+  }
+}
 
 let searchTimer = null;
 $("#search").addEventListener("input", () => {
@@ -471,15 +567,6 @@ $("#search").addEventListener("input", () => {
     recompute();
     render();
   }, 140);
-});
-
-const GROUP_LABEL = { none: "不分组", artist: "按歌手", album: "按专辑" };
-$("#btn-group").addEventListener("click", () => {
-  state.groupMode = state.groupMode === "none" ? "artist" : state.groupMode === "artist" ? "album" : "none";
-  $("#btn-group").textContent = GROUP_LABEL[state.groupMode];
-  localStorage.setItem("mp_group", state.groupMode);
-  recompute();
-  render();
 });
 
 /* ================= 上传 / 删除 ================= */
@@ -525,7 +612,6 @@ $("#file-input").addEventListener("change", () => {
   $("#file-input").value = "";
 });
 
-// 拖拽上传
 let dragDepth = 0;
 window.addEventListener("dragenter", (e) => {
   if (![...(e.dataTransfer?.types || [])].includes("Files")) return;
@@ -575,7 +661,8 @@ async function deleteTrack(key) {
 function showLogin() {
   $("#app").classList.add("hidden");
   $("#login").classList.remove("hidden");
-  setTimeout(() => $("#login-password").focus(), 60);
+  $("#login-username").value = localStorage.getItem("mp_user") || "";
+  setTimeout(() => ($("#login-username").value ? $("#login-password").focus() : $("#login-username").focus()), 60);
 }
 
 $("#login-form").addEventListener("submit", async (e) => {
@@ -586,10 +673,14 @@ $("#login-form").addEventListener("submit", async (e) => {
     const r = await fetch("/api/login", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ password: $("#login-password").value }),
+      body: JSON.stringify({
+        username: $("#login-username").value.trim(),
+        password: $("#login-password").value,
+      }),
     });
     const data = await r.json().catch(() => ({}));
     if (r.ok) {
+      localStorage.setItem("mp_user", $("#login-username").value.trim());
       $("#login").classList.add("hidden");
       $("#app").classList.remove("hidden");
       $("#login-password").value = "";
@@ -609,7 +700,6 @@ $("#btn-logout").addEventListener("click", async () => {
   location.reload();
 });
 
-// 任何请求碰到 401 就回登录页
 const _origFetch = window.fetch;
 window.fetch = async (...args) => {
   const r = await _origFetch(...args);
@@ -624,7 +714,7 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") e.target.blur();
     return;
   }
-  if ($("#login").classList.contains("hidden") === false) return;
+  if (!$("#login").classList.contains("hidden")) return;
   switch (e.key) {
     case " ":
       e.preventDefault();
@@ -668,8 +758,8 @@ function restoreLastTrack() {
   const lastKey = localStorage.getItem("mp_last");
   if (!lastKey || !byKey.has(lastKey)) return;
   const t = byKey.get(lastKey);
-  state.queue = state.view.slice();
-  state.qi = Math.max(0, state.view.findIndex((x) => x.key === lastKey));
+  state.queue = state.items.length ? state.items.slice() : [t];
+  state.qi = Math.max(0, state.items.findIndex((x) => x.key === lastKey));
   state.currentKey = lastKey;
   audio.src = "/api/stream/" + lastKey.split("/").map(encodeURIComponent).join("/");
   updateNowPlaying(t);
@@ -682,8 +772,9 @@ function restorePrefs() {
   $("#btn-shuffle").classList.toggle("active", state.shuffle);
   const rep = localStorage.getItem("mp_repeat");
   if (rep && REPEAT_ICON[rep]) { state.repeat = rep; $("#btn-repeat").innerHTML = REPEAT_ICON[rep]; }
-  const group = localStorage.getItem("mp_group");
-  if (group && GROUP_LABEL[group]) { state.groupMode = group; $("#btn-group").textContent = GROUP_LABEL[group]; }
+  const tab = localStorage.getItem("mp_tab");
+  if (tab && ["songs", "artists", "albums"].includes(tab)) { state.tab = tab; }
+  syncSeg();
 }
 
 function boot() {

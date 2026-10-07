@@ -39,10 +39,13 @@ npm install                 # 安装依赖
 npx wrangler login          # 浏览器授权登录 Cloudflare
 npx wrangler r2 bucket create xw-music   # 创建存音乐的桶
 npm run deploy              # 部署 Worker
-npx wrangler secret put PASSWORD         # 设置访问密码（回车后输入你想用的密码）
+npx wrangler secret put USERNAME         # 设置登录用户名（回车后输入）
+npx wrangler secret put PASSWORD         # 设置登录密码（回车后输入）
 ```
 
-部署完终端会给出地址（形如 `https://xw-music.<你的子域>.workers.dev`），打开 → 输入密码 → 点「上传音乐」即可开始传歌。
+部署完终端会给出地址（形如 `https://xw-music.<你的子域>.workers.dev`），打开 → 输入用户名和密码 → 点「上传音乐」即可开始传歌。
+
+绑定自己的域名：Cloudflare 控制台 → Workers → xw-music → Settings → Domains & Routes → Add Custom Domain（当前已绑定 `yinyue.xiaowuleyi.com`）。
 
 > 以后更新代码，`git pull && npm run deploy` 就行。
 
@@ -79,7 +82,7 @@ npm run dev      # http://localhost:8787
 
 | 操作 | 命令 |
 |---|---|
-| 改访问密码 | `npx wrangler secret put PASSWORD` |
+| 改登录账号/密码 | `npx wrangler secret put USERNAME` / `npx wrangler secret put PASSWORD` |
 | 看实时日志 | `npx wrangler tail` |
 | 绑定自己的域名 | Cloudflare 控制台 → Workers → xw-music → Settings → Domains & Routes |
 | 换 Worker / 桶名 | 改 `wrangler.jsonc` 里的 `name` / `bucket_name` |
@@ -98,4 +101,5 @@ npm run dev      # http://localhost:8787
 - 首次扫描大曲库是渐进式的（受免费版 Workers 单请求 CPU 限制），页面保持打开会自动分批完成；
 - Safari / iOS 支持 FLAC 播放（iOS 11+）；ogg/opus 在 Safari 上可能无法播放（浏览器解码器限制）；
 - 封面大于 2MB 的极端文件会跳过内嵌封面（极少见）；
-- 密码修改后，所有已登录会话立即失效（密钥即密码的 HMAC）。
+- 密码修改后，所有已登录会话立即失效（密钥即密码的 HMAC）；
+- 本地开发时登录账号密码在 `.dev.vars`（已被 git 忽略）。
