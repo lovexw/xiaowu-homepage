@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#faf9f6" />
+<meta name="description" content="小吴乐意 · 纯本地密码生成器：密码学安全随机数、不联网、不存储、源码可直接审计。6 位纯数字 / 8 位中等 / 12 与 18 位复杂，一键复制。" />
+<title>密码生成器 · 小吴乐意</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23252623'/%3E%3Ctext x='32' y='43' font-family='-apple-system,PingFang SC,Microsoft YaHei,sans-serif' font-size='32' font-weight='700' fill='%23faf9f6' text-anchor='middle'%3E吴%3C/text%3E%3C/svg%3E" />
+<!--
+  ═══════════════════════════════════════════════════════════════
+  密码生成器 —— 单文件、纯前端、零依赖、零网络请求、零存储。
+  本文件即全部源码：右键“查看网页源码”即可完整审计，可自由复制、
+  修改与分发（Public Domain / Unlicense）。
+  视觉规范参考 lovexw/xiaowu-brand-kit（MIT）：“温润纸感，手作印刷”
+  —— 纸白底、墨色字、陶土橘点缀、等宽编号、1px 细描边、无投影无渐变。
+  ═══════════════════════════════════════════════════════════════
+-->
+<style>
+  /* ── 品牌 tokens（浅色默认；深色为整组切换，不持久化，见页脚说明）── */
+  :root {
+    --xw-bg: #faf9f6;          /* 纸白 · 页面底色 */
+    --xw-surface: #ffffff;     /* 纯白 · 卡片表面 */
+    --xw-fg: #252623;          /* 墨色 · 正文与主按钮 */
+    --xw-muted: #6d7069;       /* 灰苔 · 次要文字 */
+    --xw-line: #e5e5df;        /* 亚麻 · 描边与分隔线 */
+    --xw-soft: #f1f1eb;        /* 米灰 · 软底色块 */
+    --xw-accent: #b9542b;      /* 陶土橘 · 品牌强调（只点缀，不大面积） */
+    --xw-accent-soft: #f9e8de; /* 陶土浅 · 强调软底 */
+    --xw-green: #356347;       /* 苔绿 · 状态与成功 */
+    /* 编号艺术区块四色（展示区按档位轮换；深色模式保留浅色底） */
+    --art0-bg: #eaf0e7; --art0-fg: #45604e;   /* 苔绿 */
+    --art1-bg: #e9e9f2; --art1-fg: #5a587c;   /* 藤紫 */
+    --art2-bg: #f3e9dc; --art2-fg: #976641;   /* 沙棕 */
+    --art3-bg: #e6edf2; --art3-fg: #4a687c;   /* 雾蓝 */
+    --xw-radius: 20px; --xw-radius-md: 13px; --xw-radius-sm: 9px;
+    --xw-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --xw-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --xw-serif: "Songti SC", "STSong", Georgia, serif;
+  }
+  html[data-theme="dark"] {
+    --xw-bg: #181b18; --xw-surface: #212521; --xw-fg: #eeeee7; --xw-muted: #b1b7ac;
+    --xw-line: #383e36; --xw-soft: #2c322a; --xw-accent: #f5a37d; --xw-accent-soft: #463026;
+    --xw-green: #a7d4ae;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--xw-bg);
+    color: var(--xw-fg);
+    font-family: var(--xw-font);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  ::selection { background: var(--xw-accent-soft); }
+  :focus-visible { outline: 3px solid var(--xw-accent); outline-offset: 5px; border-radius: 4px; }
+  button { touch-action: manipulation; font: inherit; color: inherit; }
+  a { color: inherit; }
+
+  .container { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+  @media (max-width: 600px) { .container { width: calc(100% - 40px); } }
+
+  /* ── 头部：墨章 + 名称 + 主题切换 ─────────────────────── */
+  .topbar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 18px 0 14px;
+    border-bottom: 1px solid var(--xw-line);
+  }
+  .seal {
+    position: relative; flex: none;
+    width: 34px; height: 34px; border-radius: 10px;
+    background: var(--xw-fg); color: var(--xw-bg);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; font-weight: 700; line-height: 1;
+  }
+  .seal .dot {
+    position: absolute; right: -2px; bottom: -2px;
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--xw-green);
+    box-shadow: 0 0 0 4px var(--xw-bg);   /* 状态点软光环 */
+  }
+  .brand-name { font-size: 13.5px; font-weight: 650; line-height: 1.35; }
+  .brand-sub {
+    font-family: var(--xw-mono); font-size: 9px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--xw-muted);
+  }
+  .theme-btn {
+    margin-left: auto;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--xw-surface);
+    border: 1px solid var(--xw-line); border-radius: var(--xw-radius-sm);
+    font-size: 17px; cursor: pointer;
+    transition: transform .18s ease, border-color .18s ease;
+  }
+  .theme-btn:hover { transform: translateY(-2px); border-color: var(--xw-accent); }
+
+  /* ── 眉题（全站排版签名）与 hero ──────────────────────── */
+  .eyebrow {
+    font-family: var(--xw-mono); font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--xw-muted);
+  }
+  .eyebrow b { color: var(--xw-accent); font-weight: 600; }
+  .hero { max-width: 680px; margin-inline: auto; padding: 44px 0 8px; text-align: center; }
+  h1 {
+    margin: 10px 0 8px;
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 750; letter-spacing: -.05em; line-height: 1.2;
+  }
+  .hero .sub { margin: 0 0 14px; color: var(--xw-muted); }
+  .quote { font-family: var(--xw-serif); font-size: 17px; }
+  .quote span { color: var(--xw-accent); font-size: 22px; }
+
+  /* ── 工具列 ──────────────────────────────────────────── */
+  .tool { max-width: 680px; margin-inline: auto; padding: 8px 0 8px; }
+
+  /* 展示区 = 编号艺术区块：1px 描边、圆角 15、四色轮换、角落等宽微标 */
+  .art {
+    position: relative;
+    min-height: 156px; border-radius: 15px;
+    border: 1px solid var(--xw-line);
+    display: flex; align-items: center; justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    transition: background-color .18s ease, color .18s ease;
+  }
+  .art-0 { background: var(--art0-bg); color: var(--art0-fg); }
+  .art-1 { background: var(--art1-bg); color: var(--art1-fg); }
+  .art-2 { background: var(--art2-bg); color: var(--art2-fg); }
+  .art-3 { background: var(--art3-bg); color: var(--art3-fg); }
+  .art .corner {
+    position: absolute;
+    font-family: var(--xw-mono); font-size: 9px; letter-spacing: .12em;
+    text-transform: uppercase; opacity: .85;
+  }
+  .art .corner.tl { top: 14px; left: 16px; }
+  .art .corner.tr { top: 14px; right: 16px; }
+  .pwd {
+    display: block;
+    font-family: var(--xw-mono);
+    font-size: clamp(22px, 5.5vw, 32px);
+    font-weight: 600; letter-spacing: .5px; line-height: 1.4;
+    word-break: break-all;
+    user-select: text; -webkit-user-select: text;
+    cursor: copy;
+  }
+  .pwd span { display: inline-block; animation: settle .18s ease both; }
+  @keyframes settle { from { transform: translateY(2px); } }   /* 克制上浮：仅 transform、≤3px */
+  .art.dip { animation: dip .18s ease; }
+  @keyframes dip { from { transform: translateY(-3px); } }
+
+  .art-meta {
+    margin-top: 10px;
+    display: flex; flex-wrap: wrap; gap: 4px 14px; justify-content: center; text-align: center;
+    font-family: var(--xw-mono); font-size: 9px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--xw-muted);
+  }
+
+  /* 规格选择：四张迷你卡 */
+  .presets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
+  .preset {
+    position: relative;
+    padding: 13px 8px 11px;
+    background: var(--xw-surface);
+    border: 1px solid var(--xw-line); border-radius: var(--xw-radius-md);
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    cursor: pointer;
+    transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+  }
+  .preset:hover { transform: translateY(-3px); border-color: var(--xw-accent); }
+  .preset:active { transform: translateY(1px); }
+  .preset .idx {
+    font-family: var(--xw-mono); font-size: 9px; letter-spacing: .12em;
+    color: var(--xw-muted);
+  }
+  .preset .num { font-size: 16px; font-weight: 650; line-height: 1.3; }
+  .preset .lab { font-size: 11px; color: var(--xw-muted); }
+  .preset .cd { width: 7px; height: 7px; border-radius: 50%; position: absolute; top: 10px; right: 10px; }
+  .preset[aria-pressed="true"] {
+    border-color: var(--xw-accent);
+    background: var(--xw-accent-soft);
+  }
+  .preset[aria-pressed="true"] .idx,
+  .preset[aria-pressed="true"] .lab { color: var(--xw-accent); }
+
+  /* 按钮：墨底纸字主按钮 + 1px 描边副按钮；无阴影无渐变 */
+  .actions { display: grid; grid-template-columns: 1.15fr 1fr; gap: 12px; margin-top: 20px; }
+  .btn {
+    min-height: 46px; padding: 10px 20px;
+    border-radius: var(--xw-radius-sm);
+    font-weight: 600; font-size: 14px; letter-spacing: .02em;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: transform .18s ease, border-color .18s ease, background-color .18s ease, color .18s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--xw-fg); color: var(--xw-bg); border: 1px solid var(--xw-fg); }
+  .btn-primary:hover { transform: translateY(-2px); border-color: var(--xw-accent); }
+  .btn-ghost { background: var(--xw-surface); border: 1px solid var(--xw-line); }
+  .btn-ghost:hover { transform: translateY(-2px); border-color: var(--xw-accent); }
+  .btn.copied { background: var(--xw-green); border-color: var(--xw-green); color: var(--xw-bg); }
+
+  /* 生成规则与自检 */
+  .rules {
+    margin-top: 24px;
+    background: var(--xw-surface);
+    border: 1px solid var(--xw-line); border-radius: var(--xw-radius-md);
+  }
+  .rules summary {
+    cursor: pointer; padding: 15px 20px; list-style: none;
+    display: flex; align-items: center;
+  }
+  .rules summary::-webkit-details-marker { display: none; }
+  .rules summary::after {
+    content: "＋"; margin-left: auto;
+    font-family: var(--xw-mono); color: var(--xw-muted); font-size: 13px;
+    transition: transform .18s ease;
+  }
+  .rules[open] summary::after { content: "－"; }
+  .rules .body { padding: 2px 20px 18px; font-size: 13px; color: var(--xw-muted); line-height: 1.9; }
+  .rules .body b { color: var(--xw-fg); font-weight: 650; }
+  .rules ol { margin: 0 0 10px; padding: 0; list-style: none; }
+  .rules ol li { padding-left: 30px; position: relative; margin: 4px 0; }
+  .rules ol li .idx {
+    position: absolute; left: 0; top: 0;
+    font-family: var(--xw-mono); font-size: 10px; color: var(--xw-accent); letter-spacing: .06em;
+  }
+  .rules code {
+    font-family: var(--xw-mono); font-size: 11.5px;
+    background: var(--xw-soft); border-radius: 4px; padding: 1px 6px;
+    word-break: break-all; color: var(--xw-fg);
+  }
+  .rules .body p { margin: 6px 0; }
+
+  /* 立场框：左 3px 橘边，一页只此一个 */
+  .creed {
+    margin-top: 24px;
+    border: 1px solid var(--xw-line); border-left: 3px solid var(--xw-accent);
+    border-radius: 0 var(--xw-radius-sm) var(--xw-radius-sm) 0;
+    padding: 11px 14px; font-size: 13px; color: var(--xw-muted);
+  }
+  .creed b { color: var(--xw-fg); font-weight: 650; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; justify-content: center; }
+  .chip {
+    padding: 6px 10px;
+    border: 1px solid var(--xw-line); border-radius: 7px;
+    font-family: var(--xw-mono); font-size: 11px; color: var(--xw-muted);
+  }
+  .chip b { color: var(--xw-accent); font-weight: 600; }
+
+  /* 页脚 */
+  .pagefoot {
+    margin-top: 44px; padding: 18px 0 40px;
+    border-top: 1px solid var(--xw-line);
+    display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between;
+    font-family: var(--xw-mono); font-size: 9px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--xw-muted);
+  }
+  .pagefoot a {
+    font-family: var(--xw-font); font-size: 12px; letter-spacing: 0; text-transform: none;
+    text-decoration: none; border-bottom: 1px solid var(--xw-line);
+    transition: border-color .18s ease, color .18s ease;
+  }
+  .pagefoot a:hover { color: var(--xw-accent); border-color: var(--xw-accent); }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; margin: -1px;
+    clip: rect(0 0 0 0); overflow: hidden; white-space: nowrap;
+  }
+
+  /* ── 响应式 ──────────────────────────────────────────── */
+  @media (max-width: 700px) {
+    .presets { gap: 11px; }
+    .hero { padding-top: 32px; }
+  }
+  @media (max-width: 440px) {
+    .presets { grid-template-columns: repeat(2, 1fr); }
+    .actions { grid-template-columns: 1fr; }
+    .art { padding: 38px 14px; min-height: 140px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="topbar">
+    <div class="seal" aria-hidden="true">吴<i class="dot"></i></div>
+    <div>
+      <div class="brand-name">小吴乐意</div>
+      <div class="brand-sub">XIAOWU BRAND · TOOL</div>
+    </div>
+    <button type="button" id="themeBtn" class="theme-btn" aria-label="切换深浅主题" title="切换深浅主题（不记忆，刷新回浅色）">◐</button>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow"><b>01</b> / XIAOWU TOOL</p>
+    <h1>密码生成器</h1>
+    <p class="sub">纯浏览器本地生成，一键复制；不联网、不存储，关闭即消失。</p>
+    <p class="quote"><span>「</span>落纸即成，过目即焚。<span>」</span></p>
+  </section>
+
+  <main class="tool">
+    <div class="art art-0" id="display" title="点击复制">
+      <span class="corner tl" id="cornerTl"></span>
+      <span class="corner tr" id="cornerTr"></span>
+      <output id="pwd" class="pwd" aria-label="生成的密码"></output>
+    </div>
+    <p class="art-meta" id="artMeta"></p>
+
+    <div class="presets" role="group" aria-label="密码规格">
+      <button type="button" class="preset" data-preset="simple"  aria-pressed="true">
+        <span class="idx">01</span><span class="cd" style="background:var(--art0-fg)"></span>
+        <b class="num">6 位</b><span class="lab">简单</span>
+      </button>
+      <button type="button" class="preset" data-preset="medium"  aria-pressed="false">
+        <span class="idx">02</span><span class="cd" style="background:var(--art1-fg)"></span>
+        <b class="num">8 位</b><span class="lab">中等</span>
+      </button>
+      <button type="button" class="preset" data-preset="strong"  aria-pressed="false">
+        <span class="idx">03</span><span class="cd" style="background:var(--art2-fg)"></span>
+        <b class="num">12 位</b><span class="lab">复杂</span>
+      </button>
+      <button type="button" class="preset" data-preset="extreme" aria-pressed="false">
+        <span class="idx">04</span><span class="cd" style="background:var(--art3-fg)"></span>
+        <b class="num">18 位</b><span class="lab">极复杂</span>
+      </button>
+    </div>
+
+    <div class="actions">
+      <button type="button" id="regen" class="btn btn-primary">重新生成</button>
+      <button type="button" id="copy" class="btn btn-ghost" title="复制到剪贴板"><span id="copyLb">复制密码</span></button>
+    </div>
+
+    <details class="rules">
+      <summary><span class="eyebrow"><b>02</b> / 生成规则与自检</span></summary>
+      <div class="body">
+        <ol id="ruleList"></ol>
+        <p><b>随机源</b>：全部随机数来自浏览器内置的密码学安全随机源 <code>crypto.getRandomValues()</code>，并用“拒绝采样”消除取模偏差，保证每个候选密码完全等概率。</p>
+        <p><b>算法</b>：用 Fisher–Yates 部分洗牌做无放回抽样；“不连号 / 类别要求”等约束采用整条拒绝重生成，不满足即重来，不会破坏均匀性。</p>
+        <p><b>自检</b>：打开浏览器控制台运行 <code>__audit(5000)</code>，将批量生成并校验全部规则，返回的违规计数应全部为 0。</p>
+      </div>
+    </details>
+
+    <p class="creed"><b>零收集。</b>密码只在当前页面的内存里生成与显示——不联网、不落盘，刷新或关闭即消失。页面源码即全部逻辑，右键「查看网页源码」即可逐行审计。</p>
+
+    <div class="chips">
+      <span class="chip"><b>A</b> / 加密随机</span>
+      <span class="chip"><b>B</b> / 完全离线</span>
+      <span class="chip"><b>C</b> / 零存储</span>
+      <span class="chip"><b>D</b> / 源码可审计</span>
+    </div>
+  </main>
+
+  <footer class="pagefoot">
+    <span>© 2026 小吴乐意 · 单文件 · MIT 风格规范</span>
+    <a href="https://github.com/lovexw/xiaowu-brand-kit" target="_blank" rel="noopener noreferrer">风格规范 ↗</a>
+  </footer>
+
+</div>
+
+<span id="live" class="sr-only" aria-live="polite"></span>
+
+<script>
+'use strict';
+/* ═══════════════════════════════════════════════════════════
+   一、随机数核心（可审计）
+
+   唯一随机源是 Web Crypto API 的 crypto.getRandomValues()，
+   这是浏览器暴露给 JS 的操作系统级密码学安全随机数（CSPRNG）。
+
+   randomInt(max)：返回 [0, max) 内的均匀随机整数。
+   直接对随机字节取模会产生“取模偏差”（某些值概率偏高），
+   因此这里做拒绝采样：把 2^32 切成若干完整的 max 段，
+   落在末尾不完整段里的样本直接丢弃重取，保证严格均匀。
+   ═══════════════════════════════════════════════════════════ */
+function randomInt(max) {
+  const limit = Math.floor(4294967296 / max) * max; // 2^32 内最大的“完整段”边界
+  const buf = new Uint32Array(1);
+  let x;
+  do { crypto.getRandomValues(buf); x = buf[0]; } while (x >= limit);
+  return x % max;
+}
+
+/* Fisher–Yates 部分洗牌抽样：等价于从 pool 中“无放回”地随机抽 n 个
+   （天然不重复）。这是该算法的标准用法，每一步都以 randomInt 保证均匀。 */
+function sampleDistinct(pool, n) {
+  const arr = Array.from(pool);
+  for (let i = 0; i < n; i++) {
+    const j = i + randomInt(arr.length - i);
+    const t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+  }
+  return arr.slice(0, n);
+}
+
+/* “连号”判定：两个相邻字符在字符表中的位置恰好相差 1
+   （正序如 1→2，倒序如 2→1，都算连号）。 */
+function hasSequential(chars, pool) {
+  for (let i = 1; i < chars.length; i++) {
+    if (Math.abs(pool.indexOf(chars[i]) - pool.indexOf(chars[i - 1])) === 1) return true;
+  }
+  return false;
+}
+
+function classesOk(chars, need) {
+  const c = { lower: 0, upper: 0, digit: 0, symbol: 0 };
+  for (const ch of chars) {
+    if (ch >= 'a' && ch <= 'z') c.lower++;
+    else if (ch >= 'A' && ch <= 'Z') c.upper++;
+    else if (ch >= '0' && ch <= '9') c.digit++;
+    else c.symbol++;
+  }
+  return Object.entries(need).every(([k, min]) => c[k] >= min);
+}
+
+/* 通用生成：不满足约束就整条丢弃重新生成（拒绝采样）。
+   这样得到的密码在“满足全部约束的候选集合”上仍然严格均匀。 */
+function generate(cfg) {
+  for (;;) {
+    const chars = cfg.noRepeat
+      ? sampleDistinct(cfg.pool, cfg.len)
+      : Array.from({ length: cfg.len }, () => cfg.pool[randomInt(cfg.pool.length)]);
+    if (cfg.noSeq && hasSequential(chars, cfg.pool)) continue;
+    if (cfg.need && !classesOk(chars, cfg.need)) continue;
+    return chars;
+  }
+}
+
+/* 熵估算：无放回抽样为 Σ log2(剩余字符数)；有放回为 len × log2(字符表大小)。 */
+function permEntropy(n, k) {
+  let e = 0;
+  for (let i = 0; i < k; i++) e += Math.log2(n - i);
+  return e;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   二、四档规格配置
+   6 位档为纯数字（PIN 式，好记好输）；中等档的“友好字符表”去掉了
+   易混淆字符 i l o / I L O 1 0，适合朗读与手抄；复杂档使用完整字符表
+   以最大化熵。符号集特意避开了引号、反斜杠、管道、尖括号等容易在
+   shell / HTML 里出问题的字符。no/color 对应编号与展示区四色轮换。
+   ═══════════════════════════════════════════════════════════ */
+const PRESETS = {
+  simple: {
+    label: '简单', len: 6, no: '01', color: 0,
+    pool: '0123456789', // 10 个：纯数字（PIN 式，好记好输）
+    noRepeat: true,   // 字符互不重复
+    noSeq: true,      // 相邻字符不连号
+    need: null
+  },
+  medium: {
+    label: '中等', len: 8, no: '02', color: 1,
+    pool: 'abcdefghjkmnpqrstuvwxyz' + 'ABCDEFGHJKLMNPQRSTUVWXYZ' + '23456789', // 55 个
+    noRepeat: true,
+    noSeq: false,
+    need: { lower: 1, upper: 1, digit: 1 }
+  },
+  strong: {
+    label: '复杂', len: 12, no: '03', color: 2,
+    pool: 'abcdefghijklmnopqrstuvwxyz' + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + '0123456789' + '!@#$%^&*-_=+?', // 75 个
+    noRepeat: false,
+    noSeq: false,
+    need: { lower: 1, upper: 1, digit: 1, symbol: 1 }
+  },
+  extreme: {
+    label: '极复杂', len: 18, no: '04', color: 3,
+    pool: 'abcdefghijklmnopqrstuvwxyz' + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + '0123456789' + '!@#$%^&*-_=+?',
+    noRepeat: false,
+    noSeq: false,
+    need: { lower: 1, upper: 1, digit: 1, symbol: 1 }
+  }
+};
+
+for (const cfg of Object.values(PRESETS)) {
+  cfg.bits = cfg.noRepeat ? permEntropy(cfg.pool.length, cfg.len) : cfg.len * Math.log2(cfg.pool.length);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   三、审计自检入口：控制台运行 __audit(次数) 即可批量验证
+   返回各档位的违规计数，正常应全部为 0。
+   ═══════════════════════════════════════════════════════════ */
+window.__audit = function (times = 2000) {
+  const out = {};
+  for (const [name, cfg] of Object.entries(PRESETS)) {
+    let lenViol = 0, repeatViol = 0, seqViol = 0, classViol = 0, poolViol = 0;
+    const seen = new Set();
+    for (let t = 0; t < times; t++) {
+      const pw = generate(cfg).join('');
+      seen.add(pw);
+      const cs = Array.from(pw);
+      if (pw.length !== cfg.len) lenViol++;
+      if (cfg.noRepeat && new Set(cs).size !== pw.length) repeatViol++;
+      if (cfg.noSeq && hasSequential(cs, cfg.pool)) seqViol++;
+      if (cfg.need && !classesOk(cs, cfg.need)) classViol++;
+      if (!cs.every(ch => cfg.pool.includes(ch))) poolViol++;
+    }
+    out[name] = {
+      生成数: times,
+      不重复密码数: seen.size,
+      长度违规: lenViol,
+      字符重复违规: repeatViol,
+      连号违规: seqViol,
+      字符类别违规: classViol,
+      字符表外字符: poolViol
+    };
+  }
+  return out;
+};
+
+/* ═══════════════════════════════════════════════════════════
+   四、界面交互
+   ═══════════════════════════════════════════════════════════ */
+const displayEl = document.getElementById('display');
+const pwdEl = document.getElementById('pwd');
+const cornerTl = document.getElementById('cornerTl');
+const cornerTr = document.getElementById('cornerTr');
+const artMeta = document.getElementById('artMeta');
+const regenBtn = document.getElementById('regen');
+const copyBtn = document.getElementById('copy');
+const copyLb = document.getElementById('copyLb');
+const liveEl = document.getElementById('live');
+const themeBtn = document.getElementById('themeBtn');
+
+let current = '';
+let currentPreset = 'simple';
+
+/* 逐字符“落纸”动效：仅 transform、.18s、位移 2px（规范允许范围） */
+function renderPassword(pw) {
+  pwdEl.replaceChildren();
+  Array.from(pw).forEach((ch, i) => {
+    const s = document.createElement('span');
+    s.textContent = ch;
+    s.style.animationDelay = (i * 14) + 'ms';
+    pwdEl.appendChild(s);
+  });
+}
+
+function generateAndRender() {
+  const cfg = PRESETS[currentPreset];
+  current = generate(cfg).join('');
+  displayEl.className = 'art art-' + cfg.color;
+  cornerTl.textContent = cfg.no + ' / ' + cfg.label;
+  cornerTr.textContent = '≈ ' + Math.round(cfg.bits) + ' BITS';
+  artMeta.textContent = '';
+  const bits = document.createElement('span');
+  bits.textContent = cfg.len + ' 位 · ≈ ' + Math.round(cfg.bits) + ' bits 熵 · 加密安全随机数 · 字符表 ' + cfg.pool.length;
+  artMeta.appendChild(bits);
+  renderPassword(current);
+}
+
+/* 复制：优先异步 Clipboard API，失败（旧浏览器 / 非安全上下文）时
+   退回到临时 textarea + execCommand 方案。全程不落盘、不上报。 */
+function legacyCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly', '');
+  ta.style.cssText = 'position:fixed;top:-999px;opacity:0';
+  document.body.appendChild(ta);
+  ta.select();
+  ta.setSelectionRange(0, text.length);
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) { /* 忽略 */ }
+  ta.remove();
+  return ok;
+}
+
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try { await navigator.clipboard.writeText(text); return true; } catch (e) { /* 走兜底 */ }
+  }
+  return legacyCopy(text);
+}
+
+let copyTimer = null;
+function flashCopied(ok) {
+  liveEl.textContent = ok ? '密码已复制到剪贴板' : '复制失败，请手动长按选择复制';
+  copyBtn.classList.toggle('copied', ok);
+  copyLb.textContent = ok ? '✓ 已复制' : '复制失败';
+  clearTimeout(copyTimer);
+  copyTimer = setTimeout(() => {
+    copyBtn.classList.remove('copied');
+    copyLb.textContent = '复制密码';
+  }, 1600);
+}
+
+function doCopy() {
+  if (!current) return;
+  copyText(current).then(flashCopied);
+}
+
+copyBtn.addEventListener('click', doCopy);
+pwdEl.addEventListener('click', doCopy); // 点密码本身也算一键复制
+
+regenBtn.addEventListener('click', () => {
+  displayEl.classList.remove('dip');
+  void displayEl.offsetWidth;      // 重触发“落纸”位移
+  displayEl.classList.add('dip');
+  generateAndRender();
+});
+
+document.querySelectorAll('.preset').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.preset !== currentPreset) {
+      document.querySelector('.preset[aria-pressed="true"]')?.setAttribute('aria-pressed', 'false');
+      btn.setAttribute('aria-pressed', 'true');
+      currentPreset = btn.dataset.preset;
+    }
+    generateAndRender(); // 同一档位再点一次 = 换一个
+  });
+});
+
+/* 深浅主题：整组 token 切换。刻意不做持久化——本页承诺不写
+   localStorage/Cookie（连主题偏好也不记），刷新回到浅色。 */
+themeBtn.addEventListener('click', () => {
+  const html = document.documentElement;
+  const dark = html.dataset.theme !== 'dark';
+  html.dataset.theme = dark ? 'dark' : 'light';
+  themeBtn.setAttribute('aria-pressed', String(dark));
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = dark ? '#181b18' : '#faf9f6';
+});
+
+/* 规则说明区由配置直接渲染，保证“页面文字”与“真实逻辑”永远一致 */
+function buildRules() {
+  const NEED_ZH = { lower: '小写字母', upper: '大写字母', digit: '数字', symbol: '符号' };
+  document.getElementById('ruleList').innerHTML = Object.values(PRESETS).map(cfg => {
+    const need = cfg.need
+      ? '至少各含 1 个 ' + Object.keys(cfg.need).map(k => NEED_ZH[k]).join('、')
+      : '对字符类别无强制要求';
+    const cons = [
+      cfg.noRepeat ? '字符互不重复' : '字符可重复',
+      cfg.noSeq ? '相邻字符不连号（字符表中相邻的字符不会相邻出现）' : null,
+      need
+    ].filter(Boolean).join('；');
+    return '<li><span class="idx">' + cfg.no + '</span><b>' + cfg.len + ' 位 · ' + cfg.label +
+           '</b>：字符表 ' + cfg.pool.length + ' 个字符 —— <code>' + cfg.pool +
+           '</code>；' + cons + '。</li>';
+  }).join('');
+}
+
+/* 启动 */
+if (!window.crypto || typeof crypto.getRandomValues !== 'function') {
+  pwdEl.textContent = '当前环境不支持 Web Crypto，请改用现代浏览器打开';
+  artMeta.textContent = '无法安全生成密码';
+} else {
+  buildRules();
+  generateAndRender();
+}
+</script>
+</body>
+</html>
