@@ -26,7 +26,7 @@ export const socials = [
         name: '个人博客',
         description: '同步公众号+部分敏感内容',
         url: 'https://blog.xiaowuleyi.com/',
-        icon: '/public/wordpress.svg',
+        icon: '/public/blog.svg',
     },
     {
         id: 'wechat',

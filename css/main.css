@@ -72,6 +72,11 @@ h1 span { color: var(--accent); }
 .hero-actions { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 46px; padding: 10px 20px; border-radius: 9px; border: 1px solid var(--line); background: var(--surface); font-size: 13px; font-weight: 600; }
 .button.primary { color: var(--bg); background: var(--text); border-color: var(--text); }
+/* 博客入口：陶土橘实心高亮，全主题统一，悬停时箭头飞出 */
+.button.blog-cta { padding: 11px 24px; font-size: 14px; font-weight: 700; color: #faf9f6; background: #b9542b; border-color: #b9542b; box-shadow: 0 10px 24px -8px rgba(185, 84, 43, .55); }
+.button.blog-cta .arrow { transition: transform .18s ease; }
+.button.blog-cta:hover { border-color: #b9542b; background: #a34723; box-shadow: 0 14px 30px -8px rgba(185, 84, 43, .6); }
+.button.blog-cta:hover .arrow { transform: translate(3px, -3px); }
 .button:hover { transform: translateY(-2px); }
 .hero-portrait { position: relative; width: 100%; max-width: 345px; justify-self: center; }
 .portrait-frame { padding: 13px 13px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; transform: rotate(4deg); box-shadow: 0 14px 35px #2526230c; }
