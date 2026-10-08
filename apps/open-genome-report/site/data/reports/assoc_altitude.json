@@ -1,0 +1,995 @@
+{
+ "title": "高原低氧相关位点（含扩展）",
+ "rows": [
+  {
+   "rsid": "rs1801131",
+   "chrom": "1",
+   "pos": 11854476,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "MTHFR",
+   "trait": "E429A（1298A>C）：叶酸代谢",
+   "conf": "high",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801131",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801131",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801131",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801131"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1801133",
+   "chrom": "1",
+   "pos": 11856378,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "MTHFR",
+   "trait": "A222V（677C>T）：叶酸/同型半胱氨酸代谢",
+   "conf": "high",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801133",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801133",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801133",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801133"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs699",
+   "chrom": "1",
+   "pos": 230845794,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "AGT",
+   "trait": "高血压（M235T，本数据 235M/T）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs699",
+    "snpedia": "https://www.snpedia.com/index.php/Rs699",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs699",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs699"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4762",
+   "chrom": "1",
+   "pos": 230845977,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "AGT",
+   "trait": "高血压（T268? 邻近位点）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4762",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4762",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4762",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4762"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs5051",
+   "chrom": "1",
+   "pos": 230849872,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "AGT 区",
+   "trait": "血管紧张素原水平",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs5051",
+    "snpedia": "https://www.snpedia.com/index.php/Rs5051",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs5051",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs5051"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs480902",
+   "chrom": "1",
+   "pos": 231531627,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "1q42（待核）",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs480902",
+    "snpedia": "https://www.snpedia.com/index.php/Rs480902",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs480902",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs480902"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs17034984",
+   "chrom": "2",
+   "pos": 46553087,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "2p23（EPAS1 邻近? 待核）",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs17034984",
+    "snpedia": "https://www.snpedia.com/index.php/Rs17034984",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs17034984",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs17034984"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4953354",
+   "chrom": "2",
+   "pos": 46575388,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "EPAS1",
+   "trait": "高原适应选择区（藏族富集单倍型）",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4953354",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4953354",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4953354",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4953354"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1868092",
+   "chrom": "2",
+   "pos": 46614202,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "EPAS1 区",
+   "trait": "高原适应连锁位点",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1868092",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1868092",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1868092",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1868092"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2228001",
+   "chrom": "3",
+   "pos": 14187449,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "XPC",
+   "trait": "核苷酸切除修复",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2228001",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2228001",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2228001",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2228001"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2228000",
+   "chrom": "3",
+   "pos": 14199887,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "XPC",
+   "trait": "核苷酸切除修复",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2228000",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2228000",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2228000",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2228000"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1050450",
+   "chrom": "3",
+   "pos": 49394834,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "GPX1",
+   "trait": "Pro198Leu：谷胱甘肽过氧化物酶活性",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1050450",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1050450",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1050450",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1050450"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs5186",
+   "chrom": "3",
+   "pos": 148459988,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "AGTR1",
+   "trait": "高血压（1166A>C，本数据野生）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs5186",
+    "snpedia": "https://www.snpedia.com/index.php/Rs5186",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs5186",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs5186"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs8192678",
+   "chrom": "4",
+   "pos": 23815662,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "PPARGC1A",
+   "trait": "线粒体功能/耐力候选（G482S）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs8192678",
+    "snpedia": "https://www.snpedia.com/index.php/Rs8192678",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs8192678",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs8192678"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1799895",
+   "chrom": "4",
+   "pos": 24801834,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "SOD1 区 (4p? 待核)",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1799895",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1799895",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1799895",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1799895"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1042713",
+   "chrom": "5",
+   "pos": 148206440,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "ADRB2",
+   "trait": "Arg16Gly：β2 受体下调/支气管反应性",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1042713",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1042713",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1042713",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1042713"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1042714",
+   "chrom": "5",
+   "pos": 148206473,
+   "gt": "GC",
+   "source": "ASA",
+   "gene": "ADRB2",
+   "trait": "β2 受体 Gln27Glu",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1042714",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1042714",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1042714",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1042714"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs5370",
+   "chrom": "6",
+   "pos": 12296255,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs5370",
+    "snpedia": "https://www.snpedia.com/index.php/Rs5370",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs5370",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs5370"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1799945",
+   "chrom": "6",
+   "pos": 26091179,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "HFE",
+   "trait": "H63D：血色病携带（轻）",
+   "conf": "high",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1799945",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1799945",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1799945",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1799945"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800562",
+   "chrom": "6",
+   "pos": 26093141,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "HFE",
+   "trait": "C282Y：血色病主效（欧洲变异，东亚罕见）",
+   "conf": "high",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800562",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800562",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800562",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800562"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs699947",
+   "chrom": "6",
+   "pos": 43736389,
+   "gt": "AC",
+   "source": "ASA",
+   "gene": "VEGFA",
+   "trait": "血管生成（-460）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs699947",
+    "snpedia": "https://www.snpedia.com/index.php/Rs699947",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs699947",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs699947"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs833061",
+   "chrom": "6",
+   "pos": 43737486,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "VEGFA",
+   "trait": "血管生成（-634，黄斑变性候选）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs833061",
+    "snpedia": "https://www.snpedia.com/index.php/Rs833061",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs833061",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs833061"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2010963",
+   "chrom": "6",
+   "pos": 43738350,
+   "gt": "CG",
+   "source": "ASA",
+   "gene": "VEGFA",
+   "trait": "-2578：VEGF 水平",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2010963",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2010963",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2010963",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2010963"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3025033",
+   "chrom": "6",
+   "pos": 43751075,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "VEGFA",
+   "trait": "血管生成",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3025033",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3025033",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3025033",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3025033"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3025039",
+   "chrom": "6",
+   "pos": 43752536,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "VEGFA",
+   "trait": "血管生成（936C>T，本数据野生）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3025039",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3025039",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3025039",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3025039"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs10434",
+   "chrom": "6",
+   "pos": 43753212,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "HIF1A",
+   "trait": "低氧信号通路",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs10434",
+    "snpedia": "https://www.snpedia.com/index.php/Rs10434",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs10434",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs10434"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4880",
+   "chrom": "6",
+   "pos": 160113872,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "SOD2",
+   "trait": "Val16Ala：线粒体 MnSOD 酶活性",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4880",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4880",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4880",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4880"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1617640",
+   "chrom": "7",
+   "pos": 100317298,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "7p14（TFR2? 待核）",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1617640",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1617640",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1617640",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1617640"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs551238",
+   "chrom": "7",
+   "pos": 100321528,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "7q?（待核）",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs551238",
+    "snpedia": "https://www.snpedia.com/index.php/Rs551238",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs551238",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs551238"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2070744",
+   "chrom": "7",
+   "pos": 150690079,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "NOS3",
+   "trait": "eNOS 启动子（-922）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2070744",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2070744",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2070744",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2070744"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3918226",
+   "chrom": "7",
+   "pos": 150690176,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "NOS3 区",
+   "trait": "eNOS 调控",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3918226",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3918226",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3918226",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3918226"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1799983",
+   "chrom": "7",
+   "pos": 150696111,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "NOS3",
+   "trait": "E298D：eNOS 活性/血管反应",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1799983",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1799983",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1799983",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1799983"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1801253",
+   "chrom": "10",
+   "pos": 115805056,
+   "gt": "GC",
+   "source": "ASA",
+   "gene": "ADRB1",
+   "trait": "β1 受体（S49G），心率/血压反应",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801253",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801253",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801253",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801253"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1001179",
+   "chrom": "11",
+   "pos": 34460231,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "CAT",
+   "trait": "过氧化氢酶活性",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1001179",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1001179",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1001179",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1001179"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs174546",
+   "chrom": "11",
+   "pos": 61569830,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "FADS1",
+   "trait": "长链多不饱和脂肪酸（AA/EPA/DHA）代谢",
+   "conf": "high",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs174546",
+    "snpedia": "https://www.snpedia.com/index.php/Rs174546",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs174546",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs174546"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs174547",
+   "chrom": "11",
+   "pos": 61570783,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "FADS1",
+   "trait": "长链多不饱和脂肪酸代谢（与 rs174546 连锁）",
+   "conf": "high",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs174547",
+    "snpedia": "https://www.snpedia.com/index.php/Rs174547",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs174547",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs174547"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1695",
+   "chrom": "11",
+   "pos": 67352689,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "GSTP1",
+   "trait": "谷胱甘肽转移酶（I105V）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1695",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1695",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1695",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1695"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1138272",
+   "chrom": "11",
+   "pos": 67353579,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "GSTP1",
+   "trait": "谷胱甘肽转移酶（A114V）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1138272",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1138272",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1138272",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1138272"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs662799",
+   "chrom": "11",
+   "pos": 116663707,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "APOA5",
+   "trait": "-1131T>C：甘油三酯水平",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs662799",
+    "snpedia": "https://www.snpedia.com/index.php/Rs662799",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs662799",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs662799"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs5443",
+   "chrom": "12",
+   "pos": 6954875,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "12p12 (SREBF? 待核)",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs5443",
+    "snpedia": "https://www.snpedia.com/index.php/Rs5443",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs5443",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs5443"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11549465",
+   "chrom": "14",
+   "pos": 62207557,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "HIF1A",
+   "trait": "P582S：低氧反应候选",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11549465",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11549465",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11549465",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11549465"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11549467",
+   "chrom": "14",
+   "pos": 62207575,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "HIF1A",
+   "trait": "A588T：低氧反应候选",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11549467",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11549467",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11549467",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11549467"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2057482",
+   "chrom": "14",
+   "pos": 62213848,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "14q32（待核）",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2057482",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2057482",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2057482",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2057482"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800566",
+   "chrom": "16",
+   "pos": 69745145,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "NQO1",
+   "trait": "醌氧化还原酶（C609T, P187S）——解毒酶缺陷",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800566",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800566",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800566",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800566"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1042522",
+   "chrom": "17",
+   "pos": 7579472,
+   "gt": "CG",
+   "source": "ASA",
+   "gene": "TP53",
+   "trait": "p53 P72R（肿瘤易感/功能差异候选）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1042522",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1042522",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1042522",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1042522"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4341",
+   "chrom": "17",
+   "pos": 61565990,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "ACE",
+   "trait": "ACE 区标签",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4341",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4341",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4341",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4341"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4343",
+   "chrom": "17",
+   "pos": 61566031,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "ACE",
+   "trait": "ACE 区标签（I/D 结构变异不可由 SNP 判定）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4343",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4343",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4343",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4343"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs25487",
+   "chrom": "19",
+   "pos": 44055726,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "XRCC1",
+   "trait": "DNA 修复（Q399R）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs25487",
+    "snpedia": "https://www.snpedia.com/index.php/Rs25487",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs25487",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs25487"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs25489",
+   "chrom": "19",
+   "pos": 44056412,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "XRCC1",
+   "trait": "DNA 修复（R280H）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs25489",
+    "snpedia": "https://www.snpedia.com/index.php/Rs25489",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs25489",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs25489"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs13181",
+   "chrom": "19",
+   "pos": 45854919,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "ERCC2 (XP-D)",
+   "trait": "DNA 修复（K751Q）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs13181",
+    "snpedia": "https://www.snpedia.com/index.php/Rs13181",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs13181",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs13181"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3918242",
+   "chrom": "20",
+   "pos": 44635976,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "MMP9",
+   "trait": "基质金属蛋白酶（动脉瘤候选）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3918242",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3918242",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3918242",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3918242"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs17576",
+   "chrom": "20",
+   "pos": 44640225,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "MMP9",
+   "trait": "基质金属蛋白酶（R668Q）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs17576",
+    "snpedia": "https://www.snpedia.com/index.php/Rs17576",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs17576",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs17576"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs135538",
+   "chrom": "22",
+   "pos": 46564628,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "22q11（待核）",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs135538",
+    "snpedia": "https://www.snpedia.com/index.php/Rs135538",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs135538",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs135538"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800206",
+   "chrom": "22",
+   "pos": 46614274,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "PPARGC1B",
+   "trait": "代谢（A203P）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800206",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800206",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800206",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800206"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4253778",
+   "chrom": "22",
+   "pos": 46630634,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "ACE 区",
+   "trait": "ACE I/D 结构变异邻近标签",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4253778",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4253778",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4253778",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4253778"
+   },
+   "flag": null
+  }
+ ]
+}

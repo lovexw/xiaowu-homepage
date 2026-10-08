@@ -1,0 +1,617 @@
+{
+ "title": "心理人格候选位点扩展表",
+ "rows": [
+  {
+   "rsid": "rs228697",
+   "chrom": "1",
+   "pos": 7887579,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "PER3",
+   "trait": "昼夜节律候选",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs228697",
+    "snpedia": "https://www.snpedia.com/index.php/Rs228697",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs228697",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs228697"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11584700",
+   "chrom": "1",
+   "pos": 204576983,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11584700",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11584700",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11584700",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11584700"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1042778",
+   "chrom": "3",
+   "pos": 8794545,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "OXTR",
+   "trait": "催产素受体",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1042778",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1042778",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1042778",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1042778"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2254298",
+   "chrom": "3",
+   "pos": 8802228,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "OXTR",
+   "trait": "催产素受体：应激/依恋关联（效应极小）",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2254298",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2254298",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2254298",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2254298"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs53576",
+   "chrom": "3",
+   "pos": 8804371,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "OXTR",
+   "trait": "催产素受体：社会认知关联（效应极小）",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs53576",
+    "snpedia": "https://www.snpedia.com/index.php/Rs53576",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs53576",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs53576"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs62263923",
+   "chrom": "3",
+   "pos": 85674790,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs62263923",
+    "snpedia": "https://www.snpedia.com/index.php/Rs62263923",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs62263923",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs62263923"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6280",
+   "chrom": "3",
+   "pos": 113890815,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "DRD3",
+   "trait": "Ser9Gly：多巴胺 D3 受体",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6280",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6280",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6280",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6280"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1801260",
+   "chrom": "4",
+   "pos": 56301369,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "CLOCK",
+   "trait": "3111T/C：睡眠节律关联",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801260",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801260",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801260",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801260"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4580704",
+   "chrom": "4",
+   "pos": 56326707,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4580704",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4580704",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4580704",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4580704"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6295",
+   "chrom": "5",
+   "pos": 63258565,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6295",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6295",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6295",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6295"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6198",
+   "chrom": "5",
+   "pos": 142657621,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "NR3C1",
+   "trait": "糖皮质激素受体 BclI（应激/代谢）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6198",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6198",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6198",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6198"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs41423247",
+   "chrom": "5",
+   "pos": 142778575,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "FKBP5",
+   "trait": "应激调节（ER22/23ek? 邻近）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs41423247",
+    "snpedia": "https://www.snpedia.com/index.php/Rs41423247",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs41423247",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs41423247"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs17070145",
+   "chrom": "5",
+   "pos": 167845791,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "KIBRA",
+   "trait": "情景记忆表现关联",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs17070145",
+    "snpedia": "https://www.snpedia.com/index.php/Rs17070145",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs17070145",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs17070145"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs265981",
+   "chrom": "5",
+   "pos": 174870902,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs265981",
+    "snpedia": "https://www.snpedia.com/index.php/Rs265981",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs265981",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs265981"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3800373",
+   "chrom": "6",
+   "pos": 35542476,
+   "gt": "AC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3800373",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3800373",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3800373",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3800373"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1360780",
+   "chrom": "6",
+   "pos": 35607571,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "FKBP5",
+   "trait": "应激轴（HPA）反应性/创伤应激候选",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1360780",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1360780",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1360780",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1360780"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1487441",
+   "chrom": "6",
+   "pos": 98553894,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1487441",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1487441",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1487441",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1487441"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4410790",
+   "chrom": "7",
+   "pos": 17284577,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "CLPTM1L-TERT (5p15.33)",
+   "trait": "肺癌易感候选",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4410790",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4410790",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4410790",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4410790"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1824024",
+   "chrom": "7",
+   "pos": 136643694,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "7q31（待核）",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1824024",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1824024",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1824024",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1824024"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1801253",
+   "chrom": "10",
+   "pos": 115805056,
+   "gt": "GC",
+   "source": "ASA",
+   "gene": "ADRB1",
+   "trait": "β1 受体（S49G），心率/血压反应",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1801253",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1801253",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1801253",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1801253"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800955",
+   "chrom": "11",
+   "pos": 636784,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "DRD4",
+   "trait": "多巴胺 D4（-521C/T），新奇寻求候选",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800955",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800955",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800955",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800955"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs7124442",
+   "chrom": "11",
+   "pos": 27677041,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "BDNF 区",
+   "trait": "BDNF 邻近变异",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs7124442",
+    "snpedia": "https://www.snpedia.com/index.php/Rs7124442",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs7124442",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs7124442"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6265",
+   "chrom": "11",
+   "pos": 27679916,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "BDNF",
+   "trait": "Val66Met：应激反应/记忆表现关联",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6265",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6265",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6265",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6265"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11030104",
+   "chrom": "11",
+   "pos": 27684517,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "BDNF 区",
+   "trait": "BDNF 邻近变异",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11030104",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11030104",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11030104",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11030104"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800497",
+   "chrom": "11",
+   "pos": 113270828,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "ANKK1/DRD2",
+   "trait": "Taq1A：D2 受体密度/奖赏",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800497",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800497",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800497",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800497"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs7997012",
+   "chrom": "13",
+   "pos": 47411985,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "HTR2A",
+   "trait": "抑郁/SSRI 反应候选",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs7997012",
+    "snpedia": "https://www.snpedia.com/index.php/Rs7997012",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs7997012",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs7997012"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6313",
+   "chrom": "13",
+   "pos": 47469940,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "HTR2A",
+   "trait": "102T/C：5-HT2A 密度",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6313",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6313",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6313",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6313"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6311",
+   "chrom": "13",
+   "pos": 47471478,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "HTR2A",
+   "trait": "-1438A/G：5-HT2A 密度",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6311",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6311",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6311",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6311"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs28386840",
+   "chrom": "16",
+   "pos": 55686818,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs28386840",
+    "snpedia": "https://www.snpedia.com/index.php/Rs28386840",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs28386840",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs28386840"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs62056842",
+   "chrom": "17",
+   "pos": 43991515,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs62056842",
+    "snpedia": "https://www.snpedia.com/index.php/Rs62056842",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs62056842",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs62056842"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs73598374",
+   "chrom": "20",
+   "pos": 43280227,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "20p12（待核）",
+   "trait": "待核",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs73598374",
+    "snpedia": "https://www.snpedia.com/index.php/Rs73598374",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs73598374",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs73598374"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4680",
+   "chrom": "22",
+   "pos": 19951271,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "COMT",
+   "trait": "Val158Met：儿茶酚胺代谢（前额叶多巴胺）",
+   "conf": "medium",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4680",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4680",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4680",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4680"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs909525",
+   "chrom": "X",
+   "pos": 43553202,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "MAOA 区",
+   "trait": "单胺氧化酶邻近",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs909525",
+    "snpedia": "https://www.snpedia.com/index.php/Rs909525",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs909525",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs909525"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6323",
+   "chrom": "X",
+   "pos": 43591036,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "MAOA",
+   "trait": "单胺氧化酶 A 活性",
+   "conf": "low",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6323",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6323",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6323",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6323"
+   },
+   "flag": null
+  }
+ ]
+}

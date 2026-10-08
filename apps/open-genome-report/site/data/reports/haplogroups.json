@@ -1,0 +1,952 @@
+{
+ "title": "父系与母系单倍群（粗判）",
+ "icon": "🧭",
+ "intro": "单倍群是沿母系/父系「一条线」追溯的谱系标签。母系用 Phylotree Build 17.3 全树（5,435 支系）做树感知走查；父系用 ISOGG 2016 主干树的经典标记。判定原则与全站一致：宁可留白，不强行分层。",
+ "mt": {
+  "label": "母系（mtDNA）",
+  "call": "F2",
+  "call_display": "F2（亚支未定）",
+  "confidence": "high",
+  "summary": "F 系（R9 下游）是东亚与东南亚的代表性母系世系之一，F2 亚支在华南、西南及东南亚人群较为常见。母系单倍群只反映「母亲→女儿」这一条线的谱系。",
+  "sub_note": "亚支分辨率止于 F2：F2c 的定义突变未被本芯片覆盖，与 F2* 无法区分；其余亚支的定义突变不匹配，已排除。",
+  "evidence_note": "路径上 17 个可测信息位点全部匹配、0 个矛盾。",
+  "path": [
+   {
+    "name": "H2a2a1",
+    "own_matched": 0,
+    "status": "root",
+    "note": "rCRS 参考序列"
+   },
+   {
+    "name": "H2a2a",
+    "own_matched": 1,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "H2a2",
+    "own_matched": 1,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "H2a",
+    "own_matched": 1,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "H2",
+    "own_matched": 1,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "H",
+    "own_matched": 1,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "HV",
+    "own_matched": 2,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "R0",
+    "own_matched": 0,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "R",
+    "own_matched": 1,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "R9",
+    "own_matched": 3,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "F",
+    "own_matched": 2,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "F2",
+    "own_matched": 4,
+    "own_mismatched": 0,
+    "status": "confirmed"
+   }
+  ],
+  "chain": [
+   "H2a2a1",
+   "H2a2a",
+   "H2a2",
+   "H2a",
+   "H2",
+   "H",
+   "HV",
+   "R0",
+   "R",
+   "R9",
+   "F",
+   "F2"
+  ],
+  "evidence": [
+   {
+    "pos": 263,
+    "expected": "G",
+    "observed": "G",
+    "branch": "H2a2a",
+    "poly": "263G",
+    "rsid": "rs2853515",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 750,
+    "expected": "G",
+    "observed": "G",
+    "branch": "H2a",
+    "poly": "750G",
+    "rsid": "rs2853518",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 1005,
+    "expected": "C",
+    "observed": "C",
+    "branch": "F2",
+    "poly": "1005C",
+    "rsid": "rs111033179",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 1438,
+    "expected": "G",
+    "observed": "G",
+    "branch": "H",
+    "poly": "1438G",
+    "rsid": "rs2001030",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 2706,
+    "expected": "G",
+    "observed": "G",
+    "branch": "HV",
+    "poly": "2706G",
+    "rsid": "rs2854128",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 3970,
+    "expected": "T",
+    "observed": "T",
+    "branch": "R9",
+    "poly": "3970T",
+    "rsid": "rs9629042",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 4769,
+    "expected": "G",
+    "observed": "G",
+    "branch": "H2",
+    "poly": "4769G",
+    "rsid": "rs3021086",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 6392,
+    "expected": "C",
+    "observed": "C",
+    "branch": "F",
+    "poly": "6392C",
+    "rsid": "rs376513041",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 7028,
+    "expected": "T",
+    "observed": "T",
+    "branch": "HV",
+    "poly": "7028T",
+    "rsid": "rs2015062",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 8860,
+    "expected": "G",
+    "observed": "G",
+    "branch": "H2a2",
+    "poly": "8860G",
+    "rsid": "rs2001031",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 10310,
+    "expected": "A",
+    "observed": "A",
+    "branch": "F",
+    "poly": "10310A",
+    "rsid": "rs41467651",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 10586,
+    "expected": "A",
+    "observed": "A",
+    "branch": "F2",
+    "poly": "10586A",
+    "rsid": "rs28358281",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 11719,
+    "expected": "A",
+    "observed": "A",
+    "branch": "R",
+    "poly": "11719A",
+    "rsid": "rs2853495",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 12338,
+    "expected": "C",
+    "observed": "C",
+    "branch": "F2",
+    "poly": "12338C",
+    "rsid": "rs201863060",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 13708,
+    "expected": "A",
+    "observed": "A",
+    "branch": "F2",
+    "poly": "13708A",
+    "rsid": "rs28359178",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 13928,
+    "expected": "C",
+    "observed": "C",
+    "branch": "R9",
+    "poly": "13928C",
+    "rsid": "rs28359184",
+    "dbsnp": "ok"
+   },
+   {
+    "pos": 16304,
+    "expected": "C",
+    "observed": "C",
+    "branch": "R9",
+    "poly": "16304C",
+    "rsid": "rs386829305",
+    "dbsnp": "ok"
+   }
+  ],
+  "mismatches": [],
+  "subbranches": [
+   {
+    "name": "F2+16291",
+    "verdict": "excluded",
+    "detail": "定义突变不匹配：16291T(实测 C)"
+   },
+   {
+    "name": "F2c",
+    "verdict": "unresolved",
+    "detail": "定义突变全部未覆盖，不能排除：13722G(未覆盖)"
+   },
+   {
+    "name": "F2d",
+    "verdict": "excluded",
+    "detail": "定义突变不匹配：235G(实测 A), 1009T(实测 C)"
+   },
+   {
+    "name": "F2e",
+    "verdict": "excluded",
+    "detail": "定义突变不匹配：3010A(实测 G), 14769G(实测 A)；另有未覆盖：2281G(未覆盖)"
+   },
+   {
+    "name": "F2f",
+    "verdict": "excluded",
+    "detail": "定义突变不匹配：11339C(实测 T)"
+   },
+   {
+    "name": "F2+195",
+    "verdict": "excluded",
+    "detail": "定义突变不匹配：195C(实测 T)"
+   }
+  ],
+  "stats": {
+   "mt_positions": 3738,
+   "mt_valid": 3698,
+   "mt_mixed": 29,
+   "coverage_pct": 22.3
+  }
+ },
+ "y": {
+  "label": "父系（Y 染色体）",
+  "call": "Q1a1a1（M120）",
+  "call_display": "Q1a1a1（M120）",
+  "confidence": "high",
+  "summary": "Q-M242 谱系整体广布于西伯利亚与中亚，并经 Q-M3 等分支进入美洲原住民；Q-M120 是在东亚土生分化的一支，在汉族中约占 2-5%（北方略高），属东亚固有的早期父系世系。父系单倍群只反映「父亲→儿子」这一条线的谱系。",
+  "sub_note": "ISOGG 2016 在 Q1a1a1 层之下无更深 SNV 分层；更精细的下游分支需要 WGS 或 Y-STR 高通量检测。中间层（GHIJK/HIJK/IJK/K2/Q1a/Q1a1）无独立覆盖标记，由下游衍生标记按谱系关系传递确认。",
+  "evidence_note": "13 个单拷贝区衍生标记全部一致，10 个兄弟支系全部被祖先型标记或树位置排除。",
+  "path": [
+   {
+    "name": "Y-根",
+    "markers": [],
+    "note": "",
+    "derived": 0,
+    "ancestral": 0,
+    "status": "root"
+   },
+   {
+    "name": "CT（CT 大支）",
+    "markers": [
+     {
+      "name": "M168",
+      "pos": 14813991,
+      "ref": "C",
+      "alt": "T",
+      "rsid": "rs2032595",
+      "status": "derived",
+      "observed": "T"
+     }
+    ],
+    "note": "",
+    "derived": 1,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "CF",
+    "markers": [
+     {
+      "name": "P143",
+      "pos": 14197867,
+      "ref": "G",
+      "alt": "A",
+      "rsid": "rs4141886",
+      "status": "uncovered",
+      "observed": null
+     },
+     {
+      "name": "CTS3818",
+      "pos": 15203676,
+      "ref": "A",
+      "alt": "G",
+      "status": "derived",
+      "observed": "G"
+     }
+    ],
+    "note": "",
+    "derived": 1,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "F",
+    "markers": [
+     {
+      "name": "M89",
+      "pos": 21917313,
+      "ref": "C",
+      "alt": "T",
+      "rsid": "rs2032652",
+      "status": "derived",
+      "observed": "T"
+     }
+    ],
+    "note": "",
+    "derived": 1,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "GHIJK",
+    "markers": [],
+    "note": "",
+    "derived": 0,
+    "ancestral": 0,
+    "status": "presumed"
+   },
+   {
+    "name": "HIJK",
+    "markers": [],
+    "note": "",
+    "derived": 0,
+    "ancestral": 0,
+    "status": "presumed"
+   },
+   {
+    "name": "IJK",
+    "markers": [
+     {
+      "name": "M522",
+      "pos": 7173143,
+      "ref": "G",
+      "alt": "A",
+      "rsid": "rs9786714",
+      "dup_prone": true,
+      "status": "uncovered",
+      "observed": null
+     }
+    ],
+    "note": "",
+    "derived": 0,
+    "ancestral": 0,
+    "status": "presumed"
+   },
+   {
+    "name": "K",
+    "markers": [
+     {
+      "name": "M9",
+      "pos": 21730257,
+      "ref": "C",
+      "alt": "G",
+      "rsid": "rs3900",
+      "status": "derived",
+      "observed": "G"
+     },
+     {
+      "name": "P128",
+      "pos": 20837553,
+      "ref": "C",
+      "alt": "T",
+      "rsid": "rs17250121",
+      "status": "derived",
+      "observed": "T"
+     }
+    ],
+    "note": "",
+    "derived": 2,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "K2",
+    "markers": [
+     {
+      "name": "M526",
+      "pos": 23550924,
+      "ref": "A",
+      "alt": "C",
+      "rsid": "rs2033003",
+      "status": "uncovered",
+      "observed": null
+     }
+    ],
+    "note": "",
+    "derived": 0,
+    "ancestral": 0,
+    "status": "presumed"
+   },
+   {
+    "name": "K2b",
+    "markers": [
+     {
+      "name": "P331",
+      "pos": 16222561,
+      "ref": "C",
+      "alt": "T",
+      "rsid": "rs9785994",
+      "status": "derived",
+      "observed": "T"
+     }
+    ],
+    "note": "",
+    "derived": 1,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "P1",
+    "markers": [
+     {
+      "name": "M45",
+      "pos": 21867787,
+      "ref": "G",
+      "alt": "A",
+      "rsid": "rs2032631",
+      "status": "derived",
+      "observed": "A"
+     }
+    ],
+    "note": "",
+    "derived": 1,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "Q",
+    "markers": [
+     {
+      "name": "M242",
+      "pos": 15018582,
+      "ref": "C",
+      "alt": "T",
+      "rsid": "rs8179021",
+      "note": "Q 根定义位点，本芯片未覆盖",
+      "status": "uncovered",
+      "observed": null
+     },
+     {
+      "name": "M1047",
+      "pos": 22195010,
+      "ref": "C",
+      "alt": "T",
+      "status": "derived",
+      "observed": "T"
+     },
+     {
+      "name": "CTS3727",
+      "pos": 15134176,
+      "ref": "G",
+      "alt": "A",
+      "status": "derived",
+      "observed": "A"
+     },
+     {
+      "name": "FGC1755",
+      "pos": 13227885,
+      "ref": "C",
+      "alt": "T",
+      "status": "ambiguous",
+      "observed": "CT"
+     }
+    ],
+    "note": "",
+    "derived": 2,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "Q1",
+    "markers": [
+     {
+      "name": "L273.1",
+      "pos": 17595874,
+      "ref": "C",
+      "alt": "T",
+      "status": "derived",
+      "observed": "T"
+     }
+    ],
+    "note": "",
+    "derived": 1,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "Q1a",
+    "markers": [
+     {
+      "name": "F903",
+      "pos": 7014317,
+      "ref": "G",
+      "alt": "C",
+      "rsid": "rs35724598",
+      "dup_prone": true,
+      "status": "dup",
+      "observed": "C"
+     }
+    ],
+    "note": "",
+    "derived": 0,
+    "ancestral": 0,
+    "status": "presumed"
+   },
+   {
+    "name": "Q1a1",
+    "markers": [
+     {
+      "name": "F1215",
+      "pos": 8454150,
+      "ref": "A",
+      "alt": "C",
+      "dup_prone": true,
+      "status": "dup",
+      "observed": "C"
+     },
+     {
+      "name": "F844",
+      "pos": 6871854,
+      "ref": "G",
+      "alt": "T",
+      "dup_prone": true,
+      "status": "dup",
+      "observed": "T"
+     }
+    ],
+    "note": "",
+    "derived": 0,
+    "ancestral": 0,
+    "status": "presumed"
+   },
+   {
+    "name": "Q1a1a",
+    "markers": [
+     {
+      "name": "F746",
+      "pos": 2888083,
+      "ref": "C",
+      "alt": "G",
+      "status": "derived",
+      "observed": "G"
+     }
+    ],
+    "note": "",
+    "derived": 1,
+    "ancestral": 0,
+    "status": "confirmed"
+   },
+   {
+    "name": "Q1a1a1 (M120)",
+    "markers": [
+     {
+      "name": "M120",
+      "pos": 21907394,
+      "ref": "T",
+      "alt": "C",
+      "rsid": "rs374472129",
+      "status": "derived",
+      "observed": "C"
+     },
+     {
+      "name": "M265/N14",
+      "pos": 15030650,
+      "ref": "C",
+      "alt": "A",
+      "rsid": "rs3212294",
+      "status": "derived",
+      "observed": "A"
+     }
+    ],
+    "note": "Q-M120：东亚固有世系，汉族约 2-5%；ISOGG 2016 在此层无更深 SNV 分层",
+    "derived": 2,
+    "ancestral": 0,
+    "status": "confirmed"
+   }
+  ],
+  "chain": [
+   "Y-根",
+   "CT（CT 大支）",
+   "CF",
+   "F",
+   "GHIJK",
+   "HIJK",
+   "IJK",
+   "K",
+   "K2",
+   "K2b",
+   "P1",
+   "Q",
+   "Q1",
+   "Q1a",
+   "Q1a1",
+   "Q1a1a",
+   "Q1a1a1 (M120)"
+  ],
+  "evidence": [
+   {
+    "marker": "M168",
+    "branch": "CT（CT 大支）",
+    "rsid": "rs2032595",
+    "pos": 14813991,
+    "mutation": "C→T",
+    "observed": "T",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "CTS3818",
+    "branch": "CF",
+    "rsid": "",
+    "pos": 15203676,
+    "mutation": "A→G",
+    "observed": "G",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "M89",
+    "branch": "F",
+    "rsid": "rs2032652",
+    "pos": 21917313,
+    "mutation": "C→T",
+    "observed": "T",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "M9",
+    "branch": "K",
+    "rsid": "rs3900",
+    "pos": 21730257,
+    "mutation": "C→G",
+    "observed": "G",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "P128",
+    "branch": "K",
+    "rsid": "rs17250121",
+    "pos": 20837553,
+    "mutation": "C→T",
+    "observed": "T",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "P331",
+    "branch": "K2b",
+    "rsid": "rs9785994",
+    "pos": 16222561,
+    "mutation": "C→T",
+    "observed": "T",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "M45",
+    "branch": "P1",
+    "rsid": "rs2032631",
+    "pos": 21867787,
+    "mutation": "G→A",
+    "observed": "A",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "M1047",
+    "branch": "Q",
+    "rsid": "",
+    "pos": 22195010,
+    "mutation": "C→T",
+    "observed": "T",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "CTS3727",
+    "branch": "Q",
+    "rsid": "",
+    "pos": 15134176,
+    "mutation": "G→A",
+    "observed": "A",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "L273.1",
+    "branch": "Q1",
+    "rsid": "",
+    "pos": 17595874,
+    "mutation": "C→T",
+    "observed": "T",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "F746",
+    "branch": "Q1a1a",
+    "rsid": "",
+    "pos": 2888083,
+    "mutation": "C→G",
+    "observed": "G",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "M120",
+    "branch": "Q1a1a1 (M120)",
+    "rsid": "rs374472129",
+    "pos": 21907394,
+    "mutation": "T→C",
+    "observed": "C",
+    "status": "derived",
+    "note": ""
+   },
+   {
+    "marker": "M265/N14",
+    "branch": "Q1a1a1 (M120)",
+    "rsid": "rs3212294",
+    "pos": 15030650,
+    "mutation": "C→A",
+    "observed": "A",
+    "status": "derived",
+    "note": ""
+   }
+  ],
+  "dup_side": [
+   {
+    "marker": "F903",
+    "branch": "Q1a",
+    "rsid": "rs35724598",
+    "pos": 7014317,
+    "mutation": "G→C",
+    "observed": "C",
+    "status": "dup",
+    "note": ""
+   },
+   {
+    "marker": "F1215",
+    "branch": "Q1a1",
+    "rsid": "",
+    "pos": 8454150,
+    "mutation": "A→C",
+    "observed": "C",
+    "status": "dup",
+    "note": ""
+   },
+   {
+    "marker": "F844",
+    "branch": "Q1a1",
+    "rsid": "",
+    "pos": 6871854,
+    "mutation": "G→T",
+    "observed": "T",
+    "status": "dup",
+    "note": ""
+   }
+  ],
+  "uncovered": [
+   {
+    "marker": "P143",
+    "branch": "CF",
+    "rsid": "rs4141886",
+    "pos": 14197867,
+    "mutation": "G→A",
+    "observed": null,
+    "status": "uncovered",
+    "note": ""
+   },
+   {
+    "marker": "M522",
+    "branch": "IJK",
+    "rsid": "rs9786714",
+    "pos": 7173143,
+    "mutation": "G→A",
+    "observed": null,
+    "status": "uncovered",
+    "note": ""
+   },
+   {
+    "marker": "M526",
+    "branch": "K2",
+    "rsid": "rs2033003",
+    "pos": 23550924,
+    "mutation": "A→C",
+    "observed": null,
+    "status": "uncovered",
+    "note": ""
+   },
+   {
+    "marker": "M242",
+    "branch": "Q",
+    "rsid": "rs8179021",
+    "pos": 15018582,
+    "mutation": "C→T",
+    "observed": null,
+    "status": "uncovered",
+    "note": "Q 根定义位点，本芯片未覆盖"
+   },
+   {
+    "marker": "FGC1755",
+    "branch": "Q",
+    "rsid": "",
+    "pos": 13227885,
+    "mutation": "C→T",
+    "observed": "CT",
+    "status": "ambiguous",
+    "note": ""
+   }
+  ],
+  "excluded": [
+   {
+    "branch": "DE",
+    "reason": "无衍生标记；祖先型：M174−, M96−"
+   },
+   {
+    "branch": "C",
+    "reason": "无衍生标记；祖先型：M130−"
+   },
+   {
+    "branch": "G",
+    "reason": "无衍生标记；祖先型：M201−"
+   },
+   {
+    "branch": "H",
+    "reason": "无衍生标记；祖先型：M69−"
+   },
+   {
+    "branch": "IJ",
+    "reason": "无衍生标记；祖先型：M170−, M304−"
+   },
+   {
+    "branch": "LT",
+    "reason": "无衍生标记；祖先型：M20−, M70−"
+   },
+   {
+    "branch": "K2a (NO)",
+    "reason": "无衍生标记；祖先型：M231−, M268−, M88−, M176−, M324−, P201−"
+   },
+   {
+    "branch": "K2b1 (M,S)",
+    "reason": "无衍生标记；祖先型：P256−"
+   },
+   {
+    "branch": "R",
+    "reason": "无衍生标记；祖先型：M207−, M173−, M343−"
+   },
+   {
+    "branch": "Q1b",
+    "reason": "无衍生标记；祖先型：M378−"
+   }
+  ],
+  "confirmed_levels": [
+   "CT（CT 大支）",
+   "CF",
+   "F",
+   "K",
+   "K2b",
+   "P1",
+   "Q",
+   "Q1",
+   "Q1a1a",
+   "Q1a1a1 (M120)"
+  ],
+  "presumed_levels": [
+   "GHIJK",
+   "HIJK",
+   "IJK",
+   "K2",
+   "Q1a",
+   "Q1a1"
+  ]
+ },
+ "caveats": [
+  "本页判定为「粗判」：给出的是当前芯片数据能支撑的最深支系，全部证据见下方表格，可自行核对。",
+  "线粒体基因组覆盖约 22.3%（3698/16,569），另有 29 个混合读数被忽略；控制区（D-loop）覆盖有限，部分亚支无法分辨属预期行为。",
+  "Y 染色体 6.5-9.0Mb 存在多拷贝/回文区，该区间读数不可靠，不参与判定（仅作旁证）；Q 支系根定义位点 M242 未被芯片覆盖，由 3 个单拷贝区内部标记与下游 M120/M265 共同确证。",
+  "单倍群不与任何民族、地域或身份挂钩，也不代表全部祖先构成；祖源定量分析见 ROADMAP。"
+ ],
+ "method": {
+  "mt_tree": "PhyloTree Build 17.3（van Oven & Kayser 2009；genepi/haplogrep3 rCRS 重定位版）",
+  "mt_source": "https://github.com/genepi/phylotree-rcrs-17（release 17.3）",
+  "y_tree": "ISOGG 2016.01.04 SNP 表（23andMe/yhaplo 版）主干手工策展；仅收录与判定相关的标记",
+  "y_source": "https://github.com/23andMe/yhaplo"
+ }
+}

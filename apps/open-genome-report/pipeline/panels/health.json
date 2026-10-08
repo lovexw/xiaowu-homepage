@@ -1,0 +1,354 @@
+{
+  "module": "health",
+  "title": "健康风险参考",
+  "icon": "🫀",
+  "intro": "本模块展示与常见慢病风险相关的经典易感位点。⚠️ 必读：这里展示的是「统计学关联」，不是「个人命运」。GWAS 位点的风险等位基因普遍只使患病概率变动 10-50%（相对），且大多数疾病的风险由年龄、饮食、运动、吸烟、血脂血压等可改变因素主导。本模块数据来自消费级芯片（研究用途），不构成临床风险预测，也不应触发任何医疗决定。如需临床级评估，请做专门的基因检测并结合家族史咨询医生。",
+  "entries": [
+    {
+      "rsid": "rs7903146",
+      "gene": "TCF7L2",
+      "variant": "2 型糖尿病最强易感位点 TCF7L2 rs7903146 (C>T)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "代谢疾病",
+      "interp": {
+        "CC": ["野生型（C/C）", "不携带该最强糖尿病风险等位基因；东亚人群 T 频率低（~2-5%），本数据为典型东亚型。"],
+        "CT": ["携带 T", "2 型糖尿病风险 OR≈1.4；仍需结合 BMI/腰围评估。"],
+        "TT": ["T/T", "风险 OR≈1.8-2.0（欧洲数据）。"]
+      },
+      "confidence": "high",
+      "evidence": ["Grant et al., Science 2006", "GWAS Catalog T2D"],
+      "note": "同时 rs12255372 (G/T, T=风险) 亦为野生，进一步支持低风险判断。"
+    },
+    {
+      "rsid": "rs12255372",
+      "gene": "TCF7L2",
+      "variant": "TCF7L2 rs12255372 (G>T)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "T",
+      "group": "代谢疾病",
+      "interp": {
+        "GG": ["野生型", "与 rs7903146 一致，指向低 TCF7L2 遗传风险。"],
+        "GT": ["携带 T", "风险轻微升高。"],
+        "TT": ["T/T", "风险升高。"]
+      },
+      "confidence": "high",
+      "evidence": ["GWAS Catalog T2D"],
+      "note": "本数据 G/G。"
+    },
+    {
+      "rsid": "rs13266634",
+      "gene": "SLC30A8",
+      "variant": "SLC30A8 R325W (c.973C>T) — 胰岛锌转运体",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "代谢疾病",
+      "interp": {
+        "CC": ["Arg/Arg", "常见型（保护性方向）。"],
+        "CT": ["Arg/Trp", "2 型糖尿病风险 OR≈1.14（微妙但全基因组显著）。"],
+        "TT": ["Trp/Trp", "风险 OR≈1.25。2014 年功能缺失研究提示罕见截断变异反而保护，说明该通路复杂。"]
+      },
+      "confidence": "high",
+      "evidence": ["Sladek et al., Nature 2007", "Flannick et al., Nat Genet 2014"],
+      "note": "本数据 T/T 为风险纯合 —— 但绝对风险变动仍有限，控重与运动的影响远大于此。⚠️ 该位点列入 dbSNP 校验清单，解读以校验后等位基因为准。"
+    },
+    {
+      "rsid": "rs5219",
+      "gene": "KCNJ11",
+      "variant": "KCNJ11 E23K (c.67G>A)",
+      "gene_strand": "-",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "代谢疾病",
+      "interp": {
+        "CC": ["Glu/Glu", "常见型。"],
+        "CT": ["Glu/Lys", "T2D 风险轻微升高（OR≈1.15）。"],
+        "TT": ["Lys/Lys", "风险略高。"]
+      },
+      "confidence": "high",
+      "evidence": ["GWAS Catalog T2D"],
+      "note": "本数据 C/C 常见型。等位基因方向以校验为准。"
+    },
+    {
+      "rsid": "rs1333049",
+      "gene": "9p21.3 (CDKN2B-AS1 区)",
+      "variant": "冠心病最强遗传易感区 9p21 rs1333049 (G>C，dbSNP 已确认)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "C",
+      "group": "心血管",
+      "interp": {
+        "CC": ["风险等位基因纯合（C/C）", "冠心病风险相对升高（OR≈1.5-1.8 vs G/G）；东亚人群 C 频率约 0.55-0.65，本基因型在人群中也常见。可通过戒烟、运动、血压血脂管理显著压缩风险差异。"],
+        "GC": ["携带一个风险等位基因", "风险中度升高。"],
+        "GG": ["无风险等位基因", "相对保护。"]
+      },
+      "confidence": "high",
+      "evidence": ["McPherson et al., Science 2007", "Helgadottir et al., Science 2007"],
+      "note": "本数据 C/C。方向性说明：9p21 风险等位基因在部分文献以反向链记录为 T，本报告统一采用 dbSNP 正链口径（C 为风险）。"
+    },
+    {
+      "rsid": "rs10757274",
+      "gene": "9p21.3 (CDKN2B-AS1 区)",
+      "variant": "冠心病 9p21 连锁位点 rs10757274 (A/G)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "心血管",
+      "interp": {
+        "AA": ["无风险等位基因（就 G 而言）", "相对保护。"],
+        "AG": ["携带一个 G", "风险中度升高（与 rs1333049 连锁，非独立证据）。"],
+        "GG": ["G/G", "风险纯合。"]
+      },
+      "confidence": "medium",
+      "evidence": ["GWAS Catalog CAD"],
+      "note": "本数据 A/G，与 rs1333049 结果相互印证（均携带风险等位基因）。"
+    },
+    {
+      "rsid": "rs9939609",
+      "gene": "FTO",
+      "variant": "肥胖主效位点 FTO rs9939609 (T>A)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "A",
+      "group": "体重",
+      "interp": {
+        "TT": ["无风险等位基因", "不携带该肥胖风险等位基因（A）。东亚人群 A 频率约 0.1-0.15。"],
+        "TA": ["携带 A", "平均体重 +0.8-1.2kg，肥胖风险 OR≈1.2-1.3。"],
+        "AA": ["A/A", "平均体重 +1.5-3kg，肥胖风险 OR≈1.4-1.7。"]
+      },
+      "confidence": "high",
+      "evidence": ["Frayling et al., Science 2007", "GWAS Catalog BMI"],
+      "note": "本数据 T/T —— FTO 三位点（rs9939609/rs1421085/rs8050136）均为无风险等位基因组合，体重遗传倾向低。"
+    },
+    {
+      "rsid": "rs1421085",
+      "gene": "FTO",
+      "variant": "FTO rs1421085 (T>C)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "体重",
+      "interp": {
+        "TT": ["无风险等位基因", "C 为风险等位基因（IRX3/IRX5 增强子变异）。"],
+        "TC": ["携带 C", "风险轻微升高。"],
+        "CC": ["C/C", "风险较高（脂肪产热减少）。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Claussnitzer et al., NEJM 2015 (机制研究)"],
+      "note": "本数据 T/T。"
+    },
+    {
+      "rsid": "rs8050136",
+      "gene": "FTO",
+      "variant": "FTO rs8050136 (C>A)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "A",
+      "group": "体重",
+      "interp": {
+        "CC": ["无风险等位基因", "A 为风险等位基因。"],
+        "CA": ["携带 A", "风险轻微升高。"],
+        "AA": ["A/A", "风险较高。"]
+      },
+      "confidence": "medium",
+      "evidence": ["GWAS Catalog BMI"],
+      "note": "本数据 C/C。"
+    },
+    {
+      "rsid": "rs17782313",
+      "gene": "MC4R 区",
+      "variant": "MC4R 区 rs17782313 (T>C)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "体重",
+      "interp": {
+        "TT": ["无风险等位基因", "常见型。"],
+        "TC": ["携带 C", "平均体重轻度增加（约 +0.5-1kg），食欲调节差异。"],
+        "CC": ["C/C", "效应略大。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Loos et al., Nat Genet 2008"],
+      "note": "本数据 T/C —— 携带一份 C，BMI 遗传倾向整体仍偏低（结合 FTO 组合）。"
+    },
+    {
+      "rsid": "rs2802292",
+      "gene": "FOXO3A",
+      "variant": "长寿基因 FOXO3 rs2802292 (G>T)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "T",
+      "group": "长寿",
+      "interp": {
+        "TT": ["T/T · 长寿相关等位基因纯合", "FOXO3 是跨人群（日裔美籍、德、中、韩、意等）复现最稳定的长寿相关基因；T 等位基因与更长寿、心血管病风险较低相关。"],
+        "TG": ["携带 G（非长寿方向）", "关联较弱。"],
+        "GG": ["G/G", "非长寿方向等位基因纯合。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Willcox et al., PNAS 2008", "多人群复现研究"],
+      "note": "本数据 T/T —— 在长寿相关位点上是'好'的组合。注意：长寿是多基因+生活方式的综合结果。"
+    },
+    {
+      "rsid": "rs2736100",
+      "gene": "TERT 区 (5p15.33)",
+      "variant": "端粒酶逆转录酶区 rs2736100 (A/C)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "C",
+      "group": "肿瘤相关",
+      "interp": {
+        "AA": ["A/A", "与较长白细胞端粒及部分肿瘤风险差异相关。"],
+        "AC": ["杂合", "中间。"],
+        "CC": ["C/C", "与端粒长度及肿瘤易感性差异相关（方向因癌种而异）。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS Catalog 端粒长度/胶质瘤"],
+      "note": "本数据 A/C。此处仅展示分型，不建议做个人化风险解读。"
+    },
+    {
+      "rsid": "rs10936599",
+      "gene": "TERC 区 (3q26)",
+      "variant": "端粒 RNA 组分区 rs10936599 (T/C)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "长寿与肿瘤",
+      "interp": {
+        "TT": ["T/T", "与较长端粒相关等位基因。"],
+        "TC": ["杂合", "中间。"],
+        "CC": ["C/C", "与端粒长度及某些肿瘤易感性相关。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS Catalog 端粒长度"],
+      "note": "本数据 T/T。"
+    },
+    {
+      "rsid": "rs1800562",
+      "gene": "HFE",
+      "variant": "血色病 HFE C282Y (c.845G>A 基因方向)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "遗传病携带",
+      "interp": {
+        "GG": ["未携带 C282Y", "不携带北欧人群最常见的血色病突变（东亚本就极罕见）。"],
+        "GA": ["携带一份 C282Y", "杂合携带者一般不发病。"],
+        "AA": ["C282Y 纯合", "遗传性血色病高风险，需铁蛋白监测。"]
+      },
+      "confidence": "high",
+      "evidence": ["Feder et al., Nat Genet 1996"],
+      "note": "本数据 G/G 野生。与 rs1799945 (H63D) 一并评估。"
+    },
+    {
+      "rsid": "rs1799945",
+      "gene": "HFE",
+      "variant": "血色病 HFE H63D (c.187C>G 基因方向)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "遗传病携带",
+      "interp": {
+        "CC": ["未携带 H63D", "野生型。"],
+        "CG": ["携带一份 H63D", "单独存在时临床意义小。"],
+        "GG": ["H63D 纯合", "铁储备轻度升高倾向。"]
+      },
+      "confidence": "high",
+      "evidence": ["GWAS/文献共识"],
+      "note": "本数据 C/C 野生。两个 HFE 位点均野生 → 血色病遗传风险极低。"
+    },
+    {
+      "rsid": "rs11136000",
+      "gene": "CLU (APOJ)",
+      "variant": "阿尔茨海默病易感位点 CLU rs11136000 (T/C)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "神经退行",
+      "interp": {
+        "TT": ["T/T（保护方向）", "不携带风险等位基因 C（OR≈1.16）。"],
+        "TC": ["携带 C", "风险轻微升高。"],
+        "CC": ["C/C", "风险略高。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Harold et al., Nat Genet 2009"],
+      "note": "本数据 T/T 保护方向。（APOE 见下方联合判定卡片，为最强 AD 遗传因素。）"
+    },
+    {
+      "rsid": "rs744373",
+      "gene": "PICALM",
+      "variant": "阿尔茨海默病易感位点 PICALM rs744373 (A/G)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "神经退行",
+      "interp": {
+        "AA": ["A/A", "不携带风险等位基因 G（OR≈1.13）。"],
+        "AG": ["携带 G", "风险轻微升高。"],
+        "GG": ["G/G", "风险略高。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Harold et al., Nat Genet 2009"],
+      "note": "本数据 A/A 保护方向。"
+    },
+    {
+      "rsid": "rs4880",
+      "gene": "SOD2 — 已移至「代谢与营养」",
+      "variant": "（交叉引用）",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "交叉引用",
+      "interp": {},
+      "confidence": "low",
+      "crosslink": "metabolism",
+      "note": "为避免重复，SOD2/ALDH2/CYP1A2 等位点已归入其他模块。"
+    },
+    {
+      "rsid": "rs5030868",
+      "gene": "G6PD (X 染色体)",
+      "variant": "G6PD A- 型（G202A，非洲型蚕豆病变异）",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "遗传病携带（Caveat 详读）",
+      "interp": {
+        "GG": ["未携带 A- 型变异（男性半合子野生）", "就本位点而言 G6PD 正常。⚠️ 重要：蚕豆病（G6PD 缺乏症）在东亚的常见变异与此不同（如 c.1387G>T、c.95A>G、IVS XI+48 等），芯片均未覆盖——本结果不能用于排除蚕豆病。G6PD 缺乏会影响磺胺、伯氨喹等药物使用，请以新生儿筛查/酶活性检测为准。"],
+        "GA": ["携带 A-（女性杂合）", "女性杂合通常症状轻或无症状，用药前仍需酶活性检测。"],
+        "AA": ["A- 纯合/半合子", "G6PD 活性显著降低。"]
+      },
+      "confidence": "high",
+      "evidence": ["G6PD 变异库（WHO 分型）"],
+      "note": "本数据 G/G：仅排除非洲型变异。东亚常见变异未覆盖，见 interp 中的重要提醒。"
+    }
+  ],
+  "special_cards": [
+    {
+      "title": "APOE 基因型联合判定（rs429358 + rs7412）",
+      "text": "本数据 rs429358=T/T、rs7412=C/C，判定为 APOE ε3/ε3 —— 人群中最常见（约 60%）的基因型：阿尔茨海默病风险为人群基线，血脂代谢无特殊遗传倾向。ε2/ε4 组合均未出现。",
+      "level": "normal"
+    },
+    {
+      "title": "2 型糖尿病遗传画像",
+      "text": "TCF7L2 双位点野生 + KCNJ11 野生 + PPARγ 野生，主要糖尿病易感位点整体为低风险组合；唯 SLC30A8 T/T 为风险纯合。整体遗传风险倾向低于人群平均。保持正常体重与肌肉量的收益仍然最大。",
+      "level": "favorable"
+    },
+    {
+      "title": "心血管遗传画像",
+      "text": "9p21 区携带风险等位基因（rs1333049 + rs10757274 相互印证），但 LPL S447X 野生、SLCO1B1 正常、载脂蛋白相关位点无高风险组合。9p21 的风险可通过不吸烟、规律有氧运动、控制血压血脂大幅压缩；建议 35 岁后定期血脂血压监测。",
+      "level": "caution"
+    },
+    {
+      "title": "体重遗传画像",
+      "text": "FTO 三位点均无风险等位基因 + MC4R 单份 —— BMI 遗传倾向低于人群平均。",
+      "level": "favorable"
+    },
+    {
+      "title": "本模块不覆盖的内容",
+      "text": "乳腺癌 BRCA1/2 大片段变异、Lynch 综合征错配修复基因、家族性高胆固醇血症 LDLR/APOB 等，均需测序级检测且属于临床遗传病范畴，芯片数据不可靠，本报告明确不做推断。",
+      "level": "attention"
+    }
+  ]
+}

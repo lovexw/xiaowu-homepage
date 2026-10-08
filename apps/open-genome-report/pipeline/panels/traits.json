@@ -1,0 +1,450 @@
+{
+  "module": "traits",
+  "title": "特质与心理",
+  "icon": "🧠",
+  "intro": "本模块涵盖认知、性格、感官与体质的候选基因位点。⚠️ 重要提醒：行为与心理性状受基因网络与环境共同影响，任何单个位点的解释力都很小（通常 <1% 的方差），且复现性参差不齐。以下内容请当作「有趣的可能倾向」而非标签或自我预言。",
+  "entries": [
+    {
+      "rsid": "rs4680",
+      "gene": "COMT",
+      "variant": "COMT Val158Met (c.472G>A)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "认知与压力",
+      "interp": {
+        "GG": ["Val/Val · 儿茶酚胺降解快", "前额叶多巴胺水平偏低倾向：工作记忆稳定性稍弱，但对压力耐受（'战士'型）更好，情绪恢复快。"],
+        "AG": ["Val/Met · 平衡型", "介于两种表型之间，执行功能较平衡（'战士-诗人'中间型）。"],
+        "AA": ["Met/Met · 降解慢", "前额叶多巴胺水平较高：工作记忆与注意细节占优（'诗人'型），但压力下认知表现易受损。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Lachman et al., 1996", "Stein et al. 战士-诗人框架（元分析效应量小）"],
+      "note": "本数据 Val/Met 平衡型。该位点对实际行为的解释力很小，请勿过度解读。"
+    },
+    {
+      "rsid": "rs6265",
+      "gene": "BDNF",
+      "variant": "BDNF Val66Met (c.196G>A 基因方向)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "认知与神经可塑性",
+      "interp": {
+        "CC": ["Val/Val · 野生型", "活动依赖性 BDNF 分泌正常，神经可塑性与运动获益不受影响。"],
+        "CT": ["Val/Met", "活动依赖性 BDNF 分泌略降；与情景记忆表现、运动后 BDNF 升高幅度较小相关（效应小）。"],
+        "TT": ["Met/Met", "分泌降幅更大的纯合型（东亚罕见，约 0-5%）。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Egan et al., Cell 2003", "元分析：对记忆效应量小"],
+      "note": "本数据 Val/Met。有氧运动仍是提升 BDNF 最可靠的方式。"
+    },
+    {
+      "rsid": "rs53576",
+      "gene": "OXTR",
+      "variant": "催产素受体 rs53576 (A/G)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "社交与情绪",
+      "interp": {
+        "AA": ["A/A", "部分研究：社会支持应对压力时的情绪获益较小、共情自我报告偏低（效应小且复现性一般）。"],
+        "AG": ["A/G", "中间型。"],
+        "GG": ["G/G", "'亲社会'等位基因：与共情、社会支持缓冲效应增强相关（效应小）。"]
+      },
+      "confidence": "low",
+      "evidence": ["Tost et al., 2010 综述", "后续大规模 GWAS 支持弱"],
+      "note": "本数据 A/G 中间型。社交能力的实际解释力非常有限。"
+    },
+    {
+      "rsid": "rs1042778",
+      "gene": "OXTR",
+      "variant": "催产素受体 rs104778 (T/G)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "G",
+      "group": "社交与情绪",
+      "interp": {
+        "TT": ["T/T", "部分研究与社会认知差异相关。"],
+        "TG": ["T/G", "中间型。"],
+        "GG": ["G/G", "部分研究提示与共情/亲子行为差异相关。"]
+      },
+      "confidence": "low",
+      "evidence": ["PharmGKB/Literature 综述"],
+      "note": "本数据 G/G。证据等级低。"
+    },
+    {
+      "rsid": "rs2254298",
+      "gene": "OXTR",
+      "variant": "催产素受体 rs2254298 (A/G)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "社交与情绪",
+      "interp": {
+        "AA": ["A/A", "部分研究提示与依恋/应激敏感性差异相关。"],
+        "AG": ["A/G", "中间型。"],
+        "GG": ["G/G", "部分研究提示与更晚的依恋形成等差异相关。"]
+      },
+      "confidence": "low",
+      "evidence": ["Chen et al., 2011", "复现性有限"],
+      "note": "本数据 G/G。证据等级低。"
+    },
+    {
+      "rsid": "rs1800497",
+      "gene": "ANKK1 (影响 DRD2)",
+      "variant": "DRD2/ANKK1 Taq1A (rs1800497)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "奖赏与成瘾",
+      "interp": {
+        "GG": ["Taq1A T/T（DRD2 密度较高组）", "纹状体 D2 受体可用性较高，与物质成瘾易感性较低相关。"],
+        "AG": ["Taq1A C/T（A1 携带）", "D2 受体可用性降低 30-40%（PET 证据），与奖赏敏感性变化、成瘾易感性略增相关。"],
+        "AA": ["Taq1A C/C（A1/A1）", "同上更明显。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Thompson et al., 1997 (PET)", "Noble 系列研究"],
+      "note": "本数据 A1 携带（AG）。该关联对个体预测价值有限。"
+    },
+    {
+      "rsid": "rs6280",
+      "gene": "DRD3",
+      "variant": "DRD3 Ser9Gly (rs6280)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "奖赏与成瘾",
+      "interp": {
+        "TT": ["Ser/Ser", "常见型。"],
+        "TC": ["Ser/Gly", "与帕金森病易感性/冲动行为差异的候选位点（效应小）。"],
+        "CC": ["Gly/Gly", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS Catalog 帕金森/行为关联（弱）"],
+      "note": "本数据 Ser/Gly。仅供了解。"
+    },
+    {
+      "rsid": "rs6311",
+      "gene": "HTR2A",
+      "variant": "5-羟色胺 2A 受体 -1438A>G (rs6311)",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "情绪与用药",
+      "interp": {
+        "TT": ["野生型", "常见型。"],
+        "TC": ["杂合", "该启动子位点与 5-HT2A 表达及抗抑郁药反应差异的候选关联。"],
+        "CC": ["-1438G/G", "部分研究提示与厌食/强迫谱系差异相关（弱）。"]
+      },
+      "confidence": "low",
+      "evidence": ["PharmGKB HTR2A（抗抑郁药反应证据弱）"],
+      "note": "本数据杂合。证据等级低。"
+    },
+    {
+      "rsid": "rs6313",
+      "gene": "HTR2A",
+      "variant": "5-羟色胺 2A 受体 102T>C (rs6313)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "情绪与用药",
+      "interp": {
+        "AA": ["102T/T", "常见型。"],
+        "AG": ["102T/C", "与 rs6311 强连锁；部分研究与非自杀性自伤/抑郁易感性关联（弱）。"],
+        "GG": ["102C/C", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS/PharmGKB（弱）"],
+      "note": "本数据 102T/C。"
+    },
+    {
+      "rsid": "rs17070145",
+      "gene": "KIBRA (WWC1)",
+      "variant": "KIBRA rs17070145 (C/T)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "记忆",
+      "interp": {
+        "CC": ["C/C", "与延迟回忆得分较低相关的基因型（效应小）。"],
+        "CT": ["C/T", "中间。"],
+        "TT": ["T/T", "与情景/延迟回忆表现较好相关的基因型（效应小）。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Papassotiropoulos et al., Science 2006", "后续复现部分成功"],
+      "note": "本数据 T/T，指向较优的情景记忆潜质；对个体预测价值有限。"
+    },
+    {
+      "rsid": "rs1801260",
+      "gene": "CLOCK",
+      "variant": "CLOCK 3111T/C (rs1801260；dbSNP 正链 A>G)",
+      "gene_strand": "-",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "昼夜节律",
+      "interp": {
+        "AA": ["3111 T/T（基因方向）· 野生型", "与'晨型'倾向无特殊关联。本数据即此基因型。"],
+        "AG": ["携带 C（基因方向）", "部分研究：携带 C 与入睡延迟、偏好晚间活动相关（欧洲人群证据，效应小）。"],
+        "GG": ["3111 C/C（基因方向）", "同上更明显（'夜猫子'倾向）。"]
+      },
+      "confidence": "low",
+      "evidence": ["Katzenberg et al., Sleep 1998", "复现结果不一"],
+      "note": "本数据 A/A 野生型，无晚睡倾向的该位点证据。光照与作息仍是决定性因素。"
+    },
+    {
+      "rsid": "rs1360780",
+      "gene": "FKBP5",
+      "variant": "FKBP5 rs1360780 (C/T)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "应激反应",
+      "interp": {
+        "CC": ["C/C", "常见型；FKBP5 应激调节基线。"],
+        "CT": ["C/T", "携带 T：应激时 FKBP5 诱导更强，HPA 轴负反馈减弱；与童年创伤叠加时的抑郁/PTSD 易感性升高相关（基因×环境交互研究的经典位点）。"],
+        "TT": ["T/T", "同上更明显。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Binder et al., Science 2004", "Klengel et al., Nat Neurosci 2013 (表观交互)"],
+      "note": "本数据 C/T。该位点的风险意义高度依赖环境（创伤暴露），单独存在不构成预测。"
+    },
+    {
+      "rsid": "rs6323",
+      "gene": "MAOA (X 染色体)",
+      "variant": "MAOA rs6323 (G/T, c.897G>T? R297R)",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "T",
+      "group": "神经递质降解",
+      "interp": {
+        "GG": ["G（半合子，男性）", "该位点与 MAOA 活性调节相关；MAOA 经典'战士基因'研究针对的是启动子 uVNTR，而非此 SNP，请注意区分。"],
+        "TG": ["女性杂合（X 染色体失活混合）"],
+        "TT": ["T（半合子，男性）", "部分研究指向 MAOA 活性差异。"]
+      },
+      "confidence": "low",
+      "evidence": ["PharmGKB MAOA"],
+      "note": "本数据为 X 染色体半合子 G。uVNTR 结构变异无法用该 SNP 代表。"
+    },
+    {
+      "rsid": "rs1815739",
+      "gene": "ACTN3",
+      "variant": "ACTN3 R577X (c.1729C>T)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "运动类型",
+      "interp": {
+        "CC": ["R/R · α-辅肌动蛋白-3 正常表达", "快肌纤维表达完整，爆发力项目（短跑/力量）遗传倾向较好（影响幅度小）。"],
+        "CT": ["R/X", "一份功能性 α-辅肌动蛋白；爆发与耐力均衡。"],
+        "TT": ["X/X · 无功能性 α-辅肌动蛋白-3", "慢肌/氧化代谢倾向更强，与耐力表现及肌肉损伤恢复差异相关（约 18% 欧洲人、<5% 东亚人为 X/X）。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Yang et al., Am J Hum Genet 2003", "运动员队列多项复现"],
+      "note": "本数据 R/X 均衡型。基因型不能替代训练，只描述'起点微差'。"
+    },
+    {
+      "rsid": "rs3827760",
+      "gene": "EDAR",
+      "variant": "EDAR V370A (c.1540T>C, 370A 衍生等位基因)",
+      "gene_strand": "-",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "体质特征（东亚适应）",
+      "interp": {
+        "AA": ["V370 ancestral", "欧非人群主流。"],
+        "AG": ["370A 杂合", "部分东亚表型。"],
+        "GG": ["370A/370A（衍生纯合）", "约 93% 东亚人携带：直粗头发、汗腺密度较高、铲形门齿、乳腺/汗腺发育差异等。该变异约 3 万年前出现在东亚祖先群体并受正选择。"]
+      },
+      "confidence": "high",
+      "evidence": ["Kamberov et al., Cell 2013", "Grossman et al., Cell 2013"],
+      "note": "本数据为衍生纯合，典型的东亚适应性基因型。"
+    },
+    {
+      "rsid": "rs17822931",
+      "gene": "ABCC11",
+      "variant": "ABCC11 538G>A (耳垢干湿 + 腋臭主效位点)",
+      "gene_strand": "-",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "体质特征",
+      "interp": {
+        "CC": ["湿性耳垢（Wt/Wt）", "湿型耳垢，腋下大汗腺分泌活跃（欧洲/非洲主流，干性为东亚衍生）。"],
+        "CT": ["杂合，多为湿性或中间", "湿型表型但分泌可能减弱。"],
+        "TT": ["干性耳垢（1800G>A 纯合）", "耳垢干性、腋臭风险极低、乳汁分泌相关物减少。约 80-95% 东亚人携带。"]
+      },
+      "confidence": "high",
+      "evidence": ["Yoshiura et al., Nat Genet 2006"],
+      "note": "本数据干性纯合，为典型东亚表型。"
+    },
+    {
+      "rsid": "rs713598",
+      "gene": "TAS2R38",
+      "variant": "苦味受体 TAS2R38 位点 1/3 (PAV/AVI 单倍型组成)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "味觉",
+      "interp": {
+        "CC": ["敏感单倍型组分纯合", "该位点为苦味敏感（PAV）方向组分。"],
+        "CG": ["杂合", "PAV/AVI 混合（三点综合判断见下）。"],
+        "GG": ["非敏感组分纯合", "该位点为非敏感（AVI）方向组分。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Kim et al., Science 2003 (TAS2R38 PAV/AVI)"],
+      "note": "需要 rs713598 + rs1726866 + rs10246939 三点共同判定单倍型；本数据三点均为杂合 → PAV/AVI 双单倍型，中等苦味敏感。"
+    },
+    {
+      "rsid": "rs1726866",
+      "gene": "TAS2R38",
+      "variant": "苦味受体 TAS2R38 位点 2/3",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "味觉",
+      "interp": {
+        "AA": ["单方向纯合", "组分之一。"],
+        "AG": ["杂合", "PAV/AVI 混合。"],
+        "GG": ["单方向纯合", "组分之一。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Kim et al., Science 2003"],
+      "note": "本数据 A/G（dbSNP 正链 G>A）。三点综合判断见位点 1/3。"
+    },
+    {
+      "rsid": "rs10246939",
+      "gene": "TAS2R38",
+      "variant": "苦味受体 TAS2R38 位点 3/3",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "味觉",
+      "interp": {
+        "TT": ["单方向纯合", "组分之一。"],
+        "TC": ["杂合", "PAV/AVI 混合。"],
+        "CC": ["单方向纯合", "组分之一。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Kim et al., Science 2003"],
+      "note": "本数据 T/C。三点综合：PAV/AVI 杂合 → 中等苦味敏感（能尝出 PTC/苦味，弱于 PAV 纯合）。"
+    },
+    {
+      "rsid": "rs10427255",
+      "gene": "ACHOO 光喷嚏反射 (2q37)",
+      "variant": "看到阳光想打喷嚏的反射 rs10427255",
+      "gene_strand": "+",
+      "plus_ref": "T",
+      "plus_alt": "C",
+      "group": "趣味特征",
+      "interp": {
+        "TT": ["无光喷嚏反射倾向", "走出暗处见到阳光不会喷嚏连连。"],
+        "TC": ["中等光喷嚏反射", "从暗处走向阳光时偶尔想打喷嚏——这是真实存在的'光喷嚏反射'（ACHOO 综合征），约 1/4 人口有此反射。"],
+        "CC": ["强光喷嚏反射", "见光打喷嚏的倾向明显。无害，纯属神经回路'串线'：三叉神经与视神经在脑内离得太近。"]
+      },
+      "confidence": "medium",
+      "evidence": ["GWAS Catalog 'photic sneeze reflex'（祖先公司大型队列）"],
+      "note": "本数据 T/C —— 中等倾向。安全影响：开车出隧道时留意。"
+    },
+    {
+      "rsid": "rs12913832",
+      "gene": "HERC2 (调控 OCA2)",
+      "variant": "虹膜（眼睛颜色）主效位点 rs12913832",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "外貌特征",
+      "interp": {
+        "AA": ["深棕色虹膜", "该位点是人类虹膜颜色最强决定位点：G/G 组合才可能出现蓝眼睛，A/A 高度确定深棕色。东亚人群几乎全部为 A/A。"],
+        "AG": ["棕色为主", "携带一份衍生等位基因，虹膜颜色仍偏深。"],
+        "GG": ["蓝眼睛可能", "欧洲人群蓝眼睛的经典组合。"]
+      },
+      "confidence": "high",
+      "evidence": ["Eiberg et al., Am J Hum Genet 2008"],
+      "note": "本数据 A/A —— 典型的深棕色虹膜基因型。"
+    },
+    {
+      "rsid": "rs1800407",
+      "gene": "OCA2",
+      "variant": "虹膜颜色次效位点 rs1800407",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "外貌特征",
+      "interp": {
+        "CC": ["指向深色虹膜的组合", "与 rs12913832 A/A 一致：深棕色虹膜。"],
+        "CG": ["中间", "单一位点不改变结论。"],
+        "GG": ["与浅色虹膜相关的组合（欧洲人群）", "需与主效位点联合判断。"]
+      },
+      "confidence": "low",
+      "evidence": ["GWAS Catalog 眼色"],
+      "note": "次效位点，主效位点（rs12913832）已确定为深棕。"
+    },
+    {
+      "rsid": "rs11803731",
+      "gene": "TCHH (毛透明蛋白)",
+      "variant": "头发卷直关联位点 rs11803731 (dbSNP 正链 A>C/G/T)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "T",
+      "group": "外貌特征",
+      "interp": {
+        "AA": ["常见型（A/A）", "不携带欧洲卷发 GWAS 里的 T 直发相关等位基因。不过东亚人群的直发主要由 EDAR 370A 决定（你的 EDAR 已是衍生纯合），此位点只是次要参考。"],
+        "AT": ["携带 T（欧洲人群直发方向等位基因）", "欧洲双生子研究里 T 与直发相关；东亚背景下影响更小。"],
+        "GG": ["其他等位基因组合", "该位点为多等位位点，详见外链。"]
+      },
+      "confidence": "low",
+      "evidence": ["Medland et al., 2009 (欧洲双生子卷发 GWAS)"],
+      "note": "本数据 A/A 常见型。头发的东亚故事主角是 EDAR（见特质模块）。"
+    },
+    {
+      "rsid": "rs838133",
+      "gene": "FGF21",
+      "variant": "嗜甜/饮食偏好关联 rs838133",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "饮食偏好",
+      "interp": {
+        "AA": ["常见型", "该位点与甜食/酒精偏好差异的候选关联（效应小）。"],
+        "AG": ["杂合", "部分研究：携带 G 与更高的甜食摄入偏好相关。"],
+        "GG": ["G/G", "部分研究：与甜食摄入偏好升高相关（观察性，效应小）。"]
+      },
+      "confidence": "low",
+      "evidence": ["Chuang et al., Cell Metab 2018 (FGF21 与饮食偏好)"],
+      "note": "本数据 G/G。行为偏好的遗传解释力很小，当个有趣的参考。"
+    },
+    {
+      "rsid": "rs6746030",
+      "gene": "SCN9A (NaV1.7 钠通道)",
+      "variant": "痛觉敏感度关联 rs6746030 (R1150W)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "感觉",
+      "interp": {
+        "GG": ["野生型 · 常见痛阈", "不携带 W1150 变异。SCN9A 是'痛觉音量旋钮'基因——罕见功能获得突变会让人天生无痛觉（罕见病），常见变异的影响则很轻微。"],
+        "GA": ["携带 W1150", "部分研究：痛阈略低/背痛敏感度略高的候选关联（效应小）。"],
+        "AA": ["W1150 纯合", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Reimann et al., Curr Biol 2010 (SCN9A 与痛觉)"],
+      "note": "本数据 G/G 野生型。"
+    }
+  ],
+  "special_cards": [
+    {
+      "title": "综合解读：认知与行为画像",
+      "text": "记忆位点（KIBRA T/T）+ COMT 平衡型 + BDNF 杂合的组合大致指向：情景记忆潜质较好、压力下认知较稳的中间画像。但这只是几个小效应位点的拼图，实际认知表现由训练、睡眠、教育与环境主导。",
+      "level": "normal"
+    },
+    {
+      "title": "应激系统的基因×环境提示",
+      "text": "FKBP5 T 携带的应激敏感性差异，仅在严重早期逆境下才与心理疾病风险升高相关；稳定支持性环境即可'关闭'大部分风险。这与'基因不是命运'的科学共识一致。",
+      "level": "normal"
+    },
+    {
+      "title": "5-HTTLPR 未覆盖说明",
+      "text": "经典'情绪基因'5-HTTLPR（SLC6A4 启动子插入/缺失）是结构变异，芯片单 SNP 无法代表；文献中也因大样本复现失败而信誉下降。本报告不作推断。",
+      "level": "attention"
+    }
+  ]
+}

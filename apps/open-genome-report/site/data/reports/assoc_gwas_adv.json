@@ -1,0 +1,1013 @@
+{
+ "title": "GWAS 扩展位点",
+ "rows": [
+  {
+   "rsid": "rs2295080",
+   "chrom": "1",
+   "pos": 11322628,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "mTOR (1p36)",
+   "trait": "mTOR 通路上游变异",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2295080",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2295080",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2295080",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2295080"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2746342",
+   "chrom": "1",
+   "pos": 57136249,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2746342",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2746342",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2746342",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2746342"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2815752",
+   "chrom": "1",
+   "pos": 72812440,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2815752",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2815752",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2815752",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2815752"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs17602729",
+   "chrom": "1",
+   "pos": 115236057,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs17602729",
+    "snpedia": "https://www.snpedia.com/index.php/Rs17602729",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs17602729",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs17602729"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11584700",
+   "chrom": "1",
+   "pos": 204576983,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11584700",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11584700",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11584700",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11584700"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3818361",
+   "chrom": "1",
+   "pos": 207784968,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3818361",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3818361",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3818361",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3818361"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1136410",
+   "chrom": "1",
+   "pos": 226555302,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1136410",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1136410",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1136410",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1136410"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs523349",
+   "chrom": "2",
+   "pos": 31805706,
+   "gt": "CG",
+   "source": "ASA",
+   "gene": "SRD5A2",
+   "trait": "5α-还原酶（V89L），雄激素代谢",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs523349",
+    "snpedia": "https://www.snpedia.com/index.php/Rs523349",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs523349",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs523349"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2293275",
+   "chrom": "2",
+   "pos": 48921375,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2293275",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2293275",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2293275",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2293275"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs12469063",
+   "chrom": "2",
+   "pos": 66764308,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs12469063",
+    "snpedia": "https://www.snpedia.com/index.php/Rs12469063",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs12469063",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs12469063"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs744373",
+   "chrom": "2",
+   "pos": 127894615,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs744373",
+    "snpedia": "https://www.snpedia.com/index.php/Rs744373",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs744373",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs744373"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6721961",
+   "chrom": "2",
+   "pos": 178130037,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "2q31（SORT1? 位置待核）",
+   "trait": "血脂（待核）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6721961",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6721961",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6721961",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6721961"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1805086",
+   "chrom": "2",
+   "pos": 190925077,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1805086",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1805086",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1805086",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1805086"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs35349669",
+   "chrom": "2",
+   "pos": 234068476,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs35349669",
+    "snpedia": "https://www.snpedia.com/index.php/Rs35349669",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs35349669",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs35349669"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs934945",
+   "chrom": "2",
+   "pos": 239155053,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs934945",
+    "snpedia": "https://www.snpedia.com/index.php/Rs934945",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs934945",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs934945"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs13084531",
+   "chrom": "3",
+   "pos": 85553994,
+   "gt": "CC",
+   "source": "IMP",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs13084531",
+    "snpedia": "https://www.snpedia.com/index.php/Rs13084531",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs13084531",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs13084531"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs13107325",
+   "chrom": "4",
+   "pos": 103188709,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "SLC39A8",
+   "trait": "锌转运（精神分裂/镉代谢候选；本数据野生）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs13107325",
+    "snpedia": "https://www.snpedia.com/index.php/Rs13107325",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs13107325",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs13107325"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3923809",
+   "chrom": "6",
+   "pos": 38440970,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3923809",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3923809",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3923809",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3923809"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs75932628",
+   "chrom": "6",
+   "pos": 41129252,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs75932628",
+    "snpedia": "https://www.snpedia.com/index.php/Rs75932628",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs75932628",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs75932628"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1906252",
+   "chrom": "6",
+   "pos": 98550289,
+   "gt": "CC",
+   "source": "IMP",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1906252",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1906252",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1906252",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1906252"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1487441",
+   "chrom": "6",
+   "pos": 98553894,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1487441",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1487441",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1487441",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1487441"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2234693",
+   "chrom": "6",
+   "pos": 152163335,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "ESR1",
+   "trait": "雌激素受体 PvuII",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2234693",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2234693",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2234693",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2234693"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs9340799",
+   "chrom": "6",
+   "pos": 152163381,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "ESR1",
+   "trait": "雌激素受体 XbaI",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs9340799",
+    "snpedia": "https://www.snpedia.com/index.php/Rs9340799",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs9340799",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs9340799"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6465084",
+   "chrom": "7",
+   "pos": 86403475,
+   "gt": "AA",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6465084",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6465084",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6465084",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6465084"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11767557",
+   "chrom": "7",
+   "pos": 143109139,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11767557",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11767557",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11767557",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11767557"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11136000",
+   "chrom": "8",
+   "pos": 27464519,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": true,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11136000",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11136000",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11136000",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11136000"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1346044",
+   "chrom": "8",
+   "pos": 31024654,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1346044",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1346044",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1346044",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1346044"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1937",
+   "chrom": "10",
+   "pos": 60145342,
+   "gt": "CG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1937",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1937",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1937",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1937"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs7923609",
+   "chrom": "10",
+   "pos": 65133822,
+   "gt": "AA",
+   "source": "IMP",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs7923609",
+    "snpedia": "https://www.snpedia.com/index.php/Rs7923609",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs7923609",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs7923609"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs10822184",
+   "chrom": "10",
+   "pos": 65337153,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs10822184",
+    "snpedia": "https://www.snpedia.com/index.php/Rs10822184",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs10822184",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs10822184"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs4387287",
+   "chrom": "10",
+   "pos": 105677897,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4387287",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4387287",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4387287",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4387287"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11246020",
+   "chrom": "11",
+   "pos": 233067,
+   "gt": "CC",
+   "source": "IMP",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11246020",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11246020",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11246020",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11246020"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs10835638",
+   "chrom": "11",
+   "pos": 30252352,
+   "gt": "GG",
+   "source": "IMP",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs10835638",
+    "snpedia": "https://www.snpedia.com/index.php/Rs10835638",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs10835638",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs10835638"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs610932",
+   "chrom": "11",
+   "pos": 59939307,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs610932",
+    "snpedia": "https://www.snpedia.com/index.php/Rs610932",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs610932",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs610932"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs659366",
+   "chrom": "11",
+   "pos": 73694754,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "UCP2",
+   "trait": "解偶联蛋白 2（-866G/A），能量代谢",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs659366",
+    "snpedia": "https://www.snpedia.com/index.php/Rs659366",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs659366",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs659366"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800849",
+   "chrom": "11",
+   "pos": 73720165,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800849",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800849",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800849",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800849"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3851179",
+   "chrom": "11",
+   "pos": 85868640,
+   "gt": "TC",
+   "source": "ASA",
+   "gene": "PICALM",
+   "trait": "阿尔茨海默病易感",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3851179",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3851179",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3851179",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3851179"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11218343",
+   "chrom": "11",
+   "pos": 121435587,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11218343",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11218343",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11218343",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11218343"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1006737",
+   "chrom": "12",
+   "pos": 2345295,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "CACNA1C",
+   "trait": "双相/精神分裂风险（钙通道，效应小）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1006737",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1006737",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1006737",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1006737"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs11046205",
+   "chrom": "12",
+   "pos": 21992326,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs11046205",
+    "snpedia": "https://www.snpedia.com/index.php/Rs11046205",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs11046205",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs11046205"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs35767",
+   "chrom": "12",
+   "pos": 102875569,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "IGF1",
+   "trait": "胰岛素样生长因子 1 水平",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs35767",
+    "snpedia": "https://www.snpedia.com/index.php/Rs35767",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs35767",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs35767"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs8192440",
+   "chrom": "12",
+   "pos": 107395106,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs8192440",
+    "snpedia": "https://www.snpedia.com/index.php/Rs8192440",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs8192440",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs8192440"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs10046",
+   "chrom": "15",
+   "pos": 51502986,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "CYP19A1",
+   "trait": "芳香化酶/雌激素水平",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs10046",
+    "snpedia": "https://www.snpedia.com/index.php/Rs10046",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs10046",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs10046"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2307441",
+   "chrom": "15",
+   "pos": 89861826,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2307441",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2307441",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2307441",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2307441"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs2229765",
+   "chrom": "15",
+   "pos": 99478225,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2229765",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2229765",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2229765",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2229765"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1799941",
+   "chrom": "17",
+   "pos": 7533423,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "SHBG 区",
+   "trait": "性激素结合球蛋白水平",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1799941",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1799941",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1799941",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1799941"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6258",
+   "chrom": "17",
+   "pos": 7534678,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "SHBG",
+   "trait": "性激素结合球蛋白（D327N）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6258",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6258",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6258",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6258"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6259",
+   "chrom": "17",
+   "pos": 7536527,
+   "gt": "GG",
+   "source": "ASA",
+   "gene": "SHBG",
+   "trait": "性激素结合球蛋白",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6259",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6259",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6259",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6259"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs62056842",
+   "chrom": "17",
+   "pos": 43991515,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs62056842",
+    "snpedia": "https://www.snpedia.com/index.php/Rs62056842",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs62056842",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs62056842"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs1800012",
+   "chrom": "17",
+   "pos": 48277749,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "COL1A1",
+   "trait": "骨密度（Sp1 位点，本数据野生）",
+   "conf": "low",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800012",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800012",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800012",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800012"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs8084351",
+   "chrom": "18",
+   "pos": 50726559,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs8084351",
+    "snpedia": "https://www.snpedia.com/index.php/Rs8084351",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs8084351",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs8084351"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3764650",
+   "chrom": "19",
+   "pos": 1046520,
+   "gt": "TG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3764650",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3764650",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3764650",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3764650"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs8111989",
+   "chrom": "19",
+   "pos": 45809208,
+   "gt": "TT",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs8111989",
+    "snpedia": "https://www.snpedia.com/index.php/Rs8111989",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs8111989",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs8111989"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs3865444",
+   "chrom": "19",
+   "pos": 51727962,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "CD33",
+   "trait": "阿尔茨海默病易感（本数据野生方向）",
+   "conf": "medium",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3865444",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3865444",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3865444",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3865444"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs6010620",
+   "chrom": "20",
+   "pos": 62309839,
+   "gt": "AG",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs6010620",
+    "snpedia": "https://www.snpedia.com/index.php/Rs6010620",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs6010620",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs6010620"
+   },
+   "flag": null
+  },
+  {
+   "rsid": "rs5934505",
+   "chrom": "X",
+   "pos": 8913826,
+   "gt": "CC",
+   "source": "ASA",
+   "gene": "",
+   "trait": "",
+   "conf": "",
+   "in_panel": false,
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs5934505",
+    "snpedia": "https://www.snpedia.com/index.php/Rs5934505",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs5934505",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs5934505"
+   },
+   "flag": null
+  }
+ ]
+}

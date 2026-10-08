@@ -1,0 +1,326 @@
+{
+  "module": "metabolism",
+  "title": "代谢与营养",
+  "icon": "🥗",
+  "intro": "本模块覆盖叶酸/同型半胱氨酸代谢、乳糖耐受、咖啡因、脂肪酸代谢、抗氧化酶等经典营养遗传位点。单基因效应普遍较小，营养建议应以整体膳食模式优先。",
+  "entries": [
+    {
+      "rsid": "rs1801133",
+      "gene": "MTHFR",
+      "variant": "MTHFR 677C>T (A222V, c.1286A>C 基因方向)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "叶酸与同型半胱氨酸",
+      "interp": {
+        "GG": ["677C/C（基因方向）· 酶活性正常", "MTHFR 677 位点野生型，叶酸代谢通路此位点无缺陷。东亚人群约 50-60% 为该型。"],
+        "GA": ["677C/T · 杂合（轻度）", "酶活性约降 30-35%，通常在叶酸摄入充足时无临床影响，同型半胱氨酸可能轻度升高。"],
+        "AA": ["677T/T · 纯合变异", "酶活性约降 60-70%，同型半胱氨酸升高倾向明显；补充叶酸可改善，孕期更需注意叶酸补充。"]
+      },
+      "confidence": "high",
+      "evidence": ["Frosst et al., Nat Genet 1995 (677C>T)", "大量人群研究（详见链接）"],
+      "note": "MTHFR 为负链基因：文献写法 677C>T 对应本数据正链 G>A。"
+    },
+    {
+      "rsid": "rs1801131",
+      "gene": "MTHFR",
+      "variant": "MTHFR 1298A>C (E429A, c.2573A>C 基因方向)",
+      "gene_strand": "-",
+      "plus_ref": "T",
+      "plus_alt": "G",
+      "group": "叶酸与同型半胱氨酸",
+      "interp": {
+        "TT": ["1298A/A · 野生型", "该位点正常。"],
+        "TG": ["1298A/C · 杂合", "酶活性轻度下降；与 677T 不在常见单倍型组合时影响更小。本数据为 677 野生 + 1298 杂合，总体叶酸代谢受影响轻微。"],
+        "GG": ["1298C/C", "单独存在时影响轻微。"]
+      },
+      "confidence": "high",
+      "evidence": ["van der Put et al., Lancet 1998 (1298A>C)"],
+      "note": "677T 与 1298C 极少处于同一条染色体（反式时影响叠加）。"
+    },
+    {
+      "rsid": "rs4988235",
+      "gene": "MCM6 (调控 LCT)",
+      "variant": "LCT -13910 C>T（乳糖酶持久性主效位点）",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "乳糖耐受",
+      "interp": {
+        "GG": ["乳糖酶不持久型（-13910 C/C 基因方向）", "成年后乳糖酶表达下降，是乳糖不耐受的典型基因型——也是东亚人群约 90% 的主流基因型。饮用牛奶建议少量多次、佐餐或选无乳糖/发酵乳制品。"],
+        "GA": ["携带持久性等位基因（单份）", "乳糖酶持续表达倾向，耐受度中等。"],
+        "AA": ["乳糖酶持久型", "成年后仍持续表达乳糖酶，乳糖耐受良好（该型在北欧高频）。"]
+      },
+      "confidence": "high",
+      "evidence": ["Enattah et al., Nat Genet 2002", "1000G 东亚 A 等位基因频率极低"],
+      "note": "东亚人群另有更上游的其他变异，但 -13910 仍是全球主效位点；本数据为典型东亚型。"
+    },
+    {
+      "rsid": "rs174547",
+      "gene": "FADS2 (FADS 基因簇)",
+      "variant": "FADS2 rs174547 (C>T)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "脂肪酸代谢",
+      "interp": {
+        "CC": [" ancestral 单倍型", "去饱和酶活性较低，转化效率低。"],
+        "CT": ["中间型", "介于两者之间。"],
+        "TT": ["衍生单倍型（东亚高频）", "Δ5/Δ6 去饱和酶活性高：由植物油前体合成花生四烯酸（AA）效率高；血 EPA/DHA 常偏低、TG 与 LDL 偏低的关联证据较多。对膳食 Omega-3 的实际获益因人而异。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Ameur et al., PLoS Genet 2012 (FADS 单倍型)", "GWAS Catalog 脂质关联"],
+      "note": "与 rs174546 连锁，共同构成东亚高发的衍生单倍型。"
+    },
+    {
+      "rsid": "rs174546",
+      "gene": "FADS1",
+      "variant": "FADS1 rs174546 (C>T, rs174547 连锁位点)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "脂肪酸代谢",
+      "interp": {
+        "CC": ["ancestral", "同上，活性较低。"],
+        "CT": ["中间型", "介于两者之间。"],
+        "TT": ["衍生单倍型", "与 rs174547 T/T 一致，指向东亚常见高效去饱和单倍型。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Ameur et al., PLoS Genet 2012"],
+      "note": "本数据 CC + rs174547 T/T 不构成常见单倍型组合，需 dbSNP 校验确认等位基因方向。"
+    },
+    {
+      "rsid": "rs662799",
+      "gene": "APOA5",
+      "variant": "APOA5 -1131T>C（启动子）",
+      "gene_strand": "-",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "甘油三酯",
+      "interp": {
+        "AA": ["野生型（-1131T/T）", "甘油三酯基线遗传倾向正常。"],
+        "AG": ["携带 -1131C", "甘油三酯水平轻度升高倾向，高脂膳食后更明显。"],
+        "GG": ["-1131C/C", "甘油三酯升高倾向更明显。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Pennacchio et al., Science 2001", "GWAS Catalog 甘油三酯"],
+      "note": "等位基因方向以 dbSNP 校验为准。"
+    },
+    {
+      "rsid": "rs328",
+      "gene": "LPL",
+      "variant": "LPL S447X (c.1338C>G, 提前终止获功能；dbSNP 正链 C>G)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "甘油三酯",
+      "interp": {
+        "CC": ["野生型（S447/S447）", "常见型；就本位点而言脂蛋白脂肪酶活性正常。本数据即此基因型。"],
+        "CG": ["携带 S447X", "X447 变体脂解效率更高，与较低的甘油三酯和较高的 HDL 相关（少数的'有利'变体）。"],
+        "GG": ["S447X/X", "同上，关联更明确。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Rip et al., NEJM 2006 (LPL S447X)"],
+      "note": "dbSNP 已确认正链等位基因，本数据为野生型。"
+    },
+    {
+      "rsid": "rs4148323",
+      "gene": "UGT1A1",
+      "variant": "UGT1A1 G71R (c.211G>A) — Gilbert 综合征相关（东亚型）",
+      "gene_strand": "+",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "胆红素代谢",
+      "interp": {
+        "GG": ["野生型（G71/G71）", "胆红素结合酶活性正常（dbSNP 已确认位置与正链等位基因，本数据为野生纯合）。"],
+        "GA": ["携带 G71R", "酶活性下降约 30-70%，非结合胆红素轻度升高、疲劳/饥饿时波动。属于良性体质差异，无需治疗。"],
+        "AA": ["G71R/G71R", "典型 Gilbert 表现（东亚以 G71R 为主，欧洲以启动子 TA 重复为主），黄疸波动倾向明显。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Aono et al., 1999 (G71R 东亚 Gilbert)"],
+      "note": "本数据 G/G 野生型：G71R 相关的 Gilbert 体质可排除。"
+    },
+    {
+      "rsid": "rs4880",
+      "gene": "SOD2 (MnSOD)",
+      "variant": "SOD2 Ala16Val (c.47T>C 基因方向)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "抗氧化",
+      "interp": {
+        "GG": ["Ala/Ala（基因方向）", "线粒体导入效率较低，基质内酶活性略低。"],
+        "GA": ["Ala/Val", "中间。"],
+        "AA": ["Val/Val（基因方向）", "Val 型导入线粒体基质效率高，酶活性较高；东亚人群约 70-85% 为该型。与疾病关联的研究方向不一致，属体质差异。"]
+      },
+      "confidence": "low",
+      "evidence": ["Sutton et al., 2003 (线粒体靶向序列)"],
+      "note": "效应量小且研究结论不一，仅作了解。"
+    },
+    {
+      "rsid": "rs1050450",
+      "gene": "GPX1",
+      "variant": "GPX1 Pro198Leu (c.594C>T 基因方向)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "A",
+      "group": "抗氧化",
+      "interp": {
+        "GG": ["野生型（Pro/Pro）", "谷胱甘肽过氧化物酶 1 活性正常。"],
+        "GA": ["携带 Leu", "酶活性略低，硒状态差时更明显。"],
+        "AA": ["Leu/Leu", "酶活性降低倾向，保证硒摄入（海产、蛋类）更重要。"]
+      },
+      "confidence": "low",
+      "evidence": ["Forsberg et al., 2000 (GPX1 Pro198Leu)"],
+      "note": "该位点等位基因方向待 dbSNP 校验；本数据为 G/G。"
+    },
+    {
+      "rsid": "rs2472297",
+      "gene": "CYP1A1/1A2 区 (15q24)",
+      "variant": "咖啡因摄入/代谢关联位点",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "咖啡因",
+      "interp": {
+        "CC": ["典型东亚型", "与较快咖啡因清除倾向相关（结合 CYP1A2 -163 A/A）。"],
+        "CT": ["中间", "摄入倾向中等。"],
+        "TT": ["与较低摄入量相关", "欧洲人群中该等位基因与低咖啡摄入相关。"]
+      },
+      "confidence": "low",
+      "evidence": ["Cornelis et al., PLoS Genet 2011 (咖啡摄入 GWAS)"],
+      "note": "行为遗传学效应量普遍很小，仅供了解。"
+    },
+    {
+      "rsid": "rs4410790",
+      "gene": "AHR/CYP1A1 区 (7q21)",
+      "variant": "咖啡摄入量关联位点",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "T",
+      "group": "咖啡因",
+      "interp": {
+        "CC": ["典型", "摄入量基线。"],
+        "CT": ["与咖啡摄入量变化相关", "详见 GWAS Catalog。"],
+        "TT": ["与较高摄入量相关的等位基因纯合", "观察性关联，非因果结论。"]
+      },
+      "confidence": "low",
+      "evidence": ["Cornelis et al., PLoS Genet 2011"],
+      "note": "本数据 C/T。"
+    },
+    {
+      "rsid": "rs1801282",
+      "gene": "PPARG",
+      "variant": "PPARG Pro12Ala (c.34C>G 基因方向)",
+      "gene_strand": "-",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "糖代谢",
+      "interp": {
+        "CC": ["Pro/Pro（常见型）", "人群主流基因型（>85%）。"],
+        "CG": ["携带 Ala12", "胰岛素敏感性改善、2 型糖尿病风险降低的'有利'变异，但频率低（东亚 <3%）。"],
+        "GG": ["Ala/Ala", "同上，保护关联更明显。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Altshuler et al., Nat Genet 2000 (Pro12Ala 与糖尿病)"],
+      "note": "本数据为常见型。"
+    },
+    {
+      "rsid": "rs1042713",
+      "gene": "ADRB2",
+      "variant": "ADRB2 Arg16Gly (c.46A>G)",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "肾上腺素能受体",
+      "interp": {
+        "AA": ["Arg/Arg", "β2 受体下调较慢。"],
+        "AG": ["Arg/Gly", "混合型。哮喘/支气管扩张剂反应及血管反应的研究位点。"],
+        "GG": ["Gly/Gly", "与 β2 受体下调较快相关（长期激动剂暴露下反应下降）。"]
+      },
+      "confidence": "medium",
+      "evidence": ["Liggett 组系列研究", "PharmGKB ADRB2"],
+      "note": "与 rs1042714 (Gln27Glu) 连锁评估。本数据 Arg/Gly。"
+    },
+    {
+      "rsid": "rs1042714",
+      "gene": "ADRB2",
+      "variant": "ADRB2 Gln27Glu (c.79C>G)",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "肾上腺素能受体",
+      "interp": {
+        "CC": ["Gln/Gln", "常见型。"],
+        "CG": ["Gln/Glu", "混合型。"],
+        "GG": ["Glu/Glu", "与支气管扩张/代谢表型差异相关。"]
+      },
+      "confidence": "medium",
+      "evidence": ["PharmGKB ADRB2"],
+      "note": "本数据 Gln/Glu。"
+    },
+    {
+      "rsid": "rs2231142",
+      "gene": "ABCG2",
+      "variant": "ABCG2 Q141K (c.421C>A；正链 G>T，东亚高频)",
+      "gene_strand": "-",
+      "plus_ref": "G",
+      "plus_alt": "T",
+      "group": "尿酸与痛风",
+      "interp": {
+        "GG": ["Q141/Q141 · 转运体正常", "URAT1 上游的尿酸外排泵功能正常，痛风遗传风险不高（就本位点）。"],
+        "GT": ["Q141K 杂合（本数据）", "ABCG2 转运效率下降约一半：肾脏排泄尿酸能力降低，痛风风险升高（东亚人群 OR≈1.7-2.0，该变异在东亚携带率约 25-30%，远高于欧洲）。同时影响部分药物暴露（他汀、磺吡酮等）。建议：定期体检关注血尿酸，少喝含糖饮料与啤酒、多喝水。"],
+        "TT": ["Q141K 纯合", "转运效率下降更明显，痛风遗传倾向更高；药物暴露影响同样存在。"]
+      },
+      "confidence": "high",
+      "evidence": ["Woodward et al., Nat Genet 2009", "Matsuo et al., Lancet 2009", "东亚人群 Q141K 高频研究"],
+      "note": "本数据 G/T —— 携带一份 Q141K，属于东亚人群最常见的痛风遗传风险位点。尿酸水平受饮食与肾功能影响更大，建议以体检血尿酸实测为准。"
+    },
+    {
+      "rsid": "rs12498742",
+      "gene": "SLC2A9 (GLUT9)",
+      "variant": "尿酸转运主效位点 rs12498742",
+      "gene_strand": "+",
+      "plus_ref": "A",
+      "plus_alt": "G",
+      "group": "尿酸与痛风",
+      "interp": {
+        "AA": ["等位基因纯合", "SLC2A9 是血尿酸水平最强的常见基因位点（效应显著但方向随人群记录有差异，见外链）。"],
+        "AG": ["杂合", "中间。"],
+        "GG": ["等位基因纯合", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Döring et al., Lancet 2008 (SLC2A9 与尿酸)"],
+      "note": "本数据 A/A。与 ABCG2 Q141K 杂合的提示方向一致：建议关注体检血尿酸值。等位基因方向待 dbSNP 校验。"
+    },
+    {
+      "rsid": "rs6596473",
+      "gene": "SLC23A1 (维生素 C 转运体)",
+      "variant": "维生素 C 水平关联 rs6596473",
+      "gene_strand": "+",
+      "plus_ref": "C",
+      "plus_alt": "G",
+      "group": "维生素",
+      "interp": {
+        "CC": ["常见型", "维生素 C 转运基线。"],
+        "CG": ["杂合", "部分研究：与血维生素 C 水平差异相关（效应小）。"],
+        "GG": ["G/G", "同上。"]
+      },
+      "confidence": "low",
+      "evidence": ["Cahill & El-Sohemy 文献（维 C 转运 GWAS）"],
+      "note": "本数据 C/G。膳食均衡比基因型重要。"
+    }
+  ],
+  "special_cards": [
+    {
+      "title": "同型半胱氨酸综合评估",
+      "text": "MTHFR 677 野生（C/C）+ 1298 杂合的组合提示叶酸代谢通路整体受遗传影响轻微。同型半胱氨酸水平更多取决于叶酸/B12/B6 摄入与肾功能，可通过常规体检（HCY 指标）验证。",
+      "level": "favorable"
+    },
+    {
+      "title": "乳制品策略",
+      "text": "乳糖酶不持久 + 典型东亚脂肪酸单倍型的组合下：乳制品建议以发酵类（酸奶、奶酪）和无乳糖牛奶为主，坚果与深绿叶菜补充钙；不必刻意追求牛奶。",
+      "level": "normal"
+    }
+  ]
+}

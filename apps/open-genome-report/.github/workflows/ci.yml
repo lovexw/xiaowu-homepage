@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 面板 JSON 合法性 + 必填字段检查
+        run: |
+          python3 - <<'EOF'
+          import json, glob, sys
+          ok = True
+          for f in glob.glob("pipeline/panels/*.json"):
+              if f.endswith("annotations_curated.json"):
+                  json.load(open(f)); continue
+              d = json.load(open(f))
+              for k in ("module", "title", "entries"):
+                  if k not in d:
+                      print(f"❌ {f} 缺少 {k}"); ok = False
+              for e in d.get("entries", []):
+                  for k in ("rsid", "gene", "interp"):
+                      if k not in e and "crosslink" not in e:
+                          print(f"❌ {f} 条目缺 {k}: {e.get('rsid')}"); ok = False
+          print("✅ 面板检查通过" if ok else sys.exit(1))
+          EOF
+      - name: 网站数据产物一致性（报告引用的 rsID 必须在面板中）
+        run: |
+          python3 - <<'EOF'
+          import json, glob
+          panels = set()
+          for f in glob.glob("pipeline/panels/*.json"):
+              if f.endswith("annotations_curated.json"): continue
+              for e in json.load(open(f)).get("entries", []):
+                  panels.add(e.get("rsid"))
+          missing = []
+          for f in glob.glob("site/data/reports/*.json"):
+              d = json.load(open(f))
+              for e in d.get("entries", []):
+                  if e.get("rsid") and e["rsid"].startswith("rs") and e["rsid"] not in panels:
+                      missing.append((f, e["rsid"]))
+          if missing:
+              print("❌ 报告与面板不同步，先 make reports:", missing[:10]); raise SystemExit(1)
+          print("✅ 报告与面板一致")
+          EOF
+      - name: 关键文件存在性
+        run: |
+          test -f site/index.html
+          test -f site/data/manifest.json
+          test -f site/data/reports/overview.json
+          test -f AI_HANDOFF.md
+          test -f pipeline/cache/dbsnp/rs671.json
+          echo "✅ 结构完整"

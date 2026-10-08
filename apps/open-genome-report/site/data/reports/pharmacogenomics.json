@@ -1,0 +1,717 @@
+{
+ "module": "pharmacogenomics",
+ "title": "药物基因组学",
+ "icon": "💊",
+ "intro": "本模块解读基因型对常用药物代谢和剂量的影响，参照 CPIC（临床药物遗传学实施联盟）与 PharmGKB 的公开指南。以下结论针对分型明确的位点；CYP2D6、CYP21A2 等含结构变异的基因无法用芯片可靠分型，见模块末尾说明。此信息仅供研究参考，用药调整请务必咨询医生，不要自行改变治疗方案。",
+ "popsci_cards": [
+  {
+   "title": "💡 药物在你体内经历什么？",
+   "text": "吃下去的药要经历四关：吸收 → 激活/加工 → 干活 → 拆解排出。'加工'和'拆解'主要由肝药酶家族（CYP 系列）完成——它们像工厂里不同工位的工人，你的基因决定每个工位是'手速正常'还是'慢半拍'。药物基因组学查的就是这些工位的速度。"
+  },
+  {
+   "title": "💊 为什么氯吡格雷要特别看 CYP2C19？",
+   "text": "氯吡格雷是个'前体药'——吃下去时没有药效，必须被 CYP2C19 剪一刀才激活。你的 CYP2C19 少了一个班次（*2），等于激活工序慢半拍，抗血栓效果可能打折——所以指南建议换替格瑞洛这类'免加工'药。而同样的慢工位对奥美拉唑反而是'药效更持久'。同一个酶，故事完全两方向。"
+  },
+  {
+   "title": "🍷 华法林为什么是'最考验基因的药'？",
+   "text": "华法林的有效剂量在不同人身上能差 10 倍。你身上两个关键基因一个拉低剂量（VKORC1 高敏感型，靶点更'灵敏'），一个正常（CYP2C9 拆药速度正常）。这也是东亚人群华法林普遍用小剂量的大背景——但真正的剂量必须靠医生调 INR，基因只是起点参考。"
+  }
+ ],
+ "entries": [
+  {
+   "plain": "你的'药物激活车间'（CYP2C19）少了一个班次：氯吡格雷这类要先激活的药效果可能打折，指南建议换药；奥美拉唑这类则会在体内待得更久。",
+   "rsid": "rs4244285",
+   "gene": "CYP2C19",
+   "variant": "CYP2C19*2 (c.681G>A, 剪接缺陷)",
+   "group": "CYP2C19",
+   "confidence": "high",
+   "note": "东亚人群 *2 等位基因携带率约 25-35%，是氯吡格雷反应不佳的重要遗传因素。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4244285",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4244285",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4244285",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4244285"
+   },
+   "genotype": "AG",
+   "chrom": "10",
+   "pos": 96541616,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "CYP2C19*1/*2 · 中间代谢 (Intermediate Metabolizer)",
+    "text": "CYP2C19 活性降低。CPIC 指南：急性冠脉综合征/PCI 人群中，中间代谢型使用标准剂量氯吡格雷时血小板抑制不足、缺血事件风险升高，建议优先考虑替格瑞洛或普拉格雷（若无禁忌）。奥美拉唑等 PPI 的暴露量会升高。",
+    "level": "caution"
+   }
+  },
+  {
+   "plain": "CYP2C19 的另一个常见故障点你没携带——车间的问题就是上面那一个班次的事。",
+   "rsid": "rs4986893",
+   "gene": "CYP2C19",
+   "variant": "CYP2C19*3 (c.636G>A, W212X)",
+   "group": "CYP2C19",
+   "confidence": "high",
+   "note": "仅覆盖 *2/*3/*17 等常见等位基因；罕见等位基因不在芯片覆盖内。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4986893",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4986893",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4986893",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4986893"
+   },
+   "genotype": "GG",
+   "chrom": "10",
+   "pos": 96540410,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "未携带 *3 等位基因",
+    "text": "该位点为野生型，不产生额外功能缺陷。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "你没有'超频档'（*17），CYP2C19 不会反方向变快。",
+   "rsid": "rs12248560",
+   "gene": "CYP2C19",
+   "variant": "CYP2C19*17 (启动子 -806C>T, 快代谢)",
+   "group": "CYP2C19",
+   "confidence": "high",
+   "note": "东亚人群 *17 频率低（约 2-4%），本位点判定价值有限，以 *2 结果为主。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs12248560",
+    "snpedia": "https://www.snpedia.com/index.php/Rs12248560",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs12248560",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs12248560"
+   },
+   "genotype": "CC",
+   "chrom": "10",
+   "pos": 96521657,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "未携带 *17 等位基因",
+    "text": "无快代谢等位基因。结合 *2 位点结果（*1/*2）综合判定为中间代谢型。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "华法林拆解工人（CYP2C9）的欧洲常见慢速版本你没有。",
+   "rsid": "rs1799853",
+   "gene": "CYP2C9",
+   "variant": "CYP2C9*2 (c.430C>T, R144C)",
+   "group": "CYP2C9",
+   "confidence": "high",
+   "note": "东亚人群 *2 频率极低（<1%），*3 为主。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1799853",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1799853",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1799853",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1799853"
+   },
+   "genotype": "CC",
+   "chrom": "10",
+   "pos": 96702047,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "未携带 *2 等位基因",
+    "text": "该位点野生型。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "CYP2C9 两个工位都正常——华法林代谢属于'手速标准'组。",
+   "rsid": "rs1057910",
+   "gene": "CYP2C9",
+   "variant": "CYP2C9*3 (c.1075A>C, I359L)",
+   "group": "CYP2C9",
+   "confidence": "high",
+   "note": "*3 是东亚人群最主要的 CYP2C9 功能缺陷等位基因（频率约 3-5%）。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1057910",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1057910",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1057910",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1057910"
+   },
+   "genotype": "AA",
+   "chrom": "10",
+   "pos": 96741053,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "CYP2C9*1/*1 · 正常代谢",
+    "text": "两个功能缺陷位点（*2/*3）均为野生型，判定为 *1/*1 正常代谢型。华法林、苯妥英、氯沙坦、塞来昔布等按标准代谢处理；华法林剂量主要参考 VKORC1 与临床因素。",
+    "level": "favorable"
+   }
+  },
+  {
+   "plain": "免疫抑制剂他克莫司的加工工人 CYP3A5 你是'半勤'状态，用这类药时医生会参考调起始剂量。",
+   "rsid": "rs776746",
+   "gene": "CYP3A5",
+   "variant": "CYP3A5*3 (c.6986A>G, 剪接缺陷)",
+   "group": "CYP3A5",
+   "confidence": "high",
+   "note": "本数据携带 *1/*3，属于中间表达者。他克莫司用于移植领域，此信息对相关人群有参考价值。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs776746",
+    "snpedia": "https://www.snpedia.com/index.php/Rs776746",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs776746",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs776746"
+   },
+   "genotype": "TC",
+   "chrom": "7",
+   "pos": 99270539,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "CYP3A5*1/*3 · 中间表达者",
+    "text": "CYP3A5 部分表达。CPIC 指南：他克莫司建议适当提高起始剂量（约 1.5-2 倍），以浓度监测为准。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "维生素 K 的回收工人（CYP4F2）正常，对华法林剂量没有额外加成。",
+   "rsid": "rs2108622",
+   "gene": "CYP4F2",
+   "variant": "CYP4F2*3 (c.1297G>T, V433M)",
+   "group": "CYP4F2",
+   "confidence": "medium",
+   "note": "若该位点不在芯片覆盖范围内，则显示为未测出。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2108622",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2108622",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2108622",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2108622"
+   },
+   "genotype": "CC",
+   "chrom": "19",
+   "pos": 15990431,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "GG",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "CYP4F2*3 纯合",
+    "text": "华法林剂量需求增加趋势更明显；同时维生素 E 代谢相关研究提示该基因型人群补充维生素 E 时暴露升高。",
+    "level": "caution"
+   }
+  },
+  {
+   "plain": "华法林的'靶点灵敏度'（VKORC1）属于灵敏档——同样剂量下效果更强，所以需要更小的剂量，这在东亚人中是大多数。",
+   "rsid": "rs9923231",
+   "gene": "VKORC1",
+   "variant": "VKORC1 -1639G>A (启动子)",
+   "group": "warfarin",
+   "confidence": "high",
+   "note": "注意链方向：本文件为正链 T>C；文献常用基因方向 -1639G>A 表示，两者互补。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs9923231",
+    "snpedia": "https://www.snpedia.com/index.php/Rs9923231",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs9923231",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs9923231"
+   },
+   "genotype": "TT",
+   "chrom": "16",
+   "pos": 31107689,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "AA",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "VKORC1 AA（基因方向）· 华法林高敏感",
+    "text": "VKORC1 转录水平低、维生素 K 环氧化物还原酶表达少，华法林剂量需求显著降低（约为 GG 型的 60% 左右）。CPIC 算法中该基因型对应低剂量组；东亚人群 A/A 比例约 80%，与华法林在亚洲人群中常规低剂量使用一致。",
+    "level": "neutral"
+   }
+  },
+  {
+   "plain": "他汀的'进料口'（SLCO1B1）正常——辛伐他汀在你体内不会异常蓄积，肌肉酸痛的遗传风险不高。",
+   "rsid": "rs4149056",
+   "gene": "SLCO1B1",
+   "variant": "SLCO1B1*5/*15 (c.521T>C, V174A)",
+   "group": "statin",
+   "confidence": "high",
+   "note": "SLCO1B1 完整分型还需 rs2306283（*1b）等位点；本数据同时覆盖该位点。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs4149056",
+    "snpedia": "https://www.snpedia.com/index.php/Rs4149056",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs4149056",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs4149056"
+   },
+   "genotype": "TT",
+   "chrom": "12",
+   "pos": 21331549,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "SLCO1B1 功能正常（就本位点而言）",
+    "text": "521 位点无缺陷等位基因。CPIC 指南：可按标准处方使用辛伐他汀等他汀，肌病风险无遗传性升高（就本位点而言）。",
+    "level": "favorable"
+   }
+  },
+  {
+   "plain": "进料口的另一个常见变体你带了一份（*1b），功能正常，两个位点合起来判定：正常型。",
+   "rsid": "rs2306283",
+   "gene": "SLCO1B1",
+   "variant": "SLCO1B1*1b (c.388A>G, N130D)",
+   "group": "statin",
+   "confidence": "medium",
+   "note": "等位基因方向待 dbSNP 校验步骤确认；若有出入以校验结果为准。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2306283",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2306283",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2306283",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2306283"
+   },
+   "genotype": "AG",
+   "chrom": "12",
+   "pos": 21329738,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "携带 *1b",
+    "text": "*1b 功能基本正常，与 *1a 组成 *1a/*1b（本数据即此组合）。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "化疗药氟尿嘧啶的'刹车基因'（DPYD）第一个常见故障点没有。",
+   "rsid": "rs3918290",
+   "gene": "DPYD",
+   "variant": "DPYD*2A (c.1905+1G>A, 剪接缺陷)",
+   "group": "chemo",
+   "confidence": "high",
+   "note": "DPYD 为负链基因，文献写法 c.1905+1G>A 是基因方向；正链表现互补。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs3918290",
+    "snpedia": "https://www.snpedia.com/index.php/Rs3918290",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs3918290",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs3918290"
+   },
+   "genotype": "CC",
+   "chrom": "1",
+   "pos": 97915614,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "GG",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "未携带 *2A",
+    "text": "就本位点而言无功能缺陷。DPYD 完整评估还需覆盖 *13、HapB3 等位点。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "DPYD 的第二个常见故障点也没有——两位点都正常是好消息。",
+   "rsid": "rs55886062",
+   "gene": "DPYD",
+   "variant": "DPYD*13 (c.1679T>G, D949V)",
+   "group": "chemo",
+   "confidence": "high",
+   "note": "等位基因方向以 dbSNP 校验为准。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs55886062",
+    "snpedia": "https://www.snpedia.com/index.php/Rs55886062",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs55886062",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs55886062"
+   },
+   "genotype": "AA",
+   "chrom": "1",
+   "pos": 97981343,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "TT",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "未携带 *13",
+    "text": "就本位点而言无功能缺陷。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "DPYD 的第三个需关注位点也是野生型。三位点齐全：就已知常见变异而言，DPYD 功能正常。",
+   "rsid": "rs67376798",
+   "gene": "DPYD",
+   "variant": "DPYD c.2688G>A（基因方向；dbSNP 已确认正链 T→A）",
+   "group": "chemo",
+   "confidence": "low",
+   "note": "本位点等位基因方向存在不确定性，已列入 dbSNP 强制校验清单；解读以校验后的等位基因为准。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs67376798",
+    "snpedia": "https://www.snpedia.com/index.php/Rs67376798",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs67376798",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs67376798"
+   },
+   "genotype": "TT",
+   "chrom": "1",
+   "pos": 97547947,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "AA",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "野生型（正链 T/T = 基因方向 G/G）",
+    "text": "无功能缺陷。本数据即此基因型。",
+    "level": "favorable"
+   }
+  },
+  {
+   "plain": "硫唑嘌呤类药物的'东亚必查保险丝'（NUDT15）正常——东亚人比欧洲人更需要查这个，你查了且是好的。",
+   "rsid": "rs1142345",
+   "gene": "NUDT15",
+   "variant": "NUDT15*3 (c.415C>T, R139C)",
+   "group": "thiopurine",
+   "confidence": "high",
+   "note": "NUDT15*3 在东亚人群中的临床意义甚至超过 TPMT，是硫嘌呤用药必查位点。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1142345",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1142345",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1142345",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1142345"
+   },
+   "genotype": "TT",
+   "chrom": "6",
+   "pos": 18130918,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "NUDT15*1/*1 · 正常",
+    "text": "硫嘌呤类药物（硫唑嘌呤、6-MP、硫鸟嘌呤）可按标准剂量使用，就本基因而言无毒性风险升高。",
+    "level": "favorable"
+   }
+  },
+  {
+   "plain": "TPMT 的常见故障版本之一没有。",
+   "rsid": "rs1800460",
+   "gene": "TPMT",
+   "variant": "TPMT*3B (c.460G>A, A154T)",
+   "group": "thiopurine",
+   "confidence": "high",
+   "note": "TPMT 为负链基因。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800460",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800460",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800460",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800460"
+   },
+   "genotype": "CC",
+   "chrom": "6",
+   "pos": 18139228,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "GG",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "未携带 *3B",
+    "text": "就本位点而言正常。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "TPMT 的另一个常见故障版本也没有——与上一位点合并：TPMT 正常。",
+   "rsid": "rs1800462",
+   "gene": "TPMT",
+   "variant": "TPMT*3C (c.719A>G, Y240C)",
+   "group": "thiopurine",
+   "confidence": "high",
+   "note": "TPMT*3A = *3B + *3C 顺式组合。本数据两位点均无变异，判定 TPMT*1/*1。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1800462",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1800462",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1800462",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1800462"
+   },
+   "genotype": "CC",
+   "chrom": "6",
+   "pos": 18143955,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "GG",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "*3C 纯合",
+    "text": "TPMT 活性极低。",
+    "level": "neutral"
+   }
+  },
+  {
+   "plain": "你的乙醛脱氢酶是满血版：喝酒不太会脸红那套'出厂设置'你没有。不过酶正常≠酒无害，乙醛本来就是一级致癌物。",
+   "rsid": "rs671",
+   "gene": "ALDH2",
+   "variant": "ALDH2*2 (c.1510G>A, E504K, 乙醛脱氢酶缺陷)",
+   "group": "alcohol",
+   "confidence": "high",
+   "note": "约 30-50% 东亚人携带 *2；本数据为 G/G，即最常见的正常基因型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs671",
+    "snpedia": "https://www.snpedia.com/index.php/Rs671",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs671",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs671"
+   },
+   "genotype": "GG",
+   "chrom": "12",
+   "pos": 112241766,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "ALDH2*1/*1 · 乙醛代谢正常",
+    "text": "线粒体乙醛脱氢酶活性正常，饮酒后乙醛可正常清除，无明显的酒精潮红反应遗传倾向。注意：酶活性正常不等于饮酒无害。",
+    "level": "favorable"
+   }
+  },
+  {
+   "plain": "干扰素应答基因（IL28B） favorable 组合——当年丙肝干扰素时代这是'好抽的签'，现在直接抗病毒药时代它主要是个历史注脚。",
+   "rsid": "rs12979860",
+   "gene": "IFNL3/4 (IL28B)",
+   "variant": "IL28B rs12979860 (C>T)",
+   "group": "hepatitis",
+   "confidence": "high",
+   "note": "本数据 CC，为有利基因型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs12979860",
+    "snpedia": "https://www.snpedia.com/index.php/Rs12979860",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs12979860",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs12979860"
+   },
+   "genotype": "CC",
+   "chrom": "19",
+   "pos": 39738787,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "IL28B CC · 干扰素应答有利基因型",
+    "text": "聚乙二醇干扰素+利巴韦林时代，CC 型丙肝自发清除率与持续病毒学应答率最高。直接抗病毒药物（DAA）时代该位点的选药价值下降。",
+    "level": "favorable"
+   }
+  },
+  {
+   "plain": "IL28B 的第二张签也是 favorable，两位点互相印证。",
+   "rsid": "rs8099917",
+   "gene": "IFNL3/4 (IL28B)",
+   "variant": "IL28B rs8099917 (T>G)",
+   "group": "hepatitis",
+   "confidence": "high",
+   "note": "本数据 TT，与 rs12979860 CC 一致，均指向有利应答基因型。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs8099917",
+    "snpedia": "https://www.snpedia.com/index.php/Rs8099917",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs8099917",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs8099917"
+   },
+   "genotype": "TT",
+   "chrom": "19",
+   "pos": 39743165,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "有利基因型",
+    "text": "与干扰素治疗应答率升高相关（与 rs12979860 相互印证）。",
+    "level": "favorable"
+   }
+  },
+  {
+   "plain": "咖啡因拆解工人（CYP1A2）属于快班——你对咖啡因的耐受偏'福利组'，喝完不太容易心慌。",
+   "rsid": "rs762551",
+   "gene": "CYP1A2",
+   "variant": "CYP1A2 -163C>A (启动子, 快代谢)",
+   "group": "caffeine",
+   "confidence": "medium",
+   "note": "CYP1A2 活性受吸烟强烈诱导，基因型只是基线。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs762551",
+    "snpedia": "https://www.snpedia.com/index.php/Rs762551",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs762551",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs762551"
+   },
+   "genotype": "AA",
+   "chrom": "15",
+   "pos": 75041917,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "+",
+   "genotype_gene_direction": null,
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "CYP1A2 快代谢型",
+    "text": "诱导型快代谢，咖啡因清除快。观察性研究提示快代谢者适量咖啡摄入的心血管获益更明确。",
+    "level": "favorable"
+   }
+  },
+  {
+   "plain": "P-糖蛋白'保安'（ABCB1）的低表达版本你带了一份——部分药物在肠道被'退货'得少一些，吸收略多。",
+   "rsid": "rs1045642",
+   "gene": "ABCB1 (P-糖蛋白)",
+   "variant": "ABCB1 3435C>T (I1145M 同义变异)",
+   "group": "transporter",
+   "confidence": "medium",
+   "note": "ABCB1 三个热点位点构成单倍型；本数据未做相位分析，解读为近似。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1045642",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1045642",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1045642",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1045642"
+   },
+   "genotype": "AG",
+   "chrom": "7",
+   "pos": 87138645,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "TC",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "3435 C/T（基因方向）",
+    "text": "携带一份低表达等位基因（本数据即此组合）。",
+    "level": "caution"
+   }
+  },
+  {
+   "plain": "保安岗位的第二个检查点也带一份低表达版本——两个位点方向一致。",
+   "rsid": "rs2032582",
+   "gene": "ABCB1 (P-糖蛋白)",
+   "variant": "ABCB1 2677G>T/A (A893S/T；dbSNP 正链 A>C/T)",
+   "group": "transporter",
+   "confidence": "medium",
+   "note": "该位点存在 G>T/A 三态变异（正链对应 C/A/T），芯片只覆盖部分组合。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs2032582",
+    "snpedia": "https://www.snpedia.com/index.php/Rs2032582",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs2032582",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs2032582"
+   },
+   "genotype": "AC",
+   "chrom": "7",
+   "pos": 87160618,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "TG",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "2677 G/T（基因方向）",
+    "text": "携带一份 2677T 变异（本数据即此组合）。",
+    "level": "attention"
+   }
+  },
+  {
+   "plain": "第三个检查点也是低表达方向：三个位点合起来，你的 P-糖蛋白基线偏'松'，对部分药物吸收偏多。",
+   "rsid": "rs1128503",
+   "gene": "ABCB1 (P-糖蛋白)",
+   "variant": "ABCB1 1236C>T (G412G 同义变异)",
+   "group": "transporter",
+   "confidence": "medium",
+   "note": "与上两位点共同评估。",
+   "links": {
+    "dbsnp": "https://www.ncbi.nlm.nih.gov/snp/rs1128503",
+    "snpedia": "https://www.snpedia.com/index.php/Rs1128503",
+    "gwas": "https://www.ebi.ac.uk/gwas/search?query=rs1128503",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term=rs1128503"
+   },
+   "genotype": "AA",
+   "chrom": "7",
+   "pos": 87179601,
+   "source": "ASA",
+   "found_by": "rsid",
+   "gene_strand_note": "-",
+   "genotype_gene_direction": "TT",
+   "flag": null,
+   "status": "ok",
+   "resolved": {
+    "label": "1236 T/T",
+    "text": "1236T 与 3435T 连锁，指向低表达单倍型。",
+    "level": "caution"
+   }
+  }
+ ],
+ "special_cards": [
+  {
+   "title": "CYP2D6 — 芯片无法可靠分型",
+   "text": "CYP2D6 区域存在基因拷贝数变异和大量假基因干扰，ASA 芯片的少数位点（如 *10 相关）不足以给出可靠表型。涉及 CYP2D6 的药物（他莫昔芬、可待因/曲马多、部分抗抑郁药、部分抗精神病药）请勿根据本报告做任何推断，临床如需可用 PCR/LR-PCR 方法专门分型。",
+   "level": "attention"
+  },
+  {
+   "title": "NAT2 乙酰化表型（研究级推断）",
+   "text": "NAT2 表型由多点位单倍型组合决定，本报告基于已覆盖的 7 个位点做近似推断（慢型等位基因计数法：0 个=快型，1 个=中间型，2 个=慢型）。该推断未覆盖全部罕见等位基因，结论标注为研究级。",
+   "level": "caution"
+  },
+  {
+   "title": "HLA 区域 — 疫苗/药物超敏反应",
+   "text": "HLA-B*15:02（卡马西平）、HLA-B*57:01（阿巴卡韦）、HLA-A*31:01 等超敏相关等位基因位于高多态性 HLA 区域，必须用专门的 HLA 分型方法，芯片探针覆盖不可靠，本报告不作推断。",
+   "level": "attention"
+  },
+  {
+   "title": "使用边界",
+   "text": "本模块所有结论均为分型明确的位点 + 公开指南的机械映射，不替代药物基因组学临床检测（后者有更全面的基因覆盖和质控）。任何用药决定请与医生讨论。",
+   "level": "normal"
+  }
+ ],
+ "counts": {
+  "total": 23,
+  "ok": 23,
+  "flagged": 0,
+  "not_called": 0
+ }
+}
