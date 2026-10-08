@@ -1,0 +1,263 @@
+{
+  "_readme": [
+    "这是全站唯一的视频清单：页面上展示什么、每个视频对应 R2 哪个目录，都由这里决定。",
+    "添加视频的三步：① 用 scripts/add-video.sh 把切片传到 R2；② 在对应科目的 videos 里加一条记录；③ git push（或 npm run deploy）。",
+    "视频文件默认通过本站的 /media/ 代理读取 R2 桶 fitlab-videos（见 functions/media/[[path]].js）；如果你给 R2 绑定了公开自定义域名，可填到 cdnBaseUrl 直接走 CDN。",
+    "hls: 指向目录里的 m3u8 文件名（如 master.m3u8）；mp4: 也可直接放 mp4 文件名，两者至少填一个，m3u8 优先。",
+    "orientation: vertical=竖版(9:16)，horizontal=横版(16:9)，决定封面与播放器的展示比例。",
+    "status: ready=已上传可播放，pending=占位（前端会显示「整理中」的优雅占位卡片）。",
+    "duration: 秒数（add-video.sh 会帮你算好），用于卡片角标。",
+    "tips: 动作要领，展示在播放页下方。支持三种写法：一个字符串；字符串数组（多条要点）；对象 {\"t\": 秒数, \"text\": \"说明\"}（要点时间戳，渲染成可点击的时间芯片，点击即跳转到对应进度，适合精学某个片段）。"
+  ],
+  "version": 1,
+  "updatedAt": "2026-09-22",
+  "cdnBaseUrl": "",
+  "groups": [
+    { "id": "cardio",   "name": "有氧",     "nameEn": "CARDIO",   "icon": "🔥", "accent": "#ff7a45" },
+    { "id": "strength", "name": "力量训练", "nameEn": "STRENGTH", "icon": "💪", "accent": "#7c5cff" },
+    { "id": "skills",   "name": "技巧训练", "nameEn": "SKILLS",   "icon": "🤸", "accent": "#f59e0b" }
+  ],
+  "categories": [
+    {
+      "id": "treadmill",
+      "groupId": "cardio",
+      "name": "走步机",
+      "icon": "🚶",
+      "accent": "#ff9f43",
+      "dir": "cardio/treadmill",
+      "description": "走步机有氧跟练：边看边走，节奏同步",
+      "videos": [
+        {
+          "id": "walk-basics-20",
+          "title": "20 分钟基础快走",
+          "dir": "cardio/treadmill/walk-basics-20",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "vertical",
+          "duration": 0,
+          "tags": ["入门", "低强度"],
+          "tips": "全程保持核心收紧，落地从脚跟到脚掌滚动，跟随节奏即可。",
+          "status": "pending"
+        },
+        {
+          "id": "walk-incline-fatburn",
+          "title": "坡度燃脂走",
+          "dir": "cardio/treadmill/walk-incline-fatburn",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "vertical",
+          "duration": 0,
+          "tags": ["燃脂", "坡度"],
+          "tips": "坡度 6-8，速度 5.0-5.5km/h，全程不扶扶手效果更好。",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "swimming",
+      "groupId": "cardio",
+      "name": "游泳",
+      "icon": "🏊",
+      "accent": "#2f9bff",
+      "dir": "cardio/swimming",
+      "description": "泳姿分解与配合练习，陆上先学、下水再练",
+      "videos": [
+        {
+          "id": "freestyle-kick",
+          "title": "自由泳打腿·陆上五课",
+          "dir": "cardio/swimming/freestyle-kick",
+          "hls": "master.m3u8",
+          "mp4": "",
+          "poster": "poster.jpg",
+          "orientation": "vertical",
+          "duration": 356,
+          "tags": ["自由泳", "打腿", "陆上模仿"],
+          "tips": [
+            { "t": 0,   "text": "第1课 坐姿定桩：浮板尖角朝外，坐前 2/3 留一小半，手撑地微微抬脚。" },
+            { "t": 10,  "text": "膝盖、大腿、脚背三处完全离开板面，整条腿绷直『像一根棍子』。" },
+            { "t": 22,  "text": "视频演示错误动作：膝盖一弯、脚搭回板上，练了也白练。" },
+            { "t": 30,  "text": "挺胸、肚子收紧，静力保持 1 分钟 × 4 组。" },
+            { "t": 72,  "text": "第2课 坐姿打腿：『加腿是让你慢慢的』——先慢打找脚背发力感，再逐渐加速。" },
+            { "t": 78,  "text": "打快之后幅度要变小：频率上去、幅度收小。" },
+            { "t": 100, "text": "第3课 流线型手臂：双臂伸直夹在耳朵后面，像一根针往天上冲。" },
+            { "t": 110, "text": "手绝对不能弯——『一弯针就扎到自己的头』，伸得直直的。" },
+            { "t": 120, "text": "打腿时上身稳住不被流线型打扰，大腿依然要离开板。" },
+            { "t": 162, "text": "第4课 翻板俯卧打腿：趴在肚子上，最接近水里俯卧打腿的陆上模仿。" },
+            { "t": 168, "text": "不要趴太靠前：腿抬不起来，还会压得胸口难受。" },
+            { "t": 190, "text": "双腿并拢再抬；俯卧时大腿只要离开板一点点，抬太多反而累。" },
+            { "t": 234, "text": "手流线型夹耳后，先从慢开始再练快——慢不是随便玩，是感觉脚背在发力。" },
+            { "t": 273, "text": "做不到 1 分钟就改半分钟 × 4 组（教练原话）。" },
+            { "t": 330, "text": "第5课 提速进阶：快打会累，但肚子必须收紧——腹一松腰就塌、腿就散。" },
+            { "t": 340, "text": "要『自己主动打』，靠核心带节奏，不是放松了靠惯性乱甩。" },
+            { "t": 350, "text": "全片自检口诀：膝盖直、脚背绷、大腿离板、肚子收紧、手像针一样夹耳后。" }
+          ],
+          "status": "ready"
+        },
+        {
+          "id": "breath-drill",
+          "title": "换气节奏练习",
+          "dir": "cardio/swimming/breath-drill",
+          "hls": "",
+          "mp4": "",
+          "poster": "",
+          "orientation": "vertical",
+          "duration": 0,
+          "tags": ["换气"],
+          "tips": "转头不要抬头，嘴角贴水面吸气，吐气在水下完成。",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "strength",
+      "groupId": "strength",
+      "name": "力量训练",
+      "icon": "🏋️",
+      "accent": "#ff4d6d",
+      "dir": "strength",
+      "description": "器械动作库：每个动作一条视频，跟着学标准轨迹",
+      "videos": [
+        {
+          "id": "pec-deck-fly",
+          "title": "蝴蝶机夹胸",
+          "dir": "strength/pec-deck-fly",
+          "hls": "master.m3u8",
+          "mp4": "",
+          "poster": "poster.jpg",
+          "orientation": "vertical",
+          "duration": 103,
+          "tags": ["胸", "中束"],
+          "tips": [
+            { "t": 1,  "text": "调整座椅高度：坐好后把手大约在胸口中缝的高度。" },
+            { "t": 8,  "text": "臀背贴住椅背，腰部自然反弓，身体不要跟着晃。" },
+            { "t": 13, "text": "掌根压住把手、全握，不要用手指去扣（手腕会塌）。" },
+            { "t": 21, "text": "肘部微屈、朝后打开，肩胛下沉贴实椅背。" },
+            { "t": 28, "text": "双脚往后收、踩实地面，先稳定好下半身。" },
+            { "t": 35, "text": "发力想象拥抱大树：向前抱，手臂保持自然弯曲不完全伸直。" },
+            { "t": 46, "text": "还原要慢，充分拉开胸大肌；发力吐气、还原吸气。" },
+            { "t": 60, "text": "想加强上胸和中缝：座椅略调低，手抓得略比肩高，身体前倾夹胸。" },
+            { "t": 80, "text": "想加强下胸和外沿：座椅调最高，臀部向前坐、身体倾斜夹胸。" },
+            { "t": 100, "text": "每组 10 次，做 4 组，坚持练中缝和轮廓会越来越明显。" }
+          ],
+          "status": "ready"
+        },
+        {
+          "id": "lat-pulldown",
+          "title": "高位下拉",
+          "dir": "strength/lat-pulldown",
+          "hls": "master.m3u8",
+          "mp4": "",
+          "poster": "poster.jpg",
+          "orientation": "vertical",
+          "duration": 124,
+          "tags": ["背", "背阔肌"],
+          "tips": [
+            { "t": 12, "text": "握法和姿态：不要死攥横杆，攥太紧前臂先酸、会变成手臂代偿。" },
+            { "t": 22, "text": "握距调到肩宽的 1.5 倍左右，坐稳、大腿固定好再开始。" },
+            { "t": 32, "text": "手肘微微内收：想象把横杆『掰弯』，肘部往身体方向带。" },
+            { "t": 43, "text": "千万不要用手臂硬拽往下压——手臂只做『钩子』。" },
+            { "t": 53, "text": "先肩胛下沉，让背阔肌成为发力主体，把杆拉向上胸。" },
+            { "t": 62, "text": "还原要慢：控制着回放横杆，不要靠配重把身体弹回去。" },
+            { "t": 73, "text": "全程身体稳定不后仰，发力感集中在背部，练背效率直接拉满。" },
+            { "t": 83, "text": "标准握法略宽于肩：练背黄金握距，能拉的重量最大。" },
+            { "t": 93, "text": "想练倒三角：换宽握变式，侧重背阔肌外沿。" },
+            { "t": 103, "text": "对握 V 型把：主攻背阔肌中下束和肩背肌群。" },
+            { "t": 113, "text": "颈后下拉肩关节外展加外旋、易伤肩，不建议新手练。" }
+          ],
+          "status": "ready"
+        },
+        {
+          "id": "seated-db-press",
+          "title": "坐姿哑铃肩推",
+          "dir": "strength/seated-db-press",
+          "hls": "master.m3u8",
+          "mp4": "",
+          "poster": "poster.jpg",
+          "orientation": "vertical",
+          "duration": 73,
+          "tags": ["肩", "三角肌"],
+          "tips": [
+            { "t": 3,  "text": "别一上来就直接推：先把凳子和姿态调整好再做动作。" },
+            { "t": 15, "text": "调好靠背角度并贴紧腰背坐实，身体更稳定，推的时候不晃。" },
+            { "t": 30, "text": "手腕压力大说明握法不对：手腕保持中立不后折，用掌根压住哑铃。" },
+            { "t": 45, "text": "下放到大臂平行或略低即可，全程手肘垂直地面、小臂不倾斜。" },
+            { "t": 60, "text": "起始位：哑铃放到与两个耳朵平行的位置，不要沉得太低。" },
+            { "t": 70, "text": "推起不要完全锁肘，肩部全程保持受力，发力感会特别明显。" }
+          ],
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "tumbling",
+      "groupId": "skills",
+      "name": "空翻技巧",
+      "icon": "🤸",
+      "accent": "#f59e0b",
+      "dir": "skills/tumbling",
+      "description": "空翻与翻腾动作分解教学：从垫上辅助到平地完成",
+      "videos": [
+        {
+          "id": "backflip",
+          "title": "后空翻教学",
+          "dir": "skills/tumbling/backflip",
+          "hls": "master.m3u8",
+          "mp4": "",
+          "poster": "poster.jpg",
+          "orientation": "vertical",
+          "duration": 101,
+          "tags": ["空翻", "翻腾", "进阶"],
+          "tips": [
+            { "t": 0,  "text": "循序渐进是关键：先借助垫箱和教练保护建立动作记忆，别直接上平地。" },
+            { "t": 9,  "text": "后倒练习：臀部后坐、双臂向后上方甩，背部落上垫箱找翻转的感觉。" },
+            { "t": 26, "text": "地面后手翻分解：后倒撑手成桥，再蹬腿收腹翻过，练好腰腹力量。" },
+            { "t": 43, "text": "在教练保护下完成完整翻转，重点体会起跳和团身的时机。" },
+            { "t": 52, "text": "起跳要垂直向上，不要往后倒着跳——高度才有时间完成翻转。" },
+            { "t": 70, "text": "垫箱辅助练习：往后跳上垫箱，逐渐降低高度过渡到平地。" },
+            { "t": 78, "text": "平地完整后空翻：务必在教练保护下尝试，起跳后立刻收紧团身。" },
+            { "t": 90, "text": "团身越紧转得越快：膝盖抱胸，看到落点后展开身体、屈膝缓冲落地。" }
+          ],
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "groupId": "strength",
+      "name": "核心训练",
+      "icon": "🧘",
+      "accent": "#14b8a6",
+      "dir": "core",
+      "description": "自重核心动作库：每个动作一条视频，跟着学标准姿态",
+      "videos": [
+        {
+          "id": "plank",
+          "title": "平板支撑",
+          "dir": "core/plank",
+          "hls": "master.m3u8",
+          "mp4": "",
+          "poster": "poster.jpg",
+          "orientation": "vertical",
+          "duration": 60,
+          "tags": ["核心", "腹肌"],
+          "tips": [
+            { "t": 2,  "text": "先看整体姿态：头、背、腰、脚一条直线，红色区域就是要持续发力的核心。" },
+            { "t": 6,  "text": "别含胸挤肩胛：很多人一撑起就把上背拱起来，支撑会不稳。" },
+            { "t": 11, "text": "肩胛骨自然展开、不内扣，上背保持平整。" },
+            { "t": 16, "text": "不要塌腰坠腹：肚子下沉、腰椎反折，最伤腰。" },
+            { "t": 21, "text": "正确做法：收腹夹臀、骨盆微微后倾，腰背回到一条直线。" },
+            { "t": 26, "text": "上肢支撑别让手肘内夹，肘往里收容易失稳。" },
+            { "t": 31, "text": "手肘与肩同宽，垂直压在肩膀正下方。" },
+            { "t": 36, "text": "下半身别双脚并拢——并拢容易大腿代偿，核心练不到位。" },
+            { "t": 41, "text": "双脚适当打开，核心才能真正发力。" },
+            { "t": 51, "text": "头颈自然放松，不要抬头或低头，视线看向地面。" },
+            { "t": 56, "text": "记住：宁做标准 30 秒，不做松垮 2 分钟。" }
+          ],
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

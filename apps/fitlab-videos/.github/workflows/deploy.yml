@@ -1,0 +1,44 @@
+# ============================================================
+# GitHub → Cloudflare Pages 自动部署
+# 推送 main 分支后自动执行 `wrangler pages deploy`，
+# 等价于本地 `npm run deploy`，实现仓库与线上实时同步。
+#
+# 前置（只需一次）：仓库 Settings → Secrets and variables → Actions 添加：
+#   CLOUDFLARE_API_TOKEN  —— dash.cloudflare.com/profile/api-tokens 创建，
+#                            用「编辑 Cloudflare Workers」模板（含 Pages: Edit 权限）
+#   CLOUDFLARE_ACCOUNT_ID —— 账户 ID（控制台右侧栏 / wrangler whoami）
+# 未配置密钥时本工作流自动跳过部署（保持绿色，不报错）。
+# ============================================================
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CF_TOKEN_SET: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        if: env.CF_TOKEN_SET == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name fitlab-videos --branch main
+
+      - name: Missing Cloudflare credentials
+        if: env.CF_TOKEN_SET != 'true'
+        run: |
+          echo "未检测到 CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID 密钥，本次跳过部署。"
+          echo "配置方法见本文件顶部注释。"

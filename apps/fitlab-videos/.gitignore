@@ -1,0 +1,12 @@
+# 依赖与构建产物
+node_modules/
+build/
+.wrangler/
+.dev.vars
+
+# 本地演示资源（用 scripts/gen-demo.sh 生成，不进仓库）
+.demo/
+
+# 系统文件
+.DS_Store
+*.log

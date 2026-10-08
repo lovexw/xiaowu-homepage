@@ -1,0 +1,7 @@
+{
+  "AllowedOrigins": ["*"],
+  "AllowedMethods": ["GET", "HEAD"],
+  "AllowedHeaders": ["range", "content-type"],
+  "ExposeHeaders": ["content-range", "content-length", "accept-ranges"],
+  "MaxAgeSeconds": 3600
+}
