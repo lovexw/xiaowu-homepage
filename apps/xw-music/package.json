@@ -1,0 +1,23 @@
+{
+  "name": "xw-music",
+  "version": "1.0.0",
+  "private": true,
+  "description": "私人在线音乐播放器：Cloudflare Workers + R2",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "upload": "node scripts/upload.mjs"
+  },
+  "dependencies": {
+    "aws4fetch": "^1.0.20"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5",
+    "typescript": "^5",
+    "wrangler": "^4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

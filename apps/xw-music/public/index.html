@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f7fb">
+<title>云音 · 我的私人音乐库</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%237c5cf6'/%3E%3Cpath d='M9.2 17.2V6.8l8-1.7v9.4' stroke='white' stroke-width='1.7' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='7.6' cy='17.4' r='2' fill='white'/%3E%3Ccircle cx='15.6' cy='14.6' r='2' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div id="login" class="overlay hidden">
+  <div class="login-card">
+    <div class="login-logo">♫</div>
+    <h1>云音</h1>
+    <p class="login-sub">我的私人在线音乐库</p>
+    <form id="login-form" autocomplete="off">
+      <input id="login-username" type="text" placeholder="用户名" autocomplete="username" required>
+      <input id="login-password" type="password" placeholder="密码" autocomplete="current-password" required>
+      <button type="submit" class="primary login-btn">进 入</button>
+    </form>
+    <div id="login-error" class="login-error hidden"></div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">♫</span><span>云音</span></div>
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+      <input id="search" type="search" placeholder="搜索歌曲 / 歌手 / 专辑" autocomplete="off">
+    </div>
+    <nav class="seg" id="seg">
+      <button data-view="songs" class="active">歌曲</button>
+      <button data-view="artists">歌手</button>
+      <button data-view="albums">专辑</button>
+    </nav>
+    <div class="topbar-actions">
+      <button id="btn-upload" class="primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0 4.5 4.5M12 4 7.5 8.5"/><path d="M4 16.5V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2.5"/></svg><span class="upload-text">上传音乐</span></button>
+      <button id="btn-logout" class="ghost icon-only" title="退出登录"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3"/><path d="m16 17 5-5-5-5M21 12H9"/></svg></button>
+    </div>
+  </header>
+
+  <div id="build-notice" class="build-notice hidden">正在为新歌曲读取标签与封面…</div>
+
+  <main id="list" class="list"></main>
+
+  <aside id="queue" class="queue">
+    <div class="queue-head"><span>播放队列</span><button id="btn-close-queue" class="ctl small"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div id="queue-list"></div>
+  </aside>
+
+  <footer class="player">
+    <div class="np">
+      <div id="np-cover" class="np-cover">♫</div>
+      <div class="np-meta">
+        <div id="np-title" class="np-title">未在播放</div>
+        <div id="np-artist" class="np-artist">选一首歌开始吧</div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="controls">
+        <button id="btn-shuffle" class="ctl small" title="随机播放"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="M4 4l5 5"/></svg></button>
+        <button id="btn-prev" class="ctl small" title="上一首"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 6a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1z"/><path d="M18.4 6.5c.6-.44 1.6-.02 1.6.78v9.44c0 .8-1 1.22-1.6.78l-6.8-4.72a.97.97 0 0 1 0-1.56z"/></svg></button>
+        <button id="btn-play" class="ctl big" title="播放 / 暂停（空格）"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11-6.86a1 1 0 0 0 0-1.74l-11-6.86A1 1 0 0 0 8 5.14z"/></svg></button>
+        <button id="btn-next" class="ctl small" title="下一首"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 6a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1z"/><path d="M5.6 6.5c-.6-.44-1.6-.02-1.6.78v9.44c0 .8 1 1.22 1.6.78l6.8-4.72a.97.97 0 0 0 0-1.56z"/></svg></button>
+        <button id="btn-repeat" class="ctl small" title="循环：关闭 / 全部 / 单曲"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></button>
+      </div>
+      <div class="progress">
+        <span id="time-cur" class="time">0:00</span>
+        <input id="seek" class="range seek" type="range" min="0" max="1000" value="0" step="1">
+        <span id="time-total" class="time">0:00</span>
+      </div>
+    </div>
+    <div class="right">
+      <button id="btn-queue" class="ctl small" title="播放队列"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h9"/></svg></button>
+      <button id="btn-mute" class="ctl small" title="静音"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" stroke="none"/><path id="vol-wave" d="M15.5 8.5a5 5 0 0 1 0 7M18.3 5.8a9 9 0 0 1 0 12.4"/></svg></button>
+      <input id="vol" class="range vol" type="range" min="0" max="100" value="100">
+    </div>
+  </footer>
+</div>
+
+<input id="file-input" type="file" multiple accept=".mp3,.flac,.m4a,.aac,.ogg,.oga,.opus,.wav,.webm,audio/*" hidden>
+<div id="drop" class="drop hidden"><div class="drop-inner">松开即可上传到音乐库</div></div>
+<div id="toast-wrap"></div>
+
+<audio id="audio" preload="metadata"></audio>
+<script src="/app.js"></script>
+</body>
+</html>
