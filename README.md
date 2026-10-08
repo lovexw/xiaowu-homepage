@@ -1,6 +1,21 @@
 # 小吴乐意的个人主页
 
-这是一个简洁的个人主页项目，集合了我的社交媒体账号和个人项目展示。
+这是小吴乐意所有网站的总仓库（monorepo）。根目录是个人主页，集合社交媒体账号与个人项目展示；`apps/` 下每个子目录是一个独立小工具，各自部署到 Cloudflare 并绑定二级域名。
+
+## 仓库结构（Monorepo）
+
+```
+├── 根目录              个人主页 → www.xiaowuleyi.com
+└── apps/
+    ├── brand-kit/             品牌视觉规范
+    ├── xw-music/              私人音乐播放器（Worker + R2）
+    ├── subtitle-collage/      台词拼图（pintu.xiaowuleyi.com）
+    ├── password-generator/    密码生成器（pd.xiaowuleyi.com）
+    ├── open-genome-report/    基因报告（dna.xiaowuleyi.com，站点在 site/）
+    └── fitlab-videos/         FitLab 健身视频库（fit.xiaowuleyi.com）
+```
+
+各项目的部署参数、Cloudflare 重新绑定仓库、域名切换与旧仓库代码同步，见 [迁移手册](MIGRATION.md)。
 
 ## 功能特点
 
